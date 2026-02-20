@@ -1,12 +1,21 @@
 import React, { useState } from 'react';
-import { Crown, Sun, Wind, Snowflake, Droplets, Shield, Star, CheckCircle, Phone, ChevronDown, Award, Instagram } from 'lucide-react';
+import { Sun, Wind, Snowflake, Droplets, Shield, Star, CheckCircle, Phone, ChevronDown, Award, Instagram } from 'lucide-react';
+
+const Logo = ({ className = '', style = {} }: { className?: string; style?: React.CSSProperties }) => (
+  <img
+    src="/logo.png"
+    alt="Don of Detail logo"
+    className={className}
+    style={{ mixBlendMode: 'lighten', ...style }}
+  />
+);
 
 export default function App() {
   const [isSubmitted, setIsSubmitted] = useState(false);
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    
+
     const formData = new FormData(e.currentTarget);
     const data = Object.fromEntries(formData.entries());
 
@@ -18,7 +27,7 @@ export default function App() {
         },
         body: JSON.stringify(data),
       });
-      
+
       setIsSubmitted(true);
       setTimeout(() => setIsSubmitted(false), 5000);
     } catch (error) {
@@ -31,15 +40,14 @@ export default function App() {
       {/* Sticky Header */}
       <header className="fixed top-0 w-full z-50 bg-don-black/90 backdrop-blur-md border-b border-white/10 transition-all">
         <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
-          <div className="flex items-center gap-3">
-            <Crown className="w-8 h-8 text-don-gold" />
-            <span className="text-2xl font-serif font-bold tracking-wide text-don-cream">Don of Detail</span>
+          <div className="flex items-center gap-2">
+            <Logo className="h-16 w-auto" />
           </div>
-          <a href="tel:+17755550199" className="hidden md:flex items-center gap-2 text-sm font-semibold uppercase tracking-widest text-don-black bg-don-gold hover:bg-don-gold/90 px-6 py-2.5 rounded-sm transition-all hover:shadow-[0_0_15px_rgba(212,175,55,0.4)]">
+          <a href="tel:+17752307035" className="hidden md:flex items-center gap-2 text-sm font-semibold uppercase tracking-widest text-don-black bg-don-gold hover:bg-don-gold/90 px-6 py-2.5 rounded-sm transition-all hover:shadow-[0_0_15px_rgba(212,175,55,0.4)]">
             <Phone className="w-4 h-4" />
             Call Now
           </a>
-          <a href="tel:+17755550199" className="md:hidden flex items-center justify-center w-10 h-10 bg-don-gold text-don-black rounded-sm">
+          <a href="tel:+17752307035" className="md:hidden flex items-center justify-center w-10 h-10 bg-don-gold text-don-black rounded-sm">
             <Phone className="w-5 h-5" />
           </a>
         </div>
@@ -47,9 +55,9 @@ export default function App() {
 
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden">
-        <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?q=80&w=1920&auto=format&fit=crop')] bg-cover bg-[center_25%] opacity-25" />
+        <div className="absolute inset-0 bg-[url('/hero.jpg')] bg-cover bg-center opacity-50" />
         <div className="absolute inset-0 bg-gradient-to-b from-don-black/70 via-don-black/80 to-don-black" />
-        
+
         <div className="relative max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           <div className="max-w-2xl">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-don-gold/10 border border-don-gold/20 mb-8 backdrop-blur-sm">
@@ -72,7 +80,7 @@ export default function App() {
               </div>
               <div className="flex items-center gap-2">
                 <Shield className="w-5 h-5 text-don-gold" />
-                <span>Ceramic Certified</span>
+                <span>Ceramic Coating Certified</span>
               </div>
             </div>
           </div>
@@ -80,7 +88,7 @@ export default function App() {
           {/* Lead Form - Glassmorphism */}
           <div id="quote" className="bg-white/5 backdrop-blur-xl border border-white/10 p-8 lg:p-10 rounded-xl shadow-2xl relative">
             <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-don-gold to-transparent opacity-50 rounded-t-xl" />
-            
+
             {isSubmitted ? (
               <div className="flex flex-col items-center justify-center h-[400px] text-center animate-in fade-in zoom-in duration-500">
                 <div className="w-20 h-20 bg-don-gold/10 rounded-full flex items-center justify-center mb-6">
@@ -92,27 +100,27 @@ export default function App() {
             ) : (
               <>
                 <h2 className="text-3xl font-serif font-bold mb-2 text-don-gold">Request a Quote</h2>
-                <p className="text-don-cream/60 text-sm mb-8 font-light tracking-wide">Experience the gold standard of detailing.</p>
-                
+                <p className="text-don-cream/60 text-sm mb-8 font-light tracking-wide">Serving Reno &amp; Sparks — we'll come to you. Most quotes answered within the hour.</p>
+
                 <form className="space-y-4" onSubmit={handleSubmit}>
                   <div className="grid grid-cols-2 gap-4">
                     <div>
                       <label className="block text-xs font-semibold uppercase tracking-widest text-don-cream/50 mb-2">First Name</label>
-                      <input 
-                        type="text" 
+                      <input
+                        type="text"
                         name="firstName"
                         required
-                        placeholder="James" 
+                        placeholder="James"
                         className="w-full bg-don-black/50 border border-white/10 rounded-sm px-4 py-3 text-don-cream placeholder:text-don-cream/30 focus:outline-none focus:ring-1 focus:ring-don-gold focus:border-don-gold transition-all"
                       />
                     </div>
                     <div>
                       <label className="block text-xs font-semibold uppercase tracking-widest text-don-cream/50 mb-2">Last Name</label>
-                      <input 
-                        type="text" 
+                      <input
+                        type="text"
                         name="lastName"
                         required
-                        placeholder="Bond" 
+                        placeholder="Bond"
                         className="w-full bg-don-black/50 border border-white/10 rounded-sm px-4 py-3 text-don-cream placeholder:text-don-cream/30 focus:outline-none focus:ring-1 focus:ring-don-gold focus:border-don-gold transition-all"
                       />
                     </div>
@@ -120,32 +128,32 @@ export default function App() {
                   <div className="grid grid-cols-2 gap-4">
                     <div>
                       <label className="block text-xs font-semibold uppercase tracking-widest text-don-cream/50 mb-2">Phone</label>
-                      <input 
-                        type="tel" 
+                      <input
+                        type="tel"
                         name="phone"
                         required
-                        placeholder="(775) 555-0199" 
+                        placeholder="(775) 230-7035"
                         className="w-full bg-don-black/50 border border-white/10 rounded-sm px-4 py-3 text-don-cream placeholder:text-don-cream/30 focus:outline-none focus:ring-1 focus:ring-don-gold focus:border-don-gold transition-all"
                       />
                     </div>
                     <div>
                       <label className="block text-xs font-semibold uppercase tracking-widest text-don-cream/50 mb-2">Email</label>
-                      <input 
-                        type="email" 
+                      <input
+                        type="email"
                         name="email"
                         required
-                        placeholder="james@example.com" 
+                        placeholder="james@example.com"
                         className="w-full bg-don-black/50 border border-white/10 rounded-sm px-4 py-3 text-don-cream placeholder:text-don-cream/30 focus:outline-none focus:ring-1 focus:ring-don-gold focus:border-don-gold transition-all"
                       />
                     </div>
                   </div>
                   <div>
                     <label className="block text-xs font-semibold uppercase tracking-widest text-don-cream/50 mb-2">Vehicle Make/Model</label>
-                    <input 
-                      type="text" 
+                    <input
+                      type="text"
                       name="vehicle"
                       required
-                      placeholder="e.g. 2018 Toyota Tacoma" 
+                      placeholder="e.g. 2018 Toyota Tacoma"
                       className="w-full bg-don-black/50 border border-white/10 rounded-sm px-4 py-3 text-don-cream placeholder:text-don-cream/30 focus:outline-none focus:ring-1 focus:ring-don-gold focus:border-don-gold transition-all"
                     />
                   </div>
@@ -165,7 +173,7 @@ export default function App() {
                   </div>
                   <button type="submit" className="w-full bg-don-gold hover:bg-don-gold/90 text-don-black font-bold uppercase tracking-widest py-4 rounded-sm mt-4 transition-all hover:shadow-[0_0_20px_rgba(212,175,55,0.3)] flex items-center justify-center gap-2 group cursor-pointer relative overflow-hidden">
                     <div className="absolute inset-0 w-full h-full bg-gradient-to-r from-transparent via-white/40 to-transparent -translate-x-full group-hover:animate-[shimmer_1.5s_infinite]" />
-                    <span className="relative z-10 flex items-center gap-2">GET MY QUOTE <ChevronDown className="w-4 h-4 -rotate-90 group-hover:translate-x-1 transition-transform" /></span>
+                    <span className="relative z-10 flex items-center gap-2">CLAIM MY FREE QUOTE <ChevronDown className="w-4 h-4 -rotate-90 group-hover:translate-x-1 transition-transform" /></span>
                   </button>
                 </form>
               </>
@@ -216,6 +224,14 @@ export default function App() {
               </p>
             </div>
           </div>
+
+          {/* Mid-page CTA */}
+          <div className="text-center mt-16">
+            <p className="text-don-cream/60 text-sm uppercase tracking-widest mb-4">Ready to protect your investment?</p>
+            <a href="#quote" className="inline-flex items-center gap-2 bg-don-gold text-don-black font-bold uppercase tracking-widest px-8 py-4 rounded-sm transition-all hover:bg-don-gold/90 hover:shadow-[0_0_20px_rgba(212,175,55,0.3)]">
+              Get a Free Quote
+            </a>
+          </div>
         </div>
       </section>
 
@@ -231,7 +247,7 @@ export default function App() {
                   <div className="flex items-center gap-3">
                     <div className="w-10 h-10 rounded-full bg-gradient-to-tr from-[#f09433] via-[#dc2743] to-[#bc1888] p-[2px]">
                       <div className="w-full h-full rounded-full bg-don-black flex items-center justify-center overflow-hidden">
-                        <Crown className="w-5 h-5 text-don-gold" />
+                        <img src="/ig-avatar.jpg" alt="Don of Detail Instagram" className="w-full h-full object-cover rounded-full" />
                       </div>
                     </div>
                     <div>
@@ -239,9 +255,9 @@ export default function App() {
                       <p className="text-xs text-don-cream/60">Reno, Nevada</p>
                     </div>
                   </div>
-                  <a 
-                    href="https://instagram.com/donofdetail" 
-                    target="_blank" 
+                  <a
+                    href="https://instagram.com/donofdetail"
+                    target="_blank"
                     rel="noopener noreferrer"
                     className="bg-don-gold text-don-black text-xs font-bold px-4 py-1.5 rounded-sm hover:bg-don-gold/90 transition-colors"
                   >
@@ -252,22 +268,22 @@ export default function App() {
                 {/* Grid */}
                 <div className="grid grid-cols-2 gap-0.5 bg-don-black">
                   <a href="https://instagram.com/donofdetail" target="_blank" rel="noopener noreferrer" className="aspect-square relative group overflow-hidden block">
-                    <img src="https://picsum.photos/seed/porsche911/400/400" alt="Detailing Work" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                    <img src="/ig1.jpg" alt="Mobile auto detailing Reno NV - paint correction on Porsche" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
                   </a>
                   <a href="https://instagram.com/donofdetail" target="_blank" rel="noopener noreferrer" className="aspect-square relative group overflow-hidden block">
-                    <img src="https://picsum.photos/seed/bmwm3/400/400" alt="Detailing Work" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                    <img src="/ig2.jpg" alt="Ceramic coating service Reno Nevada - BMW detail" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
                   </a>
                   <a href="https://instagram.com/donofdetail" target="_blank" rel="noopener noreferrer" className="aspect-square relative group overflow-hidden block">
-                    <img src="https://picsum.photos/seed/mercedesamg/400/400" alt="Detailing Work" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                    <img src="/ig3.jpg" alt="Don of Detail mobile car detailing Reno - Mercedes exterior treatment" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
                   </a>
                   <a href="https://instagram.com/donofdetail" target="_blank" rel="noopener noreferrer" className="aspect-square relative group overflow-hidden block">
-                    <img src="https://picsum.photos/seed/rangerover/400/400" alt="Detailing Work" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                    <img src="/ig4.jpg" alt="Paint protection and full detail Reno NV - Range Rover" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
                     <div className="absolute inset-0 bg-don-black/60 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
                       <span className="text-don-cream font-bold text-xs uppercase tracking-widest border-b border-don-gold pb-1">View Feed</span>
                     </div>
                   </a>
                 </div>
-                
+
                 {/* Footer */}
                 <div className="p-3 bg-white/5 border-t border-white/10 flex justify-between items-center text-xs text-don-cream/60">
                   <span>Latest Posts</span>
@@ -279,8 +295,8 @@ export default function App() {
               </div>
 
               <div className="absolute -bottom-6 -right-6 bg-don-black border border-don-gold/30 p-6 rounded-xl shadow-2xl hidden md:block z-10">
-                <Crown className="w-8 h-8 text-don-gold mb-2" />
-                <p className="text-lg font-serif font-bold text-don-cream">The Gold Standard</p>
+                <Logo className="w-12 h-12 object-contain mb-2" />
+                <p className="text-lg font-serif font-bold text-don-cream">Your Car. Our Obsession.</p>
               </div>
             </div>
 
@@ -291,15 +307,15 @@ export default function App() {
               <p className="text-don-cream/70 text-lg mb-12 font-light">
                 We don't just wash cars; we engineer preservation systems designed specifically for the high desert climate.
               </p>
-              
+
               <div className="space-y-10">
                 <div className="flex gap-6">
                   <div className="flex-shrink-0 w-12 h-12 rounded-full bg-don-gold/10 border border-don-gold/30 flex items-center justify-center">
                     <Droplets className="w-5 h-5 text-don-gold" />
                   </div>
                   <div>
-                    <h4 className="text-2xl font-serif font-bold mb-2 text-don-cream">Spot-Free Guarantee</h4>
-                    <p className="text-don-cream/70 font-light leading-relaxed">Using 100% deionized water filtered to 0 PPM. We eliminate the hard water minerals that etch into glass and paint, ensuring a flawless, mirror-like finish even in direct sun.</p>
+                    <h4 className="text-2xl font-serif font-bold mb-2 text-don-cream">Zero Scratches. Zero Swirls.</h4>
+                    <p className="text-don-cream/70 font-light leading-relaxed">We use a strict two-bucket hand wash method with pH-neutral, paint-safe soaps — no automated brushes, no harsh chemicals. Every surface is treated with microfiber cloths to leave your finish flawless, not damaged.</p>
                   </div>
                 </div>
                 <div className="flex gap-6">
@@ -307,8 +323,8 @@ export default function App() {
                     <Shield className="w-5 h-5 text-don-gold" />
                   </div>
                   <div>
-                    <h4 className="text-2xl font-serif font-bold mb-2 text-don-cream">High-Elevation Sealants</h4>
-                    <p className="text-don-cream/70 font-light leading-relaxed">Our ceramic-infused sealants and professional coatings create a sacrificial, UV-rated barrier against the Sierra sun, lasting months or years, not weeks.</p>
+                    <h4 className="text-2xl font-serif font-bold mb-2 text-don-cream">Protection That Actually Lasts</h4>
+                    <p className="text-don-cream/70 font-light leading-relaxed">We apply professional-grade ceramic coatings and sealants that bond to your paint — not just sit on top of it. The result is months or years of UV, water, and contaminant resistance, not the weeks you get from a dealership detail.</p>
                   </div>
                 </div>
                 <div className="flex gap-6">
@@ -316,8 +332,8 @@ export default function App() {
                     <CheckCircle className="w-5 h-5 text-don-gold" />
                   </div>
                   <div>
-                    <h4 className="text-2xl font-serif font-bold mb-2 text-don-cream">24-Hour Rain Guarantee</h4>
-                    <p className="text-don-cream/70 font-light leading-relaxed">We stand behind our work. If rain or weather ruins your shine within 24 hours of service, we'll return to restore the exterior finish at no extra cost.</p>
+                    <h4 className="text-2xl font-serif font-bold mb-2 text-don-cream">We Come to You — Always</h4>
+                    <p className="text-don-cream/70 font-light leading-relaxed">No drop-offs, no waiting rooms, no wasted time. We bring a fully self-contained setup — water, power, and everything needed — directly to your home, office, or job site. Premium results delivered to your door, on your schedule.</p>
                   </div>
                 </div>
               </div>
@@ -329,19 +345,22 @@ export default function App() {
       {/* Social Proof & FAQ Section */}
       <section className="py-24 bg-don-black border-t border-white/5">
         <div className="max-w-7xl mx-auto px-6">
-          
+
           {/* Testimonial */}
           <div className="max-w-4xl mx-auto text-center mb-24">
-            <div className="flex justify-center gap-2 mb-8">
-              {[1, 2, 3, 4, 5].map((star) => (
-                <Star key={star} className="w-8 h-8 text-don-gold fill-don-gold" />
-              ))}
+            <div className="flex flex-col items-center gap-2 mb-8">
+              <div className="flex justify-center gap-1">
+                {[1, 2, 3, 4, 5].map((star) => (
+                  <Star key={star} className="w-7 h-7 text-don-gold fill-don-gold" />
+                ))}
+              </div>
+              <span className="text-don-cream/50 text-xs uppercase tracking-widest">5.0 · Google Reviews</span>
             </div>
             <blockquote className="text-2xl md:text-4xl font-serif italic text-don-cream leading-snug mb-8">
-              "The only detailer I trust with my Porsche. The deionized water makes a huge difference, and the ceramic coating is absolutely flawless. True luxury service."
+              "Been using them since my last vehicle. Always amazing results. Love how convenient it is coming to my work. Very responsive with scheduling which makes it easy to work around my busy life."
             </blockquote>
             <cite className="text-don-cream/60 uppercase tracking-widest text-sm not-italic font-semibold">
-              — James T., South Reno
+              — Lisa G., Reno, NV
             </cite>
           </div>
 
@@ -350,20 +369,20 @@ export default function App() {
             <h2 className="text-3xl font-serif font-bold text-center mb-12 text-don-cream">
               Frequently Asked Questions
             </h2>
-            
+
             <div className="space-y-6">
               <div className="bg-white/5 border border-white/10 p-8 rounded-xl">
-                <h4 className="text-xl font-serif font-bold mb-3 text-don-gold">Do I need to be home?</h4>
+                <h4 className="text-xl font-serif font-bold mb-3 text-don-gold">Do I need to be home for the mobile detailing service?</h4>
                 <p className="text-don-cream/70 font-light leading-relaxed">Not at all. As long as we have access to the vehicle and the keys (if interior work is requested), you can be at work, running errands, or relaxing inside. We are 100% self-sustained with our own power and water.</p>
               </div>
-              
+
               <div className="bg-white/5 border border-white/10 p-8 rounded-xl">
-                <h4 className="text-xl font-serif font-bold mb-3 text-don-gold">What areas do you service?</h4>
-                <p className="text-don-cream/70 font-light leading-relaxed">We provide elite mobile service to the entire Truckee Meadows area, including Reno, Sparks, Spanish Springs, South Meadows, Montrêux, and Verdi.</p>
+                <h4 className="text-xl font-serif font-bold mb-3 text-don-gold">What areas in Reno &amp; Sparks do you service?</h4>
+                <p className="text-don-cream/70 font-light leading-relaxed">We provide elite mobile auto detailing to the entire Truckee Meadows area, including Reno, Sparks, Spanish Springs, South Meadows, Montrêux, and Verdi.</p>
               </div>
-              
+
               <div className="bg-white/5 border border-white/10 p-8 rounded-xl">
-                <h4 className="text-xl font-serif font-bold mb-3 text-don-gold">Why deionized water?</h4>
+                <h4 className="text-xl font-serif font-bold mb-3 text-don-gold">Why do you use deionized water for car detailing?</h4>
                 <p className="text-don-cream/70 font-light leading-relaxed">Reno has notoriously hard water. Washing a car with tap water leaves mineral deposits that etch into the clear coat. Our deionized water is purified to 0 PPM, ensuring a perfect, spot-free finish that preserves your paint.</p>
               </div>
             </div>
@@ -374,11 +393,10 @@ export default function App() {
 
       {/* Final CTA */}
       <section className="py-24 bg-don-gold text-don-black text-center relative overflow-hidden">
-        <div className="absolute inset-0 bg-[url('https://picsum.photos/seed/gold-texture/1920/1080')] opacity-10 mix-blend-overlay" />
+        <div className="absolute inset-0 bg-[url('/gold-texture.jpg')] opacity-10 mix-blend-overlay bg-cover bg-center" />
         <div className="max-w-4xl mx-auto px-6 relative z-10">
-          <Crown className="w-16 h-16 mx-auto mb-8 text-don-black opacity-80" />
           <h2 className="text-4xl lg:text-6xl font-serif font-bold tracking-tight mb-6">
-            Stop driving a dusty car.
+            Quit driving a dirty car.
           </h2>
           <p className="text-xl lg:text-2xl font-medium mb-12 opacity-90 font-sans">
             Protect your resale value today.
@@ -388,12 +406,11 @@ export default function App() {
           </a>
         </div>
       </section>
-      
+
       {/* Footer */}
       <footer className="bg-don-black py-12 border-t border-white/10 text-center text-don-cream/40 text-sm font-light tracking-wide">
-        <div className="flex justify-center items-center gap-2 mb-4">
-          <Crown className="w-4 h-4" />
-          <span className="font-serif font-bold text-don-cream/60">Don of Detail</span>
+        <div className="flex justify-center items-center mb-4">
+          <Logo className="w-12 h-12 object-contain opacity-70" />
         </div>
         <p>&copy; {new Date().getFullYear()} Don of Detail. All rights reserved.</p>
       </footer>
