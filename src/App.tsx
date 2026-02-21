@@ -24,21 +24,12 @@ export default function App() {
     const data = Object.fromEntries(formData.entries());
 
     try {
-      await Promise.all([
-        // Existing LeadConnector webhook
-        fetch('https://services.leadconnectorhq.com/hooks/GSXwZXlUEk8ELyr6WHYi/webhook-trigger/57b3863f-5d1c-48ff-a066-a3f31391047b', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify(data),
-        }),
-        // Google Sheets via Apps Script Web App
-        fetch(GOOGLE_SHEET_URL, {
-          method: 'POST',
-          // text/plain avoids a CORS preflight that Apps Script doesn't handle
-          headers: { 'Content-Type': 'text/plain' },
-          body: JSON.stringify(data),
-        }),
-      ]);
+      await fetch(GOOGLE_SHEET_URL, {
+        method: 'POST',
+        // text/plain avoids a CORS preflight that Apps Script doesn't handle
+        headers: { 'Content-Type': 'text/plain' },
+        body: JSON.stringify(data),
+      });
 
       setIsSubmitted(true);
       setTimeout(() => setIsSubmitted(false), 5000);
