@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { Sun, Wind, Snowflake, Droplets, Shield, Star, CheckCircle, Phone, ChevronDown, Award, Instagram } from 'lucide-react';
 
 const Logo = ({ className = '', style = {} }: { className?: string; style?: React.CSSProperties }) => (
@@ -174,7 +175,20 @@ export default function App() {
                       <ChevronDown className="absolute right-4 top-1/2 -translate-y-1/2 w-5 h-5 text-don-gold pointer-events-none" />
                     </div>
                   </div>
-                  <button type="submit" className="w-full bg-don-gold hover:bg-don-gold/90 text-don-black font-bold uppercase tracking-widest py-4 rounded-sm mt-4 transition-all hover:shadow-[0_0_20px_rgba(212,175,55,0.3)] flex items-center justify-center gap-2 group cursor-pointer relative overflow-hidden">
+                  <label className="flex items-start gap-3 cursor-pointer group">
+                    <input
+                      type="checkbox"
+                      name="consent"
+                      required
+                      className="mt-0.5 w-4 h-4 flex-shrink-0 accent-[#D4AF37] cursor-pointer"
+                    />
+                    <span className="text-xs text-don-cream/50 leading-relaxed">
+                      By submitting this form, I authorize Don of Detail LLC to contact me via phone and/or SMS text message at the number provided regarding my quote and services. Message &amp; data rates may apply. View our{' '}
+                      <Link to="/terms" className="text-don-gold hover:underline">Terms of Service</Link>{' '}and{' '}
+                      <Link to="/privacy" className="text-don-gold hover:underline">Privacy Policy</Link>.
+                    </span>
+                  </label>
+                  <button type="submit" className="w-full bg-don-gold hover:bg-don-gold/90 text-don-black font-bold uppercase tracking-widest py-4 rounded-sm mt-2 transition-all hover:shadow-[0_0_20px_rgba(212,175,55,0.3)] flex items-center justify-center gap-2 group cursor-pointer relative overflow-hidden">
                     <div className="absolute inset-0 w-full h-full bg-gradient-to-r from-transparent via-white/40 to-transparent -translate-x-full group-hover:animate-[shimmer_1.5s_infinite]" />
                     <span className="relative z-10 flex items-center gap-2">CLAIM MY FREE QUOTE <ChevronDown className="w-4 h-4 -rotate-90 group-hover:translate-x-1 transition-transform" /></span>
                   </button>
@@ -416,6 +430,10 @@ export default function App() {
           <Logo className="w-12 h-12 object-contain opacity-70" />
         </div>
         <p>&copy; {new Date().getFullYear()} Don of Detail. All rights reserved.</p>
+        <div className="flex justify-center gap-6 mt-3 text-xs">
+          <Link to="/terms" className="hover:text-don-gold transition-colors">Terms of Service</Link>
+          <Link to="/privacy" className="hover:text-don-gold transition-colors">Privacy Policy</Link>
+        </div>
       </footer>
     </div>
   );
