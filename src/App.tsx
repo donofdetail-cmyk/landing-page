@@ -107,7 +107,7 @@ export default function App() {
                 <p className="text-don-cream/60 text-sm mb-8 font-light tracking-wide">Serving Reno &amp; Sparks — we'll come to you. Most quotes answered within the hour.</p>
 
                 <form className="space-y-4" onSubmit={handleSubmit}>
-                  <div className="grid grid-cols-2 gap-4">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div>
                       <label className="block text-xs font-semibold uppercase tracking-widest text-don-cream/50 mb-2">First Name</label>
                       <input
@@ -129,7 +129,7 @@ export default function App() {
                       />
                     </div>
                   </div>
-                  <div className="grid grid-cols-2 gap-4">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div>
                       <label className="block text-xs font-semibold uppercase tracking-widest text-don-cream/50 mb-2">Phone</label>
                       <input
