@@ -381,7 +381,7 @@ export default function App() {
 
               <div className="bg-white/5 border border-white/10 p-8 rounded-xl">
                 <h4 className="text-xl font-serif font-bold mb-3 text-don-gold">What areas in Reno &amp; Sparks do you service?</h4>
-                <p className="text-don-cream/70 font-light leading-relaxed">We provide elite mobile auto detailing to the entire Truckee Meadows area, including Reno, Sparks, Spanish Springs, South Meadows, Montrêux, and Verdi.</p>
+                <p className="text-don-cream/70 font-light leading-relaxed">We provide mobile auto detailing to Reno, Sparks, Spanish Springs, South Meadows, Montrêux, and Verdi.</p>
               </div>
 
               <div className="bg-white/5 border border-white/10 p-8 rounded-xl">
