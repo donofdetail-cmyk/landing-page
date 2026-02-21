@@ -13,6 +13,10 @@ const Logo = ({ className = '', style = {} }: { className?: string; style?: Reac
 export default function App() {
   const [isSubmitted, setIsSubmitted] = useState(false);
 
+  // ── Google Sheets – paste your Apps Script Web App URL below ──────────────
+  const GOOGLE_SHEET_URL = 'https://script.google.com/macros/s/AKfycbzjliWvpaLq1Lzo9Y_Wyq8q0URwRRhPXwAUw3JTvrubtlAqRYB3BaCgUdGZG93_gAzD/exec';
+  // ──────────────────────────────────────────────────────────────────────────
+
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
@@ -20,13 +24,21 @@ export default function App() {
     const data = Object.fromEntries(formData.entries());
 
     try {
-      await fetch('https://services.leadconnectorhq.com/hooks/GSXwZXlUEk8ELyr6WHYi/webhook-trigger/57b3863f-5d1c-48ff-a066-a3f31391047b', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(data),
-      });
+      await Promise.all([
+        // Existing LeadConnector webhook
+        fetch('https://services.leadconnectorhq.com/hooks/GSXwZXlUEk8ELyr6WHYi/webhook-trigger/57b3863f-5d1c-48ff-a066-a3f31391047b', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(data),
+        }),
+        // Google Sheets via Apps Script Web App
+        fetch(GOOGLE_SHEET_URL, {
+          method: 'POST',
+          // text/plain avoids a CORS preflight that Apps Script doesn't handle
+          headers: { 'Content-Type': 'text/plain' },
+          body: JSON.stringify(data),
+        }),
+      ]);
 
       setIsSubmitted(true);
       setTimeout(() => setIsSubmitted(false), 5000);
