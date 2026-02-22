@@ -72,7 +72,7 @@ export default function App() {
               <span className="text-don-gold text-xs font-bold tracking-widest uppercase">Located in Reno, Nevada</span>
             </div>
             <h1 className="text-5xl lg:text-7xl font-serif font-bold tracking-tight leading-[1.1] mb-6 text-don-cream">
-              When’s the last time your car was properly <span className="text-don-gold italic">polished or protected?</span>
+              When’s the last time your car was <span className="text-don-gold italic">properly protected?</span>
             </h1>
             <p className="text-lg lg:text-xl text-don-cream/80 font-light leading-relaxed mb-10">
               Luxury isn't just driven. It’s preserved. Don of Detail brings the gold standard of mobile auto detailing and high-altitude paint protection directly to your Reno driveway.
