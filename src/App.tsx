@@ -69,13 +69,13 @@ export default function App() {
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-don-gold opacity-75"></span>
                 <span className="relative inline-flex rounded-full h-2 w-2 bg-don-gold"></span>
               </span>
-              <span className="text-don-gold text-xs font-bold tracking-widest uppercase">Located in Reno, Nevada</span>
+              <span className="text-don-gold text-xs font-bold tracking-widest uppercase">Now Booking</span>
             </div>
             <h1 className="text-5xl lg:text-7xl font-serif font-bold tracking-tight leading-[1.1] mb-6 text-don-cream">
-              When’s the last time your car was <span className="text-don-gold italic">properly protected?</span>
+              Reno's Premier <span className="text-don-gold italic">Mobile Auto Detailing</span>
             </h1>
             <p className="text-lg lg:text-xl text-don-cream/80 font-light leading-relaxed mb-10">
-              Luxury isn't just driven. It’s preserved. Don of Detail brings the gold standard of mobile auto detailing and high-altitude paint protection directly to your Reno driveway.
+              Luxury isn't just driven. It’s preserved. Don of Detail brings the gold standard of car detailing and ceramic coating directly to your driveway in Reno, NV.
             </p>
             <div className="flex items-center gap-6 text-sm font-medium text-don-cream/90 uppercase tracking-widest">
               <div className="flex items-center gap-2">
@@ -192,6 +192,9 @@ export default function App() {
                     <div className="absolute inset-0 w-full h-full bg-gradient-to-r from-transparent via-white/40 to-transparent -translate-x-full group-hover:animate-[shimmer_1.5s_infinite]" />
                     <span className="relative z-10 flex items-center gap-2">CLAIM MY FREE QUOTE <ChevronDown className="w-4 h-4 -rotate-90 group-hover:translate-x-1 transition-transform" /></span>
                   </button>
+                  <p className="text-center text-[10px] text-don-cream/40 uppercase tracking-widest mt-3 flex items-center justify-center gap-1.5">
+                    <Shield className="w-3 h-3 text-don-gold/70" /> 100% Free · No Obligation
+                  </p>
                 </form>
               </>
             )}
@@ -319,7 +322,7 @@ export default function App() {
 
             <div className="order-1 lg:order-2">
               <h2 className="text-4xl lg:text-5xl font-serif font-bold tracking-tight mb-6 text-don-cream">
-                The "Don" Standard.
+                The Reno Mobile Detailing Standard.
               </h2>
               <p className="text-don-cream/70 text-lg mb-12 font-light">
                 We don't just wash cars; we engineer preservation systems designed specifically for the high desert climate.
@@ -416,7 +419,7 @@ export default function App() {
             Quit driving a dirty car.
           </h2>
           <p className="text-xl lg:text-2xl font-medium mb-12 opacity-90 font-sans">
-            Protect your resale value today.
+            Protect your resale value with the best mobile detailing in Reno.
           </p>
           <a href="#quote" className="inline-flex items-center justify-center gap-3 bg-don-black text-don-gold hover:bg-[#1a1a1a] font-bold uppercase tracking-widest px-10 py-5 rounded-sm transition-all hover:scale-105 active:scale-95 shadow-2xl w-full sm:w-auto">
             GET MY QUOTE
@@ -425,7 +428,7 @@ export default function App() {
       </section>
 
       {/* Footer */}
-      <footer className="bg-don-black py-12 border-t border-white/10 text-center text-don-cream/40 text-sm font-light tracking-wide">
+      <footer className="bg-don-black py-12 border-t border-white/10 text-center text-don-cream/40 text-sm font-light tracking-wide pb-24 md:pb-12">
         <div className="flex justify-center items-center mb-4">
           <Logo className="w-12 h-12 object-contain opacity-70" />
         </div>
@@ -435,6 +438,14 @@ export default function App() {
           <Link to="/privacy" className="hover:text-don-gold transition-colors">Privacy Policy</Link>
         </div>
       </footer>
+
+      {/* Sticky Mobile CTA */}
+      <div className="fixed bottom-0 left-0 w-full p-4 bg-gradient-to-t from-don-black to-transparent z-50 md:hidden pointer-events-none">
+        <a href="tel:+17752307035" className="w-full bg-don-gold text-don-black font-bold uppercase tracking-widest py-4 rounded-sm flex items-center justify-center gap-2 shadow-[0_0_20px_rgba(212,175,55,0.3)] pointer-events-auto">
+          <Phone className="w-5 h-5" />
+          Tap to Call Now
+        </a>
+      </div>
     </div>
   );
 }
