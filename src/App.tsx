@@ -217,8 +217,8 @@ export default function App() {
 
           <div className="grid md:grid-cols-3 gap-8">
             <div className="bg-white/5 border border-white/10 p-10 rounded-xl hover:bg-white/10 transition-colors group">
-              <div className="w-14 h-14 bg-don-gold/10 rounded-full flex items-center justify-center mb-8 group-hover:scale-110 transition-transform">
-                <Sun className="w-7 h-7 text-don-gold" />
+              <div className="w-20 h-20 mb-8 group-hover:scale-110 transition-transform">
+                <img src="/icon_uv_burn.png" alt="UV Burn Icon" className="w-full h-full object-contain drop-shadow-[0_0_15px_rgba(212,175,55,0.2)]" />
               </div>
               <h3 className="text-2xl font-serif font-bold mb-4 text-don-cream">300 Days of UV Burn</h3>
               <p className="text-don-cream/70 font-light leading-relaxed">
@@ -226,8 +226,8 @@ export default function App() {
               </p>
             </div>
             <div className="bg-white/5 border border-white/10 p-10 rounded-xl hover:bg-white/10 transition-colors group">
-              <div className="w-14 h-14 bg-don-gold/10 rounded-full flex items-center justify-center mb-8 group-hover:scale-110 transition-transform">
-                <Wind className="w-7 h-7 text-don-gold" />
+              <div className="w-20 h-20 mb-8 group-hover:scale-110 transition-transform">
+                <img src="/icon_desert_wind.png" alt="Desert Wind Icon" className="w-full h-full object-contain drop-shadow-[0_0_15px_rgba(212,175,55,0.2)]" />
               </div>
               <h3 className="text-2xl font-serif font-bold mb-4 text-don-cream">The 'Washoe Zephyr' Grit</h3>
               <p className="text-don-cream/70 font-light leading-relaxed">
@@ -235,8 +235,8 @@ export default function App() {
               </p>
             </div>
             <div className="bg-white/5 border border-white/10 p-10 rounded-xl hover:bg-white/10 transition-colors group">
-              <div className="w-14 h-14 bg-don-gold/10 rounded-full flex items-center justify-center mb-8 group-hover:scale-110 transition-transform">
-                <Snowflake className="w-7 h-7 text-don-gold" />
+              <div className="w-20 h-20 mb-8 group-hover:scale-110 transition-transform">
+                <img src="/icon_road_salt.png" alt="Road Salt Icon" className="w-full h-full object-contain drop-shadow-[0_0_15px_rgba(212,175,55,0.2)]" />
               </div>
               <h3 className="text-2xl font-serif font-bold mb-4 text-don-cream">Sierra Road Salt</h3>
               <p className="text-don-cream/70 font-light leading-relaxed">
