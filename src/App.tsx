@@ -483,8 +483,6 @@ export default function App() {
               <div className="flex flex-wrap justify-center gap-3">
                 {[
                   { name: 'Google', color: '#4285F4' },
-                  { name: 'Facebook', color: '#1877F2' },
-                  { name: 'Yelp', color: '#D32323' },
                 ].map(({ name, color }) => (
                   <div key={name} className="flex items-center gap-2.5 bg-white/5 border border-white/10 rounded-lg px-4 py-2.5">
                     <span className="text-xs font-bold uppercase tracking-widest" style={{ color }}>{name}</span>
