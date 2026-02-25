@@ -15,6 +15,11 @@ body {
   font-family: var(--font-sans);
 }
 
+/* Subtle SVG noise texture for premium film grain effect */
+.bg-noise {
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' fill='transparent'/%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.04'/%3E%3C/svg%3E");
+}
+
 /* Luxury Gold Gradient Utilities */
 .text-don-gold-gradient {
   background: linear-gradient(135deg, #F9E29C 0%, #D4AF37 50%, #B48811 100%);
@@ -34,18 +39,21 @@ body {
 
 /* Shimmer animation for buttons */
 @keyframes shimmer {
-  0% { background-position: -200% center; }
-  100% { background-position: 200% center; }
+  0% {
+    background-position: -200% center;
+  }
+
+  100% {
+    background-position: 200% center;
+  }
 }
 
 .animate-shimmer {
-  background: linear-gradient(
-    90deg, 
-    #D4AF37 0%, 
-    #F9E29C 20%, 
-    #D4AF37 40%, 
-    #D4AF37 100%
-  );
+  background: linear-gradient(90deg,
+      #D4AF37 0%,
+      #F9E29C 20%,
+      #D4AF37 40%,
+      #D4AF37 100%);
   background-size: 200% auto;
   animation: shimmer 3s linear infinite;
 }

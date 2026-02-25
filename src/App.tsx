@@ -41,6 +41,9 @@ export default function App() {
 
   return (
     <div className="min-h-screen bg-don-black text-don-cream font-sans selection:bg-don-gold/30">
+      {/* Global Noise Overlay for premium film grain effect */}
+      <div className="fixed inset-0 pointer-events-none z-50 bg-noise"></div>
+
       {/* Sticky Header */}
       <header className="fixed top-0 w-full z-50 bg-don-black/90 backdrop-blur-md border-b border-white/10 transition-all">
         <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
