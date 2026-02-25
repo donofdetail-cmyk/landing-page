@@ -216,47 +216,35 @@ export default function App() {
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
-            <div className="relative bg-don-black border border-white/10 rounded-xl overflow-hidden group h-[400px] flex flex-col justify-end p-8 hover:border-don-gold/30 transition-colors duration-500">
-              <div className="absolute inset-0 bg-[url('/hero.jpg')] bg-cover bg-center opacity-30 group-hover:opacity-40 transition-opacity duration-700 group-hover:scale-105 transform" />
-              <div className="absolute inset-0 bg-gradient-to-t from-don-black via-don-black/80 to-transparent" />
-
-              <div className="relative z-10">
-                <div className="text-don-gold/40 font-serif text-6xl mb-4 font-light leading-none">01</div>
-                <h3 className="text-3xl font-serif font-bold mb-4 text-don-cream leading-tight">300 Days of UV Burn</h3>
-                <p className="text-don-cream/70 font-light leading-relaxed text-sm">
-                  At 4,500+ feet, UV radiation is significantly stronger. The high-elevation sun bakes clear coats, "chalks" paint, and cracks premium leather dashboards at an accelerated rate.
-                </p>
+            <div className="bg-white/5 border border-white/10 p-10 rounded-xl hover:bg-white/10 transition-colors group">
+              <div className="relative w-16 h-16 rounded-full mb-8 flex items-center justify-center group-hover:scale-110 transition-transform duration-500">
+                <div className="absolute inset-0 rounded-full border border-don-gold/40 bg-don-gold/5 group-hover:bg-don-gold/10 transition-colors shadow-[0_0_15px_rgba(212,175,55,0.15)] group-hover:shadow-[0_0_20px_rgba(212,175,55,0.3)] backdrop-blur-sm" />
+                <Sun className="w-8 h-8 text-don-gold relative z-10" strokeWidth={1} />
               </div>
+              <h3 className="text-2xl font-serif font-bold mb-4 text-don-cream">300 Days of UV Burn</h3>
+              <p className="text-don-cream/70 font-light leading-relaxed">
+                At 4,500+ feet, UV radiation is significantly stronger. The high-elevation sun bakes clear coats, "chalks" paint, and cracks premium leather dashboards at an accelerated rate.
+              </p>
             </div>
-
-            <div className="relative bg-don-black border border-white/10 rounded-xl overflow-hidden group h-[400px] flex flex-col justify-end p-8 hover:border-don-gold/30 transition-colors duration-500">
-              <div className="absolute inset-0 bg-[url('/hero.jpg')] bg-cover bg-center opacity-30 group-hover:opacity-40 transition-opacity duration-700 group-hover:scale-105 transform hidden" />
-              {/* Note: In a real app, you'd use different images for each card. Using hero.jpg as a placeholder for now to establish the design pattern */}
-              <div className="absolute inset-0 bg-gradient-to-tr from-[#1a1510] to-[#0a0a0a] opacity-80 group-hover:opacity-60 transition-opacity duration-700" />
-              <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1620891549027-942fdc95d3f5?q=80&w=600&auto=format&fit=crop')] bg-cover bg-center mix-blend-overlay opacity-20 group-hover:opacity-30 transition-opacity duration-700 group-hover:scale-105 transform" />
-              <div className="absolute inset-0 bg-gradient-to-t from-don-black via-don-black/80 to-transparent" />
-
-              <div className="relative z-10">
-                <div className="text-don-gold/40 font-serif text-6xl mb-4 font-light leading-none">02</div>
-                <h3 className="text-3xl font-serif font-bold mb-4 text-don-cream leading-tight">The 'Washoe Zephyr' Grit</h3>
-                <p className="text-don-cream/70 font-light leading-relaxed text-sm">
-                  Desert wind turns dust into sandpaper. Every time you drive through a dusty valley, micro-abrasions cut into your clear coat, permanently dulling the finish if left unprotected.
-                </p>
+            <div className="bg-white/5 border border-white/10 p-10 rounded-xl hover:bg-white/10 transition-colors group">
+              <div className="relative w-16 h-16 rounded-full mb-8 flex items-center justify-center group-hover:scale-110 transition-transform duration-500">
+                <div className="absolute inset-0 rounded-full border border-don-gold/40 bg-don-gold/5 group-hover:bg-don-gold/10 transition-colors shadow-[0_0_15px_rgba(212,175,55,0.15)] group-hover:shadow-[0_0_20px_rgba(212,175,55,0.3)] backdrop-blur-sm" />
+                <Wind className="w-8 h-8 text-don-gold relative z-10" strokeWidth={1} />
               </div>
+              <h3 className="text-2xl font-serif font-bold mb-4 text-don-cream">The 'Washoe Zephyr' Grit</h3>
+              <p className="text-don-cream/70 font-light leading-relaxed">
+                Desert wind turns dust into sandpaper. Every time you drive through a dusty valley, micro-abrasions cut into your clear coat, permanently dulling the finish if left unprotected.
+              </p>
             </div>
-
-            <div className="relative bg-don-black border border-white/10 rounded-xl overflow-hidden group h-[400px] flex flex-col justify-end p-8 hover:border-don-gold/30 transition-colors duration-500">
-              <div className="absolute inset-0 bg-gradient-to-tr from-[#10151a] to-[#0a0a0a] opacity-80 group-hover:opacity-60 transition-opacity duration-700" />
-              <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1542282088-fe8426682b8f?q=80&w=600&auto=format&fit=crop')] bg-cover bg-center mix-blend-overlay opacity-20 group-hover:opacity-30 transition-opacity duration-700 group-hover:scale-105 transform" />
-              <div className="absolute inset-0 bg-gradient-to-t from-don-black via-don-black/80 to-transparent" />
-
-              <div className="relative z-10">
-                <div className="text-don-gold/40 font-serif text-6xl mb-4 font-light leading-none">03</div>
-                <h3 className="text-3xl font-serif font-bold mb-4 text-don-cream leading-tight">Sierra Road Salt</h3>
-                <p className="text-don-cream/70 font-light leading-relaxed text-sm">
-                  Winter trips to Tahoe leave corrosive magnesium chloride and road salt clinging to your undercarriage and lower panels, quietly eating away at your vehicle's value.
-                </p>
+            <div className="bg-white/5 border border-white/10 p-10 rounded-xl hover:bg-white/10 transition-colors group">
+              <div className="relative w-16 h-16 rounded-full mb-8 flex items-center justify-center group-hover:scale-110 transition-transform duration-500">
+                <div className="absolute inset-0 rounded-full border border-don-gold/40 bg-don-gold/5 group-hover:bg-don-gold/10 transition-colors shadow-[0_0_15px_rgba(212,175,55,0.15)] group-hover:shadow-[0_0_20px_rgba(212,175,55,0.3)] backdrop-blur-sm" />
+                <Snowflake className="w-8 h-8 text-don-gold relative z-10" strokeWidth={1} />
               </div>
+              <h3 className="text-2xl font-serif font-bold mb-4 text-don-cream">Sierra Road Salt</h3>
+              <p className="text-don-cream/70 font-light leading-relaxed">
+                Winter trips to Tahoe leave corrosive magnesium chloride and road salt clinging to your undercarriage and lower panels, quietly eating away at your vehicle's value.
+              </p>
             </div>
           </div>
 
@@ -343,33 +331,27 @@ export default function App() {
                 We don't just wash cars; we engineer preservation systems designed specifically for the high desert climate.
               </p>
 
-              <div className="space-y-10">
-                <div className="flex gap-6">
-                  <div className="flex-shrink-0 w-12 h-12 rounded-full bg-don-gold/10 border border-don-gold/30 flex items-center justify-center">
-                    <Droplets className="w-5 h-5 text-don-gold" />
-                  </div>
-                  <div>
-                    <h4 className="text-2xl font-serif font-bold mb-2 text-don-cream">Zero Scratches. Zero Swirls.</h4>
-                    <p className="text-don-cream/70 font-light leading-relaxed">We use a strict two-bucket hand wash method with pH-neutral, paint-safe soaps — no automated brushes, no harsh chemicals. Every surface is treated with microfiber cloths to leave your finish flawless, not damaged.</p>
-                  </div>
+              <div className="space-y-12">
+                <div>
+                  <h4 className="text-2xl font-serif font-bold mb-3 text-don-cream flex items-baseline gap-4">
+                    <span className="text-don-gold/40 font-light text-xl">01.</span>
+                    Zero Scratches. Zero Swirls.
+                  </h4>
+                  <p className="text-don-cream/70 font-light leading-relaxed pl-10">We use a strict two-bucket hand wash method with pH-neutral, paint-safe soaps — no automated brushes, no harsh chemicals. Every surface is treated with microfiber cloths to leave your finish flawless, not damaged.</p>
                 </div>
-                <div className="flex gap-6">
-                  <div className="flex-shrink-0 w-12 h-12 rounded-full bg-don-gold/10 border border-don-gold/30 flex items-center justify-center">
-                    <Shield className="w-5 h-5 text-don-gold" />
-                  </div>
-                  <div>
-                    <h4 className="text-2xl font-serif font-bold mb-2 text-don-cream">Protection That Actually Lasts</h4>
-                    <p className="text-don-cream/70 font-light leading-relaxed">We apply professional-grade ceramic coatings and sealants that bond to your paint — not just sit on top of it. The result is months or years of UV, water, and contaminant resistance, not the weeks you get from a dealership detail.</p>
-                  </div>
+                <div>
+                  <h4 className="text-2xl font-serif font-bold mb-3 text-don-cream flex items-baseline gap-4">
+                    <span className="text-don-gold/40 font-light text-xl">02.</span>
+                    Protection That Actually Lasts
+                  </h4>
+                  <p className="text-don-cream/70 font-light leading-relaxed pl-10">We apply professional-grade ceramic coatings and sealants that bond to your paint — not just sit on top of it. The result is months or years of UV, water, and contaminant resistance, not the weeks you get from a dealership detail.</p>
                 </div>
-                <div className="flex gap-6">
-                  <div className="flex-shrink-0 w-12 h-12 rounded-full bg-don-gold/10 border border-don-gold/30 flex items-center justify-center">
-                    <CheckCircle className="w-5 h-5 text-don-gold" />
-                  </div>
-                  <div>
-                    <h4 className="text-2xl font-serif font-bold mb-2 text-don-cream">We Come to You — Always</h4>
-                    <p className="text-don-cream/70 font-light leading-relaxed">No drop-offs, no waiting rooms, no wasted time. We bring a fully self-contained setup — water, power, and everything needed — directly to your home, office, or job site. Premium results delivered to your door, on your schedule.</p>
-                  </div>
+                <div>
+                  <h4 className="text-2xl font-serif font-bold mb-3 text-don-cream flex items-baseline gap-4">
+                    <span className="text-don-gold/40 font-light text-xl">03.</span>
+                    We Come to You — Always
+                  </h4>
+                  <p className="text-don-cream/70 font-light leading-relaxed pl-10">No drop-offs, no waiting rooms, no wasted time. We bring a fully self-contained setup — water, power, and everything needed — directly to your home, office, or job site. Premium results delivered to your door, on your schedule.</p>
                 </div>
               </div>
             </div>
