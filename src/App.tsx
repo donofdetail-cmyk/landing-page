@@ -7,8 +7,8 @@ const Logo = ({ className = '', style = {} }: { className?: string; style?: Reac
     src="/logo.png"
     alt="Don of Detail logo"
     className={className}
-    loading="lazy"
-    decoding="async"
+    loading="eager"
+    decoding="sync"
     style={{ mixBlendMode: 'lighten', ...style }}
   />
 );
@@ -435,6 +435,7 @@ export default function App() {
                   style={{
                     height: lineProgress * lineTrackHeight,
                     boxShadow: lineProgress > 0 ? '0 0 8px 1px rgba(212,175,55,0.5)' : 'none',
+                    willChange: 'height, box-shadow'
                   }}
                 />
 
@@ -450,7 +451,7 @@ export default function App() {
                       <div key={title} className="flex items-start gap-6">
                         <div
                           ref={(el) => { iconRefs.current[i] = el; }}
-                          className={`relative flex-shrink-0 w-14 h-14 rounded-full flex items-center justify-center bg-don-black transition-transform duration-500 ${isActive ? 'scale-110' : 'scale-100'}`}
+                          className={`relative flex-shrink-0 w-14 h-14 rounded-full flex items-center justify-center bg-don-black transition-transform duration-500 will-change-transform ${isActive ? 'scale-110' : 'scale-100'}`}
                         >
                           <div className={`absolute inset-0 rounded-full border transition-all duration-500 ${isActive
                             ? 'border-don-gold bg-don-gold/20 shadow-[0_0_24px_4px_rgba(212,175,55,0.55)]'
@@ -505,7 +506,7 @@ export default function App() {
               {testimonials.map((t, i) => (
                 <div
                   key={i}
-                  className={`transition-all duration-500 absolute inset-0 flex flex-col items-center justify-center px-6 py-8 md:p-10 ${i === activeTestimonial ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-8 pointer-events-none'
+                  className={`transition-all duration-500 absolute inset-0 flex flex-col items-center justify-center px-6 py-8 md:p-10 will-change-transform will-change-opacity ${i === activeTestimonial ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-8 pointer-events-none'
                     }`}
                 >
                   <div className="flex gap-1 mb-4 md:mb-6">
