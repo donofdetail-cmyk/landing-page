@@ -17,6 +17,7 @@ export default function App() {
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [openFaq, setOpenFaq] = useState<number | null>(null);
   const [activeTestimonial, setActiveTestimonial] = useState(0);
+  const [isScrolled, setIsScrolled] = useState(false);
   const [lineProgress, setLineProgress] = useState(0);
   const [lineTrackHeight, setLineTrackHeight] = useState(0);
   const stepsRef = useRef<HTMLDivElement>(null);
@@ -24,6 +25,7 @@ export default function App() {
 
   useEffect(() => {
     const handleScroll = () => {
+      setIsScrolled(window.scrollY > 20);
       if (!stepsRef.current) return;
 
       // Compute exact pixel height between first and last icon centers
@@ -139,7 +141,7 @@ export default function App() {
       <div className="fixed inset-0 pointer-events-none z-50 bg-noise"></div>
 
       {/* Sticky Header */}
-      <header className="fixed top-0 w-full z-50 bg-don-black/90 backdrop-blur-md border-b border-white/10 transition-all">
+      <header className={`fixed top-0 w-full z-50 border-b border-white/10 transition-all duration-300 ${isScrolled ? 'bg-don-black/95 backdrop-blur-md py-0' : 'bg-transparent py-4 border-transparent'}`}>
         <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
           <div className="flex items-center gap-2">
             <Logo className="h-16 w-auto" />
