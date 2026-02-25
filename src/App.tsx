@@ -331,27 +331,39 @@ export default function App() {
                 We don't just wash cars; we engineer preservation systems designed specifically for the high desert climate.
               </p>
 
-              <div className="space-y-12">
-                <div>
-                  <h4 className="text-2xl font-serif font-bold mb-3 text-don-cream flex items-baseline gap-4">
-                    <span className="text-don-gold/40 font-light text-xl">01.</span>
-                    Zero Scratches. Zero Swirls.
-                  </h4>
-                  <p className="text-don-cream/70 font-light leading-relaxed pl-10">We use a strict two-bucket hand wash method with pH-neutral, paint-safe soaps — no automated brushes, no harsh chemicals. Every surface is treated with microfiber cloths to leave your finish flawless, not damaged.</p>
+              <div className="space-y-16">
+                <div className="relative pl-4 sm:pl-8">
+                  <div className="absolute top-0 left-0 -translate-y-10 sm:-translate-x-4 text-[120px] font-serif font-bold text-don-gold/5 leading-none tracking-tighter select-none pointer-events-none z-0">
+                    01.
+                  </div>
+                  <div className="relative z-10 relative">
+                    <h4 className="text-2xl font-serif font-bold mb-3 text-don-cream">
+                      Zero Scratches. Zero Swirls.
+                    </h4>
+                    <p className="text-don-cream/70 font-light leading-relaxed text-lg">We use a strict two-bucket hand wash method with pH-neutral, paint-safe soaps — no automated brushes, no harsh chemicals. Every surface is treated with microfiber cloths to leave your finish flawless, not damaged.</p>
+                  </div>
                 </div>
-                <div>
-                  <h4 className="text-2xl font-serif font-bold mb-3 text-don-cream flex items-baseline gap-4">
-                    <span className="text-don-gold/40 font-light text-xl">02.</span>
-                    Protection That Actually Lasts
-                  </h4>
-                  <p className="text-don-cream/70 font-light leading-relaxed pl-10">We apply professional-grade ceramic coatings and sealants that bond to your paint — not just sit on top of it. The result is months or years of UV, water, and contaminant resistance, not the weeks you get from a dealership detail.</p>
+                <div className="relative pl-4 sm:pl-8">
+                  <div className="absolute top-0 left-0 -translate-y-10 sm:-translate-x-4 text-[120px] font-serif font-bold text-don-gold/5 leading-none tracking-tighter select-none pointer-events-none z-0">
+                    02.
+                  </div>
+                  <div className="relative z-10 relative">
+                    <h4 className="text-2xl font-serif font-bold mb-3 text-don-cream">
+                      Protection That Actually Lasts
+                    </h4>
+                    <p className="text-don-cream/70 font-light leading-relaxed text-lg">We apply professional-grade ceramic coatings and sealants that bond to your paint — not just sit on top of it. The result is months or years of UV, water, and contaminant resistance, not the weeks you get from a dealership detail.</p>
+                  </div>
                 </div>
-                <div>
-                  <h4 className="text-2xl font-serif font-bold mb-3 text-don-cream flex items-baseline gap-4">
-                    <span className="text-don-gold/40 font-light text-xl">03.</span>
-                    We Come to You — Always
-                  </h4>
-                  <p className="text-don-cream/70 font-light leading-relaxed pl-10">No drop-offs, no waiting rooms, no wasted time. We bring a fully self-contained setup — water, power, and everything needed — directly to your home, office, or job site. Premium results delivered to your door, on your schedule.</p>
+                <div className="relative pl-4 sm:pl-8">
+                  <div className="absolute top-0 left-0 -translate-y-10 sm:-translate-x-4 text-[120px] font-serif font-bold text-don-gold/5 leading-none tracking-tighter select-none pointer-events-none z-0">
+                    03.
+                  </div>
+                  <div className="relative z-10 relative">
+                    <h4 className="text-2xl font-serif font-bold mb-3 text-don-cream">
+                      We Come to You — Always
+                    </h4>
+                    <p className="text-don-cream/70 font-light leading-relaxed text-lg">No drop-offs, no waiting rooms, no wasted time. We bring a fully self-contained setup — water, power, and everything needed — directly to your home, office, or job site. Premium results delivered to your door, on your schedule.</p>
+                  </div>
                 </div>
               </div>
             </div>
