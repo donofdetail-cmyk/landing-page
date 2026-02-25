@@ -217,8 +217,9 @@ export default function App() {
 
           <div className="grid md:grid-cols-3 gap-8">
             <div className="bg-white/5 border border-white/10 p-10 rounded-xl hover:bg-white/10 transition-colors group">
-              <div className="w-20 h-20 mb-8 group-hover:scale-110 transition-transform">
-                <img src="/icon_uv_burn.png" alt="UV Burn Icon" className="w-full h-full object-contain drop-shadow-[0_0_15px_rgba(212,175,55,0.2)]" />
+              <div className="relative w-16 h-16 rounded-full mb-8 flex items-center justify-center group-hover:scale-110 transition-transform duration-500">
+                <div className="absolute inset-0 rounded-full border border-don-gold/40 bg-don-gold/5 group-hover:bg-don-gold/10 transition-colors shadow-[0_0_15px_rgba(212,175,55,0.15)] group-hover:shadow-[0_0_20px_rgba(212,175,55,0.3)] backdrop-blur-sm" />
+                <Sun className="w-8 h-8 text-don-gold relative z-10" strokeWidth={1} />
               </div>
               <h3 className="text-2xl font-serif font-bold mb-4 text-don-cream">300 Days of UV Burn</h3>
               <p className="text-don-cream/70 font-light leading-relaxed">
@@ -226,8 +227,9 @@ export default function App() {
               </p>
             </div>
             <div className="bg-white/5 border border-white/10 p-10 rounded-xl hover:bg-white/10 transition-colors group">
-              <div className="w-20 h-20 mb-8 group-hover:scale-110 transition-transform">
-                <img src="/icon_desert_wind.png" alt="Desert Wind Icon" className="w-full h-full object-contain drop-shadow-[0_0_15px_rgba(212,175,55,0.2)]" />
+              <div className="relative w-16 h-16 rounded-full mb-8 flex items-center justify-center group-hover:scale-110 transition-transform duration-500">
+                <div className="absolute inset-0 rounded-full border border-don-gold/40 bg-don-gold/5 group-hover:bg-don-gold/10 transition-colors shadow-[0_0_15px_rgba(212,175,55,0.15)] group-hover:shadow-[0_0_20px_rgba(212,175,55,0.3)] backdrop-blur-sm" />
+                <Wind className="w-8 h-8 text-don-gold relative z-10" strokeWidth={1} />
               </div>
               <h3 className="text-2xl font-serif font-bold mb-4 text-don-cream">The 'Washoe Zephyr' Grit</h3>
               <p className="text-don-cream/70 font-light leading-relaxed">
@@ -235,8 +237,9 @@ export default function App() {
               </p>
             </div>
             <div className="bg-white/5 border border-white/10 p-10 rounded-xl hover:bg-white/10 transition-colors group">
-              <div className="w-20 h-20 mb-8 group-hover:scale-110 transition-transform">
-                <img src="/icon_road_salt.png" alt="Road Salt Icon" className="w-full h-full object-contain drop-shadow-[0_0_15px_rgba(212,175,55,0.2)]" />
+              <div className="relative w-16 h-16 rounded-full mb-8 flex items-center justify-center group-hover:scale-110 transition-transform duration-500">
+                <div className="absolute inset-0 rounded-full border border-don-gold/40 bg-don-gold/5 group-hover:bg-don-gold/10 transition-colors shadow-[0_0_15px_rgba(212,175,55,0.15)] group-hover:shadow-[0_0_20px_rgba(212,175,55,0.3)] backdrop-blur-sm" />
+                <Snowflake className="w-8 h-8 text-don-gold relative z-10" strokeWidth={1} />
               </div>
               <h3 className="text-2xl font-serif font-bold mb-4 text-don-cream">Sierra Road Salt</h3>
               <p className="text-don-cream/70 font-light leading-relaxed">
