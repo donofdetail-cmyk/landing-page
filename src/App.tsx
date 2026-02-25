@@ -155,7 +155,7 @@ export default function App() {
       </header>
 
       {/* Hero Section */}
-      <section className="relative pt-40 pb-20 lg:pt-48 lg:pb-32 overflow-hidden">
+      <section className="relative pt-56 pb-20 lg:pt-48 lg:pb-32 overflow-hidden">
         <div className="absolute inset-0 bg-[url('/hero.jpg')] bg-cover bg-center opacity-70" />
         <div className="absolute inset-0 bg-gradient-to-b from-don-black/50 via-don-black/80 to-don-black" />
 
