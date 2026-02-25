@@ -90,85 +90,81 @@ export default function App() {
           </div>
 
           {/* Lead Form - Glassmorphism */}
-          <div id="quote" className="relative bg-[#0a0a0a]/60 backdrop-blur-2xl border border-white/10 p-8 lg:p-12 rounded-2xl shadow-[0_0_50px_rgba(0,0,0,0.5)] overflow-hidden">
-            {/* Ambient luxury glow inside the card */}
-            <div className="absolute top-0 left-1/2 -translate-x-1/2 w-3/4 h-32 bg-don-gold opacity-10 blur-[80px] pointer-events-none" />
-            <div className="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-don-gold/50 to-transparent" />
+          <div id="quote" className="bg-white/5 backdrop-blur-xl border border-white/10 p-8 lg:p-10 rounded-xl shadow-2xl relative">
+            <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-don-gold to-transparent opacity-50 rounded-t-xl" />
 
             {isSubmitted ? (
-              <div className="flex flex-col items-center justify-center h-[400px] text-center animate-in fade-in zoom-in duration-500 relative z-10">
-                <div className="w-20 h-20 bg-don-gold/10 rounded-full flex items-center justify-center mb-6 shadow-[0_0_30px_rgba(212,175,55,0.2)]">
+              <div className="flex flex-col items-center justify-center h-[400px] text-center animate-in fade-in zoom-in duration-500">
+                <div className="w-20 h-20 bg-don-gold/10 rounded-full flex items-center justify-center mb-6">
                   <CheckCircle className="w-10 h-10 text-don-gold" />
                 </div>
-                <h3 className="text-3xl font-serif text-white mb-3 tracking-tight">Request Received</h3>
-                <p className="text-don-cream/60 font-light text-lg">We will be in touch with you shortly.</p>
+                <h3 className="text-3xl font-serif text-don-gold mb-3">Request Received</h3>
+                <p className="text-don-cream/80 font-light text-lg">We will be in touch with you shortly.</p>
               </div>
             ) : (
-              <div className="relative z-10">
-                <div className="mb-10 text-center sm:text-left">
-                  <h2 className="text-3xl lg:text-4xl font-serif font-bold mb-3 text-white tracking-tight">Request a Quote</h2>
-                  <p className="text-don-cream/50 text-sm font-light tracking-wide">Serving Reno &amp; Sparks — we'll come to you. Most quotes answered within the hour.</p>
-                </div>
+              <>
+                <h2 className="text-3xl font-serif font-bold mb-2 text-don-gold">Request a Quote</h2>
+                <p className="text-don-cream/60 text-sm mb-8 font-light tracking-wide">Serving Reno &amp; Sparks — we'll come to you. Most quotes answered within the hour.</p>
 
-                <form className="space-y-5" onSubmit={handleSubmit}>
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
-                    <div className="group">
-                      <label className="block text-[10px] font-bold uppercase tracking-[0.2em] text-don-cream/40 mb-2.5 transition-colors group-focus-within:text-don-gold/80">First Name</label>
+                <form className="space-y-4" onSubmit={handleSubmit}>
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div>
+                      <label className="block text-xs font-semibold uppercase tracking-widest text-don-cream/50 mb-2">First Name</label>
                       <input
                         type="text"
                         name="firstName"
                         required
                         placeholder="James"
-                        className="w-full bg-white/5 border border-white/10 rounded-lg px-5 py-4 text-don-cream text-sm placeholder:text-don-cream/20 focus:outline-none focus:ring-1 focus:ring-don-gold/50 focus:border-don-gold/50 hover:border-white/20 focus:bg-white/10 transition-all duration-300"
+                        className="w-full bg-don-black/50 border border-white/10 rounded-sm px-4 py-3 text-don-cream placeholder:text-don-cream/30 focus:outline-none focus:ring-1 focus:ring-don-gold focus:border-don-gold transition-all"
                       />
                     </div>
-                    <div className="group">
-                      <label className="block text-[10px] font-bold uppercase tracking-[0.2em] text-don-cream/40 mb-2.5 transition-colors group-focus-within:text-don-gold/80">Last Name</label>
+                    <div>
+                      <label className="block text-xs font-semibold uppercase tracking-widest text-don-cream/50 mb-2">Last Name</label>
                       <input
                         type="text"
                         name="lastName"
                         required
                         placeholder="Bond"
-                        className="w-full bg-white/5 border border-white/10 rounded-lg px-5 py-4 text-don-cream text-sm placeholder:text-don-cream/20 focus:outline-none focus:ring-1 focus:ring-don-gold/50 focus:border-don-gold/50 hover:border-white/20 focus:bg-white/10 transition-all duration-300"
+                        className="w-full bg-don-black/50 border border-white/10 rounded-sm px-4 py-3 text-don-cream placeholder:text-don-cream/30 focus:outline-none focus:ring-1 focus:ring-don-gold focus:border-don-gold transition-all"
                       />
                     </div>
                   </div>
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
-                    <div className="group">
-                      <label className="block text-[10px] font-bold uppercase tracking-[0.2em] text-don-cream/40 mb-2.5 transition-colors group-focus-within:text-don-gold/80">Phone</label>
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div>
+                      <label className="block text-xs font-semibold uppercase tracking-widest text-don-cream/50 mb-2">Phone</label>
                       <input
                         type="tel"
                         name="phone"
                         required
                         placeholder="(775) 230-7035"
-                        className="w-full bg-white/5 border border-white/10 rounded-lg px-5 py-4 text-don-cream text-sm placeholder:text-don-cream/20 focus:outline-none focus:ring-1 focus:ring-don-gold/50 focus:border-don-gold/50 hover:border-white/20 focus:bg-white/10 transition-all duration-300"
+                        className="w-full bg-don-black/50 border border-white/10 rounded-sm px-4 py-3 text-don-cream placeholder:text-don-cream/30 focus:outline-none focus:ring-1 focus:ring-don-gold focus:border-don-gold transition-all"
                       />
                     </div>
-                    <div className="group">
-                      <label className="block text-[10px] font-bold uppercase tracking-[0.2em] text-don-cream/40 mb-2.5 transition-colors group-focus-within:text-don-gold/80">Email</label>
+                    <div>
+                      <label className="block text-xs font-semibold uppercase tracking-widest text-don-cream/50 mb-2">Email</label>
                       <input
                         type="email"
                         name="email"
                         required
                         placeholder="james@example.com"
-                        className="w-full bg-white/5 border border-white/10 rounded-lg px-5 py-4 text-don-cream text-sm placeholder:text-don-cream/20 focus:outline-none focus:ring-1 focus:ring-don-gold/50 focus:border-don-gold/50 hover:border-white/20 focus:bg-white/10 transition-all duration-300"
+                        className="w-full bg-don-black/50 border border-white/10 rounded-sm px-4 py-3 text-don-cream placeholder:text-don-cream/30 focus:outline-none focus:ring-1 focus:ring-don-gold focus:border-don-gold transition-all"
                       />
                     </div>
                   </div>
-                  <div className="group">
-                    <label className="block text-[10px] font-bold uppercase tracking-[0.2em] text-don-cream/40 mb-2.5 transition-colors group-focus-within:text-don-gold/80">Vehicle Make/Model</label>
+                  <div>
+                    <label className="block text-xs font-semibold uppercase tracking-widest text-don-cream/50 mb-2">Vehicle Make/Model</label>
                     <input
                       type="text"
                       name="vehicle"
                       required
                       placeholder="e.g. 2018 Toyota Tacoma"
-                      className="w-full bg-white/5 border border-white/10 rounded-lg px-5 py-4 text-don-cream text-sm placeholder:text-don-cream/20 focus:outline-none focus:ring-1 focus:ring-don-gold/50 focus:border-don-gold/50 hover:border-white/20 focus:bg-white/10 transition-all duration-300"
+                      className="w-full bg-don-black/50 border border-white/10 rounded-sm px-4 py-3 text-don-cream placeholder:text-don-cream/30 focus:outline-none focus:ring-1 focus:ring-don-gold focus:border-don-gold transition-all"
                     />
                   </div>
-                  <div className="group">
-                    <label className="block text-[10px] font-bold uppercase tracking-[0.2em] text-don-cream/40 mb-2.5 transition-colors group-focus-within:text-don-gold/80">Primary Concern</label>
+                  <div>
+                    <label className="block text-xs font-semibold uppercase tracking-widest text-don-cream/50 mb-2">Primary Concern</label>
                     <div className="relative">
-                      <select required name="service" defaultValue="" className="w-full bg-white/5 border border-white/10 rounded-lg px-5 py-4 text-don-cream text-sm appearance-none focus:outline-none focus:ring-1 focus:ring-don-gold/50 focus:border-don-gold/50 hover:border-white/20 focus:bg-white/10 transition-all duration-300 cursor-pointer">
+                      <select required name="service" defaultValue="" className="w-full bg-don-black/50 border border-white/10 rounded-sm px-4 py-3 text-don-cream appearance-none focus:outline-none focus:ring-1 focus:ring-don-gold focus:border-don-gold transition-all">
                         <option value="" disabled className="text-don-black">Select a service...</option>
                         <option value="interior" className="text-don-black">Interior Detail</option>
                         <option value="exterior" className="text-don-black">Exterior Detail</option>
@@ -176,37 +172,31 @@ export default function App() {
                         <option value="paint-correction" className="text-don-black">Paint Correction</option>
                         <option value="ceramic-coating" className="text-don-black">Ceramic Coating</option>
                       </select>
-                      <ChevronDown className="absolute right-5 top-1/2 -translate-y-1/2 w-4 h-4 text-don-gold/70 group-hover:text-don-gold transition-colors pointer-events-none" />
+                      <ChevronDown className="absolute right-4 top-1/2 -translate-y-1/2 w-5 h-5 text-don-gold pointer-events-none" />
                     </div>
                   </div>
-
-                  <div className="pt-2">
-                    <label className="flex items-start gap-4 cursor-pointer group">
-                      <input
-                        type="checkbox"
-                        name="consent"
-                        required
-                        className="mt-0.5 w-4 h-4 flex-shrink-0 accent-[#D4AF37] cursor-pointer"
-                      />
-                      <span className="text-[11px] text-don-cream/40 leading-relaxed font-light">
-                        By submitting this form, I authorize Don of Detail LLC to contact me via phone and/or SMS text message at the number provided regarding my quote and services. Message &amp; data rates may apply. View our{' '}
-                        <Link to="/terms" className="text-white hover:text-don-gold transition-colors">Terms of Service</Link>{' '}and{' '}
-                        <Link to="/privacy" className="text-white hover:text-don-gold transition-colors">Privacy Policy</Link>.
-                      </span>
-                    </label>
-                  </div>
-
-                  <div className="pt-2">
-                    <button type="submit" className="w-full bg-don-gold text-don-black font-bold text-[11px] uppercase tracking-[0.2em] py-5 rounded-lg transition-all duration-500 hover:shadow-[0_0_30px_rgba(212,175,55,0.3)] hover:bg-[#F9E29C] hover:-translate-y-0.5 flex items-center justify-center gap-3 group relative overflow-hidden">
-                      <div className="absolute inset-0 w-full h-full bg-gradient-to-r from-transparent via-white/40 to-transparent -translate-x-full group-hover:animate-[shimmer_1.5s_infinite]" />
-                      <span className="relative z-10 flex items-center gap-2">CLAIM MY FREE QUOTE <ChevronDown className="w-4 h-4 -rotate-90 group-hover:translate-x-1 transition-transform" /></span>
-                    </button>
-                    <p className="text-center text-[9px] text-don-cream/30 uppercase tracking-[0.2em] mt-5 flex items-center justify-center gap-2">
-                      <Shield className="w-3 h-3 text-don-gold/50" /> 100% Free · No Obligation
-                    </p>
-                  </div>
+                  <label className="flex items-start gap-3 cursor-pointer group">
+                    <input
+                      type="checkbox"
+                      name="consent"
+                      required
+                      className="mt-0.5 w-4 h-4 flex-shrink-0 accent-[#D4AF37] cursor-pointer"
+                    />
+                    <span className="text-xs text-don-cream/50 leading-relaxed">
+                      By submitting this form, I authorize Don of Detail LLC to contact me via phone and/or SMS text message at the number provided regarding my quote and services. Message &amp; data rates may apply. View our{' '}
+                      <Link to="/terms" className="text-don-gold hover:underline">Terms of Service</Link>{' '}and{' '}
+                      <Link to="/privacy" className="text-don-gold hover:underline">Privacy Policy</Link>.
+                    </span>
+                  </label>
+                  <button type="submit" className="w-full bg-don-gold hover:bg-don-gold/90 text-don-black font-bold uppercase tracking-widest py-4 rounded-sm mt-2 transition-all hover:shadow-[0_0_20px_rgba(212,175,55,0.3)] flex items-center justify-center gap-2 group cursor-pointer relative overflow-hidden">
+                    <div className="absolute inset-0 w-full h-full bg-gradient-to-r from-transparent via-white/40 to-transparent -translate-x-full group-hover:animate-[shimmer_1.5s_infinite]" />
+                    <span className="relative z-10 flex items-center gap-2">CLAIM MY FREE QUOTE <ChevronDown className="w-4 h-4 -rotate-90 group-hover:translate-x-1 transition-transform" /></span>
+                  </button>
+                  <p className="text-center text-[10px] text-don-cream/40 uppercase tracking-widest mt-3 flex items-center justify-center gap-1.5">
+                    <Shield className="w-3 h-3 text-don-gold/70" /> 100% Free · No Obligation
+                  </p>
                 </form>
-              </div>
+              </>
             )}
           </div>
         </div>
