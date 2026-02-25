@@ -59,8 +59,8 @@ export default function App() {
 
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden">
-        <div className="absolute inset-0 bg-[url('/hero.jpg')] bg-cover bg-center opacity-50" />
-        <div className="absolute inset-0 bg-gradient-to-b from-don-black/70 via-don-black/80 to-don-black" />
+        <div className="absolute inset-0 bg-[url('/hero.jpg')] bg-cover bg-center opacity-75" />
+        <div className="absolute inset-0 bg-gradient-to-b from-don-black/40 via-don-black/70 to-don-black" />
 
         <div className="relative max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           <div className="max-w-2xl">
