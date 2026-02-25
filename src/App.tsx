@@ -333,7 +333,7 @@ export default function App() {
 
               <div className="space-y-16">
                 <div className="relative pl-4 sm:pl-8">
-                  <div className="absolute top-0 left-0 -translate-y-10 sm:-translate-x-4 text-[120px] font-serif font-bold text-[#d4af37]/[0.02] leading-none tracking-tighter select-none pointer-events-none z-0">
+                  <div className="absolute top-0 left-0 -translate-y-10 sm:-translate-x-4 text-[120px] font-serif font-bold text-don-gold/5 leading-none tracking-tighter select-none pointer-events-none z-0">
                     01.
                   </div>
                   <div className="relative z-10 relative">
@@ -344,7 +344,7 @@ export default function App() {
                   </div>
                 </div>
                 <div className="relative pl-4 sm:pl-8">
-                  <div className="absolute top-0 left-0 -translate-y-10 sm:-translate-x-4 text-[120px] font-serif font-bold text-[#d4af37]/[0.02] leading-none tracking-tighter select-none pointer-events-none z-0">
+                  <div className="absolute top-0 left-0 -translate-y-10 sm:-translate-x-4 text-[120px] font-serif font-bold text-don-gold/5 leading-none tracking-tighter select-none pointer-events-none z-0">
                     02.
                   </div>
                   <div className="relative z-10 relative">
@@ -355,7 +355,7 @@ export default function App() {
                   </div>
                 </div>
                 <div className="relative pl-4 sm:pl-8">
-                  <div className="absolute top-0 left-0 -translate-y-10 sm:-translate-x-4 text-[120px] font-serif font-bold text-[#d4af37]/[0.02] leading-none tracking-tighter select-none pointer-events-none z-0">
+                  <div className="absolute top-0 left-0 -translate-y-10 sm:-translate-x-4 text-[120px] font-serif font-bold text-don-gold/5 leading-none tracking-tighter select-none pointer-events-none z-0">
                     03.
                   </div>
                   <div className="relative z-10 relative">
