@@ -325,10 +325,10 @@ export default function App() {
 
             <div className="order-1 lg:order-2">
               <h2 className="text-4xl lg:text-5xl font-serif font-bold tracking-tight mb-6 text-don-cream">
-                The Reno Mobile Detailing Standard.
+                How It Works.
               </h2>
               <p className="text-don-cream/70 text-lg mb-12 font-light">
-                We don't just wash cars; we engineer preservation systems designed specifically for the high desert climate.
+                Secure your slot in three simple steps. We handle the rest.
               </p>
 
               <div className="space-y-16">
@@ -338,9 +338,9 @@ export default function App() {
                   </div>
                   <div className="relative z-10 relative">
                     <h4 className="text-2xl font-serif font-bold mb-3 text-don-cream">
-                      Zero Scratches. Zero Swirls.
+                      Request a Quote
                     </h4>
-                    <p className="text-don-cream/70 font-light leading-relaxed text-lg">We use a strict two-bucket hand wash method with pH-neutral, paint-safe soaps — no automated brushes, no harsh chemicals. Every surface is treated with microfiber cloths to leave your finish flawless, not damaged.</p>
+                    <p className="text-don-cream/70 font-light leading-relaxed text-lg">Fill out our brief online form with your vehicle details and location. We review every request personally and typically respond with a custom quote within the hour.</p>
                   </div>
                 </div>
                 <div className="relative pl-4 sm:pl-8">
@@ -349,9 +349,9 @@ export default function App() {
                   </div>
                   <div className="relative z-10 relative">
                     <h4 className="text-2xl font-serif font-bold mb-3 text-don-cream">
-                      Protection That Actually Lasts
+                      Schedule & Confirm
                     </h4>
-                    <p className="text-don-cream/70 font-light leading-relaxed text-lg">We apply professional-grade ceramic coatings and sealants that bond to your paint — not just sit on top of it. The result is months or years of UV, water, and contaminant resistance, not the weeks you get from a dealership detail.</p>
+                    <p className="text-don-cream/70 font-light leading-relaxed text-lg">Once you approve the quote, we'll find a time that works perfectly with your schedule. No need to clear your whole day—we bring our fully-equipped mobile unit directly to your home or office.</p>
                   </div>
                 </div>
                 <div className="relative pl-4 sm:pl-8">
@@ -360,9 +360,9 @@ export default function App() {
                   </div>
                   <div className="relative z-10 relative">
                     <h4 className="text-2xl font-serif font-bold mb-3 text-don-cream">
-                      We Come to You — Always
+                      Experience the Standard
                     </h4>
-                    <p className="text-don-cream/70 font-light leading-relaxed text-lg">No drop-offs, no waiting rooms, no wasted time. We bring a fully self-contained setup — water, power, and everything needed — directly to your home, office, or job site. Premium results delivered to your door, on your schedule.</p>
+                    <p className="text-don-cream/70 font-light leading-relaxed text-lg">Hand us the keys and relax. We execute our meticulous detailing process, transforming your vehicle right where it sits. You get a dealership-ready finish without ever leaving your driveway.</p>
                   </div>
                 </div>
               </div>
