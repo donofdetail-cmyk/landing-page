@@ -158,7 +158,7 @@ export default function App() {
 
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 lg:pt-40 lg:pb-32 overflow-hidden">
-        <div className="absolute inset-0 bg-[url('/hero.jpg')] bg-cover bg-center opacity-70" />
+        <div className="absolute inset-0 bg-[url('/ceramic%20coating%20reno%20nv.JPG')] bg-cover bg-center opacity-70" />
         <div className="absolute inset-0 bg-gradient-to-b from-don-black/60 via-don-black/90 to-don-black" />
 
         <div className="relative max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
