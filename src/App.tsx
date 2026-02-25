@@ -501,20 +501,20 @@ export default function App() {
             </div>
 
             {/* Card */}
-            <div className="relative bg-white/5 border border-white/10 rounded-xl p-10 text-center overflow-hidden min-h-[440px] md:min-h-[340px] flex flex-col justify-center">
+            <div className="relative bg-white/5 border border-white/10 rounded-xl px-4 py-8 md:p-10 text-center overflow-hidden min-h-[440px] flex flex-col justify-center">
               {testimonials.map((t, i) => (
                 <div
                   key={i}
-                  className={`transition-all duration-500 absolute inset-0 flex flex-col items-center justify-center p-10 ${i === activeTestimonial ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-8 pointer-events-none'
+                  className={`transition-all duration-500 absolute inset-0 flex flex-col items-center justify-center px-6 py-8 md:p-10 ${i === activeTestimonial ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-8 pointer-events-none'
                     }`}
                 >
-                  <div className="flex gap-1 mb-6">
+                  <div className="flex gap-1 mb-4 md:mb-6">
                     {[1, 2, 3, 4, 5].map(s => <Star key={s} className="w-4 h-4 text-don-gold fill-don-gold" />)}
                   </div>
-                  <blockquote className="text-xl md:text-2xl font-serif italic text-don-cream leading-snug mb-6">
+                  <blockquote className="text-lg md:text-2xl font-serif italic text-don-cream leading-snug mb-4 md:mb-6">
                     "{t.quote}"
                   </blockquote>
-                  <cite className="text-don-cream/60 uppercase tracking-widest text-xs not-italic font-semibold">
+                  <cite className="text-don-cream/60 uppercase tracking-widest text-[10px] md:text-xs not-italic font-semibold">
                     — {t.author}, {t.location}
                   </cite>
                 </div>
