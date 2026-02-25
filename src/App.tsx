@@ -1,6 +1,5 @@
-import React, { useState, useRef } from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { motion, useScroll, useTransform } from 'motion/react';
 import { Sun, Wind, Snowflake, Droplets, Shield, Star, CheckCircle, Phone, ChevronDown, Award, Instagram } from 'lucide-react';
 
 const Logo = ({ className = '', style = {} }: { className?: string; style?: React.CSSProperties }) => (
@@ -11,78 +10,6 @@ const Logo = ({ className = '', style = {} }: { className?: string; style?: Reac
     style={{ mixBlendMode: 'lighten', ...style }}
   />
 );
-
-const painPoints = [
-  {
-    title: "300 Days of UV Burn",
-    text: "At 4,500+ feet, UV radiation is significantly stronger. The high-elevation sun bakes clear coats, \"chalks\" paint, and cracks premium leather dashboards at an accelerated rate.",
-    image: "https://images.unsplash.com/photo-1542281286-9e0a16bb7366?auto=format&fit=crop&q=80&w=800",
-    icon: Sun
-  },
-  {
-    title: "The 'Washoe Zephyr'",
-    text: "Desert wind turns dust into sandpaper. Every time you drive through a dusty valley, micro-abrasions cut into your clear coat, permanently dulling the finish if left unprotected.",
-    image: "https://images.unsplash.com/photo-1620891549027-942fdc95d3f5?auto=format&fit=crop&q=80&w=800",
-    icon: Wind
-  },
-  {
-    title: "Sierra Road Salt",
-    text: "Winter trips to Tahoe leave corrosive magnesium chloride and road salt clinging to your undercarriage and lower panels, quietly eating away at your vehicle's value.",
-    image: "https://images.unsplash.com/photo-1542282088-fe8426682b8f?auto=format&fit=crop&q=80&w=800",
-    icon: Snowflake
-  }
-];
-
-const FlipCard = ({ card }: { card: typeof painPoints[0] }) => {
-  const cardRef = useRef<HTMLDivElement>(null);
-
-  // Track this specific card's position in the viewport
-  const { scrollYProgress } = useScroll({
-    target: cardRef,
-    offset: ["start center", "end center"] // Start flipping when top hits center, finish when bottom hits center
-  });
-
-  // Map the scroll progress from 0 to 1 into a degree rotation from 0 to 180
-  const rotateY = useTransform(scrollYProgress, [0, 1], [0, 180]);
-
-  return (
-    <div ref={cardRef} className="relative w-full aspect-[3/4] md:h-[450px] flex-shrink-0 perspective-1000">
-      <motion.div
-        style={{ rotateY, transformStyle: "preserve-3d" }}
-        className="w-full h-full relative"
-      >
-        {/* Front of Card (Image) */}
-        <div
-          className="absolute inset-0 w-full h-full bg-don-black border border-white/10 rounded-2xl overflow-hidden shadow-2xl backface-hidden"
-          style={{ backfaceVisibility: 'hidden' }}
-        >
-          <img src={card.image} alt={card.title} className="w-full h-full object-cover opacity-60" />
-          <div className="absolute inset-0 bg-gradient-to-t from-don-black via-don-black/40 to-transparent" />
-          <div className="absolute bottom-6 left-6 right-6">
-            <h3 className="text-2xl md:text-3xl font-serif font-bold text-don-cream drop-shadow-lg">{card.title}</h3>
-            <p className="text-don-gold uppercase tracking-widest text-xs mt-2 font-bold flex items-center gap-2">Keep Scrolling <ChevronDown className="w-3 h-3 -rotate-90 animate-pulse" /></p>
-          </div>
-        </div>
-
-        {/* Back of Card (Text) */}
-        <div
-          className="absolute inset-0 w-full h-full bg-don-black border border-don-gold/30 rounded-2xl p-8 md:p-12 flex flex-col justify-center items-center text-center shadow-[0_0_30px_rgba(212,175,55,0.1)] backface-hidden"
-          style={{ backfaceVisibility: 'hidden', transform: 'rotateY(180deg)' }}
-        >
-          <div className="w-16 h-16 rounded-full bg-don-gold/5 border border-don-gold/20 flex items-center justify-center mb-6">
-            <card.icon className="w-8 h-8 text-don-gold relative z-10" strokeWidth={1} />
-          </div>
-          <h3 className="text-2xl md:text-3xl font-serif font-bold mb-4 text-don-cream">{card.title}</h3>
-          <p className="text-don-cream/70 font-light leading-relaxed text-sm md:text-base">
-            {card.text}
-          </p>
-        </div>
-      </motion.div>
-    </div>
-  );
-};
-
-
 
 export default function App() {
   const [isSubmitted, setIsSubmitted] = useState(false);
@@ -276,7 +203,7 @@ export default function App() {
       </section>
 
       {/* Agitation Section */}
-      <section id="reno-toll" className="pt-24 bg-don-black border-t border-white/5 relative">
+      <section className="py-24 bg-don-black border-t border-white/5 relative">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center max-w-3xl mx-auto mb-16">
             <h2 className="text-4xl lg:text-5xl font-serif font-bold tracking-tight mb-6 text-don-cream">
@@ -289,9 +216,36 @@ export default function App() {
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
-            {painPoints.map((card, i) => (
-              <FlipCard key={i} card={card} />
-            ))}
+            <div className="bg-white/5 border border-white/10 p-10 rounded-xl hover:bg-white/10 transition-colors group">
+              <div className="relative w-16 h-16 rounded-full mb-8 flex items-center justify-center group-hover:scale-110 transition-transform duration-500">
+                <div className="absolute inset-0 rounded-full border border-don-gold/40 bg-don-gold/5 group-hover:bg-don-gold/10 transition-colors shadow-[0_0_15px_rgba(212,175,55,0.15)] group-hover:shadow-[0_0_20px_rgba(212,175,55,0.3)] backdrop-blur-sm" />
+                <Sun className="w-8 h-8 text-don-gold relative z-10" strokeWidth={1} />
+              </div>
+              <h3 className="text-2xl font-serif font-bold mb-4 text-don-cream">300 Days of UV Burn</h3>
+              <p className="text-don-cream/70 font-light leading-relaxed">
+                At 4,500+ feet, UV radiation is significantly stronger. The high-elevation sun bakes clear coats, "chalks" paint, and cracks premium leather dashboards at an accelerated rate.
+              </p>
+            </div>
+            <div className="bg-white/5 border border-white/10 p-10 rounded-xl hover:bg-white/10 transition-colors group">
+              <div className="relative w-16 h-16 rounded-full mb-8 flex items-center justify-center group-hover:scale-110 transition-transform duration-500">
+                <div className="absolute inset-0 rounded-full border border-don-gold/40 bg-don-gold/5 group-hover:bg-don-gold/10 transition-colors shadow-[0_0_15px_rgba(212,175,55,0.15)] group-hover:shadow-[0_0_20px_rgba(212,175,55,0.3)] backdrop-blur-sm" />
+                <Wind className="w-8 h-8 text-don-gold relative z-10" strokeWidth={1} />
+              </div>
+              <h3 className="text-2xl font-serif font-bold mb-4 text-don-cream">The 'Washoe Zephyr' Grit</h3>
+              <p className="text-don-cream/70 font-light leading-relaxed">
+                Desert wind turns dust into sandpaper. Every time you drive through a dusty valley, micro-abrasions cut into your clear coat, permanently dulling the finish if left unprotected.
+              </p>
+            </div>
+            <div className="bg-white/5 border border-white/10 p-10 rounded-xl hover:bg-white/10 transition-colors group">
+              <div className="relative w-16 h-16 rounded-full mb-8 flex items-center justify-center group-hover:scale-110 transition-transform duration-500">
+                <div className="absolute inset-0 rounded-full border border-don-gold/40 bg-don-gold/5 group-hover:bg-don-gold/10 transition-colors shadow-[0_0_15px_rgba(212,175,55,0.15)] group-hover:shadow-[0_0_20px_rgba(212,175,55,0.3)] backdrop-blur-sm" />
+                <Snowflake className="w-8 h-8 text-don-gold relative z-10" strokeWidth={1} />
+              </div>
+              <h3 className="text-2xl font-serif font-bold mb-4 text-don-cream">Sierra Road Salt</h3>
+              <p className="text-don-cream/70 font-light leading-relaxed">
+                Winter trips to Tahoe leave corrosive magnesium chloride and road salt clinging to your undercarriage and lower panels, quietly eating away at your vehicle's value.
+              </p>
+            </div>
           </div>
 
           {/* Mid-page CTA */}
