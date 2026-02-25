@@ -34,14 +34,21 @@ const painPoints = [
 ];
 
 const FlipCard = ({ card }: { card: typeof painPoints[0] }) => {
+  const cardRef = useRef<HTMLDivElement>(null);
+
+  // Track this specific card's position in the viewport
+  const { scrollYProgress } = useScroll({
+    target: cardRef,
+    offset: ["start center", "end center"] // Start flipping when top hits center, finish when bottom hits center
+  });
+
+  // Map the scroll progress from 0 to 1 into a degree rotation from 0 to 180
+  const rotateY = useTransform(scrollYProgress, [0, 1], [0, 180]);
+
   return (
-    <div className="relative w-full aspect-[3/4] md:h-[450px] flex-shrink-0 perspective-1000">
+    <div ref={cardRef} className="relative w-full aspect-[3/4] md:h-[450px] flex-shrink-0 perspective-1000">
       <motion.div
-        initial={{ rotateY: 0 }}
-        whileInView={{ rotateY: 180 }}
-        viewport={{ margin: "-30% 0px -30% 0px", amount: "some" }}
-        transition={{ duration: 0.8, type: "spring", stiffness: 50, damping: 15 }}
-        style={{ transformStyle: "preserve-3d" }}
+        style={{ rotateY, transformStyle: "preserve-3d" }}
         className="w-full h-full relative"
       >
         {/* Front of Card (Image) */}
