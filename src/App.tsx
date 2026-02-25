@@ -76,7 +76,7 @@ export default function App() {
   const faqs = [
     {
       q: 'How much does mobile auto detailing cost in Reno, NV?',
-      a: 'Pricing depends on vehicle size and the service selected. Exterior packages start at $200+. For a full interior & exterior detail, the average client should expect to spend between $250 and $400. Because every vehicle is different, we require you to submit a form to get a custom quote. Request yours free above and we\'ll respond within the hour.',
+      a: 'Pricing depends on vehicle size and the service selected. Exterior packages start at $200+. For a full interior & exterior detail, the average client should expect to spend between $250 and $400. Because every vehicle is different, we require you to submit a form to get a custom quote.',
     },
     {
       q: 'How long does a full car detail take?',
