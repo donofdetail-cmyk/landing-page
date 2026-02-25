@@ -501,7 +501,7 @@ export default function App() {
             </div>
 
             {/* Card */}
-            <div className="relative bg-white/5 border border-white/10 rounded-xl p-10 text-center overflow-hidden min-h-[340px] flex flex-col justify-center">
+            <div className="relative bg-white/5 border border-white/10 rounded-xl p-10 text-center overflow-hidden min-h-[440px] md:min-h-[340px] flex flex-col justify-center">
               {testimonials.map((t, i) => (
                 <div
                   key={i}
@@ -611,15 +611,6 @@ export default function App() {
           <Link to="/terms" className="hover:text-don-gold transition-colors">Terms of Service</Link>
           <Link to="/privacy" className="hover:text-don-gold transition-colors">Privacy Policy</Link>
         </div>
-      </footer>
-
-      {/* Sticky Mobile CTA */}
-      <div className="fixed bottom-0 left-0 w-full p-4 bg-gradient-to-t from-don-black to-transparent z-50 md:hidden pointer-events-none">
-        <a href="tel:+17752307035" className="w-full bg-don-gold text-don-black font-bold uppercase tracking-widest py-4 rounded-sm flex items-center justify-center gap-2 shadow-[0_0_20px_rgba(212,175,55,0.3)] pointer-events-auto">
-          <Phone className="w-5 h-5" />
-          Tap to Call Now
-        </a>
-      </div>
-    </div>
+      </footer>    </div>
   );
 }
