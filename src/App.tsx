@@ -12,19 +12,37 @@ const Logo = ({ className = '', style = {} }: { className?: string; style?: Reac
   />
 );
 
-const FlipCard = ({ card, index, progress }: { card: any, index: number, progress: any }) => {
-  // Flip the card as the user scrolls through its specific segment
-  const start = index * 0.33;
-  const flipStart = start + 0.1;
-  const flipEnd = start + 0.25;
+const painPoints = [
+  {
+    title: "300 Days of UV Burn",
+    text: "At 4,500+ feet, UV radiation is significantly stronger. The high-elevation sun bakes clear coats, \"chalks\" paint, and cracks premium leather dashboards at an accelerated rate.",
+    image: "https://images.unsplash.com/photo-1542281286-9e0a16bb7366?auto=format&fit=crop&q=80&w=800",
+    icon: Sun
+  },
+  {
+    title: "The 'Washoe Zephyr'",
+    text: "Desert wind turns dust into sandpaper. Every time you drive through a dusty valley, micro-abrasions cut into your clear coat, permanently dulling the finish if left unprotected.",
+    image: "https://images.unsplash.com/photo-1620891549027-942fdc95d3f5?auto=format&fit=crop&q=80&w=800",
+    icon: Wind
+  },
+  {
+    title: "Sierra Road Salt",
+    text: "Winter trips to Tahoe leave corrosive magnesium chloride and road salt clinging to your undercarriage and lower panels, quietly eating away at your vehicle's value.",
+    image: "https://images.unsplash.com/photo-1542282088-fe8426682b8f?auto=format&fit=crop&q=80&w=800",
+    icon: Snowflake
+  }
+];
 
-  const rotateY = useTransform(progress, [flipStart, flipEnd], [0, 180]);
-
+const FlipCard = ({ card }: { card: typeof painPoints[0] }) => {
   return (
-    <div className="relative w-[300px] h-[400px] md:w-[400px] md:h-[500px] flex-shrink-0 perspective-1000">
+    <div className="relative w-full aspect-[3/4] md:h-[450px] flex-shrink-0 perspective-1000">
       <motion.div
-        style={{ rotateY, transformStyle: "preserve-3d" }}
-        className="w-full h-full relative duration-100"
+        initial={{ rotateY: 0 }}
+        whileInView={{ rotateY: 180 }}
+        viewport={{ margin: "-30% 0px -30% 0px", amount: "some" }}
+        transition={{ duration: 0.8, type: "spring", stiffness: 50, damping: 15 }}
+        style={{ transformStyle: "preserve-3d" }}
+        className="w-full h-full relative"
       >
         {/* Front of Card (Image) */}
         <div
@@ -57,57 +75,7 @@ const FlipCard = ({ card, index, progress }: { card: any, index: number, progres
   );
 };
 
-const HorizontalScrollSection = () => {
-  const targetRef = useRef<HTMLDivElement>(null);
-  const { scrollYProgress } = useScroll({
-    target: targetRef,
-  });
 
-  // Translate X horizontally as we scroll
-  // For 3 cards, translate from 0 to -66% so the last card aligns nicely
-  const x = useTransform(scrollYProgress, [0, 1], ["0%", "-60%"]);
-
-  const cards = [
-    {
-      title: "300 Days of UV Burn",
-      text: "At 4,500+ feet, UV radiation is significantly stronger. The high-elevation sun bakes clear coats, \"chalks\" paint, and cracks premium leather dashboards at an accelerated rate.",
-      image: "https://images.unsplash.com/photo-1542281286-9e0a16bb7366?auto=format&fit=crop&q=80&w=800",
-      icon: Sun
-    },
-    {
-      title: "The 'Washoe Zephyr'",
-      text: "Desert wind turns dust into sandpaper. Every time you drive through a dusty valley, micro-abrasions cut into your clear coat, permanently dulling the finish if left unprotected.",
-      image: "https://images.unsplash.com/photo-1620891549027-942fdc95d3f5?auto=format&fit=crop&q=80&w=800",
-      icon: Wind
-    },
-    {
-      title: "Sierra Road Salt",
-      text: "Winter trips to Tahoe leave corrosive magnesium chloride and road salt clinging to your undercarriage and lower panels, quietly eating away at your vehicle's value.",
-      image: "https://images.unsplash.com/photo-1542282088-fe8426682b8f?auto=format&fit=crop&q=80&w=800",
-      icon: Snowflake
-    }
-  ];
-
-  return (
-    <section ref={targetRef} className="relative h-[300vh] bg-don-black border-t border-white/5">
-      <div className="sticky top-0 h-screen flex items-center overflow-hidden">
-
-        {/* Absolute Background element to add texture/depth to the scroll section */}
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-7xl px-6 pointer-events-none opacity-20">
-          <h2 className="text-[15vw] font-serif font-bold text-don-cream/5 text-center leading-none tracking-tighter whitespace-nowrap">
-            RENO TOLL
-          </h2>
-        </div>
-
-        <motion.div style={{ x }} className="flex gap-8 md:gap-16 px-6 md:px-24">
-          {cards.map((card, i) => (
-            <FlipCard key={i} card={card} index={i} progress={scrollYProgress} />
-          ))}
-        </motion.div>
-      </div>
-    </section>
-  );
-};
 
 export default function App() {
   const [isSubmitted, setIsSubmitted] = useState(false);
@@ -313,7 +281,11 @@ export default function App() {
             </p>
           </div>
 
-          <HorizontalScrollSection />
+          <div className="grid md:grid-cols-3 gap-8">
+            {painPoints.map((card, i) => (
+              <FlipCard key={i} card={card} />
+            ))}
+          </div>
 
           {/* Mid-page CTA */}
           <div className="text-center mt-16">
