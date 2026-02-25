@@ -325,7 +325,7 @@ export default function App() {
 
             <div className="order-1 lg:order-2">
               <h2 className="text-4xl lg:text-5xl font-serif font-bold tracking-tight mb-6 text-don-cream">
-                How It Works.
+                How It Works
               </h2>
               <p className="text-don-cream/70 text-lg mb-12 font-light">
                 Secure your slot in three simple steps. We handle the rest.
