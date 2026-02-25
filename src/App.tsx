@@ -325,7 +325,99 @@ export default function App() {
             </p>
           </div>
 
-
+          <div className="grid md:grid-cols-3 gap-8">
+            {/* UV Burn */}
+            <div className="bg-white/5 border border-white/10 p-10 rounded-xl">
+              <div className="mb-8 w-16 h-16">
+                <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-full drop-shadow-[0_0_8px_rgba(212,175,55,0.6)]">
+                  <circle cx="32" cy="32" r="30" stroke="#D4AF37" strokeWidth="0.4" strokeDasharray="2 4" opacity="0.3" />
+                  {[0, 30, 60, 90, 120, 150, 180, 210, 240, 270, 300, 330].map((deg, i) => (
+                    <line key={i} x1="32" y1="32"
+                      x2={32 + Math.cos((deg * Math.PI) / 180) * (i % 2 === 0 ? 29 : 25)}
+                      y2={32 + Math.sin((deg * Math.PI) / 180) * (i % 2 === 0 ? 29 : 25)}
+                      stroke="#D4AF37" strokeWidth={i % 2 === 0 ? "0.8" : "0.5"} opacity={i % 2 === 0 ? 0.7 : 0.35}
+                    />
+                  ))}
+                  <circle cx="32" cy="32" r="13" stroke="#E8C84A" strokeWidth="0.8" opacity="0.5" />
+                  <circle cx="32" cy="32" r="9" fill="url(#sunGrad)" />
+                  <line x1="32" y1="23" x2="32" y2="20" stroke="#FFF5CC" strokeWidth="1.5" strokeLinecap="round" opacity="0.9" />
+                  <line x1="32" y1="41" x2="32" y2="44" stroke="#FFF5CC" strokeWidth="1.5" strokeLinecap="round" opacity="0.9" />
+                  <line x1="23" y1="32" x2="20" y2="32" stroke="#FFF5CC" strokeWidth="1.5" strokeLinecap="round" opacity="0.9" />
+                  <line x1="41" y1="32" x2="44" y2="32" stroke="#FFF5CC" strokeWidth="1.5" strokeLinecap="round" opacity="0.9" />
+                  <defs>
+                    <radialGradient id="sunGrad" cx="40%" cy="35%" r="60%">
+                      <stop offset="0%" stopColor="#FFF5CC" />
+                      <stop offset="60%" stopColor="#D4AF37" />
+                      <stop offset="100%" stopColor="#B8860B" />
+                    </radialGradient>
+                  </defs>
+                </svg>
+              </div>
+              <h3 className="text-2xl font-serif font-bold mb-4 text-don-cream">300 Days of UV Burn</h3>
+              <p className="text-don-cream/70 font-light leading-relaxed">
+                At 4,500+ feet, UV radiation is significantly stronger. The high-elevation sun bakes clear coats, "chalks" paint, and cracks premium leather dashboards at an accelerated rate.
+              </p>
+            </div>
+            {/* Washoe Zephyr */}
+            <div className="bg-white/5 border border-white/10 p-10 rounded-xl">
+              <div className="mb-8 w-16 h-16">
+                <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-full drop-shadow-[0_0_8px_rgba(212,175,55,0.5)]">
+                  {[[10, 48], [16, 54], [8, 58], [22, 58], [5, 50], [14, 44]].map(([x, y], i) => (
+                    <circle key={i} cx={x} cy={y} r="1" fill="#D4AF37" opacity={0.3 + i * 0.08} />
+                  ))}
+                  <path d="M 8 38 Q 20 30 32 34 Q 44 38 52 30" stroke="#D4AF37" strokeWidth="1.5" strokeLinecap="round" fill="none" opacity="0.9" />
+                  <path d="M 12 46 Q 24 36 36 41 Q 46 44 54 36" stroke="#D4AF37" strokeWidth="1" strokeLinecap="round" fill="none" opacity="0.6" />
+                  <path d="M 6 30 Q 18 20 30 26 Q 42 30 50 22" stroke="#E8C84A" strokeWidth="2" strokeLinecap="round" fill="none" opacity="0.8" />
+                  <path d="M 10 22 Q 22 14 34 18 Q 46 22 54 14" stroke="#D4AF37" strokeWidth="1" strokeLinecap="round" fill="none" opacity="0.5" />
+                  {[[38, 28], [44, 34], [50, 27], [42, 20], [34, 14], [28, 10], [20, 16]].map(([x, y], i) => (
+                    <circle key={i} cx={x} cy={y} r={0.8 + (i % 3) * 0.4} fill="#D4AF37" opacity={0.25 + (i % 4) * 0.12} />
+                  ))}
+                  <path d="M 46 20 L 54 14 L 50 22" stroke="#E8C84A" strokeWidth="1.5" strokeLinejoin="round" fill="none" opacity="0.8" />
+                </svg>
+              </div>
+              <h3 className="text-2xl font-serif font-bold mb-4 text-don-cream">The 'Washoe Zephyr' Grit</h3>
+              <p className="text-don-cream/70 font-light leading-relaxed">
+                High-desert wind deposits fine silica grit across every panel. That dust is harmless in the air — but the moment it's wiped away with a rag, a gas-station squeegee, or even a sleeve, those particles drag across your clear coat like sandpaper, leaving micro-scratches that permanently dull the finish.
+              </p>
+            </div>
+            {/* Sierra Road Salt */}
+            <div className="bg-white/5 border border-white/10 p-10 rounded-xl">
+              <div className="mb-8 w-16 h-16">
+                <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-full drop-shadow-[0_0_8px_rgba(180,210,255,0.4)]">
+                  {[0, 60, 120, 180, 240, 300].map((deg, i) => {
+                    const rad = (deg * Math.PI) / 180;
+                    const x2 = 32 + Math.cos(rad) * 28, y2 = 32 + Math.sin(rad) * 28;
+                    const mx = 32 + Math.cos(rad) * 18, my = 32 + Math.sin(rad) * 18;
+                    const bx1 = mx + Math.cos(rad + Math.PI / 2) * 6, by1 = my + Math.sin(rad + Math.PI / 2) * 6;
+                    const bx2 = mx + Math.cos(rad - Math.PI / 2) * 6, by2 = my + Math.sin(rad - Math.PI / 2) * 6;
+                    return (
+                      <g key={i}>
+                        <line x1="32" y1="32" x2={x2} y2={y2} stroke="#9BC4F0" strokeWidth="1.2" opacity="0.8" />
+                        <line x1={mx} y1={my} x2={bx1} y2={by1} stroke="#9BC4F0" strokeWidth="0.8" opacity="0.6" />
+                        <line x1={mx} y1={my} x2={bx2} y2={by2} stroke="#9BC4F0" strokeWidth="0.8" opacity="0.6" />
+                        <circle cx={x2} cy={y2} r="1.2" fill="#B8D4F8" opacity="0.7" />
+                      </g>
+                    );
+                  })}
+                  <circle cx="32" cy="32" r="10" stroke="#9BC4F0" strokeWidth="0.6" strokeDasharray="2 3" opacity="0.5" />
+                  {[[14, 52], [20, 56], [10, 44], [52, 50], [56, 42], [48, 56], [8, 36], [56, 30]].map(([x, y], i) => (
+                    <rect key={i} x={x - 1} y={y - 1} width="2" height="2" fill="#D4AF37" opacity={0.2 + i * 0.06} transform={`rotate(45 ${x} ${y})`} />
+                  ))}
+                  <circle cx="32" cy="32" r="4" fill="url(#iceGrad)" />
+                  <defs>
+                    <radialGradient id="iceGrad" cx="35%" cy="35%" r="65%">
+                      <stop offset="0%" stopColor="#DDEEFF" />
+                      <stop offset="100%" stopColor="#6BAED6" />
+                    </radialGradient>
+                  </defs>
+                </svg>
+              </div>
+              <h3 className="text-2xl font-serif font-bold mb-4 text-don-cream">Sierra Road Salt</h3>
+              <p className="text-don-cream/70 font-light leading-relaxed">
+                Winter trips to Tahoe leave corrosive magnesium chloride and road salt clinging to your undercarriage and lower panels, quietly eating away at your vehicle's value.
+              </p>
+            </div>
+          </div>
 
           {/* Mid-page CTA */}
           <div className="text-center mt-16">
