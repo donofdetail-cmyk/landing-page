@@ -475,7 +475,7 @@ export default function App() {
                     {[
                       { num: 1, title: 'Request a Quote', body: 'Fill out our brief online form with your vehicle details and location. We review every request personally and typically respond with a custom quote within the hour.' },
                       { num: 2, title: 'Schedule & Confirm', body: "Once you approve the quote, we'll find a time that works perfectly with your schedule. No need to clear your whole day — we bring our fully-equipped mobile unit directly to your home or office." },
-                      { num: 3, title: 'Experience the Standard', body: 'Hand us the keys and relax. We execute our meticulous detailing process, transforming your vehicle right where it sits. You get a dealership-ready finish without ever leaving your driveway.' },
+                      { num: 3, title: 'Experience the Standard', body: 'Hand us the keys and relax. We execute our meticulous detailing process, transforming your vehicle right where it sits.' },
                     ].map(({ num, title, body }, i) => {
                       const threshold = i / 2; // 0, 0.5, 1.0
                       const isActive = lineProgress >= threshold;
