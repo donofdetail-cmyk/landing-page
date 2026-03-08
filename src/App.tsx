@@ -417,16 +417,16 @@ export default function App() {
                   {/* Grid */}
                   <div className="grid grid-cols-2 gap-0.5 bg-don-black">
                     <a href="https://instagram.com/donofdetail" target="_blank" rel="noopener noreferrer" className="aspect-square relative group overflow-hidden block">
-                      <img src="/ig1.jpg" alt="Mobile auto detailing Reno NV - paint correction on Porsche" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" loading="lazy" decoding="async" />
+                      <img src="/ig1.webp" alt="Award-winning classic car detailing Reno NV - show-quality purple hot rod" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" loading="lazy" decoding="async" width="600" height="600" />
                     </a>
                     <a href="https://instagram.com/donofdetail" target="_blank" rel="noopener noreferrer" className="aspect-square relative group overflow-hidden block">
-                      <img src="/ig2.jpg" alt="Ceramic coating service Reno Nevada - BMW detail" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" loading="lazy" decoding="async" />
+                      <img src="/ig2.webp" alt="Porsche GT3 RS detailing and ceramic coating Reno Nevada" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" loading="lazy" decoding="async" width="600" height="600" />
                     </a>
                     <a href="https://instagram.com/donofdetail" target="_blank" rel="noopener noreferrer" className="aspect-square relative group overflow-hidden block">
-                      <img src="/ig3.jpg" alt="Don of Detail mobile car detailing Reno - Mercedes exterior treatment" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" loading="lazy" decoding="async" />
+                      <img src="/ig3.webp" alt="Honda Accord full exterior detail with mirror-finish paint correction Reno NV" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" loading="lazy" decoding="async" width="600" height="600" />
                     </a>
                     <a href="https://instagram.com/donofdetail" target="_blank" rel="noopener noreferrer" className="aspect-square relative group overflow-hidden block">
-                      <img src="/ig4.jpg" alt="Paint protection and full detail Reno NV - Range Rover" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" loading="lazy" decoding="async" />
+                      <img src="/ig4.webp" alt="Boat detailing and ceramic coating Reno Sparks NV - Sea Ray hull restoration" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" loading="lazy" decoding="async" width="600" height="600" />
                       <div className="absolute inset-0 bg-don-black/60 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
                         <span className="text-don-cream font-bold text-xs uppercase tracking-widest border-b border-don-gold pb-1">View Feed</span>
                       </div>
