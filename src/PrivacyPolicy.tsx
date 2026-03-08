@@ -14,9 +14,9 @@ export default function PrivacyPolicy() {
         <div className="min-h-screen bg-don-black text-don-cream font-sans">
             {/* Header */}
             <header className="fixed top-0 w-full z-50 bg-don-black/90 backdrop-blur-md border-b border-white/10">
-                <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+                <div className="max-w-7xl mx-auto px-6 h-28 flex items-center justify-between">
                     <Link to="/" className="flex items-center gap-2">
-                        <Logo className="h-16 w-auto" />
+                        <Logo className="h-24 w-auto" />
                     </Link>
                     <Link to="/" className="text-sm font-semibold uppercase tracking-widest text-don-gold hover:text-don-gold/80 transition-colors">
                         ← Back
@@ -134,7 +134,7 @@ export default function PrivacyPolicy() {
 
             <footer className="bg-don-black py-10 border-t border-white/10 text-center text-don-cream/40 text-sm font-light tracking-wide">
                 <div className="flex justify-center items-center mb-4">
-                    <Logo className="w-10 h-10 object-contain opacity-70" />
+                    <Logo className="w-16 h-16 object-contain opacity-70" />
                 </div>
                 <p>&copy; {new Date().getFullYear()} Don of Detail. All rights reserved.</p>
                 <div className="flex justify-center gap-6 mt-3 text-xs">
