@@ -57,12 +57,3 @@ body {
   background-size: 200% auto;
   animation: shimmer 3s linear infinite;
 }
-
-/* Hide scrollbar for snap-scroll containers */
-.hide-scrollbar {
-  -ms-overflow-style: none;
-  scrollbar-width: none;
-}
-.hide-scrollbar::-webkit-scrollbar {
-  display: none;
-}
