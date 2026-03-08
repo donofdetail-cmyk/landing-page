@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
-import { Sun, Wind, Snowflake, Shield, Star, CheckCircle, Phone, ChevronDown, Award, Instagram, ClipboardList, CalendarCheck, Sparkles, Mail, Clock, MapPin } from 'lucide-react';
+import { Sun, Wind, Snowflake, Shield, Star, CheckCircle, Phone, ChevronDown, Award, ClipboardList, CalendarCheck, Sparkles, Mail, Clock, MapPin } from 'lucide-react';
+import InstagramFeed from './InstagramFeed';
 
 const Logo = ({ className = '', style = {} }: { className?: string; style?: React.CSSProperties }) => (
   <img
@@ -389,61 +390,7 @@ export default function App() {
           <div className="max-w-7xl mx-auto px-6">
             <div className="grid lg:grid-cols-2 gap-16 items-center">
               <div className="order-2 lg:order-1 relative">
-                {/* Instagram Feed Embed Simulation */}
-                <div className="bg-don-black border border-white/10 rounded-xl overflow-hidden shadow-2xl max-w-md mx-auto lg:mx-0">
-                  {/* Header */}
-                  <div className="flex items-center justify-between p-4 border-b border-white/10 bg-white/5">
-                    <div className="flex items-center gap-3">
-                      <div className="w-10 h-10 rounded-full bg-gradient-to-tr from-[#f09433] via-[#dc2743] to-[#bc1888] p-[2px]">
-                        <div className="w-full h-full rounded-full bg-don-black flex items-center justify-center overflow-hidden">
-                          <img src="/ig-avatar.jpg" alt="Don of Detail Instagram" className="w-full h-full object-cover rounded-full" loading="lazy" decoding="async" />
-                        </div>
-                      </div>
-                      <div>
-                        <p className="text-sm font-bold text-don-cream">donofdetail</p>
-                        <p className="text-xs text-don-cream/60">Reno, Nevada</p>
-                      </div>
-                    </div>
-                    <a
-                      href="https://instagram.com/donofdetail"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="bg-don-gold text-don-black text-xs font-bold px-4 py-1.5 rounded-sm hover:bg-don-gold/90 transition-colors"
-                    >
-                      Follow
-                    </a>
-                  </div>
-
-                  {/* Grid */}
-                  <div className="grid grid-cols-2 gap-0.5 bg-don-black">
-                    <a href="https://instagram.com/donofdetail" target="_blank" rel="noopener noreferrer" className="aspect-square relative group overflow-hidden block">
-                      <img src="/ig1.jpg" alt="Mobile auto detailing Reno NV - paint correction on Porsche" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" loading="lazy" decoding="async" />
-                    </a>
-                    <a href="https://instagram.com/donofdetail" target="_blank" rel="noopener noreferrer" className="aspect-square relative group overflow-hidden block">
-                      <img src="/ig2.jpg" alt="Ceramic coating service Reno Nevada - BMW detail" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" loading="lazy" decoding="async" />
-                    </a>
-                    <a href="https://instagram.com/donofdetail" target="_blank" rel="noopener noreferrer" className="aspect-square relative group overflow-hidden block">
-                      <img src="/ig3.jpg" alt="Don of Detail mobile car detailing Reno - Mercedes exterior treatment" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" loading="lazy" decoding="async" />
-                    </a>
-                    <a href="https://instagram.com/donofdetail" target="_blank" rel="noopener noreferrer" className="aspect-square relative group overflow-hidden block">
-                      <img src="/ig4.jpg" alt="Paint protection and full detail Reno NV - Range Rover" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" loading="lazy" decoding="async" />
-                      <div className="absolute inset-0 bg-don-black/60 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-                        <span className="text-don-cream font-bold text-xs uppercase tracking-widest border-b border-don-gold pb-1">View Feed</span>
-                      </div>
-                    </a>
-                  </div>
-
-                  {/* Footer */}
-                  <div className="p-3 bg-white/5 border-t border-white/10 flex justify-between items-center text-xs text-don-cream/60">
-                    <span>Latest Posts</span>
-                    <a href="https://instagram.com/donofdetail" target="_blank" rel="noopener noreferrer" className="flex items-center gap-1 hover:text-don-gold transition-colors">
-                      <Instagram className="w-3 h-3" />
-                      <span>@donofdetail</span>
-                    </a>
-                  </div>
-                </div>
-
-
+                <InstagramFeed />
               </div>
 
               <div className="order-1 lg:order-2">
