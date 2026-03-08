@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
-import { Sun, Wind, Snowflake, Shield, Star, CheckCircle, Phone, ChevronDown, Award, Instagram, ClipboardList, CalendarCheck, Sparkles, Mail, Clock, MapPin } from 'lucide-react';
+import { Flame, Wind, Snowflake, Shield, Star, CheckCircle, Phone, ChevronDown, Award, Instagram, Mail, Clock, MapPin } from 'lucide-react';
 
 const Logo = ({ className = '', style = {} }: { className?: string; style?: React.CSSProperties }) => (
   <img
@@ -230,7 +230,7 @@ export default function App() {
               ) : (
                 <>
                   <h2 className="text-3xl font-serif font-bold mb-2 text-don-gold">Request a Quote</h2>
-                  <p className="text-don-cream/60 text-sm mb-8 font-light tracking-wide">Serving Reno &amp; Sparks — we'll come to you. Most quotes answered within the hour.</p>
+                  <p className="text-don-cream/60 text-sm mb-8 font-light tracking-wide">Serving Reno & Sparks — we'll come to you. Most quotes answered within the hour.</p>
 
                   <form className="space-y-4" onSubmit={handleSubmit} aria-label="Request a free auto detailing quote">
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -294,7 +294,7 @@ export default function App() {
                           <option value="" disabled className="text-don-black">Select a service...</option>
                           <option value="interior" className="text-don-black">Interior Detail</option>
                           <option value="exterior" className="text-don-black">Exterior Detail</option>
-                          <option value="interior-exterior" className="text-don-black">Interior &amp; Exterior Detail</option>
+                          <option value="interior-exterior" className="text-don-black">Interior & Exterior Detail</option>
                           <option value="paint-correction" className="text-don-black">Paint Correction</option>
                           <option value="ceramic-coating" className="text-don-black">Ceramic Coating</option>
                         </select>
@@ -343,31 +343,31 @@ export default function App() {
 
             <div className="grid md:grid-cols-3 gap-8">
               <div className="bg-white/5 border border-white/10 p-10 rounded-xl">
-                <div className="relative w-16 h-16 rounded-full mb-8 flex items-center justify-center">
+                <div className="relative w-16 h-16 rounded-full mb-8 flex items-center justify-center mx-auto">
                   <div className="absolute inset-0 rounded-full border border-don-gold/40 bg-don-gold/5 shadow-[0_0_15px_rgba(212,175,55,0.15)] backdrop-blur-sm" />
-                  <Sun className="w-8 h-8 text-don-gold relative z-10" strokeWidth={1} />
+                  <Flame className="w-8 h-8 text-don-gold relative z-10" strokeWidth={1} />
                 </div>
-                <h3 className="text-2xl font-serif font-bold mb-4 text-don-cream">300 Days of UV Burn</h3>
+                <h3 className="text-2xl font-serif font-bold mb-4 text-don-cream text-center">300 Days of UV Burn</h3>
                 <p className="text-don-cream/70 font-light leading-relaxed">
                   At 4,500+ feet, UV radiation is significantly stronger. The high-elevation sun bakes clear coats, "chalks" paint, and cracks premium leather dashboards at an accelerated rate.
                 </p>
               </div>
               <div className="bg-white/5 border border-white/10 p-10 rounded-xl">
-                <div className="relative w-16 h-16 rounded-full mb-8 flex items-center justify-center">
+                <div className="relative w-16 h-16 rounded-full mb-8 flex items-center justify-center mx-auto">
                   <div className="absolute inset-0 rounded-full border border-don-gold/40 bg-don-gold/5 shadow-[0_0_15px_rgba(212,175,55,0.15)] backdrop-blur-sm" />
                   <Wind className="w-8 h-8 text-don-gold relative z-10" strokeWidth={1} />
                 </div>
-                <h3 className="text-2xl font-serif font-bold mb-4 text-don-cream">The 'Washoe Zephyr' Grit</h3>
+                <h3 className="text-2xl font-serif font-bold mb-4 text-don-cream text-center">The 'Washoe Zephyr' Grit</h3>
                 <p className="text-don-cream/70 font-light leading-relaxed">
                   High-desert wind deposits fine silica grit across every panel. That dust is harmless in the air — but the moment it's wiped away with a rag, a gas-station squeegee, or even a sleeve, those particles drag across your clear coat like sandpaper, leaving micro-scratches that permanently dull the finish.
                 </p>
               </div>
               <div className="bg-white/5 border border-white/10 p-10 rounded-xl">
-                <div className="relative w-16 h-16 rounded-full mb-8 flex items-center justify-center">
+                <div className="relative w-16 h-16 rounded-full mb-8 flex items-center justify-center mx-auto">
                   <div className="absolute inset-0 rounded-full border border-don-gold/40 bg-don-gold/5 shadow-[0_0_15px_rgba(212,175,55,0.15)] backdrop-blur-sm" />
                   <Snowflake className="w-8 h-8 text-don-gold relative z-10" strokeWidth={1} />
                 </div>
-                <h3 className="text-2xl font-serif font-bold mb-4 text-don-cream">Sierra Road Salt</h3>
+                <h3 className="text-2xl font-serif font-bold mb-4 text-don-cream text-center">Sierra Road Salt</h3>
                 <p className="text-don-cream/70 font-light leading-relaxed">
                   Winter trips to Tahoe leave corrosive magnesium chloride and road salt clinging to your undercarriage and lower panels, quietly eating away at your vehicle's value.
                 </p>
