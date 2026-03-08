@@ -98,11 +98,11 @@ export default function App() {
     },
     {
       q: 'What areas in Reno & Sparks do you service?',
-      a: 'We provide mobile auto detailing throughout the greater Reno-Sparks metro area including Reno, Sparks, Spanish Springs, South Meadows, Montrêux, Verdi, Sun Valley, Washoe Valley, Incline Village, Fernley, Dayton, and Carson City. We serve all of Northern Nevada and the Truckee Meadows region. Not sure if we cover your area? Give us a call — we\'re flexible.',
+      a: 'We provide mobile auto detailing throughout the greater Reno-Sparks metro area including Reno, Sparks, Spanish Springs, South Meadows, Montrêux, Verdi, Sun Valley, Washoe Valley, Fernley, Dayton, and Carson City. Not sure if we cover your area? Give us a call — we\'re flexible.',
     },
     {
       q: 'How often should I get my car detailed?',
-      a: 'For most drivers in Reno, we recommend a full detail every 3–4 months due to the harsh desert environment. Vehicles with ceramic coatings need less frequent deep cleans — a maintenance wash every 6–8 weeks keeps the coating performing at its best. Daily drivers and vehicles parked outside benefit most from regular protection.',
+      a: 'For most drivers in Reno, we recommend a full detail every 3–4 months due to the harsh desert environment. Vehicles with ceramic coatings need less frequent deep cleans — on average, a maintenance wash every 4–6 weeks keeps the coating performing at its best, though some may need it sooner or later depending on driving conditions. Daily drivers and vehicles parked outside benefit most from regular protection.',
     },
     {
       q: 'Why do you use deionized water for car detailing?',
