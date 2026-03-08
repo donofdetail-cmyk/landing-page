@@ -240,7 +240,7 @@ export default function App() {
                           type="text"
                           name="firstName"
                           required
-                          placeholder="James"
+                          placeholder="First Name"
                           className="w-full bg-don-black/50 border border-white/10 rounded-sm px-4 py-3 text-don-cream placeholder:text-don-cream/30 focus:outline-none focus:ring-1 focus:ring-don-gold focus:border-don-gold transition-all"
                         />
                       </div>
@@ -250,7 +250,7 @@ export default function App() {
                           type="text"
                           name="lastName"
                           required
-                          placeholder="Bond"
+                          placeholder="Last Name"
                           className="w-full bg-don-black/50 border border-white/10 rounded-sm px-4 py-3 text-don-cream placeholder:text-don-cream/30 focus:outline-none focus:ring-1 focus:ring-don-gold focus:border-don-gold transition-all"
                         />
                       </div>
@@ -262,7 +262,7 @@ export default function App() {
                           type="tel"
                           name="phone"
                           required
-                          placeholder="(775) 230-7035"
+                          placeholder="(775) 000-0000"
                           className="w-full bg-don-black/50 border border-white/10 rounded-sm px-4 py-3 text-don-cream placeholder:text-don-cream/30 focus:outline-none focus:ring-1 focus:ring-don-gold focus:border-don-gold transition-all"
                         />
                       </div>
@@ -272,7 +272,7 @@ export default function App() {
                           type="email"
                           name="email"
                           required
-                          placeholder="james@example.com"
+                          placeholder="you@email.com"
                           className="w-full bg-don-black/50 border border-white/10 rounded-sm px-4 py-3 text-don-cream placeholder:text-don-cream/30 focus:outline-none focus:ring-1 focus:ring-don-gold focus:border-don-gold transition-all"
                         />
                       </div>
@@ -283,7 +283,7 @@ export default function App() {
                         type="text"
                         name="vehicle"
                         required
-                        placeholder="e.g. 2018 Toyota Tacoma"
+                        placeholder="Year, Make, Model"
                         className="w-full bg-don-black/50 border border-white/10 rounded-sm px-4 py-3 text-don-cream placeholder:text-don-cream/30 focus:outline-none focus:ring-1 focus:ring-don-gold focus:border-don-gold transition-all"
                       />
                     </div>
