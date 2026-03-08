@@ -166,9 +166,9 @@ export default function App() {
 
       {/* Sticky Header */}
       <header className={`fixed top-0 w-full z-50 border-b border-white/10 transition-all duration-300 ${isScrolled ? 'bg-don-black/95 backdrop-blur-md py-0' : 'bg-transparent py-4 border-transparent'}`}>
-        <div className="max-w-7xl mx-auto px-6 h-28 flex items-center justify-between">
+        <div className="max-w-7xl mx-auto px-6 h-20 md:h-28 flex items-center justify-between">
           <div className="flex items-center gap-2">
-            <Logo className="h-24 w-auto" />
+            <Logo className="h-16 md:h-24 w-auto" />
           </div>
           <nav aria-label="Primary">
             <a href="tel:+17752307035" className="hidden md:flex items-center gap-2 text-sm font-semibold uppercase tracking-widest text-don-black bg-don-gold hover:bg-don-gold/90 px-6 py-2.5 rounded-sm transition-all hover:shadow-[0_0_15px_rgba(212,175,55,0.4)]">
@@ -683,7 +683,7 @@ export default function App() {
 
             {/* Logo + Copyright + Legal */}
             <div className="flex flex-col items-center gap-4">
-              <Logo className="w-16 h-16 object-contain opacity-70" />
+              <Logo className="w-12 h-12 md:w-16 md:h-16 object-contain opacity-70" />
               <p>&copy; {new Date().getFullYear()} Don of Detail. All rights reserved.</p>
               <div className="flex justify-center gap-6 text-xs">
                 <Link to="/terms" className="hover:text-don-gold transition-colors">Terms of Service</Link>
