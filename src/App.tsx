@@ -187,7 +187,7 @@ export default function App() {
         {/* Hero Section */}
         <section id="hero" aria-label="Hero — Mobile Auto Detailing Reno NV" className="relative pt-32 pb-20 lg:pt-40 lg:pb-32 overflow-hidden">
           <img
-            src="/ceramic%20coating%20reno%20nv.JPG"
+            src="/ceramic-coating-reno-nv.webp"
             role="presentation"
             className="absolute inset-0 w-full h-full object-cover object-center opacity-70"
           />
