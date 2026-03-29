@@ -81,32 +81,12 @@ export default function App() {
       a: 'Pricing depends on vehicle size and the service selected. Exterior packages start at $200+. For a full interior & exterior detail, the average client should expect to spend between $250 and $400. Because every vehicle is different, we require you to submit a form to get a custom quote.',
     },
     {
-      q: 'How long does a full car detail take?',
-      a: 'A full interior & exterior detail typically takes 3–5 hours depending on the vehicle\'s size and condition. Ceramic coating installs take 1–2 days. We work efficiently without cutting corners — you can go about your day while we handle everything on-site.',
-    },
-    {
       q: 'Is ceramic coating worth it in Reno\'s climate?',
       a: 'Reno gets 300+ days of intense UV, road salt from Tahoe trips, and constant desert dust. Ceramic coating gives you years of hydrophobic protection, UV resistance, and keeps your paint looking factory-fresh. For this climate, it\'s a no-brainer.',
     },
     {
-      q: 'Do I need to be home during the detailing appointment?',
-      a: 'Nope. Just leave us the keys and access to the vehicle. We bring our own power, water, and equipment — your driveway, garage, or office parking lot all work.',
-    },
-    {
-      q: 'What\'s the difference between a car wash and a professional detail?',
-      a: 'A car wash knocks off the loose dirt. That\'s it. A detail goes after the stuff a car wash can\'t touch — swirl marks, oxidation, embedded grime in your paint\'s pores. We use clay bar decontamination, machine polishing, and premium protectants. The finish lasts months, not days.',
-    },
-    {
       q: 'What areas in Reno & Sparks do you service?',
       a: 'We provide mobile auto detailing throughout the greater Reno-Sparks metro area including Reno, Sparks, Spanish Springs, South Meadows, Montrêux, Verdi, Sun Valley, Washoe Valley, Fernley, Dayton, and Carson City. Not sure if we cover your area? Give us a call — we\'re flexible.',
-    },
-    {
-      q: 'How often should I get my car detailed?',
-      a: 'Every 3–4 months for most drivers out here. If you have a ceramic coating, you can stretch that — a maintenance wash every 4–6 weeks will keep the coating at peak performance. Daily drivers and vehicles parked outside benefit the most from staying on schedule.',
-    },
-    {
-      q: 'Why do you use deionized water for car detailing?',
-      a: 'Reno has notoriously hard water — tap water leaves mineral deposits that etch into clear coat over time. Our deionized water is purified to 0 PPM, delivering a completely spot-free rinse that protects your paint and leaves zero residue. It\'s one of the details that separates a professional detail from a DIY wash.',
     },
     {
       q: 'How long does ceramic coating last?',
@@ -123,10 +103,6 @@ export default function App() {
     {
       q: 'Do you detail boats and RVs in Reno?',
       a: 'Yes. We offer full mobile detailing for boats, RVs, travel trailers, and motorhomes throughout Reno, Sparks, and Northern Nevada. Services include exterior wash and wax, oxidation removal, hull cleaning, interior deep clean, and ceramic coating for long-term protection against Reno\'s intense UV and desert conditions.',
-    },
-    {
-      q: 'What\'s included in a full interior detail?',
-      a: 'A full interior detail includes thorough vacuuming of all surfaces (seats, carpets, trunk, crevices), steam cleaning or hot water extraction of fabric and carpet, leather cleaning and conditioning, full dashboard and trim wipe-down with UV protectant, door jamb cleaning, interior glass cleaning, and air vent detailing. We also address odor removal, pet hair extraction, and stain treatment as needed.',
     },
     {
       q: 'How much does ceramic coating cost in Reno?',
