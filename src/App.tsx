@@ -205,7 +205,7 @@ export default function App() {
               <div className="flex items-center gap-6 text-sm font-medium text-don-cream/90 uppercase tracking-widest">
                 <div className="flex items-center gap-2">
                   <Award className="w-5 h-5 text-don-gold" />
-                  <span>5-Star Rated · 70+ Reviews</span>
+                  <span>Award-Winning Service</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <Shield className="w-5 h-5 text-don-gold" />
@@ -316,7 +316,7 @@ export default function App() {
                     </label>
                     <button type="submit" className="w-full bg-don-gold hover:bg-don-gold/90 text-don-black font-bold uppercase tracking-widest py-4 rounded-sm mt-2 transition-all hover:shadow-[0_0_20px_rgba(212,175,55,0.3)] flex items-center justify-center gap-2 group cursor-pointer relative overflow-hidden">
                       <div className="absolute inset-0 w-full h-full bg-gradient-to-r from-transparent via-white/40 to-transparent -translate-x-full group-hover:animate-[shimmer_1.5s_infinite]" />
-                      <span className="relative z-10 flex items-center gap-2">CLAIM MY FREE QUOTE <ChevronDown className="w-4 h-4 -rotate-90 group-hover:translate-x-1 transition-transform" /></span>
+                      <span className="relative z-10">CLAIM MY FREE QUOTE</span>
                     </button>
                     <p className="text-center text-[10px] text-don-cream/40 uppercase tracking-widest mt-3 flex items-center justify-center gap-1.5">
                       <Shield className="w-3 h-3 text-don-gold/70" /> 100% Free · No Obligation
@@ -531,7 +531,7 @@ export default function App() {
                     </div>
                   ))}
                 </div>
-                <span className="text-don-cream/50 text-xs uppercase tracking-widest">70+ Google Reviews</span>
+                <span className="text-don-cream/50 text-xs uppercase tracking-widest">75+ Google Reviews</span>
               </div>
 
               {/* Card */}
@@ -627,7 +627,7 @@ export default function App() {
               Quit driving a dirty car.
             </h2>
             <p className="text-xl lg:text-2xl font-medium mb-12 opacity-90 font-sans">
-              70+ five-star reviews. We come to you. Reno & Sparks.
+              75+ five-star reviews. We come to you. Reno & Sparks.
             </p>
             <a href="#quote" className="inline-flex items-center justify-center gap-3 bg-don-black text-don-gold hover:bg-[#1a1a1a] font-bold uppercase tracking-widest px-10 py-5 rounded-sm transition-all hover:scale-105 active:scale-95 shadow-2xl w-full sm:w-auto">
               GET MY QUOTE
@@ -642,39 +642,24 @@ export default function App() {
             {/* Business Info Grid */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-8 mb-14">
               {/* Email */}
-              <div className="flex flex-col items-center text-center gap-3">
-                <div className="w-10 h-10 rounded-full border border-don-gold/30 bg-don-gold/5 flex items-center justify-center">
-                  <Mail className="w-5 h-5 text-don-gold" strokeWidth={1.5} />
-                </div>
-                <div>
-                  <p className="text-[10px] uppercase tracking-[0.2em] text-don-cream/50 mb-1">Email</p>
-                  <a href="mailto:contact@donofdetail.com" className="text-don-cream/80 hover:text-don-gold transition-colors text-sm">
-                    contact@donofdetail.com
-                  </a>
-                </div>
+              <div className="flex flex-col items-center text-center gap-2">
+                <p className="text-[10px] uppercase tracking-[0.2em] text-don-cream/50 mb-1">Email</p>
+                <a href="mailto:contact@donofdetail.com" className="text-don-cream/80 hover:text-don-gold transition-colors text-sm">
+                  contact@donofdetail.com
+                </a>
               </div>
 
               {/* Business Hours */}
-              <div className="flex flex-col items-center text-center gap-3">
-                <div className="w-10 h-10 rounded-full border border-don-gold/30 bg-don-gold/5 flex items-center justify-center">
-                  <Clock className="w-5 h-5 text-don-gold" strokeWidth={1.5} />
-                </div>
-                <div>
-                  <p className="text-[10px] uppercase tracking-[0.2em] text-don-cream/50 mb-1">Business Hours</p>
-                  <p className="text-don-cream/80 text-sm">8 AM – 7 PM</p>
-                  <p className="text-don-cream/50 text-xs mt-0.5">7 Days a Week</p>
-                </div>
+              <div className="flex flex-col items-center text-center gap-2">
+                <p className="text-[10px] uppercase tracking-[0.2em] text-don-cream/50 mb-1">Business Hours</p>
+                <p className="text-don-cream/80 text-sm">8 AM – 7 PM</p>
+                <p className="text-don-cream/50 text-xs mt-0.5">7 Days a Week</p>
               </div>
 
               {/* Location */}
-              <div className="flex flex-col items-center text-center gap-3">
-                <div className="w-10 h-10 rounded-full border border-don-gold/30 bg-don-gold/5 flex items-center justify-center">
-                  <MapPin className="w-5 h-5 text-don-gold" strokeWidth={1.5} />
-                </div>
-                <div>
-                  <p className="text-[10px] uppercase tracking-[0.2em] text-don-cream/50 mb-1">Location</p>
-                  <p className="text-don-cream/80 text-sm">Reno, NV</p>
-                </div>
+              <div className="flex flex-col items-center text-center gap-2">
+                <p className="text-[10px] uppercase tracking-[0.2em] text-don-cream/50 mb-1">Location</p>
+                <p className="text-don-cream/80 text-sm">Reno, NV</p>
               </div>
             </div>
 
