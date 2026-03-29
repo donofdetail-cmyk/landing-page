@@ -86,15 +86,15 @@ export default function App() {
     },
     {
       q: 'Is ceramic coating worth it in Reno\'s climate?',
-      a: 'Absolutely. Reno\'s 300+ days of intense UV, high-elevation sun, road salt from Tahoe trips, and desert dust make ceramic coating one of the best investments you can make for your vehicle. A professionally applied ceramic coating provides years of hydrophobic protection, UV resistance, and keeps your paint looking factory-fresh.',
+      a: 'Reno gets 300+ days of intense UV, road salt from Tahoe trips, and constant desert dust. Ceramic coating gives you years of hydrophobic protection, UV resistance, and keeps your paint looking factory-fresh. For this climate, it\'s a no-brainer.',
     },
     {
       q: 'Do I need to be home during the detailing appointment?',
-      a: 'No. As long as we have access to your vehicle and keys (for interior work), you don\'t need to be present. We are 100% self-sustained with our own power, water, and equipment — whether that\'s your driveway, garage, or office parking lot.',
+      a: 'Nope. Just leave us the keys and access to the vehicle. We bring our own power, water, and equipment — your driveway, garage, or office parking lot all work.',
     },
     {
       q: 'What\'s the difference between a car wash and a professional detail?',
-      a: 'A car wash removes surface dirt; a professional detail restores and protects. We use pH-balanced soaps, clay bar decontamination, machine polishing, and premium protectants to eliminate swirl marks, oxidation, and embedded grime that automated washes simply cannot address. The result is a finish that lasts months, not days.',
+      a: 'A car wash knocks off the loose dirt. That\'s it. A detail goes after the stuff a car wash can\'t touch — swirl marks, oxidation, embedded grime in your paint\'s pores. We use clay bar decontamination, machine polishing, and premium protectants. The finish lasts months, not days.',
     },
     {
       q: 'What areas in Reno & Sparks do you service?',
@@ -102,7 +102,7 @@ export default function App() {
     },
     {
       q: 'How often should I get my car detailed?',
-      a: 'For most drivers in Reno, we recommend a full detail every 3–4 months due to the harsh desert environment. Vehicles with ceramic coatings need less frequent deep cleans — on average, a maintenance wash every 4–6 weeks keeps the coating performing at its best, though some may need it sooner or later depending on driving conditions. Daily drivers and vehicles parked outside benefit most from regular protection.',
+      a: 'Every 3–4 months for most drivers out here. If you have a ceramic coating, you can stretch that — a maintenance wash every 4–6 weeks will keep the coating at peak performance. Daily drivers and vehicles parked outside benefit the most from staying on schedule.',
     },
     {
       q: 'Why do you use deionized water for car detailing?',
@@ -110,7 +110,7 @@ export default function App() {
     },
     {
       q: 'How long does ceramic coating last?',
-      a: 'Professional-grade ceramic coatings typically last 2–5 years depending on maintenance, driving habits, and environmental exposure. In Reno\'s high-desert climate, proper care — including regular hand washes with pH-balanced shampoo and periodic ceramic booster applications — can extend protection to the upper end of that range. We\'ll walk you through a custom maintenance plan after every install.',
+      a: '2–5 years, depending on how you maintain it. Regular hand washes with pH-balanced shampoo and the occasional ceramic booster go a long way — especially out here with the UV and dust. After every install, we\'ll show you exactly how to take care of it.',
     },
     {
       q: 'Can mobile detailers apply ceramic coatings on-site?',
@@ -200,12 +200,12 @@ export default function App() {
                 Reno's Premier <span className="text-don-gold italic">Mobile Auto Detailing</span>
               </h1>
               <p className="text-lg lg:text-xl text-don-cream/80 font-light leading-relaxed mb-10">
-                Luxury isn't just driven. It’s preserved. Don of Detail brings the gold standard of car detailing and ceramic coating directly to your driveway in Reno, NV.
+                We show up at your driveway with everything we need — water, power, the works. You hand us the keys. A few hours later, your car looks better than the day you bought it.
               </p>
               <div className="flex items-center gap-6 text-sm font-medium text-don-cream/90 uppercase tracking-widest">
                 <div className="flex items-center gap-2">
                   <Award className="w-5 h-5 text-don-gold" />
-                  <span>Award-Winning Service</span>
+                  <span>5-Star Rated · 70+ Reviews</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <Shield className="w-5 h-5 text-don-gold" />
@@ -333,11 +333,11 @@ export default function App() {
           <div className="max-w-7xl mx-auto px-6">
             <div className="text-center max-w-3xl mx-auto mb-16">
               <h2 className="text-4xl lg:text-5xl font-serif font-bold tracking-tight mb-6 text-don-cream">
-                The Reno Toll: Is Your Investment Surviving the High Desert?
+                What Reno Does to Your Paint
               </h2>
               <div className="w-24 h-1 bg-don-gold mx-auto mb-6"></div>
               <p className="text-don-cream/70 text-lg font-light">
-                Standard car washes strip wax and induce swirl marks. In Northern Nevada, your vehicle faces a unique set of environmental hazards that demand a higher standard of care.
+                Drive-through car washes strip wax and grind swirl marks into your clear coat. That's bad enough anywhere — but out here, the desert is doing its own damage every single day.
               </p>
             </div>
 
@@ -349,7 +349,7 @@ export default function App() {
                 </div>
                 <h3 className="text-2xl font-serif font-bold mb-4 text-don-cream text-center">300 Days of UV Burn</h3>
                 <p className="text-don-cream/70 font-light leading-relaxed">
-                  At 4,500+ feet, UV radiation is significantly stronger. The high-elevation sun bakes clear coats, "chalks" paint, and cracks premium leather dashboards at an accelerated rate.
+                  At 4,500+ feet, UV hits harder. The high-desert sun bakes clear coats, chalks paint, and cracks leather dashboards faster than most owners realize.
                 </p>
               </div>
               <div className="bg-white/5 border border-white/10 p-10 rounded-xl">
@@ -357,9 +357,9 @@ export default function App() {
                   <div className="absolute inset-0 rounded-full border border-don-gold/40 bg-don-gold/5 shadow-[0_0_15px_rgba(212,175,55,0.15)] backdrop-blur-sm" />
                   <Wind className="w-8 h-8 text-don-gold relative z-10" strokeWidth={1} />
                 </div>
-                <h3 className="text-2xl font-serif font-bold mb-4 text-don-cream text-center">The 'Washoe Zephyr' Grit</h3>
+                <h3 className="text-2xl font-serif font-bold mb-4 text-don-cream text-center">The Washoe Zephyr Grit</h3>
                 <p className="text-don-cream/70 font-light leading-relaxed">
-                  High-desert wind deposits fine silica grit across every panel. That dust is harmless in the air — but the moment it's wiped away with a rag, a gas-station squeegee, or even a sleeve, those particles drag across your clear coat like sandpaper, leaving micro-scratches that permanently dull the finish.
+                  That fine dust caked on your hood? It's silica. Wipe it off with a rag or a gas-station squeegee and you've just dragged sandpaper across your clear coat.
                 </p>
               </div>
               <div className="bg-white/5 border border-white/10 p-10 rounded-xl">
@@ -369,14 +369,14 @@ export default function App() {
                 </div>
                 <h3 className="text-2xl font-serif font-bold mb-4 text-don-cream text-center">Sierra Road Salt</h3>
                 <p className="text-don-cream/70 font-light leading-relaxed">
-                  Winter trips to Tahoe leave corrosive magnesium chloride and road salt clinging to your undercarriage and lower panels, quietly eating away at your vehicle's value.
+                  Every trip up to Tahoe coats your undercarriage in magnesium chloride. That salt sits there for weeks — corroding metal and staining paint from the bottom up.
                 </p>
               </div>
             </div>
 
             {/* Mid-page CTA */}
             <div className="text-center mt-16">
-              <p className="text-don-cream/60 text-sm uppercase tracking-widest mb-4">Ready to protect your investment?</p>
+              <p className="text-don-cream/60 text-sm uppercase tracking-widest mb-4">Don't let the desert win.</p>
               <a href="#quote" className="inline-flex items-center gap-2 bg-don-gold text-don-black font-bold uppercase tracking-widest px-8 py-4 rounded-sm transition-all hover:bg-don-gold/90 hover:shadow-[0_0_20px_rgba(212,175,55,0.3)]">
                 Get a Free Quote
               </a>
@@ -451,7 +451,7 @@ export default function App() {
                   How It Works
                 </h2>
                 <p className="text-don-cream/70 text-lg mb-12 font-light">
-                  Secure your slot in three simple steps. We handle the rest.
+                  Three steps. Zero hassle. You don't even have to be there.
                 </p>
 
                 {/* Scroll-driven connecting line */}
@@ -473,9 +473,9 @@ export default function App() {
 
                   <div className="space-y-12 relative z-10">
                     {[
-                      { num: 1, title: 'Request a Quote', body: 'Fill out our brief online form with your vehicle details and location. We review every request personally and typically respond with a custom quote within the hour.' },
+                      { num: 1, title: 'Request a Quote', body: 'Drop your vehicle info into the form. Year, make, model, what you need done. We\'ll get back to you with a price — usually within the hour.' },
                       { num: 2, title: 'Schedule & Confirm', body: "Once you approve the quote, we'll find a time that works perfectly with your schedule. No need to clear your whole day — we bring our fully-equipped mobile unit directly to your home or office." },
-                      { num: 3, title: 'Experience the Standard', body: 'Hand us the keys and relax. We execute our meticulous detailing process, transforming your vehicle right where it sits.' },
+                      { num: 3, title: 'Sit Back', body: 'Hand us the keys and go about your day. When you come back, it\'ll look like a different car.' },
                     ].map(({ num, title, body }, i) => {
                       const threshold = i / 2; // 0, 0.5, 1.0
                       const isActive = lineProgress >= threshold;
@@ -627,7 +627,7 @@ export default function App() {
               Quit driving a dirty car.
             </h2>
             <p className="text-xl lg:text-2xl font-medium mb-12 opacity-90 font-sans">
-              Protect your resale value with the best mobile detailing in Reno.
+              70+ five-star reviews. We come to you. Reno & Sparks.
             </p>
             <a href="#quote" className="inline-flex items-center justify-center gap-3 bg-don-black text-don-gold hover:bg-[#1a1a1a] font-bold uppercase tracking-widest px-10 py-5 rounded-sm transition-all hover:scale-105 active:scale-95 shadow-2xl w-full sm:w-auto">
               GET MY QUOTE
