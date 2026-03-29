@@ -294,9 +294,6 @@ export default function App() {
                       <div className="absolute inset-0 w-full h-full bg-gradient-to-r from-transparent via-white/40 to-transparent -translate-x-full group-hover:animate-[shimmer_1.5s_infinite]" />
                       <span className="relative z-10">CLAIM MY FREE QUOTE</span>
                     </button>
-                    <p className="text-center text-[10px] text-don-cream/40 uppercase tracking-widest mt-3 flex items-center justify-center gap-1.5">
-                      <Shield className="w-3 h-3 text-don-gold/70" /> 100% Free · No Obligation
-                    </p>
                   </form>
                 </>
               )}
@@ -353,8 +350,9 @@ export default function App() {
             {/* Mid-page CTA */}
             <div className="text-center mt-16">
               <p className="text-don-cream/60 text-sm uppercase tracking-widest mb-4">Don't let the desert win.</p>
-              <a href="#quote" className="inline-flex items-center gap-2 bg-don-gold text-don-black font-bold uppercase tracking-widest px-8 py-4 rounded-sm transition-all hover:bg-don-gold/90 hover:shadow-[0_0_20px_rgba(212,175,55,0.3)]">
-                Get a Free Quote
+              <a href="#quote" className="group inline-flex items-center gap-2 bg-don-gold text-don-black font-bold uppercase tracking-widest px-8 py-4 rounded-sm transition-all hover:shadow-[0_0_40px_rgba(212,175,55,0.4)] hover:scale-105 active:scale-95 relative overflow-hidden">
+                <div className="absolute inset-0 w-full h-full bg-gradient-to-r from-transparent via-white/30 to-transparent -translate-x-full group-hover:animate-[shimmer_1.5s_infinite]" />
+                <span className="relative z-10">Get a Free Quote</span>
               </a>
             </div>
           </div>
@@ -634,7 +632,6 @@ export default function App() {
               <span className="relative z-10">GET MY FREE QUOTE</span>
             </a>
 
-            <p className="text-don-cream/30 text-[10px] uppercase tracking-[0.2em] mt-5">100% Free · No Obligation · Same-Day Response</p>
           </div>
         </section>
 
