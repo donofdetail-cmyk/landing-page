@@ -596,18 +596,45 @@ export default function App() {
         </section>
 
         {/* Final CTA */}
-        <section id="cta" aria-label="Get a free auto detailing quote" className="py-24 bg-don-gold text-don-black text-center relative overflow-hidden">
+        <section id="cta" aria-label="Get a free auto detailing quote" className="relative py-28 lg:py-36 text-center overflow-hidden">
+          {/* Background image with dark overlay */}
+          <img
+            src="/ceramic-coating-reno-nv.webp"
+            role="presentation"
+            className="absolute inset-0 w-full h-full object-cover object-center opacity-40"
+            loading="lazy"
+            decoding="async"
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-don-black via-don-black/95 to-don-black" />
+
+          {/* Animated gold accent line at top */}
+          <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-don-gold to-transparent opacity-60" />
 
           <div className="max-w-4xl mx-auto px-6 relative z-10">
-            <h2 className="text-4xl lg:text-6xl font-serif font-bold tracking-tight mb-6">
-              Quit driving a dirty car.
+            {/* Star rating */}
+            <div className="flex justify-center gap-1 mb-6">
+              {[1, 2, 3, 4, 5].map(s => (
+                <Star key={s} className="w-5 h-5 text-don-gold fill-don-gold" />
+              ))}
+            </div>
+            <p className="text-don-cream/50 text-xs uppercase tracking-[0.3em] mb-8 font-semibold">75+ Five-Star Google Reviews</p>
+
+            <h2 className="text-4xl lg:text-7xl font-serif font-bold tracking-tight mb-6 text-don-cream">
+              Quit driving a <span className="text-don-gold italic">dirty car.</span>
             </h2>
-            <p className="text-xl lg:text-2xl font-medium mb-12 opacity-90 font-sans">
-              75+ five-star reviews. We come to you. Reno & Sparks.
+            <p className="text-lg lg:text-xl text-don-cream/70 font-light mb-12 max-w-2xl mx-auto">
+              We come to you — fully equipped. Your driveway, your office, your schedule. Reno & Sparks.
             </p>
-            <a href="#quote" className="inline-flex items-center justify-center gap-3 bg-don-black text-don-gold hover:bg-[#1a1a1a] font-bold uppercase tracking-widest px-10 py-5 rounded-sm transition-all hover:scale-105 active:scale-95 shadow-2xl w-full sm:w-auto">
-              GET MY QUOTE
+
+            <a
+              href="#quote"
+              className="group inline-flex items-center justify-center bg-don-gold text-don-black font-bold uppercase tracking-widest px-12 py-5 rounded-sm transition-all hover:shadow-[0_0_40px_rgba(212,175,55,0.4)] hover:scale-105 active:scale-95 w-full sm:w-auto relative overflow-hidden"
+            >
+              <div className="absolute inset-0 w-full h-full bg-gradient-to-r from-transparent via-white/30 to-transparent -translate-x-full group-hover:animate-[shimmer_1.5s_infinite]" />
+              <span className="relative z-10">GET MY FREE QUOTE</span>
             </a>
+
+            <p className="text-don-cream/30 text-[10px] uppercase tracking-[0.2em] mt-5">100% Free · No Obligation · Same-Day Response</p>
           </div>
         </section>
 
