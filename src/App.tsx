@@ -395,7 +395,7 @@ export default function App() {
         <section id="services-showcase" aria-label="Our detailing services" className="py-20 lg:py-28 bg-[#0a0a0a] border-t border-white/5">
           <div className="max-w-7xl mx-auto px-6">
             <h2 className="text-center text-4xl lg:text-5xl font-serif font-bold tracking-tight mb-6 text-don-cream">
-              What We Do <span className="text-don-gold-gradient italic">Best.</span>
+              What We Do <span className="text-don-gold-gradient italic">Best</span>
             </h2>
             <div className="w-24 h-1 bg-don-gold mx-auto mb-14"></div>
 
@@ -410,11 +410,7 @@ export default function App() {
                 <a
                   key={title}
                   href="#quote"
-                  className={`group relative overflow-hidden rounded-none block cursor-pointer ${
-                    i === 4 
-                      ? 'col-span-2 lg:col-span-1 aspect-[2/1] sm:aspect-[21/9] lg:aspect-[3/4]' 
-                      : 'aspect-[3/4]'
-                  }`}
+                  className="group relative aspect-[3/4] overflow-hidden rounded-none block cursor-pointer"
                 >
                   {/* Background image */}
                   <img
