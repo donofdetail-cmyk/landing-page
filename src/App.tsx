@@ -78,11 +78,11 @@ export default function App() {
   const faqs = [
     {
       q: 'How much does mobile auto detailing cost in Reno, NV?',
-      a: 'Pricing depends on vehicle size and the service selected. Exterior packages start at $200+. For a full interior & exterior detail, the average client should expect to spend between $250 and $400. Because every vehicle is different, we require you to submit a form to get a custom quote.',
+      a: 'Mobile auto detailing in Reno typically costs between $200 and $400 depending on vehicle size and the service selected. Exterior-only packages start at $200+. For a full interior & exterior detail, most clients spend $250–$400. Because every vehicle is different, we provide custom quotes after you submit a brief form.',
     },
     {
       q: 'Is ceramic coating worth it in Reno\'s climate?',
-      a: 'Reno gets 300+ days of intense UV, road salt from Tahoe trips, and constant desert dust. Ceramic coating gives you years of hydrophobic protection, UV resistance, and keeps your paint looking factory-fresh. For this climate, it\'s a no-brainer.',
+      a: 'Yes — ceramic coating is one of the best investments for vehicles in Reno\'s high-desert climate. Reno gets 300+ days of intense UV at 4,500+ feet of elevation, road salt from Tahoe trips, and constant desert dust. Ceramic coating provides years of hydrophobic protection, UV resistance, and keeps your paint looking factory-fresh.',
     },
     {
       q: 'What areas in Reno & Sparks do you service?',
@@ -164,7 +164,7 @@ export default function App() {
         <section id="hero" aria-label="Hero — Mobile Auto Detailing Reno NV" className="relative pt-32 pb-20 lg:pt-40 lg:pb-32 overflow-hidden">
           <img
             src="/ceramic-coating-reno-nv.webp"
-            role="presentation"
+            alt="Ceramic-coated vehicle with mirror-finish paint — Don of Detail mobile auto detailing Reno NV"
             className="absolute inset-0 w-full h-full object-cover object-center opacity-70"
           />
           <div className="absolute inset-0 bg-gradient-to-b from-don-black/60 via-don-black/90 to-don-black" />
@@ -211,8 +211,9 @@ export default function App() {
                   <form className="space-y-4" onSubmit={handleSubmit} aria-label="Request a free auto detailing quote">
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                       <div>
-                        <label className="block text-xs font-semibold uppercase tracking-widest text-don-cream/50 mb-2">First Name</label>
+                        <label htmlFor="firstName" className="block text-xs font-semibold uppercase tracking-widest text-don-cream/50 mb-2">First Name</label>
                         <input
+                          id="firstName"
                           type="text"
                           name="firstName"
                           required
@@ -221,8 +222,9 @@ export default function App() {
                         />
                       </div>
                       <div>
-                        <label className="block text-xs font-semibold uppercase tracking-widest text-don-cream/50 mb-2">Last Name</label>
+                        <label htmlFor="lastName" className="block text-xs font-semibold uppercase tracking-widest text-don-cream/50 mb-2">Last Name</label>
                         <input
+                          id="lastName"
                           type="text"
                           name="lastName"
                           required
@@ -233,8 +235,9 @@ export default function App() {
                     </div>
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                       <div>
-                        <label className="block text-xs font-semibold uppercase tracking-widest text-don-cream/50 mb-2">Phone</label>
+                        <label htmlFor="phone" className="block text-xs font-semibold uppercase tracking-widest text-don-cream/50 mb-2">Phone</label>
                         <input
+                          id="phone"
                           type="tel"
                           name="phone"
                           required
@@ -243,8 +246,9 @@ export default function App() {
                         />
                       </div>
                       <div>
-                        <label className="block text-xs font-semibold uppercase tracking-widest text-don-cream/50 mb-2">Email</label>
+                        <label htmlFor="email" className="block text-xs font-semibold uppercase tracking-widest text-don-cream/50 mb-2">Email</label>
                         <input
+                          id="email"
                           type="email"
                           name="email"
                           required
@@ -254,8 +258,9 @@ export default function App() {
                       </div>
                     </div>
                     <div>
-                      <label className="block text-xs font-semibold uppercase tracking-widest text-don-cream/50 mb-2">Vehicle Make/Model</label>
+                      <label htmlFor="vehicle" className="block text-xs font-semibold uppercase tracking-widest text-don-cream/50 mb-2">Vehicle Make/Model</label>
                       <input
+                        id="vehicle"
                         type="text"
                         name="vehicle"
                         required
@@ -264,9 +269,9 @@ export default function App() {
                       />
                     </div>
                     <div>
-                      <label className="block text-xs font-semibold uppercase tracking-widest text-don-cream/50 mb-2">Primary Concern</label>
+                      <label htmlFor="service" className="block text-xs font-semibold uppercase tracking-widest text-don-cream/50 mb-2">Primary Concern</label>
                       <div className="relative">
-                        <select required name="service" defaultValue="" className="w-full bg-don-black/50 border border-white/10 rounded-sm px-4 py-3 text-don-cream appearance-none focus:outline-none focus:ring-1 focus:ring-don-gold focus:border-don-gold transition-all">
+                        <select id="service" required name="service" defaultValue="" className="w-full bg-don-black/50 border border-white/10 rounded-sm px-4 py-3 text-don-cream appearance-none focus:outline-none focus:ring-1 focus:ring-don-gold focus:border-don-gold transition-all">
                           <option value="" disabled className="text-don-black">Select a service...</option>
                           <option value="interior" className="text-don-black">Interior Detail</option>
                           <option value="exterior" className="text-don-black">Exterior Detail</option>
@@ -470,7 +475,7 @@ export default function App() {
                             </span>
                           </div>
                           <div className={`transition-opacity duration-500 ${isActive ? 'opacity-100' : 'opacity-40'}`}>
-                            <h4 className="text-2xl font-serif font-bold mb-3 text-don-cream">{title}</h4>
+                            <h3 className="text-2xl font-serif font-bold mb-3 text-don-cream">{title}</h3>
                             <p className="text-don-cream/70 font-light leading-relaxed text-lg">{body}</p>
                           </div>
                         </div>
@@ -505,7 +510,7 @@ export default function App() {
                     </div>
                   ))}
                 </div>
-                <span className="text-don-cream/50 text-xs uppercase tracking-widest">75+ Google Reviews</span>
+                <span className="text-don-cream/50 text-xs uppercase tracking-widest">80+ Google Reviews</span>
               </div>
 
               {/* Card */}
@@ -573,7 +578,7 @@ export default function App() {
                       className="w-full flex items-center justify-between gap-4 px-8 py-6 text-left cursor-pointer"
                       aria-expanded={openFaq === i}
                     >
-                      <h4 className="text-lg font-serif font-bold text-don-gold leading-snug">{faq.q}</h4>
+                      <h3 className="text-lg font-serif font-bold text-don-gold leading-snug">{faq.q}</h3>
                       <ChevronDown
                         className={`w-5 h-5 text-don-gold flex-shrink-0 transition-transform duration-300 ${openFaq === i ? 'rotate-180' : ''
                           }`}
@@ -598,7 +603,7 @@ export default function App() {
           {/* Background image with dark overlay */}
           <img
             src="/ceramic-coating-reno-nv.webp"
-            role="presentation"
+            alt="Professional ceramic coating and paint correction results — Don of Detail Reno NV"
             className="absolute inset-0 w-full h-full object-cover object-center opacity-40"
             loading="lazy"
             decoding="async"
@@ -615,7 +620,7 @@ export default function App() {
                 <Star key={s} className="w-5 h-5 text-don-gold fill-don-gold" />
               ))}
             </div>
-            <p className="text-don-cream/50 text-xs uppercase tracking-[0.3em] mb-8 font-semibold">75+ Five-Star Google Reviews</p>
+            <p className="text-don-cream/50 text-xs uppercase tracking-[0.3em] mb-8 font-semibold">80+ Five-Star Google Reviews</p>
 
             <h2 className="text-4xl lg:text-7xl font-serif font-bold tracking-tight mb-6 text-don-cream">
               Quit driving a <span className="text-don-gold italic">dirty car.</span>

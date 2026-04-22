@@ -14,4 +14,10 @@ Allow: /
 User-agent: anthropic-ai
 Allow: /
 
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
 Sitemap: https://donofdetail.com/sitemap.xml
