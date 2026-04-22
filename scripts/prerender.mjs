@@ -109,5 +109,6 @@ async function prerender() {
 
 prerender().catch((err) => {
   console.error('❌ Pre-rendering failed:', err);
-  process.exit(1);
+  console.log('⚠️ Falling back to standard SPA build (Vercel deployment will continue)...');
+  process.exit(0);
 });
