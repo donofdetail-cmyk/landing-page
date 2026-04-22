@@ -150,11 +150,11 @@ export default function App() {
             <Logo className="h-16 md:h-24 w-auto" />
           </div>
           <nav aria-label="Primary">
-            <a href="tel:+17752307035" className="hidden md:flex items-center gap-2 text-sm font-semibold uppercase tracking-widest text-don-black bg-don-gold hover:bg-don-gold/90 px-6 py-2.5 rounded-sm transition-all hover:shadow-[0_0_15px_rgba(212,175,55,0.4)]">
+            <a href="tel:+17752307035" className="hidden md:flex items-center gap-2 text-sm font-semibold uppercase tracking-widest text-don-black bg-don-gold hover:bg-don-gold/90 px-6 py-2.5 rounded-none transition-all hover:shadow-[0_0_15px_rgba(212,175,55,0.4)]">
               <Phone className="w-4 h-4" />
               Call Now
             </a>
-            <a href="tel:+17752307035" className="md:hidden flex items-center justify-center w-10 h-10 bg-don-gold text-don-black rounded-sm" aria-label="Call Don of Detail">
+            <a href="tel:+17752307035" className="md:hidden flex items-center justify-center w-10 h-10 bg-don-gold text-don-black rounded-none" aria-label="Call Don of Detail">
               <Phone className="w-5 h-5" />
             </a>
           </nav>
@@ -195,8 +195,8 @@ export default function App() {
             </div>
 
             {/* Lead Form - Glassmorphism */}
-            <div id="quote" className="bg-white/5 backdrop-blur-xl border border-white/10 p-8 lg:p-10 rounded-xl shadow-2xl relative">
-              <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-don-gold to-transparent opacity-50 rounded-t-xl" />
+            <div id="quote" className="bg-white/5 backdrop-blur-xl border border-white/10 p-8 lg:p-10 rounded-none shadow-2xl relative">
+              <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-don-gold to-transparent opacity-50 rounded-none" />
 
               {isSubmitted ? (
                 <div className="flex flex-col items-center justify-center h-[400px] text-center animate-in fade-in zoom-in duration-500">
@@ -221,7 +221,7 @@ export default function App() {
                           name="firstName"
                           required
                           placeholder="First Name"
-                          className="w-full bg-don-black/50 border border-white/10 rounded-sm px-4 py-3 text-don-cream placeholder:text-don-cream/30 focus:outline-none focus:ring-1 focus:ring-don-gold focus:border-don-gold transition-all"
+                          className="w-full bg-don-black/50 border border-white/10 rounded-none px-4 py-3 text-don-cream placeholder:text-don-cream/30 focus:outline-none focus:ring-1 focus:ring-don-gold focus:border-don-gold transition-all"
                         />
                       </div>
                       <div>
@@ -232,7 +232,7 @@ export default function App() {
                           name="lastName"
                           required
                           placeholder="Last Name"
-                          className="w-full bg-don-black/50 border border-white/10 rounded-sm px-4 py-3 text-don-cream placeholder:text-don-cream/30 focus:outline-none focus:ring-1 focus:ring-don-gold focus:border-don-gold transition-all"
+                          className="w-full bg-don-black/50 border border-white/10 rounded-none px-4 py-3 text-don-cream placeholder:text-don-cream/30 focus:outline-none focus:ring-1 focus:ring-don-gold focus:border-don-gold transition-all"
                         />
                       </div>
                     </div>
@@ -245,7 +245,7 @@ export default function App() {
                           name="phone"
                           required
                           placeholder="(775) 000-0000"
-                          className="w-full bg-don-black/50 border border-white/10 rounded-sm px-4 py-3 text-don-cream placeholder:text-don-cream/30 focus:outline-none focus:ring-1 focus:ring-don-gold focus:border-don-gold transition-all"
+                          className="w-full bg-don-black/50 border border-white/10 rounded-none px-4 py-3 text-don-cream placeholder:text-don-cream/30 focus:outline-none focus:ring-1 focus:ring-don-gold focus:border-don-gold transition-all"
                         />
                       </div>
                       <div>
@@ -256,7 +256,7 @@ export default function App() {
                           name="email"
                           required
                           placeholder="you@email.com"
-                          className="w-full bg-don-black/50 border border-white/10 rounded-sm px-4 py-3 text-don-cream placeholder:text-don-cream/30 focus:outline-none focus:ring-1 focus:ring-don-gold focus:border-don-gold transition-all"
+                          className="w-full bg-don-black/50 border border-white/10 rounded-none px-4 py-3 text-don-cream placeholder:text-don-cream/30 focus:outline-none focus:ring-1 focus:ring-don-gold focus:border-don-gold transition-all"
                         />
                       </div>
                     </div>
@@ -268,13 +268,13 @@ export default function App() {
                         name="vehicle"
                         required
                         placeholder="Year, Make, Model"
-                        className="w-full bg-don-black/50 border border-white/10 rounded-sm px-4 py-3 text-don-cream placeholder:text-don-cream/30 focus:outline-none focus:ring-1 focus:ring-don-gold focus:border-don-gold transition-all"
+                        className="w-full bg-don-black/50 border border-white/10 rounded-none px-4 py-3 text-don-cream placeholder:text-don-cream/30 focus:outline-none focus:ring-1 focus:ring-don-gold focus:border-don-gold transition-all"
                       />
                     </div>
                     <div>
                       <label htmlFor="service" className="block text-xs font-semibold uppercase tracking-widest text-don-cream/50 mb-2">Primary Concern</label>
                       <div className="relative">
-                        <select id="service" required name="service" defaultValue="" className="w-full bg-don-black/50 border border-white/10 rounded-sm px-4 py-3 text-don-cream appearance-none focus:outline-none focus:ring-1 focus:ring-don-gold focus:border-don-gold transition-all">
+                        <select id="service" required name="service" defaultValue="" className="w-full bg-don-black/50 border border-white/10 rounded-none px-4 py-3 text-don-cream appearance-none focus:outline-none focus:ring-1 focus:ring-don-gold focus:border-don-gold transition-all">
                           <option value="" disabled className="text-don-black">Select a service...</option>
                           <option value="interior" className="text-don-black">Interior Detail</option>
                           <option value="exterior" className="text-don-black">Exterior Detail</option>
@@ -298,7 +298,7 @@ export default function App() {
                         <Link to="/privacy" className="text-don-gold hover:underline">Privacy Policy</Link>.
                       </span>
                     </label>
-                    <button type="submit" className="w-full bg-don-gold hover:bg-don-gold/90 text-don-black font-bold uppercase tracking-widest py-4 rounded-sm mt-2 transition-all hover:shadow-[0_0_20px_rgba(212,175,55,0.3)] flex items-center justify-center gap-2 group cursor-pointer relative overflow-hidden">
+                    <button type="submit" className="w-full bg-don-gold hover:bg-don-gold/90 text-don-black font-bold uppercase tracking-widest py-4 rounded-none mt-2 transition-all hover:shadow-[0_0_20px_rgba(212,175,55,0.3)] flex items-center justify-center gap-2 group cursor-pointer relative overflow-hidden">
                       <div className="absolute inset-0 w-full h-full bg-gradient-to-r from-transparent via-white/40 to-transparent -translate-x-full group-hover:animate-[shimmer_1.5s_infinite]" />
                       <span className="relative z-10">CLAIM MY FREE QUOTE</span>
                     </button>
@@ -323,7 +323,7 @@ export default function App() {
             </div>
 
             <div className="grid md:grid-cols-3 gap-8">
-              <div className="bg-white/5 border border-white/10 p-10 rounded-xl">
+              <div className="bg-white/5 border border-white/10 p-10 rounded-none">
                 <div className="relative w-16 h-16 rounded-full mb-8 flex items-center justify-center mx-auto">
                   <div className="absolute inset-0 rounded-full border border-don-gold/40 bg-don-gold/5 shadow-[0_0_15px_rgba(212,175,55,0.15)] backdrop-blur-sm" />
                   <Flame className="w-8 h-8 text-don-gold relative z-10" strokeWidth={1} />
@@ -333,7 +333,7 @@ export default function App() {
                   At 4,500+ feet, UV hits harder. The high-desert sun bakes clear coats, chalks paint, and cracks leather dashboards faster than most owners realize.
                 </p>
               </div>
-              <div className="bg-white/5 border border-white/10 p-10 rounded-xl">
+              <div className="bg-white/5 border border-white/10 p-10 rounded-none">
                 <div className="relative w-16 h-16 rounded-full mb-8 flex items-center justify-center mx-auto">
                   <div className="absolute inset-0 rounded-full border border-don-gold/40 bg-don-gold/5 shadow-[0_0_15px_rgba(212,175,55,0.15)] backdrop-blur-sm" />
                   <Wind className="w-8 h-8 text-don-gold relative z-10" strokeWidth={1} />
@@ -343,7 +343,7 @@ export default function App() {
                   That fine dust caked on your hood? It's silica. Wipe it off with a rag or a gas-station squeegee and you've just dragged sandpaper across your clear coat.
                 </p>
               </div>
-              <div className="bg-white/5 border border-white/10 p-10 rounded-xl">
+              <div className="bg-white/5 border border-white/10 p-10 rounded-none">
                 <div className="relative w-16 h-16 rounded-full mb-8 flex items-center justify-center mx-auto">
                   <div className="absolute inset-0 rounded-full border border-don-gold/40 bg-don-gold/5 shadow-[0_0_15px_rgba(212,175,55,0.15)] backdrop-blur-sm" />
                   <Snowflake className="w-8 h-8 text-don-gold relative z-10" strokeWidth={1} />
@@ -358,7 +358,7 @@ export default function App() {
             {/* Mid-page CTA */}
             <div className="text-center mt-16">
               <p className="text-don-cream/60 text-sm uppercase tracking-widest mb-4">Don't let the desert win.</p>
-              <a href="#quote" className="group inline-flex items-center gap-2 bg-don-gold text-don-black font-bold uppercase tracking-widest px-8 py-4 rounded-sm transition-all hover:shadow-[0_0_40px_rgba(212,175,55,0.4)] hover:scale-105 active:scale-95 relative overflow-hidden">
+              <a href="#quote" className="group inline-flex items-center gap-2 bg-don-gold text-don-black font-bold uppercase tracking-widest px-8 py-4 rounded-none transition-all hover:shadow-[0_0_40px_rgba(212,175,55,0.4)] hover:scale-105 active:scale-95 relative overflow-hidden">
                 <div className="absolute inset-0 w-full h-full bg-gradient-to-r from-transparent via-white/30 to-transparent -translate-x-full group-hover:animate-[shimmer_1.5s_infinite]" />
                 <span className="relative z-10">Get a Free Quote</span>
               </a>
@@ -372,7 +372,7 @@ export default function App() {
             <div className="grid lg:grid-cols-2 gap-16 items-center">
               <div className="order-2 lg:order-1 relative">
                 {/* Instagram Feed Embed Simulation */}
-                <div className="bg-don-black border border-white/10 rounded-xl overflow-hidden shadow-2xl max-w-md mx-auto lg:mx-0">
+                <div className="bg-don-black border border-white/10 rounded-none overflow-hidden shadow-2xl max-w-md mx-auto lg:mx-0">
                   {/* Header */}
                   <div className="flex items-center justify-between p-4 border-b border-white/10 bg-white/5">
                     <div className="flex items-center gap-3">
@@ -390,7 +390,7 @@ export default function App() {
                       href="https://instagram.com/donofdetail"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="bg-don-gold text-don-black text-xs font-bold px-4 py-1.5 rounded-sm hover:bg-don-gold/90 transition-colors"
+                      className="bg-don-gold text-don-black text-xs font-bold px-4 py-1.5 rounded-none hover:bg-don-gold/90 transition-colors"
                     >
                       Follow
                     </a>
@@ -502,7 +502,7 @@ export default function App() {
                   {[
                     { name: 'Google', color: '#4285F4' },
                   ].map(({ name, color }) => (
-                    <div key={name} className="flex items-center gap-2.5 bg-white/5 border border-white/10 rounded-lg px-4 py-2.5">
+                    <div key={name} className="flex items-center gap-2.5 bg-white/5 border border-white/10 rounded-none px-4 py-2.5">
                       <span className="text-xs font-bold uppercase tracking-widest" style={{ color }}>{name}</span>
                       <div className="flex gap-0.5">
                         {[1, 2, 3, 4, 5].map(s => (
@@ -517,7 +517,7 @@ export default function App() {
               </div>
 
               {/* Card */}
-              <div className="relative bg-white/5 border border-white/10 rounded-xl px-4 py-8 md:p-10 text-center overflow-hidden min-h-[440px] flex flex-col justify-center">
+              <div className="relative bg-white/5 border border-white/10 rounded-none px-4 py-8 md:p-10 text-center overflow-hidden min-h-[440px] flex flex-col justify-center">
                 {testimonials.map((t, i) => (
                   <div
                     key={i}
@@ -573,7 +573,7 @@ export default function App() {
                 Frequently Asked Questions
               </h2>
 
-              <div className="divide-y divide-white/10 border border-white/10 rounded-xl overflow-hidden">
+              <div className="divide-y divide-white/10 border border-white/10 rounded-none overflow-hidden">
                 {faqs.map((faq, i) => (
                   <div key={i} className="bg-white/5 hover:bg-white/[0.07] transition-colors">
                     <button
@@ -634,7 +634,7 @@ export default function App() {
 
             <a
               href="#quote"
-              className="group inline-flex items-center justify-center bg-don-gold text-don-black font-bold uppercase tracking-widest px-12 py-5 rounded-sm transition-all hover:shadow-[0_0_40px_rgba(212,175,55,0.4)] hover:scale-105 active:scale-95 w-full sm:w-auto relative overflow-hidden"
+              className="group inline-flex items-center justify-center bg-don-gold text-don-black font-bold uppercase tracking-widest px-12 py-5 rounded-none transition-all hover:shadow-[0_0_40px_rgba(212,175,55,0.4)] hover:scale-105 active:scale-95 w-full sm:w-auto relative overflow-hidden"
             >
               <div className="absolute inset-0 w-full h-full bg-gradient-to-r from-transparent via-white/30 to-transparent -translate-x-full group-hover:animate-[shimmer_1.5s_infinite]" />
               <span className="relative z-10">GET MY FREE QUOTE</span>
