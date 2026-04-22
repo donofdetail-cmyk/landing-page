@@ -302,12 +302,30 @@ export default function App() {
                       <div className="absolute inset-0 w-full h-full bg-gradient-to-r from-transparent via-white/40 to-transparent -translate-x-full group-hover:animate-[shimmer_1.5s_infinite]" />
                       <span className="relative z-10">CLAIM MY FREE QUOTE</span>
                     </button>
+
                   </form>
                 </>
               )}
             </div>
           </div>
         </section>
+
+        {/* Product Trust Badges Banner */}
+        <div className="w-full bg-[#0a0a0a] border-t border-white/5 py-8 overflow-hidden">
+          <div className="max-w-7xl mx-auto px-6">
+            <p className="text-center text-[10px] font-bold uppercase tracking-[0.3em] text-don-cream/30 mb-6">Premium Products Used & Trusted</p>
+            <div className="flex flex-wrap justify-center items-center gap-8 md:gap-16 opacity-40 grayscale transition-all hover:grayscale-0 hover:opacity-100 duration-500">
+              <span className="font-sans font-black uppercase tracking-[0.2em] text-don-cream text-lg md:text-xl flex flex-col items-center justify-center leading-none">
+                <span className="w-4/5 h-[3px] bg-don-cream mb-1 opacity-90 self-end mr-1"></span>
+                CARPRO
+              </span>
+              <span className="font-sans font-black tracking-tighter text-don-cream text-3xl md:text-4xl">3M</span>
+              <span className="font-sans font-bold uppercase tracking-widest text-don-cream text-xl md:text-2xl">STARKE</span>
+              <span className="font-sans text-don-cream text-xl md:text-2xl tracking-tight"><span className="font-black">Koch</span><span className="font-medium">Chemie</span></span>
+              <span className="font-sans font-black tracking-tighter text-don-cream text-3xl md:text-4xl">P&amp;S</span>
+            </div>
+          </div>
+        </div>
 
         {/* Agitation Section */}
         <section id="why-protection" aria-label="Why your vehicle needs protection in Reno" className="py-24 bg-don-black border-t border-white/5 relative">
