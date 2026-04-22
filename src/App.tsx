@@ -410,7 +410,11 @@ export default function App() {
                 <a
                   key={title}
                   href="#quote"
-                  className={`group relative aspect-[3/4] overflow-hidden rounded-none block cursor-pointer ${i === 4 ? 'col-span-2 lg:col-span-1 max-w-[50%] lg:max-w-none mx-auto lg:mx-0' : ''}`}
+                  className={`group relative overflow-hidden rounded-none block cursor-pointer ${
+                    i === 4 
+                      ? 'col-span-2 lg:col-span-1 aspect-[2/1] sm:aspect-[21/9] lg:aspect-[3/4]' 
+                      : 'aspect-[3/4]'
+                  }`}
                 >
                   {/* Background image */}
                   <img
