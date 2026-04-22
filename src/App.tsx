@@ -199,9 +199,14 @@ export default function App() {
 
             </div>
 
-            {/* Lead Form - Glassmorphism */}
-            <div id="quote" className="bg-white/5 backdrop-blur-xl border border-white/10 p-8 lg:p-10 rounded-none shadow-2xl relative">
-              <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-don-gold to-transparent opacity-50 rounded-none" />
+            {/* Lead Form - Attention Grabbing (Ultra Optimized for Performance) */}
+            <div id="quote" className="relative group scroll-mt-24">
+              {/* Pulsing glow layer (Hardware accelerated opacity animation only) */}
+              <div className="absolute inset-0 shadow-[0_0_40px_rgba(212,175,55,0.4)] border border-don-gold/60 animate-pulse pointer-events-none" />
+              
+              {/* Static Glassmorphism form layer */}
+              <div className="bg-don-black/90 backdrop-blur-xl border border-white/10 p-8 lg:p-10 rounded-none relative z-10 h-full w-full">
+                <div className="absolute top-0 left-0 w-full h-1 bg-don-gold-gradient opacity-80" />
 
               {isSubmitted ? (
                 <div className="flex flex-col items-center justify-center h-[400px] text-center animate-in fade-in zoom-in duration-500">
@@ -311,6 +316,7 @@ export default function App() {
                   </form>
                 </>
               )}
+              </div>
             </div>
           </div>
         </section>
