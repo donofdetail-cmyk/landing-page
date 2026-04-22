@@ -205,7 +205,7 @@ export default function App() {
               <div className="absolute inset-0 shadow-[0_0_40px_rgba(212,175,55,0.4)] border border-don-gold/60 animate-pulse pointer-events-none" />
               
               {/* Static Glassmorphism form layer */}
-              <div className="bg-don-black/90 backdrop-blur-xl border border-white/10 p-8 lg:p-10 rounded-none relative z-10 h-full w-full">
+              <div className="bg-white/5 backdrop-blur-xl border border-white/10 p-8 lg:p-10 rounded-none relative z-10 h-full w-full">
                 <div className="absolute top-0 left-0 w-full h-1 bg-don-gold-gradient opacity-80" />
 
               {isSubmitted ? (
