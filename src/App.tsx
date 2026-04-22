@@ -22,24 +22,12 @@ export default function App() {
   const [activeTestimonial, setActiveTestimonial] = useState(0);
   const [isScrolled, setIsScrolled] = useState(false);
   const [lineProgress, setLineProgress] = useState(0);
-  const [lineTrackHeight, setLineTrackHeight] = useState(0);
   const stepsRef = useRef<HTMLDivElement>(null);
-  const iconRefs = useRef<(HTMLDivElement | null)[]>([]);
 
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20);
       if (!stepsRef.current) return;
-
-      // Compute exact pixel height between first and last icon centers
-      const first = iconRefs.current[0];
-      const last = iconRefs.current[iconRefs.current.length - 1];
-      if (first && last) {
-        const containerTop = stepsRef.current.getBoundingClientRect().top;
-        const firstCenter = first.getBoundingClientRect().top + 28 - containerTop;
-        const lastCenter = last.getBoundingClientRect().top + 28 - containerTop;
-        setLineTrackHeight(lastCenter - firstCenter);
-      }
 
       const rect = stepsRef.current.getBoundingClientRect();
       const windowH = window.innerHeight;
@@ -349,30 +337,21 @@ export default function App() {
 
             <div className="grid md:grid-cols-3 gap-8">
               <div className="bg-white/5 border border-white/10 p-10 rounded-none">
-                <div className="relative w-16 h-16 rounded-full mb-8 flex items-center justify-center mx-auto">
-                  <div className="absolute inset-0 rounded-full border border-don-gold/40 bg-don-gold/5 shadow-[0_0_15px_rgba(212,175,55,0.15)] backdrop-blur-sm" />
-                  <Flame className="w-8 h-8 text-don-gold relative z-10 animate-flicker" strokeWidth={1} />
-                </div>
+                <Flame className="w-14 h-14 text-don-gold mx-auto mb-8 animate-flicker" strokeWidth={1} />
                 <h3 className="text-2xl font-serif font-bold mb-4 text-don-cream text-center">300 Days of UV Burn</h3>
                 <p className="text-don-cream/70 font-light leading-relaxed">
                   At 4,500+ feet, UV hits harder. The high-desert sun bakes clear coats, chalks paint, and cracks leather dashboards faster than most owners realize.
                 </p>
               </div>
               <div className="bg-white/5 border border-white/10 p-10 rounded-none">
-                <div className="relative w-16 h-16 rounded-full mb-8 flex items-center justify-center mx-auto">
-                  <div className="absolute inset-0 rounded-full border border-don-gold/40 bg-don-gold/5 shadow-[0_0_15px_rgba(212,175,55,0.15)] backdrop-blur-sm" />
-                  <Wind className="w-8 h-8 text-don-gold relative z-10 animate-sway" strokeWidth={1} />
-                </div>
+                <Wind className="w-14 h-14 text-don-gold mx-auto mb-8 animate-sway" strokeWidth={1} />
                 <h3 className="text-2xl font-serif font-bold mb-4 text-don-cream text-center">The Washoe Zephyr Grit</h3>
                 <p className="text-don-cream/70 font-light leading-relaxed">
                   That fine dust caked on your hood? It's silica. Wipe it off with a rag or a gas-station squeegee and you've just dragged sandpaper across your clear coat.
                 </p>
               </div>
               <div className="bg-white/5 border border-white/10 p-10 rounded-none">
-                <div className="relative w-16 h-16 rounded-full mb-8 flex items-center justify-center mx-auto">
-                  <div className="absolute inset-0 rounded-full border border-don-gold/40 bg-don-gold/5 shadow-[0_0_15px_rgba(212,175,55,0.15)] backdrop-blur-sm" />
-                  <Snowflake className="w-8 h-8 text-don-gold relative z-10 animate-spin-slow" strokeWidth={1} />
-                </div>
+                <Snowflake className="w-14 h-14 text-don-gold mx-auto mb-8 animate-spin-slow" strokeWidth={1} />
                 <h3 className="text-2xl font-serif font-bold mb-4 text-don-cream text-center">Sierra Road Salt</h3>
                 <p className="text-don-cream/70 font-light leading-relaxed">
                   Every trip up to Tahoe coats your undercarriage in magnesium chloride. That salt sits there for weeks, corroding metal and staining paint from the bottom up.
@@ -507,55 +486,37 @@ export default function App() {
                   Three steps. Zero hassle. You don't even have to be there.
                 </p>
 
-                {/* Scroll-driven connecting line */}
-                <div ref={stepsRef} className="relative">
-                  {/* Track - from center of icon 1 to center of icon 3 */}
-                  <div
-                    className="absolute left-7 top-7 w-px bg-white/10"
-                    style={{ height: lineTrackHeight }}
-                  />
-                  {/* Gold fill */}
-                  <div
-                    className="absolute left-7 top-7 w-px bg-gradient-to-b from-don-gold to-don-gold/60 transition-none"
-                    style={{
-                      height: lineProgress * lineTrackHeight,
-                      boxShadow: lineProgress > 0 ? '0 0 8px 1px rgba(212,175,55,0.5)' : 'none',
-                      willChange: 'height, box-shadow'
-                    }}
-                  />
-
-                  <div className="space-y-12 relative z-10">
-                    {[
-                      { num: 1, title: 'Request a Quote', body: 'Drop your vehicle info into the form. Year, make, model, what you need done. We\'ll get back to you with a price, usually within the hour.' },
-                      { num: 2, title: 'Schedule & Confirm', body: "Once you approve the quote, we'll find a time that works perfectly with your schedule. No need to clear your whole day. We bring our fully-equipped mobile unit directly to your home or office." },
-                      { num: 3, title: 'Sit Back', body: 'Hand us the keys and go about your day. When you come back, it\'ll look like a different car.' },
-                    ].map(({ num, title, body }, i) => {
-                      const threshold = i / 2; // 0, 0.5, 1.0
-                      const isActive = lineProgress >= threshold;
-                      return (
-                        <div key={title} className="flex items-start gap-6">
-                          <div
-                            ref={(el) => { iconRefs.current[i] = el; }}
-                            className={`relative flex-shrink-0 w-14 h-14 rounded-full flex items-center justify-center bg-don-black transition-transform duration-500 will-change-transform ${isActive ? 'scale-110' : 'scale-100'}`}
+                {/* Scroll-driven Animated Steps */}
+                <div ref={stepsRef} className="space-y-16 relative z-10 mt-12">
+                  {[
+                    { num: 1, title: 'Request a Quote', body: 'Drop your vehicle info into the form. Year, make, model, what you need done. We\'ll get back to you with a price, usually within the hour.' },
+                    { num: 2, title: 'Schedule & Confirm', body: "Once you approve the quote, we'll find a time that works perfectly with your schedule. No need to clear your whole day. We bring our fully-equipped mobile unit directly to your home or office." },
+                    { num: 3, title: 'Sit Back', body: 'Hand us the keys and go about your day. When you come back, it\'ll look like a different car.' },
+                  ].map(({ num, title, body }, i) => {
+                    const threshold = i / 2; // 0, 0.5, 1.0
+                    const isActive = lineProgress >= threshold;
+                    return (
+                      <div 
+                        key={title} 
+                        className={`group flex flex-col md:flex-row items-start md:items-center gap-6 md:gap-12 transition-all duration-1000 ease-out will-change-transform ${isActive ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-16'}`}
+                      >
+                        {/* Giant Number */}
+                        <div className="flex-shrink-0">
+                          <span
+                            className={`block text-8xl md:text-[10rem] font-serif font-black leading-none transition-all duration-1000 ${isActive ? 'text-don-gold-gradient drop-shadow-[0_0_20px_rgba(212,175,55,0.4)] scale-100' : 'text-white/5 scale-75'}`}
                           >
-                            <div className={`absolute inset-0 rounded-full border transition-all duration-500 ${isActive
-                              ? 'border-don-gold bg-don-gold/20 shadow-[0_0_24px_4px_rgba(212,175,55,0.55)]'
-                              : 'border-don-gold/30 bg-don-gold/5 shadow-[0_0_10px_rgba(212,175,55,0.1)]'
-                              }`} />
-                            <span
-                              className={`relative z-10 text-xl font-serif font-bold transition-colors duration-500 ${isActive ? 'text-don-gold' : 'text-don-gold/50'}`}
-                            >
-                              {num}
-                            </span>
-                          </div>
-                          <div className={`transition-opacity duration-500 ${isActive ? 'opacity-100' : 'opacity-40'}`}>
-                            <h3 className="text-2xl font-serif font-bold mb-3 text-don-cream">{title}</h3>
-                            <p className="text-don-cream/70 font-light leading-relaxed text-lg">{body}</p>
-                          </div>
+                            {num}.
+                          </span>
                         </div>
-                      );
-                    })}
-                  </div>
+                        
+                        {/* Text Content */}
+                        <div className={`transition-all duration-1000 delay-200 ${isActive ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-8'}`}>
+                          <h3 className="text-3xl font-serif font-bold mb-4 text-don-cream">{title}</h3>
+                          <p className="text-don-cream/70 font-light leading-relaxed text-lg">{body}</p>
+                        </div>
+                      </div>
+                    );
+                  })}
                 </div>
               </div>
             </div>
