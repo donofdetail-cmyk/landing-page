@@ -62,6 +62,16 @@ export default function App() {
       author: "Alex C.",
       location: "Reno, NV",
     },
+    {
+      quote: "Great communication and great service. They did an exceptional job with the interior especially with all the dog hair. Would recommend to anyone.",
+      author: "Debbie E.",
+      location: "Sparks, NV",
+    },
+    {
+      quote: "Logan was super friendly, knowledgeable, punctual, and thorough. I’ve booked Don of Detail for family members as gifts and myself. I even have monthly follow ups scheduled so I can keep up on my dog taxi haha. I would highly recommend to anyone and everyone.",
+      author: "Quinn T.",
+      location: "Reno, NV",
+    },
   ];
 
 
@@ -549,14 +559,14 @@ export default function App() {
               </div>
 
               {/* Card */}
-              <div className="relative bg-gradient-to-br from-white/[0.05] to-transparent border border-white/10 rounded-none px-4 py-8 md:p-12 text-center overflow-hidden min-h-[480px] flex flex-col justify-center group shadow-[0_0_40px_rgba(0,0,0,0.5)] backdrop-blur-sm">
-                <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-don-gold/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
-                <Quote className="absolute -top-6 -left-6 w-48 h-48 text-white/[0.02] -rotate-12 pointer-events-none" />
+              <div className="relative bg-gradient-to-br from-white/[0.05] to-transparent border border-white/10 rounded-none text-center overflow-hidden group shadow-[0_0_40px_rgba(0,0,0,0.5)] backdrop-blur-sm grid">
+                <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-don-gold/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 z-20" />
+                <Quote className="absolute -top-6 -left-6 w-48 h-48 text-white/[0.02] -rotate-12 pointer-events-none z-0" />
                 
                 {testimonials.map((t, i) => (
                   <div
                     key={i}
-                    className={`transition-all duration-700 absolute inset-0 flex flex-col items-center justify-center px-6 py-8 md:p-12 will-change-transform will-change-opacity ${i === activeTestimonial ? 'opacity-100 scale-100' : 'opacity-0 scale-95 pointer-events-none'
+                    className={`col-start-1 row-start-1 transition-all duration-700 flex flex-col items-center justify-center px-4 py-8 md:p-12 will-change-transform will-change-opacity ${i === activeTestimonial ? 'opacity-100 scale-100 z-10' : 'opacity-0 scale-95 pointer-events-none z-0'
                       }`}
                   >
                     <div className="flex gap-1.5 mb-8">
