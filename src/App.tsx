@@ -113,9 +113,9 @@ export default function App() {
     },
   ];
 
-  // ── Google Sheets – paste your Apps Script Web App URL below ──────────────
+  // -- Google Sheets - paste your Apps Script Web App URL below --------------
   const GOOGLE_SHEET_URL = 'https://script.google.com/macros/s/AKfycbzjliWvpaLq1Lzo9Y_Wyq8q0URwRRhPXwAUw3JTvrubtlAqRYB3BaCgUdGZG93_gAzD/exec';
-  // ──────────────────────────────────────────────────────────────────────────
+  // --------------------------------------------------------------------------
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -164,10 +164,10 @@ export default function App() {
       <main>
 
         {/* Hero Section */}
-        <section id="hero" aria-label="Hero — Mobile Auto Detailing Reno NV" className="relative pt-32 pb-20 lg:pt-40 lg:pb-32 overflow-hidden">
+        <section id="hero" aria-label="Hero - Mobile Auto Detailing Reno NV" className="relative pt-32 pb-20 lg:pt-40 lg:pb-32 overflow-hidden">
           <img
             src="/ceramic-coating-reno-nv.webp"
-            alt="Ceramic-coated vehicle with mirror-finish paint — Don of Detail mobile auto detailing Reno NV"
+            alt="Ceramic-coated vehicle with mirror-finish paint - Don of Detail mobile auto detailing Reno NV"
             className="absolute inset-0 w-full h-full object-cover object-center opacity-70"
           />
           <div className="absolute inset-0 bg-gradient-to-b from-don-black/60 via-don-black/90 to-don-black" />
@@ -438,7 +438,7 @@ export default function App() {
 
                 {/* Scroll-driven connecting line */}
                 <div ref={stepsRef} className="relative">
-                  {/* Track — from center of icon 1 to center of icon 3 */}
+                  {/* Track - from center of icon 1 to center of icon 3 */}
                   <div
                     className="absolute left-7 top-7 w-px bg-white/10"
                     style={{ height: lineTrackHeight }}
@@ -531,7 +531,7 @@ export default function App() {
                       "{t.quote}"
                     </blockquote>
                     <cite className="text-don-cream/60 uppercase tracking-widest text-[10px] md:text-xs not-italic font-semibold">
-                      — {t.author}, {t.location}
+                      - {t.author}, {t.location}
                     </cite>
                   </div>
                 ))}
@@ -606,7 +606,7 @@ export default function App() {
           {/* Background image with dark overlay */}
           <img
             src="/ceramic-coating-reno-nv.webp"
-            alt="Professional ceramic coating and paint correction results — Don of Detail Reno NV"
+            alt="Professional ceramic coating and paint correction results - Don of Detail Reno NV"
             className="absolute inset-0 w-full h-full object-cover object-center opacity-40"
             loading="lazy"
             decoding="async"
@@ -660,7 +660,7 @@ export default function App() {
               {/* Business Hours */}
               <div className="flex flex-col items-center text-center gap-2">
                 <p className="text-[10px] uppercase tracking-[0.2em] text-don-cream/50 mb-1">Business Hours</p>
-                <p className="text-don-cream/80 text-sm">8 AM – 7 PM</p>
+                <p className="text-don-cream/80 text-sm">8 AM - 7 PM</p>
                 <p className="text-don-cream/50 text-xs mt-0.5">7 Days a Week</p>
               </div>
 
