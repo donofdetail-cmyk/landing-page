@@ -326,7 +326,7 @@ export default function App() {
               <div className="bg-white/5 border border-white/10 p-10 rounded-none">
                 <div className="relative w-16 h-16 rounded-full mb-8 flex items-center justify-center mx-auto">
                   <div className="absolute inset-0 rounded-full border border-don-gold/40 bg-don-gold/5 shadow-[0_0_15px_rgba(212,175,55,0.15)] backdrop-blur-sm" />
-                  <Flame className="w-8 h-8 text-don-gold relative z-10" strokeWidth={1} />
+                  <Flame className="w-8 h-8 text-don-gold relative z-10 animate-flicker" strokeWidth={1} />
                 </div>
                 <h3 className="text-2xl font-serif font-bold mb-4 text-don-cream text-center">300 Days of UV Burn</h3>
                 <p className="text-don-cream/70 font-light leading-relaxed">
@@ -336,7 +336,7 @@ export default function App() {
               <div className="bg-white/5 border border-white/10 p-10 rounded-none">
                 <div className="relative w-16 h-16 rounded-full mb-8 flex items-center justify-center mx-auto">
                   <div className="absolute inset-0 rounded-full border border-don-gold/40 bg-don-gold/5 shadow-[0_0_15px_rgba(212,175,55,0.15)] backdrop-blur-sm" />
-                  <Wind className="w-8 h-8 text-don-gold relative z-10" strokeWidth={1} />
+                  <Wind className="w-8 h-8 text-don-gold relative z-10 animate-sway" strokeWidth={1} />
                 </div>
                 <h3 className="text-2xl font-serif font-bold mb-4 text-don-cream text-center">The Washoe Zephyr Grit</h3>
                 <p className="text-don-cream/70 font-light leading-relaxed">
@@ -346,7 +346,7 @@ export default function App() {
               <div className="bg-white/5 border border-white/10 p-10 rounded-none">
                 <div className="relative w-16 h-16 rounded-full mb-8 flex items-center justify-center mx-auto">
                   <div className="absolute inset-0 rounded-full border border-don-gold/40 bg-don-gold/5 shadow-[0_0_15px_rgba(212,175,55,0.15)] backdrop-blur-sm" />
-                  <Snowflake className="w-8 h-8 text-don-gold relative z-10" strokeWidth={1} />
+                  <Snowflake className="w-8 h-8 text-don-gold relative z-10 animate-spin-slow" strokeWidth={1} />
                 </div>
                 <h3 className="text-2xl font-serif font-bold mb-4 text-don-cream text-center">Sierra Road Salt</h3>
                 <p className="text-don-cream/70 font-light leading-relaxed">
