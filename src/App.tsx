@@ -3,14 +3,17 @@ import { Link } from 'react-router-dom';
 import { Flame, Wind, Snowflake, Shield, Star, CheckCircle, Phone, ChevronDown, Award, Instagram, Mail, Clock, MapPin } from 'lucide-react';
 
 const Logo = ({ className = '', style = {} }: { className?: string; style?: React.CSSProperties }) => (
-  <img
-    src="/logo.png"
-    alt="Don of Detail logo"
-    className={className}
-    loading="eager"
-    decoding="sync"
-    style={{ mixBlendMode: 'lighten', ...style }}
-  />
+  <picture>
+    <source srcSet="/logo.webp" type="image/webp" />
+    <img
+      src="/logo.png"
+      alt="Don of Detail logo"
+      className={className}
+      loading="eager"
+      decoding="sync"
+      style={{ mixBlendMode: 'lighten', ...style }}
+    />
+  </picture>
 );
 
 export default function App() {
