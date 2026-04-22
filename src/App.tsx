@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
-import { Flame, Wind, Snowflake, Shield, Star, CheckCircle, Phone, ChevronDown, Award, Instagram, Mail, Clock, MapPin } from 'lucide-react';
+import { Flame, Wind, Snowflake, Shield, Star, CheckCircle, Phone, ChevronDown, Award, Instagram, Mail, Clock, MapPin, Quote } from 'lucide-react';
 
 const Logo = ({ className = '', style = {} }: { className?: string; style?: React.CSSProperties }) => (
   <picture>
@@ -139,9 +139,16 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen bg-don-black text-don-cream font-sans selection:bg-don-gold/30">
+    <div className="min-h-screen bg-don-black text-don-cream font-sans selection:bg-don-gold/30 relative">
+      {/* Ambient Lighting for Premium Texture */}
+      <div className="fixed inset-0 pointer-events-none z-0 overflow-hidden opacity-50">
+        <div className="absolute top-[-20%] left-[-10%] w-[70vw] h-[70vw] rounded-full bg-[radial-gradient(circle,rgba(212,175,55,0.15)_0%,transparent_60%)] animate-float will-change-transform" />
+        <div className="absolute bottom-[-20%] right-[-10%] w-[80vw] h-[80vw] rounded-full bg-[radial-gradient(circle,rgba(212,175,55,0.08)_0%,transparent_60%)] animate-float-delayed will-change-transform" />
+        <div className="absolute top-[30%] left-[50%] w-[50vw] h-[50vw] rounded-full bg-[radial-gradient(circle,rgba(245,245,220,0.08)_0%,transparent_60%)] animate-float will-change-transform" />
+      </div>
+
       {/* Global Noise Overlay for premium film grain effect */}
-      <div className="fixed inset-0 pointer-events-none z-50 bg-noise"></div>
+      <div className="fixed inset-0 pointer-events-none z-50 bg-noise opacity-[0.06] will-change-transform translate-z-0"></div>
 
       {/* Sticky Header */}
       <header className={`fixed top-0 w-full z-50 border-b border-white/10 transition-all duration-300 ${isScrolled ? 'bg-don-black/95 backdrop-blur-md py-0' : 'bg-transparent py-4 border-transparent'}`}>
@@ -176,7 +183,7 @@ export default function App() {
             <div className="max-w-2xl">
 
               <h1 className="text-5xl lg:text-7xl font-serif font-bold tracking-tight leading-[1.1] mb-6 text-don-cream">
-                Reno's Premier <span className="text-don-gold italic">Mobile Auto Detailing</span>
+                Reno's Premier <span className="text-don-gold-gradient italic">Mobile Auto Detailing</span>
               </h1>
               <p className="text-lg lg:text-xl text-don-cream/80 font-light leading-relaxed mb-10">
                 We show up at your driveway with everything we need. Water, power, the works. You hand us the keys. A few hours later, your car looks better than the day you bought it.
@@ -384,6 +391,51 @@ export default function App() {
           </div>
         </section>
 
+        {/* Service Showcase Section */}
+        <section id="services-showcase" aria-label="Our detailing services" className="py-20 lg:py-28 bg-[#0a0a0a] border-t border-white/5">
+          <div className="max-w-7xl mx-auto px-6">
+            <h2 className="text-center text-4xl lg:text-5xl font-serif font-bold tracking-tight mb-6 text-don-cream">
+              What We Do <span className="text-don-gold-gradient italic">Best.</span>
+            </h2>
+            <div className="w-24 h-1 bg-don-gold mx-auto mb-14"></div>
+
+            <div className="grid grid-cols-2 lg:grid-cols-5 gap-3 md:gap-4">
+              {[
+                { title: 'Detailing\nServices', img: '/showcase-detailing.webp', alt: 'Full auto detailing services Reno NV' },
+                { title: 'Ceramic\nCoating', img: '/showcase-ceramic.webp', alt: 'Professional ceramic coating application Reno NV' },
+                { title: 'Paint\nCorrection', img: '/showcase-paint.webp', alt: 'Paint correction and swirl removal Reno NV' },
+                { title: 'RV\nDetailing', img: '/showcase-rv.webp', alt: 'RV and motorhome detailing Reno NV' },
+                { title: 'Marine\nDetailing', img: '/showcase-marine.webp', alt: 'Boat and marine detailing Reno Lake Tahoe NV' },
+              ].map(({ title, img, alt }, i) => (
+                <a
+                  key={title}
+                  href="#quote"
+                  className={`group relative aspect-[3/4] overflow-hidden rounded-none block cursor-pointer ${i === 4 ? 'col-span-2 lg:col-span-1 max-w-[50%] lg:max-w-none mx-auto lg:mx-0' : ''}`}
+                >
+                  {/* Background image */}
+                  <img
+                    src={img}
+                    alt={alt}
+                    className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-110"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                  {/* Dark gradient overlay */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-don-black/80 via-don-black/20 to-don-black/10 group-hover:from-don-black/90 transition-all duration-500" />
+                  {/* Gold top accent on hover */}
+                  <div className="absolute top-0 left-0 w-full h-[2px] bg-don-gold scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left" />
+                  {/* Title */}
+                  <div className="absolute inset-0 flex items-end p-4 md:p-6">
+                    <h3 className="text-xl md:text-2xl lg:text-3xl font-serif font-bold text-don-cream leading-tight tracking-wide whitespace-pre-line drop-shadow-lg">
+                      {title}
+                    </h3>
+                  </div>
+                </a>
+              ))}
+            </div>
+          </div>
+        </section>
+
         {/* Solution Section */}
         <section id="how-it-works" aria-label="How mobile auto detailing works" className="py-24 bg-[#0f0f0f] border-t border-white/5">
           <div className="max-w-7xl mx-auto px-6">
@@ -450,6 +502,7 @@ export default function App() {
                 <h2 className="text-4xl lg:text-5xl font-serif font-bold tracking-tight mb-6 text-don-cream">
                   How It Works
                 </h2>
+                <div className="w-24 h-1 bg-don-gold mb-6"></div>
                 <p className="text-don-cream/70 text-lg mb-12 font-light">
                   Three steps. Zero hassle. You don't even have to be there.
                 </p>
@@ -535,22 +588,33 @@ export default function App() {
               </div>
 
               {/* Card */}
-              <div className="relative bg-white/5 border border-white/10 rounded-none px-4 py-8 md:p-10 text-center overflow-hidden min-h-[440px] flex flex-col justify-center">
+              <div className="relative bg-gradient-to-br from-white/[0.05] to-transparent border border-white/10 rounded-none px-4 py-8 md:p-12 text-center overflow-hidden min-h-[480px] flex flex-col justify-center group shadow-[0_0_40px_rgba(0,0,0,0.5)] backdrop-blur-sm">
+                <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-don-gold/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
+                <Quote className="absolute -top-6 -left-6 w-48 h-48 text-white/[0.02] -rotate-12 pointer-events-none" />
+                
                 {testimonials.map((t, i) => (
                   <div
                     key={i}
-                    className={`transition-all duration-500 absolute inset-0 flex flex-col items-center justify-center px-6 py-8 md:p-10 will-change-transform will-change-opacity ${i === activeTestimonial ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-8 pointer-events-none'
+                    className={`transition-all duration-700 absolute inset-0 flex flex-col items-center justify-center px-6 py-8 md:p-12 will-change-transform will-change-opacity ${i === activeTestimonial ? 'opacity-100 scale-100' : 'opacity-0 scale-95 pointer-events-none'
                       }`}
                   >
-                    <div className="flex gap-1 mb-4 md:mb-6">
-                      {[1, 2, 3, 4, 5].map(s => <Star key={s} className="w-4 h-4 text-don-gold fill-don-gold" />)}
+                    <div className="flex gap-1.5 mb-8">
+                      {[1, 2, 3, 4, 5].map(s => <Star key={s} className="w-5 h-5 text-don-gold fill-don-gold drop-shadow-[0_0_8px_rgba(212,175,55,0.4)]" />)}
                     </div>
-                    <blockquote className="text-lg md:text-2xl font-serif italic text-don-cream leading-snug mb-4 md:mb-6">
-                      "{t.quote}"
+                    <blockquote className="text-xl md:text-3xl font-serif italic text-don-cream leading-relaxed mb-10 max-w-2xl relative z-10">
+                      <span className="text-don-gold/30 text-4xl absolute -top-4 -left-6 md:-left-8 select-none">"</span>
+                      {t.quote}
+                      <span className="text-don-gold/30 text-4xl absolute -bottom-6 -right-4 md:-right-6 select-none">"</span>
                     </blockquote>
-                    <cite className="text-don-cream/60 uppercase tracking-widest text-[10px] md:text-xs not-italic font-semibold">
-                      - {t.author}, {t.location}
-                    </cite>
+                    <div className="flex items-center gap-4 mt-auto">
+                      <div className="w-12 h-12 rounded-full border border-don-gold/30 bg-don-black flex items-center justify-center shadow-[0_0_15px_rgba(212,175,55,0.15)]">
+                        <span className="font-serif font-bold text-don-gold text-lg">{t.author.charAt(0)}</span>
+                      </div>
+                      <div className="text-left">
+                        <p className="text-don-cream font-bold tracking-wide uppercase text-sm md:text-base">{t.author}</p>
+                        <p className="text-don-gold/80 text-[10px] md:text-xs uppercase tracking-widest font-semibold">{t.location}</p>
+                      </div>
+                    </div>
                   </div>
                 ))}
               </div>
@@ -587,9 +651,10 @@ export default function App() {
 
             {/* FAQs */}
             <div className="max-w-3xl mx-auto">
-              <h2 className="text-3xl font-serif font-bold text-center mb-12 text-don-cream">
+              <h2 className="text-3xl font-serif font-bold text-center mb-6 text-don-cream">
                 Frequently Asked Questions
               </h2>
+              <div className="w-24 h-1 bg-don-gold mx-auto mb-12"></div>
 
               <div className="divide-y divide-white/10 border border-white/10 rounded-none overflow-hidden">
                 {faqs.map((faq, i) => (
@@ -644,7 +709,7 @@ export default function App() {
             <p className="text-don-cream/50 text-xs uppercase tracking-[0.3em] mb-8 font-semibold">80+ Five-Star Google Reviews</p>
 
             <h2 className="text-4xl lg:text-7xl font-serif font-bold tracking-tight mb-6 text-don-cream">
-              Quit driving a <span className="text-don-gold italic">dirty car.</span>
+              Quit driving a <span className="text-don-gold-gradient italic">dirty car.</span>
             </h2>
             <p className="text-lg lg:text-xl text-don-cream/70 font-light mb-12 max-w-2xl mx-auto">
               We come to you, fully equipped. Your driveway, your office, your schedule. Reno & Sparks.
