@@ -737,6 +737,7 @@ export default function App() {
             {/* Logo + Copyright + Legal */}
             <div className="flex flex-col items-center gap-4">
               <Logo className="w-12 h-12 md:w-16 md:h-16 object-contain opacity-70" />
+              <p className="font-serif italic text-don-cream/60 tracking-wide text-center text-sm mb-2 max-w-sm uppercase">"DETAILING DONE THE RIGHT WAY, NOT THE EASY WAY."</p>
               <p>&copy; {new Date().getFullYear()} Don of Detail. All rights reserved.</p>
               <div className="flex justify-center gap-6 text-xs">
                 <Link to="/terms" className="hover:text-don-gold transition-colors">Terms of Service</Link>
