@@ -70,7 +70,7 @@ export default function App() {
       location: "Reno, NV",
     },
     {
-      quote: "Logan went above and beyond on my truck. Even with the mountain of yellow lab hair in my back seat that I could never get out no matter how hard I tried he took the time to get all of it out and get it looking brand new. If you live in the Reno area and need your car cleaned he is worth every penny — will be having them clean my car from now on.",
+      quote: "Logan went above and beyond on my truck. Even with the mountain of yellow lab hair in my back seat that I could never get out no matter how hard I tried he took the time to get all of it out and get it looking brand new. If you live in the Reno area and need your car cleaned he is worth every penny. Will be having them clean my car from now on.",
       author: "Alex C.",
       location: "Reno, NV",
     },
@@ -81,27 +81,27 @@ export default function App() {
   const faqs = [
     {
       q: 'How much does mobile auto detailing cost in Reno, NV?',
-      a: 'Mobile auto detailing in Reno typically costs between $200 and $400 depending on vehicle size and the service selected. Exterior-only packages start at $200+. For a full interior & exterior detail, most clients spend $250–$400. Because every vehicle is different, we provide custom quotes after you submit a brief form.',
+      a: 'Mobile auto detailing in Reno typically costs between $200 and $400 depending on vehicle size and the service selected. Exterior-only packages start at $200+. For a full interior & exterior detail, most clients spend $250 to $400. Because every vehicle is different, we provide custom quotes after you submit a brief form.',
     },
     {
       q: 'Is ceramic coating worth it in Reno\'s climate?',
-      a: 'Yes — ceramic coating is one of the best investments for vehicles in Reno\'s high-desert climate. Reno gets 300+ days of intense UV at 4,500+ feet of elevation, road salt from Tahoe trips, and constant desert dust. Ceramic coating provides years of hydrophobic protection, UV resistance, and keeps your paint looking factory-fresh.',
+      a: 'Yes. Ceramic coating is one of the best investments for vehicles in Reno\'s high-desert climate. Reno gets 300+ days of intense UV at 4,500+ feet of elevation, road salt from Tahoe trips, and constant desert dust. Ceramic coating provides years of hydrophobic protection, UV resistance, and keeps your paint looking factory-fresh.',
     },
     {
       q: 'What areas in Reno & Sparks do you service?',
-      a: 'We provide mobile auto detailing throughout the greater Reno-Sparks metro area including Reno, Sparks, Spanish Springs, South Meadows, Montrêux, Verdi, Sun Valley, Washoe Valley, Fernley, Dayton, and Carson City. Not sure if we cover your area? Give us a call — we\'re flexible.',
+      a: 'We provide mobile auto detailing throughout the greater Reno-Sparks metro area including Reno, Sparks, Spanish Springs, South Meadows, Montrêux, Verdi, Sun Valley, Washoe Valley, Fernley, Dayton, and Carson City. Not sure if we cover your area? Give us a call. We\'re flexible.',
     },
     {
       q: 'How long does ceramic coating last?',
-      a: '2–5 years, depending on how you maintain it. Regular hand washes with pH-balanced shampoo and the occasional ceramic booster go a long way — especially out here with the UV and dust. After every install, we\'ll show you exactly how to take care of it.',
+      a: '2 to 5 years, depending on how you maintain it. Regular hand washes with pH-balanced shampoo and the occasional ceramic booster go a long way, especially out here with the UV and dust. After every install, we\'ll show you exactly how to take care of it.',
     },
     {
       q: 'Can mobile detailers apply ceramic coatings on-site?',
-      a: 'Yes. Our fully-equipped mobile unit carries everything needed for a professional ceramic coating installation — including paint correction, decontamination tools, and a controlled curing setup. We perform the entire process at your home or office in Reno or Sparks. The vehicle simply needs to remain sheltered (garage or covered area) during the 24-hour initial cure.',
+      a: 'Yes. Our fully-equipped mobile unit carries everything needed for a professional ceramic coating installation, including paint correction, decontamination tools, and a controlled curing setup. We perform the entire process at your home or office in Reno or Sparks. The vehicle simply needs to remain sheltered (garage or covered area) during the 24-hour initial cure.',
     },
     {
       q: 'What is paint correction and does my car need it?',
-      a: 'Paint correction is a multi-stage machine polishing process that removes swirl marks, scratches, water spots, and oxidation from your vehicle\'s clear coat. If your paint looks dull, hazy, or covered in fine scratches — especially under direct sunlight — your car will benefit from paint correction. It\'s also a required step before applying ceramic coating, since the coating locks in whatever condition the paint is in.',
+      a: 'Paint correction is a multi-stage machine polishing process that removes swirl marks, scratches, water spots, and oxidation from your vehicle\'s clear coat. If your paint looks dull, hazy, or covered in fine scratches, especially under direct sunlight, your car will benefit from paint correction. It\'s also a required step before applying ceramic coating, since the coating locks in whatever condition the paint is in.',
     },
     {
       q: 'Do you detail boats and RVs in Reno?',
@@ -179,7 +179,7 @@ export default function App() {
                 Reno's Premier <span className="text-don-gold italic">Mobile Auto Detailing</span>
               </h1>
               <p className="text-lg lg:text-xl text-don-cream/80 font-light leading-relaxed mb-10">
-                We show up at your driveway with everything we need — water, power, the works. You hand us the keys. A few hours later, your car looks better than the day you bought it.
+                We show up at your driveway with everything we need. Water, power, the works. You hand us the keys. A few hours later, your car looks better than the day you bought it.
               </p>
               <div className="flex items-center gap-6 text-sm font-medium text-don-cream/90 uppercase tracking-widest">
                 <div className="flex items-center gap-2">
@@ -209,7 +209,7 @@ export default function App() {
               ) : (
                 <>
                   <h2 className="text-3xl font-serif font-bold mb-2 text-don-gold">Request a Quote</h2>
-                  <p className="text-don-cream/60 text-sm mb-8 font-light tracking-wide">Serving Reno & Sparks — we'll come to you. Most quotes answered within the hour.</p>
+                  <p className="text-don-cream/60 text-sm mb-8 font-light tracking-wide">Serving Reno & Sparks. We'll come to you. Most quotes answered within the hour.</p>
 
                   <form className="space-y-4" onSubmit={handleSubmit} aria-label="Request a free auto detailing quote">
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -318,7 +318,7 @@ export default function App() {
               </h2>
               <div className="w-24 h-1 bg-don-gold mx-auto mb-6"></div>
               <p className="text-don-cream/70 text-lg font-light">
-                Drive-through car washes strip wax and grind swirl marks into your clear coat. That's bad enough anywhere — but out here, the desert is doing its own damage every single day.
+                Drive-through car washes strip wax and grind swirl marks into your clear coat. That's bad enough anywhere, but out here, the desert is doing its own damage every single day.
               </p>
             </div>
 
@@ -350,7 +350,7 @@ export default function App() {
                 </div>
                 <h3 className="text-2xl font-serif font-bold mb-4 text-don-cream text-center">Sierra Road Salt</h3>
                 <p className="text-don-cream/70 font-light leading-relaxed">
-                  Every trip up to Tahoe coats your undercarriage in magnesium chloride. That salt sits there for weeks — corroding metal and staining paint from the bottom up.
+                  Every trip up to Tahoe coats your undercarriage in magnesium chloride. That salt sits there for weeks, corroding metal and staining paint from the bottom up.
                 </p>
               </div>
             </div>
@@ -455,8 +455,8 @@ export default function App() {
 
                   <div className="space-y-12 relative z-10">
                     {[
-                      { num: 1, title: 'Request a Quote', body: 'Drop your vehicle info into the form. Year, make, model, what you need done. We\'ll get back to you with a price — usually within the hour.' },
-                      { num: 2, title: 'Schedule & Confirm', body: "Once you approve the quote, we'll find a time that works perfectly with your schedule. No need to clear your whole day — we bring our fully-equipped mobile unit directly to your home or office." },
+                      { num: 1, title: 'Request a Quote', body: 'Drop your vehicle info into the form. Year, make, model, what you need done. We\'ll get back to you with a price, usually within the hour.' },
+                      { num: 2, title: 'Schedule & Confirm', body: "Once you approve the quote, we'll find a time that works perfectly with your schedule. No need to clear your whole day. We bring our fully-equipped mobile unit directly to your home or office." },
                       { num: 3, title: 'Sit Back', body: 'Hand us the keys and go about your day. When you come back, it\'ll look like a different car.' },
                     ].map(({ num, title, body }, i) => {
                       const threshold = i / 2; // 0, 0.5, 1.0
@@ -629,7 +629,7 @@ export default function App() {
               Quit driving a <span className="text-don-gold italic">dirty car.</span>
             </h2>
             <p className="text-lg lg:text-xl text-don-cream/70 font-light mb-12 max-w-2xl mx-auto">
-              We come to you — fully equipped. Your driveway, your office, your schedule. Reno & Sparks.
+              We come to you, fully equipped. Your driveway, your office, your schedule. Reno & Sparks.
             </p>
 
             <a
