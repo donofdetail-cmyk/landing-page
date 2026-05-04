@@ -173,6 +173,8 @@ export default function App() {
           <img
             src="/ceramic-coating-reno-nv.webp"
             alt="Ceramic-coated vehicle with mirror-finish paint - Don of Detail mobile auto detailing Reno NV"
+            width="1920"
+            height="1080"
             className="absolute inset-0 w-full h-full object-cover object-center opacity-70"
           />
           <div className="absolute inset-0 bg-gradient-to-b from-don-black/60 via-don-black/90 to-don-black" />
@@ -411,6 +413,8 @@ export default function App() {
                   <img
                     src={img}
                     alt={alt}
+                    width="600"
+                    height="800"
                     className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-110"
                     loading="lazy"
                     decoding="async"
@@ -667,6 +671,8 @@ export default function App() {
           <img
             src="/ceramic-coating-reno-nv.webp"
             alt="Professional ceramic coating and paint correction results - Don of Detail Reno NV"
+            width="1920"
+            height="1080"
             className="absolute inset-0 w-full h-full object-cover object-center opacity-40"
             loading="lazy"
             decoding="async"
@@ -686,7 +692,7 @@ export default function App() {
             <p className="text-don-cream/50 text-xs uppercase tracking-[0.3em] mb-8 font-semibold">80+ Five-Star Google Reviews</p>
 
             <h2 className="text-4xl lg:text-7xl font-serif font-bold tracking-tight mb-6 text-don-cream">
-              Quit driving a <span className="text-don-gold-gradient italic">dirty car.</span>
+              Quit driving an <span className="text-don-gold-gradient italic">unprotected car.</span>
             </h2>
             <p className="text-lg lg:text-xl text-don-cream/70 font-light mb-12 max-w-2xl mx-auto">
               We come to you, fully equipped. Your driveway, your office, your schedule. Reno & Sparks.

@@ -20,4 +20,4 @@ Allow: /
 User-agent: ClaudeBot
 Allow: /
 
-Sitemap: https://donofdetail.com/sitemap.xml
+Sitemap: https://www.donofdetail.com/sitemap.xml
