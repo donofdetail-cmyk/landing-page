@@ -21,3 +21,4 @@ User-agent: ClaudeBot
 Allow: /
 
 Sitemap: https://www.donofdetail.com/sitemap.xml
+Llms-txt: https://www.donofdetail.com/llms.txt

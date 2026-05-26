@@ -146,7 +146,7 @@ export default function TermsOfService() {
                 </div>
                 <p>&copy; {new Date().getFullYear()} Don of Detail. All rights reserved.</p>
                 <div className="flex justify-center gap-6 mt-3 text-xs">
-                    <Link to="/terms" className="hover:text-don-gold transition-colors">Terms of Service</Link>
+                    <Link to="/" className="hover:text-don-gold transition-colors">Home</Link>
                     <Link to="/privacy" className="hover:text-don-gold transition-colors">Privacy Policy</Link>
                 </div>
             </footer>
