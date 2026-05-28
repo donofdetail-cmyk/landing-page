@@ -2,121 +2,27 @@
 @import "tailwindcss";
 
 @theme {
-  --color-don-black: #0a0a0a;
-  --color-don-gold: #D4AF37;
-  --color-don-cream: #F5F5DC;
-  --font-serif: "Playfair Display", serif;
-  --font-sans: "Inter", sans-serif;
+  --color-don-oat: #F0EDE8;
+  --color-don-ink: #1A1A1A;
+  --color-don-bark: #3D3830;
+  --color-don-clay: #C4BAB0;
+  --color-don-red: #E8341C;
+  --font-display: "Druk Wide Heavy", "Arial Black", sans-serif;
+  --font-sans: "DM Sans", sans-serif;
 }
 
 body {
-  background-color: var(--color-don-black);
-  color: var(--color-don-cream);
+  background-color: var(--color-don-oat);
+  color: var(--color-don-ink);
   font-family: var(--font-sans);
+  font-weight: 300;
+  letter-spacing: 0.05em; /* wide tracking for body */
+  -webkit-font-smoothing: antialiased;
 }
 
-/* Subtle SVG noise texture for premium film grain effect */
-.bg-noise {
-  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' fill='transparent'/%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.08'/%3E%3C/svg%3E");
-}
-
-/* Ambient glow animations for depth */
-@keyframes float {
-  0% { transform: translate(0px, 0px) scale(1); }
-  33% { transform: translate(30px, -50px) scale(1.1); }
-  66% { transform: translate(-20px, 20px) scale(0.9); }
-  100% { transform: translate(0px, 0px) scale(1); }
-}
-
-.animate-float {
-  animation: float 20s ease-in-out infinite;
-}
-.animate-float-delayed {
-  animation: float 25s ease-in-out infinite;
-  animation-delay: 5s;
-}
-
-/* Luxury Gold Gradient Utilities */
-.text-don-gold-gradient {
-  background: linear-gradient(135deg, #F9E29C 0%, #D4AF37 50%, #B48811 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  color: transparent;
-}
-
-.bg-don-gold-gradient {
-  background: linear-gradient(135deg, #F9E29C 0%, #D4AF37 50%, #B48811 100%);
-}
-
-.border-don-gold-gradient {
-  border-image: linear-gradient(135deg, #F9E29C 0%, #D4AF37 50%, #B48811 100%) 1;
-}
-
-/* Shimmer animation for buttons */
-@keyframes shimmer {
-  0% {
-    background-position: -200% center;
-  }
-
-  100% {
-    background-position: 200% center;
-  }
-}
-
-.animate-shimmer {
-  background: linear-gradient(90deg,
-      #D4AF37 0%,
-      #F9E29C 20%,
-      #D4AF37 40%,
-      #D4AF37 100%);
-  background-size: 200% auto;
-  animation: shimmer 3s linear infinite;
-}
-
-/* Icon Animations for Agitation Section */
-@keyframes flicker {
-  0%, 100% { opacity: 1; transform: scale(1) rotate(0deg); }
-  25% { opacity: 0.8; transform: scale(0.95) rotate(-3deg); }
-  50% { opacity: 0.9; transform: scale(1.05) rotate(3deg); }
-  75% { opacity: 0.85; transform: scale(0.98) rotate(-1deg); }
-}
-
-.animate-flicker {
-  animation: flicker 2.5s infinite alternate ease-in-out;
-}
-
-@keyframes sway {
-  0%, 100% { transform: translateX(0) rotate(0); }
-  33% { transform: translateX(3px) rotate(5deg); }
-  66% { transform: translateX(-3px) rotate(-5deg); }
-}
-
-.animate-sway {
-  animation: sway 4s ease-in-out infinite;
-}
-
-@keyframes spin-slow {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
-}
-
-.animate-spin-slow {
-  animation: spin-slow 12s linear infinite;
-}
-
-/* Optimized form glow to prevent lag */
-@keyframes pulse-glow {
-  0%, 100% {
-    box-shadow: 0 0 15px rgba(212,175,55,0.1), inset 0 0 10px rgba(212,175,55,0.05);
-    border-color: rgba(212,175,55,0.3);
-  }
-  50% {
-    box-shadow: 0 0 40px rgba(212,175,55,0.4), inset 0 0 20px rgba(212,175,55,0.1);
-    border-color: rgba(212,175,55,0.8);
-  }
-}
-
-.animate-pulse-glow {
-  animation: pulse-glow 4s ease-in-out infinite;
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display);
+  font-weight: 400;
+  letter-spacing: -1px; /* tight negative tracking */
+  text-transform: uppercase;
 }

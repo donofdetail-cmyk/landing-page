@@ -17,7 +17,20 @@ import { createServer } from 'http';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const DIST = resolve(__dirname, '..', 'dist');
-const ROUTES = ['/', '/terms', '/privacy'];
+const ROUTES = [
+  '/', 
+  '/terms', 
+  '/privacy',
+  '/ceramic-coating-reno-nv',
+  '/paint-correction-reno-nv',
+  '/auto-detailing-reno-nv',
+  '/rv-detailing-reno-nv',
+  '/boat-detailing-reno-nv',
+  '/blog',
+  '/blog/is-ceramic-coating-worth-it-reno',
+  '/blog/the-truth-about-automatic-car-washes',
+  '/404'
+];
 const PORT = 4173;
 
 // Simple static file server for the dist folder
