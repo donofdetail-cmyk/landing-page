@@ -25,7 +25,7 @@ export default function Home() {
             <p className="text-xs font-bold uppercase tracking-[0.2em] text-don-ink mb-8 md:mb-12">
               Mobile Detailing | Reno, NV
             </p>
-            <h1 className="text-6xl sm:text-8xl md:text-[9rem] lg:text-[11rem] font-display font-normal leading-[0.85] tracking-[-3px] md:tracking-[-5px] text-don-ink mb-12 uppercase max-w-full break-words">
+            <h1 className="text-5xl sm:text-8xl md:text-[9rem] lg:text-[11rem] font-display font-normal leading-[0.85] tracking-[-3px] md:tracking-[-5px] text-don-ink mb-12 uppercase max-w-full break-words">
               Obsessive<br/>By Nature.
             </h1>
             
