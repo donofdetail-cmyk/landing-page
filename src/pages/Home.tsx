@@ -25,7 +25,7 @@ export default function Home() {
             <p className="text-xs font-bold uppercase tracking-[0.2em] text-don-ink mb-8 md:mb-12">
               Mobile Detailing | Reno, NV
             </p>
-            <h1 className="text-5xl sm:text-8xl md:text-[9rem] lg:text-[11rem] font-display font-normal leading-[0.85] tracking-[-3px] md:tracking-[-5px] text-don-ink mb-12 uppercase max-w-full break-words">
+            <h1 className="text-[12vw] sm:text-8xl md:text-[9rem] lg:text-[11rem] font-display font-normal leading-[0.85] tracking-[-3px] md:tracking-[-5px] text-don-ink mb-12 uppercase max-w-full break-words">
               Obsessive<br/>By Nature.
             </h1>
             
@@ -62,7 +62,7 @@ export default function Home() {
               { img: '/range-rover-headlight-restoration.webp', title: 'Range Rover', service: 'Headlight Restoration' },
             ].map((item, i) => (
               <div key={i} className="group relative aspect-square overflow-hidden cursor-pointer bg-don-bark">
-                <img src={item.img} alt={item.title} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" loading="lazy" />
+                <img src={item.img} alt={item.title} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 saturate-[0.8] contrast-110" loading="lazy" />
                 <div className="absolute inset-0 bg-don-ink/0 group-hover:bg-don-ink/90 transition-colors duration-300 flex flex-col justify-end p-8">
                   <div className="translate-y-8 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
                     <p className="text-[10px] uppercase tracking-[0.2em] text-don-clay mb-2">{item.service}</p>
@@ -114,7 +114,7 @@ export default function Home() {
         {/* Section 5 - About */}
         <section className="bg-don-oat text-don-ink py-32 lg:py-48 px-6 lg:px-12">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-5xl md:text-7xl font-display uppercase tracking-[-3px] mb-8">
+            <h2 className="text-[10vw] md:text-7xl font-display uppercase tracking-[-3px] mb-8">
               The standard isn't optional.
             </h2>
             <p className="text-lg md:text-xl font-light text-don-ink/70 leading-relaxed max-w-2xl mx-auto">

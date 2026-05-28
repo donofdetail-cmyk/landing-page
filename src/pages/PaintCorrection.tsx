@@ -79,7 +79,7 @@ export default function PaintCorrection() {
       <section className="bg-don-oat px-6 lg:px-12 py-12 md:py-20">
         <div className="max-w-[1400px] mx-auto">
           <p className="text-[10px] md:text-xs font-bold uppercase tracking-[0.3em] text-don-clay mb-8">Defect Removal</p>
-          <h1 className="text-5xl sm:text-7xl md:text-[8rem] lg:text-[9rem] font-display font-normal leading-[0.85] tracking-[-3px] md:tracking-[-5px] text-don-ink mb-12 uppercase">
+          <h1 className="text-[11.5vw] sm:text-7xl md:text-[8rem] lg:text-[9rem] font-display font-normal leading-[0.85] tracking-[-3px] md:tracking-[-5px] text-don-ink mb-12 uppercase">
             Paint<br/>Correction.
           </h1>
           <p className="text-lg md:text-xl text-don-ink/70 font-light leading-relaxed max-w-2xl mb-12">
@@ -94,7 +94,7 @@ export default function PaintCorrection() {
       {/* Editorial Content */}
       <section className="bg-don-bark text-don-oat py-32 lg:py-48 px-6 lg:px-12">
         <div className="max-w-[1400px] mx-auto grid lg:grid-cols-2 gap-16 lg:gap-32 items-start">
-          <h2 className="text-5xl md:text-7xl font-display uppercase tracking-[-2px]">
+          <h2 className="text-[10vw] md:text-7xl font-display uppercase tracking-[-2px]">
             The toll on paint.
           </h2>
           <div className="space-y-8 font-light text-don-clay leading-relaxed text-lg">
@@ -135,7 +135,7 @@ export default function PaintCorrection() {
       {/* Raw FAQ Section */}
       <section className="bg-don-ink text-don-oat py-32 lg:py-48 px-6 lg:px-12">
         <div className="max-w-3xl mx-auto">
-          <h2 className="text-5xl md:text-7xl font-display uppercase tracking-[-2px] mb-16">Clarification.</h2>
+          <h2 className="text-[10vw] md:text-7xl font-display uppercase tracking-[-2px] mb-16">Clarification.</h2>
 
           <div className="divide-y divide-don-bark border-t border-don-bark">
             {faqs.map((faq, i) => (
