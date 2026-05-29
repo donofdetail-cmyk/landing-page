@@ -3,23 +3,24 @@ import fs from 'fs';
 
 async function optimizeImages() {
   const files = [
-    'public/porsche-911-foam-wash-detailing-reno.jpg',
-    'public/classic-truck-car-show-reno.jpg',
-    'public/range-rover-headlight-restoration.jpg'
+    'public/porsche-911-foam-wash-detailing-reno.webp',
+    'public/classic-truck-car-show-reno.webp',
+    'public/range-rover-headlight-restoration.webp'
   ];
 
   for (const file of files) {
     if (fs.existsSync(file)) {
-      const webpFile = file.replace('.jpg', '.webp');
-      console.log(`Optimizing ${file}...`);
+      const tempFile = file.replace('.webp', '-temp.webp');
+      console.log(`Shrinking ${file}...`);
       
       await sharp(file)
-        .resize(1000, 1000, { fit: 'cover', withoutEnlargement: true })
-        .webp({ quality: 80 })
-        .toFile(webpFile);
+        .resize(750, 750, { fit: 'cover', withoutEnlargement: true })
+        .webp({ quality: 65 })
+        .toFile(tempFile);
         
-      fs.unlinkSync(file); // Delete the original large JPG
-      console.log(`Saved as ${webpFile}`);
+      fs.unlinkSync(file); // Delete original
+      fs.renameSync(tempFile, file); // Replace with shrunken version
+      console.log(`Saved smaller version over ${file}`);
     }
   }
 }
