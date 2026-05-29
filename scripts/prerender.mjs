@@ -49,12 +49,17 @@ function startServer() {
       '.woff2': 'font/woff2',
     };
 
+    const templatePath = resolve(DIST, 'index.html');
+    const originalTemplate = readFileSync(templatePath);
+
     const server = createServer((req, res2) => {
       let filePath = resolve(DIST, req.url === '/' ? 'index.html' : req.url.slice(1));
 
-      // SPA fallback — serve index.html for any route without an extension
-      if (!filePath.includes('.') || !existsSync(filePath)) {
-        filePath = resolve(DIST, 'index.html');
+      // SPA fallback — serve original template from memory for routes without extensions
+      if (!req.url.includes('.')) {
+        res2.writeHead(200, { 'Content-Type': 'text/html' });
+        res2.end(originalTemplate);
+        return;
       }
 
       try {
