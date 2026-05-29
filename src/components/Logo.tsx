@@ -11,7 +11,7 @@ const DODIcon = ({ className = '' }: { className?: string }) => (
 export const Logo = ({ className = '' }: { className?: string }) => (
   <div className={`flex items-center gap-4 ${className}`}>
     <DODIcon className="w-10 h-10 md:w-12 md:h-12 shrink-0" />
-    <span className="font-display font-normal uppercase tracking-[-2px] leading-none text-don-ink hidden sm:block">
+    <span className="font-sans font-bold uppercase tracking-wide text-xl leading-none text-don-ink hidden sm:block">
       DON OF DETAIL
     </span>
   </div>
