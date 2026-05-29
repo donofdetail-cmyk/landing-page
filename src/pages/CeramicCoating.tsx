@@ -31,7 +31,7 @@ export default function CeramicCoating() {
     <ServiceLayout>
       <Helmet>
         <title>Professional Ceramic Coating Reno NV | Don of Detail</title>
-        <meta name="description" content="Professional-grade ceramic coating applied at your location. We serve Reno, Sparks, ArrowCreek, Montreux, and Washoe Valley." />
+        <meta name="description" content="Mobile ceramic coating in Reno, NV. Protect your vehicle from the harsh Nevada sun with professional-grade ceramic coatings. We bring the shop to you." />
         <link rel="canonical" href="https://www.donofdetail.com/ceramic-coating-reno-nv" />
         
         <script type="application/ld+json">

@@ -7,8 +7,9 @@ export default function BlogHub() {
   return (
     <ServiceLayout>
       <Helmet>
-        <title>Detailing Journal & Insights | Don of Detail</title>
-        <meta name="description" content="Technical guides, maintenance advice, and deep dives into high-end automotive protection and ceramic coatings." />
+        <title>Detailing & Protection Blog | Don of Detail</title>
+        <meta name="description" content="Reno auto detailing blog by Don of Detail. Expert tips on ceramic coatings, paint correction, and vehicle maintenance for Northern Nevada's climate." />
+        <link rel="canonical" href="https://www.donofdetail.com/blog" />
       </Helmet>
 
       {/* Hero Section */}

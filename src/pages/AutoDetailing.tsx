@@ -31,7 +31,7 @@ export default function AutoDetailing() {
     <ServiceLayout>
       <Helmet>
         <title>#1 Mobile Auto Detailing in Reno NV | Don of Detail</title>
-        <meta name="description" content="Comprehensive interior and exterior preservation. Mobile detailing serving Montreux, Somersett, and Washoe Valley." />
+        <meta name="description" content="Top-rated mobile auto detailing in Reno and Sparks, NV. Full interior deep cleaning, exterior washes, and protective sealants at your home or office." />
         <link rel="canonical" href="https://www.donofdetail.com/auto-detailing-reno-nv" />
         
         <script type="application/ld+json">
