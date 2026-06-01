@@ -1,5 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
 import { motion } from 'motion/react';
 import { Header } from '../components/Header';
 import { Footer } from '../components/Footer';
@@ -85,7 +86,7 @@ export default function Home() {
               { num: '04', title: 'RV Detailing', desc: 'Heavy oxidation removal and multi-stage gelcoat restoration.', price: 'Quote Required', link: '/rv-detailing-reno-nv' },
               { num: '05', title: 'Boat Detailing', desc: 'Marine acid washing and specialized gelcoat sealing.', price: 'Quote Required', link: '/boat-detailing-reno-nv' },
             ].map((svc) => (
-              <a href={svc.link} key={svc.num} className="flex flex-col group cursor-pointer hover:bg-don-ink/10 p-6 -m-6 rounded-md transition-colors h-full">
+              <Link to={svc.link} key={svc.num} className="flex flex-col group cursor-pointer hover:bg-don-ink/10 p-6 -m-6 rounded-md transition-colors h-full">
                 <span className="text-7xl md:text-8xl font-display text-don-clay/20 leading-none mb-6 select-none group-hover:text-don-clay/40 transition-colors">
                   {svc.num}
                 </span>
@@ -107,7 +108,7 @@ export default function Home() {
                 <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-don-clay mt-auto pt-6 border-t border-don-clay/10 group-hover:border-don-clay/30 transition-colors">
                   {svc.price}
                 </span>
-              </a>
+              </Link>
             ))}
           </div>
         </section>

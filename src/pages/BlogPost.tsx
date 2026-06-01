@@ -85,9 +85,9 @@ const posts: Record<string, any> = {
         <div className="pt-4">
           <h2 className="text-2xl md:text-3xl font-display uppercase tracking-[-1px] text-don-ink mb-6">Related Reading</h2>
           <ul className="space-y-4">
-            <li><a href="/blog/the-truth-about-automatic-car-washes" className="text-don-red hover:text-don-ink transition-colors font-bold uppercase tracking-[0.1em] text-sm">The Truth About Automatic Car Washes</a></li>
-            <li><a href="/ceramic-coating-reno-nv" className="text-don-red hover:text-don-ink transition-colors font-bold uppercase tracking-[0.1em] text-sm">Premium Ceramic Coating Services</a></li>
-            <li><a href="/paint-correction-reno-nv" className="text-don-red hover:text-don-ink transition-colors font-bold uppercase tracking-[0.1em] text-sm">Professional Paint Correction</a></li>
+            <li><Link to="/blog/the-truth-about-automatic-car-washes" className="text-don-red hover:text-don-ink transition-colors font-bold uppercase tracking-[0.1em] text-sm">The Truth About Automatic Car Washes</Link></li>
+            <li><Link to="/ceramic-coating-reno-nv" className="text-don-red hover:text-don-ink transition-colors font-bold uppercase tracking-[0.1em] text-sm">Premium Ceramic Coating Services</Link></li>
+            <li><Link to="/paint-correction-reno-nv" className="text-don-red hover:text-don-ink transition-colors font-bold uppercase tracking-[0.1em] text-sm">Professional Paint Correction</Link></li>
           </ul>
         </div>
 
@@ -170,9 +170,9 @@ const posts: Record<string, any> = {
         <div className="pt-4">
           <h2 className="text-2xl md:text-3xl font-display uppercase tracking-[-1px] text-don-ink mb-6">Related Reading</h2>
           <ul className="space-y-4">
-            <li><a href="/blog/is-ceramic-coating-worth-it-reno" className="text-don-red hover:text-don-ink transition-colors font-bold uppercase tracking-[0.1em] text-sm">Is Ceramic Coating Worth It In Reno?</a></li>
-            <li><a href="/auto-detailing-reno-nv" className="text-don-red hover:text-don-ink transition-colors font-bold uppercase tracking-[0.1em] text-sm">Mobile Auto Detailing Services</a></li>
-            <li><a href="/paint-correction-reno-nv" className="text-don-red hover:text-don-ink transition-colors font-bold uppercase tracking-[0.1em] text-sm">Professional Paint Correction</a></li>
+            <li><Link to="/blog/is-ceramic-coating-worth-it-reno" className="text-don-red hover:text-don-ink transition-colors font-bold uppercase tracking-[0.1em] text-sm">Is Ceramic Coating Worth It In Reno?</Link></li>
+            <li><Link to="/auto-detailing-reno-nv" className="text-don-red hover:text-don-ink transition-colors font-bold uppercase tracking-[0.1em] text-sm">Mobile Auto Detailing Services</Link></li>
+            <li><Link to="/paint-correction-reno-nv" className="text-don-red hover:text-don-ink transition-colors font-bold uppercase tracking-[0.1em] text-sm">Professional Paint Correction</Link></li>
           </ul>
         </div>
 

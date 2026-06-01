@@ -27,7 +27,7 @@ export const Footer = () => {
           <nav className="flex items-center gap-8">
             <a href="/#work" className="text-xs uppercase tracking-[0.2em] text-don-clay hover:text-don-oat transition-colors">Work</a>
             <a href="/#services" className="text-xs uppercase tracking-[0.2em] text-don-clay hover:text-don-oat transition-colors">Services</a>
-            <a href="/blog" className="text-xs uppercase tracking-[0.2em] text-don-clay hover:text-don-oat transition-colors">Journal</a>
+            <Link to="/blog" className="text-xs uppercase tracking-[0.2em] text-don-clay hover:text-don-oat transition-colors">Journal</Link>
             <button onClick={openBooking} className="text-xs uppercase tracking-[0.2em] text-don-clay hover:text-don-oat transition-colors">Get Quote</button>
           </nav>
           
