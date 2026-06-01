@@ -30,8 +30,8 @@ export default function RVDetailing() {
   return (
     <ServiceLayout>
       <Helmet>
-        <title>Mobile RV Detailing Reno NV | Don of Detail</title>
-        <meta name="description" content="Mobile RV detailing in Reno and Sparks, NV. Complete exterior washing, oxidation removal, and interior detailing for motorhomes and travel trailers." />
+        <title>Mobile RV Detailing & Wash Services in Reno, NV</title>
+        <meta name="description" content="Expert mobile RV and motorhome detailing in Reno, NV. Exterior washing, heavy oxidation removal, and multi-stage gelcoat restoration." />
         <link rel="canonical" href="https://www.donofdetail.com/rv-detailing-reno-nv" />
         
         <script type="application/ld+json">

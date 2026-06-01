@@ -30,8 +30,8 @@ export default function PaintCorrection() {
   return (
     <ServiceLayout>
       <Helmet>
-        <title>Flawless Paint Correction Reno NV | Don of Detail</title>
-        <meta name="description" content="Professional paint correction in Reno, NV. We remove swirl marks, scratches, and oxidation to restore your vehicle's factory clear coat and gloss." />
+        <title>Expert Paint Correction & Swirl Removal in Reno, NV</title>
+        <meta name="description" content="Restore your vehicle's factory finish. Professional multi-stage paint correction in Reno, NV to permanently remove swirl marks, scratches, and oxidation." />
         <link rel="canonical" href="https://www.donofdetail.com/paint-correction-reno-nv" />
         
         <script type="application/ld+json">

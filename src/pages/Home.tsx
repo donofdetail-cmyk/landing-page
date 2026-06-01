@@ -12,8 +12,8 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-don-oat text-don-ink font-sans selection:bg-don-ink selection:text-don-oat">
       <Helmet>
-        <title>Don of Detail | Mobile Detailing Reno NV</title>
-        <meta name="description" content="Mobile auto detailing in Reno, NV. Don of Detail provides premium ceramic coatings, paint correction, and interior detailing. We come to you." />
+        <title>Top Mobile Auto Detailing & Ceramic Coating in Reno, NV</title>
+        <meta name="description" content="Reno's premier mobile auto detailing service. We specialize in professional ceramic coatings, paint correction, and full interior detailing. We come to you." />
         <link rel="canonical" href="https://www.donofdetail.com/" />
         
         <script type="application/ld+json">
