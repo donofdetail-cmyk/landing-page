@@ -241,7 +241,7 @@ export default function Home() {
               The standard isn't optional.
             </h2>
             <p className="text-lg md:text-xl font-light text-don-ink/70 leading-relaxed max-w-2xl mx-auto">
-              We bring the equipment, the chemicals, and the discipline directly to your driveway. Paint correction, ceramic coatings, and anything auto detailing. No filler products. No shortcuts. The work shows.
+              We bring the equipment, the chemicals, and the discipline directly to your driveway. Paint correction, ceramic coating, and anything auto detailing. No filler products. No shortcuts. The work shows.
             </p>
           </div>
         </section>
