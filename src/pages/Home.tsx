@@ -192,7 +192,7 @@ export default function Home() {
             <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-20 gap-8">
               <div>
                 <p className="text-[10px] font-bold uppercase tracking-[0.3em] text-don-clay mb-6">Verified Reviews</p>
-                <h2 className="text-[11vw] sm:text-6xl md:text-8xl font-display uppercase tracking-[-3px] text-don-oat max-w-full break-words leading-[0.85]">
+                <h2 className="text-[9vw] sm:text-6xl md:text-8xl font-display uppercase tracking-[-2px] text-don-oat max-w-full break-words hyphens-auto leading-[0.85]">
                   Uncompromising<br/>Results.
                 </h2>
               </div>
