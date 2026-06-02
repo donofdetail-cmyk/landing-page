@@ -186,7 +186,55 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Section 5 - About */}
+        {/* Section 5 - Testimonials (Social Proof for Conversion) */}
+        <section className="bg-don-ink text-don-oat py-32 lg:py-48 px-6 lg:px-12 border-t border-don-clay/10">
+          <div className="max-w-[1400px] mx-auto">
+            <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-20 gap-8">
+              <div>
+                <p className="text-[10px] font-bold uppercase tracking-[0.3em] text-don-clay mb-6">Verified Reviews</p>
+                <h2 className="text-6xl md:text-8xl font-display uppercase tracking-[-3px] text-don-oat">
+                  Uncompromising<br/>Results.
+                </h2>
+              </div>
+              <div className="flex gap-1 text-don-red">
+                {[1, 2, 3, 4, 5].map((star) => (
+                  <svg key={star} className="w-8 h-8" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                  </svg>
+                ))}
+              </div>
+            </div>
+
+            <div className="columns-1 md:columns-2 lg:columns-3 gap-8 space-y-8">
+              {[
+                { name: "Andrew R.", loc: "Reno, NV", text: "Logan knocked it out of the park with the detail and ceramic job on my triple black metallic F350. Looks better today than the day I brought it home from the dealer! I highly recommend Don of Detail's services for your vehicles." },
+                { name: "Lisa G.", loc: "Reno, NV", text: "Been using them since my last vehicle. Always amazing results. Love how convenient it is coming to my work. Very responsive with scheduling which makes it easy to work around my busy life." },
+                { name: "Alex C.", loc: "Reno, NV", text: "Logan went above and beyond on my truck. Even with the mountain of yellow lab hair in my back seat that I could never get out no matter how hard I tried he took the time to get all of it out and get it looking brand new." },
+                { name: "Quinn T.", loc: "Reno, NV", text: "Logan was super friendly, knowledgeable, punctual, and thorough. I've booked Don of Detail for family members as gifts and myself. I would highly recommend to anyone and everyone." },
+                { name: "Debbie E.", loc: "Sparks, NV", text: "Great communication and great service. They did an exceptional job with the interior especially with all the dog hair. Would recommend to anyone." },
+              ].map((review, i) => (
+                <div key={i} className="break-inside-avoid bg-don-bark/50 p-10 rounded border border-don-clay/5 hover:border-don-clay/20 transition-colors">
+                  <div className="flex gap-1 text-don-clay mb-8">
+                    {[1, 2, 3, 4, 5].map((star) => (
+                      <svg key={star} className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                      </svg>
+                    ))}
+                  </div>
+                  <p className="text-don-oat/90 font-light leading-relaxed text-lg mb-8">
+                    "{review.text}"
+                  </p>
+                  <div className="pt-6 border-t border-don-clay/10">
+                    <p className="text-sm font-bold tracking-wide text-don-oat">{review.name}</p>
+                    <p className="text-xs font-bold uppercase tracking-[0.2em] text-don-clay mt-1">{review.loc}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Section 6 - About */}
         <section className="bg-don-oat text-don-ink py-32 lg:py-48 px-6 lg:px-12">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-[10vw] md:text-7xl font-display uppercase tracking-[-3px] mb-8">
