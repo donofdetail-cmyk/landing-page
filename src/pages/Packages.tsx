@@ -236,6 +236,21 @@ export default function Packages() {
             </div>
           </div>
         </section>
+        {/* CTA Section */}
+        <section className="bg-don-ink text-don-oat py-32 lg:py-48 px-6 lg:px-12 text-center flex flex-col justify-center items-center">
+          <h2 className="text-[10vw] md:text-8xl font-display uppercase tracking-[-3px] md:tracking-[-4px] mb-6">
+            Ready to book?
+          </h2>
+          <p className="text-lg font-light text-don-clay max-w-xl mx-auto mb-12">
+            Text us your desired package tier to secure your appointment.
+          </p>
+          <a href="sms:+17752307035" className="inline-block bg-don-red text-don-oat text-sm font-bold uppercase tracking-[0.2em] px-12 py-5 rounded hover:bg-don-red/90 transition-transform hover:scale-105 active:scale-95 mb-8">
+            Text To Book
+          </a>
+          <p className="text-xs uppercase tracking-[0.2em] text-don-clay">
+            Or call: <a href="tel:+17752307035" className="hover:text-don-oat transition-colors">(775) 230-7035</a>
+          </p>
+        </section>
 
       </main>
 
