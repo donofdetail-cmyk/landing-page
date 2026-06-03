@@ -42,7 +42,7 @@ export default function Home() {
                 "name": "What areas in Reno & Sparks do you service?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "We provide mobile auto detailing throughout the greater Reno-Sparks metro area including Reno, Sparks, Spanish Springs, South Meadows, Montrêux, Verdi, Sun Valley, Washoe Valley, Fernley, Dayton, and Carson City. Not sure if we cover your area? Give us a call. We're flexible."
+                  "text": "We provide mobile auto detailing throughout the greater Reno-Sparks metro area including Reno, Sparks, Spanish Springs, South Meadows, Montrêux, Verdi, Sun Valley, Washoe Valley, Fernley, and Dayton. Not sure if we cover your area? Give us a call. We're flexible."
                 }
               },
               {
@@ -120,7 +120,7 @@ export default function Home() {
           <div className="inline-block animate-[ticker_20s_linear_infinite]">
             {Array(5).fill(0).map((_, i) => (
               <span key={i} className="text-[10px] font-bold uppercase tracking-[0.2em] text-don-oat mx-8">
-                AUTO DETAILING &mdash; CERAMIC COATING &mdash; PAINT CORRECTION &mdash; BOAT DETAILING &mdash; RV DETAILING &mdash; <span className="text-don-red">NOW BOOKING</span>
+                AUTO DETAILING - CERAMIC COATING - PAINT CORRECTION - BOAT DETAILING - RV DETAILING - <span className="text-don-red">NOW BOOKING</span>
               </span>
             ))}
           </div>

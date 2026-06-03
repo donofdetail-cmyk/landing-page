@@ -13,6 +13,7 @@ const BoatDetailing = React.lazy(() => import('./pages/BoatDetailing'));
 const BlogHub = React.lazy(() => import('./pages/BlogHub'));
 const BlogPost = React.lazy(() => import('./pages/BlogPost'));
 const NotFound = React.lazy(() => import('./pages/NotFound'));
+const Packages = React.lazy(() => import('./pages/Packages'));
 
 import { ScrollToTop } from './components/ScrollToTop';
 import { BookingProvider } from './context/BookingContext';
@@ -33,6 +34,7 @@ export default function App() {
           <Route path="/boat-detailing-reno-nv" element={<BoatDetailing />} />
           <Route path="/blog" element={<BlogHub />} />
           <Route path="/blog/:slug" element={<BlogPost />} />
+          <Route path="/packages" element={<Packages />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </Suspense>

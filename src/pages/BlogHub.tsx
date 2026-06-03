@@ -54,6 +54,45 @@ export default function BlogHub() {
               Read Article
             </span>
           </Link>
+
+          <Link to="/blog/how-to-wash-a-ceramic-coated-car" className="block group border-b border-don-clay/20 pb-16">
+            <p className="text-[10px] font-bold uppercase tracking-[0.3em] text-don-clay mb-6">Education</p>
+            <h2 className="text-4xl md:text-5xl font-display uppercase tracking-[-2px] mb-6 text-don-oat group-hover:text-don-clay transition-colors">
+              How To Wash Your Car After a Ceramic Coating
+            </h2>
+            <p className="text-don-clay font-light leading-relaxed mb-12 max-w-xl">
+              A ceramic coating is the ultimate armor for your paint, but it requires discipline to maintain. Learn the exact two-bucket method to preserve your investment.
+            </p>
+            <span className="text-xs font-bold uppercase tracking-[0.2em] text-don-oat border-b border-don-oat pb-2 group-hover:text-don-clay group-hover:border-don-clay transition-colors">
+              Read Article
+            </span>
+          </Link>
+
+          <Link to="/blog/preparing-boat-rv-for-lake-tahoe" className="block group border-b border-don-clay/20 pb-16">
+            <p className="text-[10px] font-bold uppercase tracking-[0.3em] text-don-clay mb-6">Marine & RV</p>
+            <h2 className="text-4xl md:text-5xl font-display uppercase tracking-[-2px] mb-6 text-don-oat group-hover:text-don-clay transition-colors">
+              Preparing Your Boat or RV for Lake Tahoe
+            </h2>
+            <p className="text-don-clay font-light leading-relaxed mb-12 max-w-xl">
+              Lake Tahoe's high-altitude UV rays destroy marine gelcoat fast. Learn why physical oxidation removal and marine-grade ceramic coatings are mandatory for preservation.
+            </p>
+            <span className="text-xs font-bold uppercase tracking-[0.2em] text-don-oat border-b border-don-oat pb-2 group-hover:text-don-clay group-hover:border-don-clay transition-colors">
+              Read Article
+            </span>
+          </Link>
+
+          <Link to="/blog/paint-correction-vs-waxing" className="block group border-b border-don-clay/20 pb-16">
+            <p className="text-[10px] font-bold uppercase tracking-[0.3em] text-don-clay mb-6">Education</p>
+            <h2 className="text-4xl md:text-5xl font-display uppercase tracking-[-2px] mb-6 text-don-oat group-hover:text-don-clay transition-colors">
+              Paint Correction vs. Waxing
+            </h2>
+            <p className="text-don-clay font-light leading-relaxed mb-12 max-w-xl">
+              Applying wax over scratched paint is a temporary illusion. Discover why professional paint correction is the only permanent solution for a flawless clear coat.
+            </p>
+            <span className="text-xs font-bold uppercase tracking-[0.2em] text-don-oat border-b border-don-oat pb-2 group-hover:text-don-clay group-hover:border-don-clay transition-colors">
+              Read Article
+            </span>
+          </Link>
         </div>
       </section>
     </ServiceLayout>

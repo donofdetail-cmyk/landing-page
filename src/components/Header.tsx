@@ -3,7 +3,7 @@ import { Logo } from './Logo';
 import { Link } from 'react-router-dom';
 import { useBooking } from '../context/BookingContext';
 
-export const Header = () => {
+export const Header = ({ hideQuote = false }: { hideQuote?: boolean }) => {
   const { openBooking } = useBooking();
 
   return (
@@ -19,7 +19,9 @@ export const Header = () => {
         <nav aria-label="Primary" className="flex items-center gap-8 lg:gap-12">
           <a href="/#work" className="hidden md:block text-xs uppercase tracking-[0.2em] text-don-clay hover:text-don-ink transition-colors font-semibold">Work</a>
           <a href="/#services" className="hidden md:block text-xs uppercase tracking-[0.2em] text-don-clay hover:text-don-ink transition-colors font-semibold">Services</a>
-          <button onClick={openBooking} className="text-xs font-bold uppercase tracking-[0.2em] text-don-oat bg-don-red hover:bg-don-red/90 px-6 py-2.5 rounded transition-colors">Get Quote</button>
+          {!hideQuote && (
+            <button onClick={openBooking} className="text-xs font-bold uppercase tracking-[0.2em] text-don-oat bg-don-red hover:bg-don-red/90 px-6 py-2.5 rounded transition-colors">Get Quote</button>
+          )}
         </nav>
       </div>
       </header>

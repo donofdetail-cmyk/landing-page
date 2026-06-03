@@ -1,23 +1,30 @@
 User-agent: *
 Allow: /
+Disallow: /packages
 
-# AI crawlers — explicitly allowed for AEO visibility
+# AI crawlers - explicitly allowed for AEO visibility
 User-agent: GPTBot
 Allow: /
+Disallow: /packages
 
 User-agent: Google-Extended
 Allow: /
+Disallow: /packages
 
 User-agent: Bingbot
 Allow: /
+Disallow: /packages
 
 User-agent: anthropic-ai
 Allow: /
+Disallow: /packages
 
 User-agent: PerplexityBot
 Allow: /
+Disallow: /packages
 
 User-agent: ClaudeBot
 Allow: /
+Disallow: /packages
 
 Sitemap: https://www.donofdetail.com/sitemap.xml

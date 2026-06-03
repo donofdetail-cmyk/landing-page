@@ -1,5 +1,5 @@
 /**
- * prerender.mjs — Static Site Generation (SSG) for SEO
+ * prerender.mjs - Static Site Generation (SSG) for SEO
  *
  * Runs AFTER `vite build`. Spins up a local server to serve the built
  * files, then uses Puppeteer to render each route and save the fully-
@@ -29,6 +29,9 @@ const ROUTES = [
   '/blog',
   '/blog/is-ceramic-coating-worth-it-reno',
   '/blog/the-truth-about-automatic-car-washes',
+  '/blog/how-to-wash-a-ceramic-coated-car',
+  '/blog/preparing-boat-rv-for-lake-tahoe',
+  '/blog/paint-correction-vs-waxing',
   '/404'
 ];
 const PORT = 4173;
@@ -55,7 +58,7 @@ function startServer() {
     const server = createServer((req, res2) => {
       let filePath = resolve(DIST, req.url === '/' ? 'index.html' : req.url.slice(1));
 
-      // SPA fallback — serve original template from memory for routes without extensions
+      // SPA fallback - serve original template from memory for routes without extensions
       if (!req.url.includes('.')) {
         res2.writeHead(200, { 'Content-Type': 'text/html' });
         res2.end(originalTemplate);
@@ -89,7 +92,8 @@ async function prerender() {
   const puppeteer = await import('puppeteer');
   const browser = await puppeteer.launch({
     headless: true,
-    args: ['--no-sandbox', '--disable-setuid-sandbox'],
+    protocolTimeout: 300000,
+    args: ['--no-sandbox', '--disable-setuid-sandbox', '--disable-dev-shm-usage'],
   });
 
   for (const route of ROUTES) {
