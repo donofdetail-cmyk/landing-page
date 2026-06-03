@@ -132,7 +132,7 @@ export default function Home() {
         <section id="work" className="bg-don-oat">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
             {[
-              { img: '/porsche-911-foam-wash-detailing-reno.webp', title: 'Classic Porsche 911', service: 'Auto Detailing' },
+              { img: '/porsche-911-foam-wash-detailing-reno.webp', title: 'Classic Porsche 911', service: 'Interior & Exterior Detail' },
               { img: '/classic-truck-car-show-reno.webp', title: 'Custom Classic Truck', service: 'Paint Correction' },
               { img: '/range-rover-headlight-restoration.webp', title: 'Range Rover', service: 'Headlight Restoration' },
               { img: '/land-rover-ceramic-coating.webp', title: 'Land Rover Discovery', service: 'Ceramic Coating' },
