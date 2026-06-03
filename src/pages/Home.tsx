@@ -130,11 +130,12 @@ export default function Home() {
 
         {/* Section 3 - Work / Gallery */}
         <section id="work" className="bg-don-oat">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
             {[
               { img: '/porsche-911-foam-wash-detailing-reno.webp', title: 'Classic Porsche 911', service: 'Auto Detailing' },
               { img: '/classic-truck-car-show-reno.webp', title: 'Custom Classic Truck', service: 'Paint Correction' },
               { img: '/range-rover-headlight-restoration.webp', title: 'Range Rover', service: 'Headlight Restoration' },
+              { img: '/land-rover-ceramic-coating.webp', title: 'Land Rover Discovery', service: 'Ceramic Coating' },
             ].map((item, i) => (
               <div key={i} className="group relative aspect-square overflow-hidden cursor-pointer bg-don-bark">
                 <img src={item.img} alt={item.title} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 saturate-[0.8] contrast-110" loading="lazy" />
