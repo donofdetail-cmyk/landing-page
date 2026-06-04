@@ -20,6 +20,11 @@ async function generate() {
   await sharp(buffer).resize(512, 512).png().toFile('public/logo.png');
   await sharp(buffer).resize(512, 512).webp().toFile('public/logo.webp');
   
+  await sharp(buffer).resize(1200, 630, {
+    fit: 'contain',
+    background: { r: 240, g: 237, b: 232, alpha: 1 }
+  }).png().toFile('public/og-image-v2.png');
+  
   // favicon.ico
   fs.copyFileSync('public/favicon-32.png', 'public/favicon.ico');
   

@@ -11,7 +11,7 @@ export const Header = ({ hideQuote = false }: { hideQuote?: boolean }) => {
       <a href="#main" className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-[100] focus:px-4 focus:py-2 focus:bg-don-ink focus:text-don-oat focus:font-bold focus:uppercase focus:text-xs">
         Skip to content
       </a>
-      <header className="w-full z-50 py-6 px-6 lg:px-12 border-b border-don-clay/30 bg-don-oat">
+      <header className="w-full z-50 py-6 px-6 lg:px-12 bg-don-oat">
         <div className="max-w-[1400px] mx-auto flex items-center justify-between">
         <Link to="/" aria-label="Home">
           <Logo className="text-xl lg:text-2xl" />
