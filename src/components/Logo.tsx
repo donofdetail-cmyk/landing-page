@@ -9,10 +9,7 @@ const DODIcon = ({ className = '' }: { className?: string }) => (
 );
 
 export const Logo = ({ className = '' }: { className?: string }) => (
-  <div className={`flex flex-col items-center justify-center ${className}`}>
+  <div className={`flex items-center ${className}`}>
     <DODIcon className="w-10 h-10 md:w-12 md:h-12 shrink-0" />
-    <span className="font-sans font-bold uppercase text-[7.5px] md:text-[9px] tracking-[0.35em] pl-[0.35em] text-don-ink mt-1.5">
-      OF DETAIL
-    </span>
   </div>
 );
