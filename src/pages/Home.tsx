@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { motion } from 'motion/react';
@@ -6,8 +6,21 @@ import { Header } from '../components/Header';
 import { Footer } from '../components/Footer';
 import { useBooking } from '../context/BookingContext';
 
+const formatName = (name: string) => {
+  if (name === "SELF_CREATION KREW") return "S. Krew";
+  const parts = name.trim().split(/\s+/);
+  if (parts.length === 1) return parts[0].charAt(0).toUpperCase() + parts[0].slice(1).toLowerCase();
+  
+  const firstName = parts[0].charAt(0).toUpperCase() + parts[0].slice(1).toLowerCase();
+  const lastPart = parts[parts.length - 1];
+  const lastInitial = lastPart.endsWith('.') ? lastPart.toUpperCase() : lastPart.charAt(0).toUpperCase() + '.';
+  
+  return `${firstName} ${lastInitial}`;
+};
+
 export default function Home() {
   const { openBooking } = useBooking();
+  const [showAllReviews, setShowAllReviews] = useState(false);
   
   return (
     <div className="min-h-screen bg-don-oat text-don-ink font-sans selection:bg-don-ink selection:text-don-oat">
@@ -208,27 +221,26 @@ export default function Home() {
 
             <div className="columns-1 md:columns-2 lg:columns-3 gap-8 space-y-8">
               {[
-                { name: "ariana delarosa", loc: "Reno, NV", text: "I had an amazing experience with Logan and Don at Detail. They did an outstanding job on my car and went above and beyond with the attention to detail. The interior looks spotless and my car honestly looks better than when I first got it.\n\nThey were professional, friendly, and took the time to make sure everything was done right. You can tell they genuinely care about their work and take pride in delivering high-quality results. Communication was great throughout the process, and the service was absolutely worth it.\n\nI highly recommend Logan with Don of Detail to anyone looking for a reliable and top-quality car detail. I'll definitely be coming back again!" },
+                { name: "ariana delarosa", loc: "Reno, NV", text: "I had an amazing experience with Logan at Don of Detail. They did an outstanding job on my car and went above and beyond with their attention to detail. The interior looks spotless, and my car honestly looks better than when I first got it.\n\nThey were professional, friendly, and took the time to make sure everything was done right. You can tell they genuinely care about their work and take pride in delivering high-quality results. Communication was great throughout the process, and the service was absolutely worth it.\n\nI highly recommend Logan with Don of Detail to anyone looking for a reliable and top-quality car detail. I'll definitely be coming back again!" },
                 { name: "Andrew R.", loc: "Reno, NV", text: "Logan knocked it out of the park with the detail and ceramic job on my triple black metallic F350. Looks better today than the day I brought it home from the dealer! I highly recommend Don of Detail's services for your vehicles." },
-                { name: "Thomas Mesloh", loc: "Reno, NV", text: "Logan is very professional and knowledgeable. He does thins right and is very particular with making things look the very best. There are a lot of mobile detailers out there, but he knows a lot more particulars and proper material maintenance that comes with a professional detail and not just cleaning. He makes sure things are done right the first time!" },
-                { name: "Lisa G.", loc: "Reno, NV", text: "Been using them since my last vehicle. Always amazing results. Love how convenient it is coming to my work. Very responsive with scheduling which makes it easy to work around my busy life." },
-                { name: "Clay Eagleton", loc: "Reno, NV", text: "Truly a 5 Star experience. 5th Wheel was in pretty bad shape and Logan made it shine like new. the communication was great, attention to detail was great, care for his work and my property was great. They should be your first call!" },
-                { name: "Alex C.", loc: "Reno, NV", text: "Logan went above and beyond on my truck. Even with the mountain of yellow lab hair in my back seat that I could never get out no matter how hard I tried he took the time to get all of it out and get it looking brand new." },
-                { name: "Eric King", loc: "Reno, NV", text: "Don was very professional and the quality of his work is impressive.\n\nMy truck interior was dirty from every day use and working in construction and they somehow managed to make the interior look and feel brand new again." },
-                { name: "Quinn T.", loc: "Reno, NV", text: "Logan was super friendly, knowledgeable, punctual, and thorough. I've booked Don of Detail for family members as gifts and myself. I would highly recommend to anyone and everyone." },
-                { name: "SELF_CREATION KREW", loc: "Reno, NV", text: "Had a few cars done by Logan and can't be more happier with the results! Highly recommend." },
-                { name: "Debbie E.", loc: "Sparks, NV", text: "Great communication and great service. They did an exceptional job with the interior especially with all the dog hair. Would recommend to anyone." },
-                { name: "Kerrissa Mitchell", loc: "Reno, NV", text: "Great service! I have been in contact with Logan from Don of Detail for almost an entire year and he was very helpful and patient. I reached out when I knew I was getting a new car and wanted it detailed. For many reason it's kept getting pushed back, they weren't nagging and only reached out a couple times to check in which I greatly appreciated. I was so glad that they were available once I finally did have the car. They did a fantastic job making my (new-to-me) car look like it had just come off the lot! They vacuumed it incredibly well and not a speck of dust was left behind. I would also like to add that they came highly recommended for Best Mobile Detailers in Reno, NV on Reddit. 10/10 would recommend to anyone looking for a sparkly-clean car! -Also, the are definitely competitive with their pricing. I decided to go with them based on their good reviews and their prices even though I have a long time family connection with another local detailing service. [Pics attached where taken to showcase my car decor, however you can notice the impeccable job they did vacuuming, cleaning the dash and interior, as well as how shiny the exterior is, including the tires.]" },
-                { name: "Tyler West", loc: "Reno, NV", text: "Knowledgable, professional, and did an excellent job! Logan made sure my priority areas were addressed and provided recommendations for any issues or items he identified. I wouldn't hesitate to call again. Highly recommended for all your detail needs!" },
-                { name: "Ryan Fernandez", loc: "Reno, NV", text: "Logan detailed my '88 Honda dirt bike, removing all the engine grease, vinyl seat stains, and paint oxidation. It looks 10x better and will be easier to maintain now that the hard work is done. Scheduling was really simple, online. Logan was very responsive and answered my questions via text. He even shared tips about how to maintain my bike myself. I couldn't have asked for a better experience. Thank you Don of Detail!" },
-                { name: "Gigi McDuck", loc: "Reno, NV", text: "This was my first time getting my motorcycle detailed by Logan. He did an amazing job! I had dust caked on my bike from it being stored away for the winter season, and it was sparkly new by the time he was done, absolute perfection. He also noticed I needed new tires and was so kind to let me know of the dangers it can cause while on two wheels. He truly takes the time to go over every detail. I will definitely be recommending Don of Detail to my friends and family. Professional, deligent, and friendly...I know exactly who I'll be calling the next time my bike needs a beautiful pick me up. Thanks Don of Detail!!! :)" },
+                { name: "Thomas Mesloh", loc: "Reno, NV", text: "Logan is very professional and knowledgeable. He does things right and is very particular with making things look the very best. There are a lot of mobile detailers out there, but he knows a lot more particulars and proper material maintenance that comes with a professional detail and not just a standard cleaning. He makes sure things are done right the first time!" },
+                { name: "Lisa G.", loc: "Reno, NV", text: "Been using them since my last vehicle. Always amazing results. Love how convenient it is coming to my work. Very responsive with scheduling, which makes it easy to work around my busy life." },
+                { name: "Clay Eagleton", loc: "Reno, NV", text: "Truly a 5-star experience. My 5th wheel was in pretty bad shape, and Logan made it shine like new. The communication was great, the attention to detail was great, and the care for his work and my property was great. They should be your first call!" },
+                { name: "Alex C.", loc: "Reno, NV", text: "Logan went above and beyond on my truck. Even with the mountain of yellow lab hair in my back seat that I could never get out no matter how hard I tried, he took the time to get all of it out and get it looking brand new." },
+                { name: "Eric King", loc: "Reno, NV", text: "Don was very professional, and the quality of his work is impressive.\n\nMy truck interior was dirty from everyday use and working in construction, and they somehow managed to make the interior look and feel brand new again." },
+                { name: "Quinn T.", loc: "Reno, NV", text: "Logan was super friendly, knowledgeable, punctual, and thorough. I've booked Don of Detail for family members as gifts and for myself. I would highly recommend to anyone and everyone." },
+                { name: "SELF_CREATION KREW", loc: "Reno, NV", text: "Had a few cars done by Logan and couldn't be happier with the results! Highly recommend." },
+                { name: "Debbie E.", loc: "Sparks, NV", text: "Great communication and great service. They did an exceptional job with the interior, especially with all the dog hair. Would recommend to anyone." },
+                { name: "Tyler West", loc: "Reno, NV", text: "Knowledgeable, professional, and did an excellent job! Logan made sure my priority areas were addressed and provided recommendations for any issues or items he identified. I wouldn't hesitate to call again. Highly recommended for all your detail needs!" },
+                { name: "Ryan Fernandez", loc: "Reno, NV", text: "Logan detailed my '88 Honda dirt bike, removing all the engine grease, vinyl seat stains, and paint oxidation. It looks 10x better and will be easier to maintain now that the hard work is done. Scheduling online was really simple. Logan was very responsive and answered my questions via text. He even shared tips about how to maintain my bike myself. I couldn't have asked for a better experience. Thank you, Don of Detail!" },
+                { name: "Gigi McDuck", loc: "Reno, NV", text: "This was my first time getting my motorcycle detailed by Logan. He did an amazing job! I had dust caked on my bike from it being stored away for the winter season, and it was sparkly new by the time he was done—absolute perfection. He also noticed I needed new tires and was so kind to let me know of the dangers it can cause while on two wheels. He truly takes the time to go over every detail. I will definitely be recommending Don of Detail to my friends and family. Professional, diligent, and friendly. I know exactly who I'll be calling the next time my bike needs a beautiful pick-me-up. Thanks, Don of Detail!" },
                 { name: "courtney williams", loc: "Reno, NV", text: "I cannot recommend Logan and his wife enough. They went above and beyond on my recent project. Their team was professional, attentive, and took the time to understand my specific goals. Their expertise and attention to detail resulted in a finished product that exceeded my expectations. They truly go the extra mile to ensure customer satisfaction. I'll be using them again for all my future needs!" },
-                { name: "Anahi Bagan", loc: "Reno, NV", text: "Logan from Don of Detail was great from beginning to end. Scheduling was a breeze and he arrived on time. He was very pleasant and professional. Logan definitely has an eye for detail and I highly recommend his services." },
-                { name: "Emily Barnes", loc: "Reno, NV", text: "I cannot say enough good things about Don of Detail - he took great care of our truck and made it shine like new. He went above and beyond, focusing on every detail inside and out." },
+                { name: "Anahi Bagan", loc: "Reno, NV", text: "Logan from Don of Detail was great from beginning to end. Scheduling was a breeze, and he arrived on time. He was very pleasant and professional. Logan definitely has an eye for detail, and I highly recommend his services." },
+                { name: "Emily Barnes", loc: "Reno, NV", text: "I cannot say enough good things about Don of Detail. He took great care of our truck and made it shine like new. He went above and beyond, focusing on every detail inside and out." },
                 { name: "Dennis Beeghly", loc: "Reno, NV", text: "Logan and his wife are true professionals in detailing in every sense of the word! They are punctual, thorough, and do an incredibly beautiful job in their detail work. Our Toyota Venza never looked so beautiful when they were done. We also had him do a ceramic coat finish as well! We would highly recommend them!" },
-                { name: "Jake Rooney", loc: "Reno, NV", text: "Logan and his wife were absolutely terrific! Showed up early, were professional and friendly. They had my 2001 Ford looking like it just rolled off the showroom floor!\n\nReally cannot recommend them enough to anyone looking for an amazing detail" },
-                { name: "Charles Walker", loc: "Reno, NV", text: "I had these guys do a deep deep cleaning and detail of a truck i bought that had been smoked in for many years. They did an excellent job and got in every nook and cranny. I highly recommend them" },
-              ].map((review, i) => (
+                { name: "Jake Rooney", loc: "Reno, NV", text: "Logan and his wife were absolutely terrific! They showed up early, and were professional and friendly. They had my 2001 Ford looking like it just rolled off the showroom floor!\n\nI really cannot recommend them enough to anyone looking for an amazing detail." },
+                { name: "Charles Walker", loc: "Reno, NV", text: "I had these guys do a deep cleaning and detail of a truck I bought that had been smoked in for many years. They did an excellent job and got into every nook and cranny. I highly recommend them." },
+              ].slice(0, showAllReviews ? undefined : 6).map((review, i) => (
                 <div key={i} className="break-inside-avoid bg-don-bark/50 p-10 rounded border border-don-clay/5 hover:border-don-clay/20 transition-colors">
                   <div className="flex gap-1 text-don-clay mb-8">
                     {[1, 2, 3, 4, 5].map((star) => (
@@ -241,12 +253,23 @@ export default function Home() {
                     "{review.text}"
                   </p>
                   <div className="pt-6 border-t border-don-clay/10">
-                    <p className="text-sm font-bold tracking-wide text-don-oat">{review.name}</p>
+                    <p className="text-sm font-bold tracking-wide text-don-oat">{formatName(review.name)}</p>
                     <p className="text-xs font-bold uppercase tracking-[0.2em] text-don-clay mt-1">{review.loc}</p>
                   </div>
                 </div>
               ))}
             </div>
+
+            {!showAllReviews && (
+              <div className="mt-16 flex justify-center">
+                <button
+                  onClick={() => setShowAllReviews(true)}
+                  className="group relative inline-flex items-center justify-center px-12 py-4 rounded border border-don-oat/20 text-don-oat font-bold tracking-widest uppercase text-xs transition-all hover:border-don-oat hover:bg-don-oat hover:text-don-ink active:scale-95"
+                >
+                  See More Reviews
+                </button>
+              </div>
+            )}
           </div>
         </section>
 
