@@ -1,5 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
 import { ServiceLayout } from '../components/ServiceLayout';
 import { useBooking } from '../context/BookingContext';
 import { ChevronDown } from 'lucide-react';
@@ -11,7 +12,7 @@ export default function AutoDetailing() {
   const faqs = [
     {
       q: 'Do you require access to power or water?',
-      a: 'No. Our units are fully self-contained. We bring deionized water and silent power generators, operating independently in your driveway or office parking lot.'
+      a: 'No. Our units are fully self-contained. We bring deionized water and power generators, operating independently in your driveway or office parking lot.'
     },
     {
       q: 'How often should a vehicle be detailed in this climate?',
@@ -33,6 +34,14 @@ export default function AutoDetailing() {
         <title>Premium Mobile Auto Detailing Reno & Sparks NV</title>
         <meta name="description" content="Comprehensive interior and exterior mobile auto detailing in Reno and Sparks. Deep cleaning, stain extraction, and protective exterior sealants." />
         <link rel="canonical" href="https://www.donofdetail.com/auto-detailing-reno-nv" />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Premium Mobile Auto Detailing Reno &amp; Sparks NV | Don of Detail" />
+        <meta property="og:description" content="Comprehensive interior and exterior mobile auto detailing in Reno and Sparks. Deep cleaning, stain extraction, and protective exterior sealants." />
+        <meta property="og:url" content="https://www.donofdetail.com/auto-detailing-reno-nv" />
+        <meta property="og:image" content="https://www.donofdetail.com/og-image-v2.png" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Premium Mobile Auto Detailing Reno &amp; Sparks NV | Don of Detail" />
+        <meta name="twitter:description" content="Comprehensive interior and exterior mobile auto detailing in Reno and Sparks. Deep cleaning, stain extraction, and protective exterior sealants." />
         
         <script type="application/ld+json">
           {`{
@@ -91,18 +100,43 @@ export default function AutoDetailing() {
         </div>
       </section>
 
+      {/* AI Summary Block (AEO Optimization) */}
+      <section className="bg-don-ink text-don-oat px-6 lg:px-12 py-16 border-b border-don-clay/20">
+        <div className="max-w-[1400px] mx-auto">
+          <p className="text-[10px] font-bold uppercase tracking-[0.3em] text-don-clay mb-6">Briefing</p>
+          <div className="bg-don-bark/50 p-8 lg:p-12 rounded border border-don-clay/5">
+            <h2 className="text-2xl font-display uppercase tracking-[-1px] mb-4 text-don-oat">What is Professional Auto Detailing?</h2>
+            <p className="text-don-clay font-light leading-relaxed text-lg max-w-4xl">
+              Unlike a standard car wash, professional auto detailing is a comprehensive top-to-bottom preservation process that focuses on deep cleaning, defect removal, and material protection. For the exterior, this involves chemical decontamination, pH-neutral hand washing, and the application of UV-resistant sealants. For the interior, it includes hot water extraction for carpets, enzymatic stain removal, steam cleaning of ventilation systems, and specialized conditioning for leather and vinyl surfaces to prevent cracking in high-heat environments.
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* Editorial Content */}
       <section className="bg-don-bark text-don-oat py-32 lg:py-48 px-6 lg:px-12">
         <div className="max-w-[1400px] mx-auto grid lg:grid-cols-2 gap-16 lg:gap-32 items-start">
-          <h2 className="text-[10vw] md:text-7xl font-display uppercase tracking-[-2px]">
-            Convenience without compromise.
-          </h2>
+          <div>
+            <h2 className="sr-only">Comprehensive Mobile Auto Detailing in Reno and Sparks</h2>
+            <p aria-hidden="true" className="text-[10vw] md:text-7xl font-display uppercase tracking-[-2px] leading-tight">
+              Convenience without compromise.
+            </p>
+          </div>
           <div className="space-y-8 font-light text-don-clay leading-relaxed text-lg">
             <p>
-              Your time is valuable. We operate on the principle that you should not have to leave your home or office to maintain your vehicle properly.
+              Your time is valuable. We operate on the principle that you should not have to leave your home or office to maintain your vehicle properly. However, "mobile" should never mean a reduction in quality.
             </p>
             <p>
-              Our mobile units carry spot-free deionized water systems and independent power. Whether you are at home in Montreux, at the office in South Reno, or residing in ArrowCreek or Washoe Valley, we arrive ready to execute the work without interrupting your day.
+              Our mobile units are entirely self-contained. We arrive equipped with spot-free deionized water systems, power generators, and an arsenal of specialized chemistry. Whether you are at home in Montrêux, at the office in South Reno, or residing in ArrowCreek or Washoe Valley, we execute studio-level detailing without interrupting your day or leaving a mess in your driveway.
+            </p>
+            <p>
+              We treat the interior and exterior of your vehicle as two distinct ecosystems. The exterior requires heavy lubricants, iron removers, and alkaline pre-washes to safely lift Nevada road salt and abrasive dust without scratching the clear coat. We strictly utilize the two-bucket wash method and plush microfiber media.
+            </p>
+            <p>
+              The interior, conversely, demands a delicate approach. We utilize pH-balanced enzymatic cleaners to lift biological stains, low-moisture steam to sanitize high-touch areas like the steering wheel and center console, and dedicated UV inhibitors to protect the dashboard from the relentless Reno sun. We never use greasy, silicone-based dressings that attract dust and leave a slippery residue.
+            </p>
+            <p className="text-don-oat">
+              It is not just a wash. It is an automotive reset.
             </p>
           </div>
         </div>
@@ -153,6 +187,27 @@ export default function AutoDetailing() {
                 </div>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Related Reading */}
+      <section className="bg-don-oat py-24 px-6 lg:px-12 border-t border-don-clay/20">
+        <div className="max-w-[1400px] mx-auto">
+          <p className="text-[10px] font-bold uppercase tracking-[0.3em] text-don-clay mb-12">From the Journal</p>
+          <div className="grid md:grid-cols-3 gap-12">
+            <Link to="/blog/the-truth-about-automatic-car-washes" className="group border-b border-don-clay/20 pb-8">
+              <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-don-clay mb-3">Education</p>
+              <h3 className="text-xl font-display uppercase tracking-[-1px] text-don-ink group-hover:text-don-clay transition-colors leading-tight">The Truth About Automatic Car Washes</h3>
+            </Link>
+            <Link to="/blog/how-to-wash-a-ceramic-coated-car" className="group border-b border-don-clay/20 pb-8">
+              <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-don-clay mb-3">Education</p>
+              <h3 className="text-xl font-display uppercase tracking-[-1px] text-don-ink group-hover:text-don-clay transition-colors leading-tight">How To Wash Your Car After a Ceramic Coating</h3>
+            </Link>
+            <Link to="/ceramic-coating-reno-nv" className="group border-b border-don-clay/20 pb-8">
+              <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-don-clay mb-3">Service</p>
+              <h3 className="text-xl font-display uppercase tracking-[-1px] text-don-ink group-hover:text-don-clay transition-colors leading-tight">Ceramic Coating</h3>
+            </Link>
           </div>
         </div>
       </section>

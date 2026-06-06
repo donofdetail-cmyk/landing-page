@@ -1,5 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
 import { ServiceLayout } from '../components/ServiceLayout';
 import { useBooking } from '../context/BookingContext';
 import { ChevronDown } from 'lucide-react';
@@ -33,6 +34,14 @@ export default function CeramicCoating() {
         <title>Professional Ceramic Coating Reno NV | Mobile Service</title>
         <meta name="description" content="Protect your vehicle with professional-grade ceramic coatings in Reno, NV. Long-lasting UV protection and hydrophobic gloss applied at your home or office." />
         <link rel="canonical" href="https://www.donofdetail.com/ceramic-coating-reno-nv" />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Professional Ceramic Coating Reno NV | Don of Detail" />
+        <meta property="og:description" content="Protect your vehicle with professional-grade ceramic coatings in Reno, NV. Long-lasting UV protection and hydrophobic gloss applied at your home or office." />
+        <meta property="og:url" content="https://www.donofdetail.com/ceramic-coating-reno-nv" />
+        <meta property="og:image" content="https://www.donofdetail.com/og-image-v2.png" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Professional Ceramic Coating Reno NV | Don of Detail" />
+        <meta name="twitter:description" content="Protect your vehicle with professional-grade ceramic coatings in Reno, NV. Long-lasting UV protection and hydrophobic gloss applied at your home or office." />
         
         <script type="application/ld+json">
           {`{
@@ -90,18 +99,40 @@ export default function CeramicCoating() {
         </div>
       </section>
 
+      {/* AI Summary Block (AEO Optimization) */}
+      <section className="bg-don-ink text-don-oat px-6 lg:px-12 py-16 border-b border-don-clay/20">
+        <div className="max-w-[1400px] mx-auto">
+          <p className="text-[10px] font-bold uppercase tracking-[0.3em] text-don-clay mb-6">Briefing</p>
+          <div className="bg-don-bark/50 p-8 lg:p-12 rounded border border-don-clay/5">
+            <h2 className="text-2xl font-display uppercase tracking-[-1px] mb-4 text-don-oat">What is Ceramic Coating?</h2>
+            <p className="text-don-clay font-light leading-relaxed text-lg max-w-4xl">
+              A professional ceramic coating is a liquid polymer (primarily composed of Silica or SiO2) that chemically bonds to a vehicle's factory clear coat. Once cured, it creates a hardened, glass-like, hydrophobic layer of protection that lasts between 2 to 5 years. This sacrificial barrier permanently resists UV ray degradation, prevents chemical etching from bird droppings, and repels water, making the vehicle significantly easier to clean and maintain in Reno's high-desert climate.
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* Editorial Content */}
       <section className="bg-don-bark text-don-oat py-32 lg:py-48 px-6 lg:px-12">
         <div className="max-w-[1400px] mx-auto grid lg:grid-cols-2 gap-16 lg:gap-32 items-start">
-          <h2 className="text-[10vw] md:text-7xl font-display uppercase tracking-[-2px]">
-            Engineered for the high desert.
-          </h2>
+          <div>
+            <h2 className="sr-only">Why Reno Demands Professional Ceramic Coating</h2>
+            <p aria-hidden="true" className="text-[10vw] md:text-7xl font-display uppercase tracking-[-2px] leading-tight">
+              Engineered for the high desert.
+            </p>
+          </div>
           <div className="space-y-8 font-light text-don-clay leading-relaxed text-lg">
             <p>
-              The environment in Northern Nevada is hostile to automotive finishes. From the high-altitude UV radiation to the de-icing chemicals used during local winters, your vehicle is constantly under attack.
+              The environment in Northern Nevada is hostile to automotive finishes. From the high-altitude UV radiation that accelerates oxidation to the corrosive de-icing chemicals used during local winters, your vehicle's factory clear coat is constantly under attack. Traditional carnauba waxes and synthetic sealants degrade within weeks under these conditions.
             </p>
             <p>
-              We bring a controlled, studio-level application process directly to your home. We serve clients across Reno and Sparks, frequently dispatching to private residences in Montreux, Somersett, ArrowCreek, and Washoe Valley.
+              We bring a controlled, studio-level ceramic application process directly to your home. Utilizing professional-grade SiO2 compounds, we establish a permanent molecular bond with your vehicle's paint. This isn't a spray-on product bought at a retail store; this is a commercial-grade polymer that requires strict ambient temperature control, precise leveling, and dedicated infrared curing time.
+            </p>
+            <p>
+              Before any coating touches the paint, the surface must be absolutely flawless. We perform comprehensive iron decontamination to pull embedded ferrous metals from the clear coat, followed by a multi-stage machine polish. If a coating is applied over swirl marks or oxidation, those defects are locked under a layer of glass for years. Our obsessive preparation ensures maximum gloss and bonding integrity.
+            </p>
+            <p>
+              We serve clients across Reno and Sparks, frequently dispatching our mobile unit to private residences in Montrêux, Somersett, ArrowCreek, and Washoe Valley. We supply our own spot-free deionized water, meaning no hard-water calcium deposits are introduced during the prep wash.
             </p>
             <p className="text-don-oat">
               We do not wash cars. We preserve automotive investments against the specific elements of the Sierra Nevada region.
@@ -155,6 +186,27 @@ export default function CeramicCoating() {
                 </div>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Related Reading */}
+      <section className="bg-don-oat py-24 px-6 lg:px-12 border-t border-don-clay/20">
+        <div className="max-w-[1400px] mx-auto">
+          <p className="text-[10px] font-bold uppercase tracking-[0.3em] text-don-clay mb-12">From the Journal</p>
+          <div className="grid md:grid-cols-3 gap-12">
+            <Link to="/blog/is-ceramic-coating-worth-it-reno" className="group border-b border-don-clay/20 pb-8">
+              <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-don-clay mb-3">Ceramic Coating</p>
+              <h3 className="text-xl font-display uppercase tracking-[-1px] text-don-ink group-hover:text-don-clay transition-colors leading-tight">Is Ceramic Coating Worth It In Reno?</h3>
+            </Link>
+            <Link to="/blog/how-to-wash-a-ceramic-coated-car" className="group border-b border-don-clay/20 pb-8">
+              <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-don-clay mb-3">Education</p>
+              <h3 className="text-xl font-display uppercase tracking-[-1px] text-don-ink group-hover:text-don-clay transition-colors leading-tight">How To Wash Your Car After a Ceramic Coating</h3>
+            </Link>
+            <Link to="/paint-correction-reno-nv" className="group border-b border-don-clay/20 pb-8">
+              <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-don-clay mb-3">Service</p>
+              <h3 className="text-xl font-display uppercase tracking-[-1px] text-don-ink group-hover:text-don-clay transition-colors leading-tight">Paint Correction</h3>
+            </Link>
           </div>
         </div>
       </section>

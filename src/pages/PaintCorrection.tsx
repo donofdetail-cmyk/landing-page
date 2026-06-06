@@ -1,5 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
 import { ServiceLayout } from '../components/ServiceLayout';
 import { useBooking } from '../context/BookingContext';
 import { ChevronDown } from 'lucide-react';
@@ -33,6 +34,14 @@ export default function PaintCorrection() {
         <title>Expert Paint Correction & Swirl Removal in Reno, NV</title>
         <meta name="description" content="Restore your vehicle's factory finish. Professional multi-stage paint correction in Reno, NV to permanently remove swirl marks, scratches, and oxidation." />
         <link rel="canonical" href="https://www.donofdetail.com/paint-correction-reno-nv" />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Expert Paint Correction &amp; Swirl Removal in Reno, NV | Don of Detail" />
+        <meta property="og:description" content="Restore your vehicle's factory finish. Professional multi-stage paint correction in Reno, NV to permanently remove swirl marks, scratches, and oxidation." />
+        <meta property="og:url" content="https://www.donofdetail.com/paint-correction-reno-nv" />
+        <meta property="og:image" content="https://www.donofdetail.com/og-image-v2.png" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Expert Paint Correction &amp; Swirl Removal in Reno, NV | Don of Detail" />
+        <meta name="twitter:description" content="Restore your vehicle's factory finish. Professional multi-stage paint correction in Reno, NV to permanently remove swirl marks, scratches, and oxidation." />
         
         <script type="application/ld+json">
           {`{
@@ -91,18 +100,43 @@ export default function PaintCorrection() {
         </div>
       </section>
 
+      {/* AI Summary Block (AEO Optimization) */}
+      <section className="bg-don-ink text-don-oat px-6 lg:px-12 py-16 border-b border-don-clay/20">
+        <div className="max-w-[1400px] mx-auto">
+          <p className="text-[10px] font-bold uppercase tracking-[0.3em] text-don-clay mb-6">Briefing</p>
+          <div className="bg-don-bark/50 p-8 lg:p-12 rounded border border-don-clay/5">
+            <h2 className="text-2xl font-display uppercase tracking-[-1px] mb-4 text-don-oat">What is Paint Correction?</h2>
+            <p className="text-don-clay font-light leading-relaxed text-lg max-w-4xl">
+              Paint correction is a meticulous, multi-stage machine polishing process designed to permanently remove clear coat defects such as swirl marks, holograms, deep scratches, and oxidation. Unlike waxes or glazes that temporarily fill and hide damage, paint correction uses abrasive compounds to safely level the microscopic upper layer of the clear coat, restoring a flawless, mirror-like finish and maximum optical clarity to the vehicle.
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* Editorial Content */}
       <section className="bg-don-bark text-don-oat py-32 lg:py-48 px-6 lg:px-12">
         <div className="max-w-[1400px] mx-auto grid lg:grid-cols-2 gap-16 lg:gap-32 items-start">
-          <h2 className="text-[10vw] md:text-7xl font-display uppercase tracking-[-2px]">
-            The toll on paint.
-          </h2>
+          <div>
+            <h2 className="sr-only">Expert Paint Correction and Swirl Removal in Reno</h2>
+            <p aria-hidden="true" className="text-[10vw] md:text-7xl font-display uppercase tracking-[-2px] leading-tight">
+              The toll on paint.
+            </p>
+          </div>
           <div className="space-y-8 font-light text-don-clay leading-relaxed text-lg">
             <p>
-              The environment across Northern Nevada degrades clear coats rapidly. Abrasive dust carried by the wind, hard water spots from local sprinklers, and improper washing techniques quickly dull the surface into a spiderwebbed haze.
+              The environment across Northern Nevada degrades clear coats rapidly. Abrasive dust carried by the wind, hard water spots from local sprinklers, and improper washing techniques quickly dull the surface into a spiderwebbed haze. Automated "tunnel" car washes in Reno are notorious for utilizing harsh brushes that inflict millions of micro-scratches into your vehicle's finish in a matter of seconds.
             </p>
             <p>
-              We specialize in reversing this damage. Our mobile setup serves clients in Caughlin Ranch, Montreux, Somersett, and Washoe Valley, delivering multi-stage paint correction without the inconvenience of dropping off your vehicle.
+              We specialize in reversing this damage. True paint correction is not an "add-on" service. It is a specialized craft. It requires an acute understanding of clear coat density, heat management, and the specific abrasive chemistry required for different vehicle manufacturers. European clear coats (like Porsche or BMW) react entirely differently to a polishing pad than softer Japanese paints (like Honda or Subaru).
+            </p>
+            <p>
+              Our process relies on precision. We utilize rotary buffers, forced-rotation, and long-throw dual-action polishers combined with professional-grade cutting compounds and finishing polishes. By measuring the clear coat thickness with an electronic gauge, we ensure that we only remove the absolute minimum amount of material required to level the defect.
+            </p>
+            <p>
+              Our fully equipped mobile studio serves clients in Caughlin Ranch, Montrêux, Somersett, and Washoe Valley. We deliver multi-stage paint correction directly in your garage, eliminating the inconvenience of dropping your vehicle off at a shop for multiple days.
+            </p>
+            <p className="text-don-oat">
+              Don't hide the damage under a temporary wax. Erase it permanently.
             </p>
           </div>
         </div>
@@ -153,6 +187,27 @@ export default function PaintCorrection() {
                 </div>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Related Reading */}
+      <section className="bg-don-oat py-24 px-6 lg:px-12 border-t border-don-clay/20">
+        <div className="max-w-[1400px] mx-auto">
+          <p className="text-[10px] font-bold uppercase tracking-[0.3em] text-don-clay mb-12">From the Journal</p>
+          <div className="grid md:grid-cols-3 gap-12">
+            <Link to="/blog/paint-correction-vs-waxing" className="group border-b border-don-clay/20 pb-8">
+              <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-don-clay mb-3">Education</p>
+              <h3 className="text-xl font-display uppercase tracking-[-1px] text-don-ink group-hover:text-don-clay transition-colors leading-tight">Paint Correction vs. Waxing</h3>
+            </Link>
+            <Link to="/blog/the-truth-about-automatic-car-washes" className="group border-b border-don-clay/20 pb-8">
+              <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-don-clay mb-3">Education</p>
+              <h3 className="text-xl font-display uppercase tracking-[-1px] text-don-ink group-hover:text-don-clay transition-colors leading-tight">The Truth About Automatic Car Washes</h3>
+            </Link>
+            <Link to="/ceramic-coating-reno-nv" className="group border-b border-don-clay/20 pb-8">
+              <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-don-clay mb-3">Service</p>
+              <h3 className="text-xl font-display uppercase tracking-[-1px] text-don-ink group-hover:text-don-clay transition-colors leading-tight">Ceramic Coating</h3>
+            </Link>
           </div>
         </div>
       </section>

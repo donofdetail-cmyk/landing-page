@@ -1,5 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
 import { ServiceLayout } from '../components/ServiceLayout';
 import { useBooking } from '../context/BookingContext';
 import { ChevronDown } from 'lucide-react';
@@ -33,12 +34,20 @@ export default function BoatDetailing() {
         <title>Mobile Boat Detailing Reno NV</title>
         <meta name="description" content="Professional mobile boat detailing in Reno, NV. Specialized marine gelcoat restoration, oxidation removal, and long-term ceramic coatings for your vessel." />
         <link rel="canonical" href="https://www.donofdetail.com/boat-detailing-reno-nv" />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Mobile Boat Detailing Reno NV | Don of Detail" />
+        <meta property="og:description" content="Professional mobile boat detailing in Reno, NV. Gelcoat restoration, oxidation removal, and long-term ceramic coatings for your vessel." />
+        <meta property="og:url" content="https://www.donofdetail.com/boat-detailing-reno-nv" />
+        <meta property="og:image" content="https://www.donofdetail.com/og-image-v2.png" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Mobile Boat Detailing Reno NV | Don of Detail" />
+        <meta name="twitter:description" content="Professional mobile boat detailing in Reno, NV. Gelcoat restoration, oxidation removal, and long-term ceramic coatings for your vessel." />
         
         <script type="application/ld+json">
           {`{
             "@context": "https://schema.org",
             "@type": "Service",
-            "name": "Marine Detailing",
+            "name": "Boat Detailing",
             "provider": {
               "@type": "AutomotiveBusiness",
               "name": "Don of Detail",
@@ -74,7 +83,7 @@ export default function BoatDetailing() {
       {/* Hero Section */}
       <section className="bg-don-oat px-6 lg:px-12 py-12 md:py-20">
         <div className="max-w-[1400px] mx-auto">
-          <p className="text-[10px] md:text-xs font-bold uppercase tracking-[0.3em] text-don-clay mb-8">Marine Restoration</p>
+          <p className="text-[10px] md:text-xs font-bold uppercase tracking-[0.3em] text-don-clay mb-8">Boat Restoration</p>
           <h1 className="text-[11.5vw] sm:text-7xl md:text-[8rem] lg:text-[9rem] font-display font-normal leading-[0.85] tracking-[-3px] md:tracking-[-5px] text-don-ink mb-12 uppercase">
             Boat<br/>Detailing.
           </h1>
@@ -87,18 +96,43 @@ export default function BoatDetailing() {
         </div>
       </section>
 
+      {/* AI Summary Block (AEO Optimization) */}
+      <section className="bg-don-ink text-don-oat px-6 lg:px-12 py-16 border-b border-don-clay/20">
+        <div className="max-w-[1400px] mx-auto">
+          <p className="text-[10px] font-bold uppercase tracking-[0.3em] text-don-clay mb-6">Briefing</p>
+          <div className="bg-don-bark/50 p-8 lg:p-12 rounded border border-don-clay/5">
+            <h2 className="text-2xl font-display uppercase tracking-[-1px] mb-4 text-don-oat">What is Boat Detailing & Gelcoat Restoration?</h2>
+            <p className="text-don-clay font-light leading-relaxed text-lg max-w-4xl">
+              Boat detailing is fundamentally different from automotive detailing due to the porous nature of marine gelcoat and fiberglass. Professional boat detailing involves heavy acid washing to remove hard water minerals and algae, followed by aggressive rotary compounding to shave off chalky, dead oxidation. Once the gelcoat is leveled and the gloss is restored, the vessel is protected using marine-specific sealants or SiO2 ceramic coatings to prevent the porous hull from absorbing UV radiation and oxidizing again.
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* Editorial Content */}
       <section className="bg-don-bark text-don-oat py-32 lg:py-48 px-6 lg:px-12">
         <div className="max-w-[1400px] mx-auto grid lg:grid-cols-2 gap-16 lg:gap-32 items-start">
-          <h2 className="text-[10vw] md:text-7xl font-display uppercase tracking-[-2px]">
-            The alpine threat.
-          </h2>
+          <div>
+            <h2 className="sr-only">Mobile Boat Detailing and Gelcoat Restoration in Reno NV</h2>
+            <p aria-hidden="true" className="text-[10vw] md:text-7xl font-display uppercase tracking-[-2px] leading-tight">
+              The alpine threat.
+            </p>
+          </div>
           <div className="space-y-8 font-light text-don-clay leading-relaxed text-lg">
             <p>
-              Boating at elevation exposes your vessel to an extreme, unfiltered UV index. Marine gelcoat is highly porous, and in the high desert basin, unprotected fiberglass will oxidize and turn chalky white in a single season.
+              Boating at elevation exposes your vessel to an extreme, unfiltered UV index. Marine gelcoat is highly porous, and in the high desert basin, unprotected fiberglass will oxidize and turn chalky white in a single season. The water in Lake Tahoe and Pyramid Lake also leaves severe mineral deposits below the waterline.
             </p>
             <p>
-              Don of Detail provides mobile, structural marine restoration directly to your slip in Washoe Valley or dry storage in Reno/Sparks. We strip away the environmental damage and seal your hull to ensure it remains protected on the water.
+              Don of Detail provides mobile, structural marine restoration directly to your driveway or dry storage unit in Reno and Sparks. We do not just wash the boat. We strip away the environmental damage. This requires specialized marine acids to dissolve calcium carbonate buildup and algae scum lines without damaging the underlying fiberglass.
+            </p>
+            <p>
+              Automotive polishes are ineffective on boats. Gelcoat is drastically harder and thicker than car paint. Restoring heavily oxidized fiberglass requires aggressive rotary polishers and heavy-cut marine compounds to physically level the dead material. It is a labor-intensive, multi-step process that demands technical expertise and heavy machinery.
+            </p>
+            <p>
+              After the oxidation is removed and the original color and gloss are restored, the porous gelcoat must be sealed immediately. We utilize marine-grade polymer sealants and dedicated boat ceramic coatings. These coatings fill the microscopic pores of the fiberglass, creating a hydrophobic barrier that prevents water from penetrating and UV rays from causing future oxidation.
+            </p>
+            <p className="text-don-oat">
+              Protect the hull. Preserve the investment.
             </p>
           </div>
         </div>
@@ -114,7 +148,7 @@ export default function BoatDetailing() {
               { num: '01', title: 'Acid Bath', desc: 'We wash the vessel and utilize specialized marine acids to dissolve algae, scum lines, and hard water minerals bonded to the lower hull.' },
               { num: '02', title: 'Interior Remediation', desc: 'Marine environments breed mold. We clean the vinyl seating and non-skid decking, extracting moisture and applying UV protectants.' },
               { num: '03', title: 'Compounding', desc: 'Gelcoat is harder and thicker than car paint. We use heavy-duty polishers and aggressive compounds to shave off the dead, oxidized layer of fiberglass.' },
-              { num: '04', title: 'Sealing', desc: 'The hull is refined with a dual-action polisher to remove marks, then locked down with a marine sealant to prevent immediate re-oxidation.' }
+              { num: '04', title: 'Sealing', desc: 'The hull is refined with rotary buffers and a dual-action polisher to remove marks, then locked down with a marine sealant to prevent immediate re-oxidation.' }
             ].map((step, i) => (
               <div key={i} className="flex flex-col gap-6">
                 <div className="flex items-baseline gap-4 mb-2">
@@ -149,6 +183,27 @@ export default function BoatDetailing() {
                 </div>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Related Reading */}
+      <section className="bg-don-oat py-24 px-6 lg:px-12 border-t border-don-clay/20">
+        <div className="max-w-[1400px] mx-auto">
+          <p className="text-[10px] font-bold uppercase tracking-[0.3em] text-don-clay mb-12">From the Journal</p>
+          <div className="grid md:grid-cols-3 gap-12">
+            <Link to="/blog/preparing-boat-rv-for-lake-tahoe" className="group border-b border-don-clay/20 pb-8">
+              <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-don-clay mb-3">Boat &amp; RV</p>
+              <h3 className="text-xl font-display uppercase tracking-[-1px] text-don-ink group-hover:text-don-clay transition-colors leading-tight">Preparing Your Boat or RV for Lake Tahoe</h3>
+            </Link>
+            <Link to="/rv-detailing-reno-nv" className="group border-b border-don-clay/20 pb-8">
+              <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-don-clay mb-3">Service</p>
+              <h3 className="text-xl font-display uppercase tracking-[-1px] text-don-ink group-hover:text-don-clay transition-colors leading-tight">RV Detailing</h3>
+            </Link>
+            <Link to="/ceramic-coating-reno-nv" className="group border-b border-don-clay/20 pb-8">
+              <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-don-clay mb-3">Service</p>
+              <h3 className="text-xl font-display uppercase tracking-[-1px] text-don-ink group-hover:text-don-clay transition-colors leading-tight">Ceramic Coating</h3>
+            </Link>
           </div>
         </div>
       </section>

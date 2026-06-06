@@ -1,6 +1,7 @@
 import React, { Suspense } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import Home from './pages/Home';
+import About from './pages/About';
 
 // Lazy load all subpages to split JavaScript bundles
 const TermsOfService = React.lazy(() => import('./pages/TermsOfService'));
@@ -25,6 +26,7 @@ export default function App() {
       <Suspense fallback={<div className="min-h-screen bg-don-oat"></div>}>
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
           <Route path="/terms" element={<TermsOfService />} />
           <Route path="/privacy" element={<PrivacyPolicy />} />
           <Route path="/ceramic-coating-reno-nv" element={<CeramicCoating />} />

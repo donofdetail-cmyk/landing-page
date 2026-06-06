@@ -19,6 +19,7 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 const DIST = resolve(__dirname, '..', 'dist');
 const ROUTES = [
   '/', 
+  '/about',
   '/terms', 
   '/privacy',
   '/ceramic-coating-reno-nv',
