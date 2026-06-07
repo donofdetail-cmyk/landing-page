@@ -15,6 +15,7 @@ const BlogHub = React.lazy(() => import('./pages/BlogHub'));
 const BlogPost = React.lazy(() => import('./pages/BlogPost'));
 const NotFound = React.lazy(() => import('./pages/NotFound'));
 const Packages = React.lazy(() => import('./pages/Packages'));
+const SparksDetailing = React.lazy(() => import('./pages/SparksDetailing'));
 
 import { ScrollToTop } from './components/ScrollToTop';
 import { BookingProvider } from './context/BookingContext';
@@ -37,6 +38,7 @@ export default function App() {
           <Route path="/blog" element={<BlogHub />} />
           <Route path="/blog/:slug" element={<BlogPost />} />
           <Route path="/packages" element={<Packages />} />
+          <Route path="/mobile-detailing-sparks-nv" element={<SparksDetailing />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </Suspense>

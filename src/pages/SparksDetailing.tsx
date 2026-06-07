@@ -18,16 +18,16 @@ const formatName = (name: string) => {
   return `${firstName} ${lastInitial}`;
 };
 
-export default function Home() {
+export default function SparksDetailing() {
   const { openBooking } = useBooking();
 
 
   return (
     <div className="min-h-screen bg-don-oat text-don-ink font-sans selection:bg-don-ink selection:text-don-oat">
       <Helmet>
-        <title>Top Mobile Auto Detailing & Ceramic Coating in Reno, NV</title>
-        <meta name="description" content="Reno's premier mobile auto detailing service. We specialize in professional ceramic coatings, paint correction, and full interior detailing. We come to you." />
-        <link rel="canonical" href="https://www.donofdetail.com/" />
+        <title>Top Mobile Auto Detailing & Ceramic Coating in Sparks, NV</title>
+        <meta name="description" content="Sparks's premier mobile auto detailing service. We specialize in professional ceramic coatings, paint correction, and full interior detailing. We come to you." />
+        <link rel="canonical" href="https://www.donofdetail.com/mobile-detailing-sparks-nv" />
 
         <script type="application/ld+json">
           {`{
@@ -36,18 +36,18 @@ export default function Home() {
             "mainEntity": [
               {
                 "@type": "Question",
-                "name": "How much does mobile auto detailing cost in Reno, NV?",
+                "name": "How much does mobile auto detailing cost in Sparks, NV?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "Mobile auto detailing in Reno typically costs between $200 and $400 depending on vehicle size and the service selected. Exterior-only packages start at $200+. For a full interior & exterior detail, most clients spend $250 to $400. Because every vehicle is different, we provide custom quotes after you submit a brief form."
+                  "text": "Mobile auto detailing in Sparks typically costs between $200 and $400 depending on vehicle size and the service selected. Exterior-only packages start at $200+. For a full interior & exterior detail, most clients spend $250 to $400. Because every vehicle is different, we provide custom quotes after you submit a brief form."
                 }
               },
               {
                 "@type": "Question",
-                "name": "Is ceramic coating worth it in Reno's climate?",
+                "name": "Is ceramic coating worth it in Nevada's climate?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "Yes. Ceramic coating is one of the best investments for vehicles in Reno's high-desert climate. Reno gets 300+ days of intense UV at 4,500+ feet of elevation, road salt from Tahoe trips, and constant desert dust. Ceramic coating provides years of hydrophobic protection, UV resistance, and keeps your paint looking factory-fresh."
+                  "text": "Yes. Ceramic coating is one of the best investments for vehicles in Northern Nevada's high-desert climate. Sparks gets 300+ days of intense UV at 4,500+ feet of elevation, road salt from Tahoe trips, and constant desert dust. Ceramic coating provides years of hydrophobic protection, UV resistance, and keeps your paint looking factory-fresh."
                 }
               },
               {
@@ -84,18 +84,18 @@ export default function Home() {
               },
               {
                 "@type": "Question",
-                "name": "Do you detail boats and RVs in Reno?",
+                "name": "Do you detail boats and RVs in Sparks?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "Yes. We offer full mobile detailing for boats, RVs, travel trailers, and motorhomes throughout Reno, Sparks, and Northern Nevada. Services include exterior wash and wax, oxidation removal, hull cleaning, interior deep clean, and ceramic coating for long-term protection against Reno's intense UV and desert conditions."
+                  "text": "Yes. We offer full mobile detailing for boats, RVs, travel trailers, and motorhomes throughout Sparks, Reno, and Northern Nevada. Services include exterior wash and wax, oxidation removal, hull cleaning, interior deep clean, and ceramic coating for long-term protection against the intense UV and desert conditions."
                 }
               },
               {
                 "@type": "Question",
-                "name": "How much does ceramic coating cost in Reno?",
+                "name": "How much does ceramic coating cost in Sparks?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "Professional ceramic coating in Reno typically ranges from $800 to $2,500 depending on vehicle size, paint condition, and the level of coating selected. This includes full paint decontamination, paint correction (to remove swirls and scratches before sealing), and the ceramic coating application itself. Because every vehicle is unique, we provide custom quotes after reviewing photos of your vehicle."
+                  "text": "Professional ceramic coating in Sparks typically ranges from $800 to $2,500 depending on vehicle size, paint condition, and the level of coating selected. This includes full paint decontamination, paint correction (to remove swirls and scratches before sealing), and the ceramic coating application itself. Because every vehicle is unique, we provide custom quotes after reviewing photos of your vehicle."
                 }
               }
             ]
@@ -111,7 +111,7 @@ export default function Home() {
           <section className="relative flex-1 flex flex-col justify-center pt-24 pb-20 px-6 lg:px-12 bg-don-oat">
             <div className="max-w-[1400px] mx-auto w-full text-left">
               <h1 className="!font-sans text-xs !font-black uppercase !tracking-[0.2em] leading-normal text-don-ink mb-8 md:mb-12">
-                Mobile Auto Detailing & Ceramic Coating | Reno, NV
+                Mobile Auto Detailing & Ceramic Coating | Sparks, NV
               </h1>
               <p aria-hidden="true" className="text-[12vw] sm:text-8xl md:text-[9rem] lg:text-[11rem] font-display font-normal leading-[0.85] tracking-[-3px] md:tracking-[-5px] text-don-ink mb-12 uppercase max-w-full break-words">
                 Obsessive<br />By Nature.
@@ -145,10 +145,10 @@ export default function Home() {
         <section id="work" className="bg-don-oat">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
             {[
-              { img: '/porsche-911-foam-wash-detailing-reno.webp', alt: 'Classic Porsche 911 full interior and exterior detail — Don of Detail mobile detailing Reno NV', title: 'Classic Porsche 911', service: 'Interior & Exterior Detail' },
-              { img: '/classic-truck-car-show-reno.webp', alt: 'Custom classic truck paint correction Reno NV — Don of Detail mobile detailing', title: 'Custom Classic Truck', service: 'Paint Correction' },
-              { img: '/range-rover-headlight-restoration.webp', alt: 'Range Rover headlight restoration Reno NV — Don of Detail mobile detailing', title: 'Range Rover', service: 'Headlight Restoration' },
-              { img: '/land-rover-ceramic-coating.webp', alt: 'Land Rover Discovery ceramic coating Reno NV — Don of Detail mobile detailing', title: 'Land Rover Discovery', service: 'Ceramic Coating' },
+              { img: '/porsche-911-foam-wash-detailing-reno.webp', alt: 'Classic Porsche 911 full interior and exterior detail — Don of Detail mobile detailing Sparks NV', title: 'Classic Porsche 911', service: 'Interior & Exterior Detail' },
+              { img: '/classic-truck-car-show-reno.webp', alt: 'Custom classic truck paint correction Sparks NV — Don of Detail mobile detailing', title: 'Custom Classic Truck', service: 'Paint Correction' },
+              { img: '/range-rover-headlight-restoration.webp', alt: 'Range Rover headlight restoration Sparks NV — Don of Detail mobile detailing', title: 'Range Rover', service: 'Headlight Restoration' },
+              { img: '/land-rover-ceramic-coating.webp', alt: 'Land Rover Discovery ceramic coating Sparks NV — Don of Detail mobile detailing', title: 'Land Rover Discovery', service: 'Ceramic Coating' },
             ].map((item, i) => (
               <div key={i} className="group relative aspect-square overflow-hidden cursor-pointer bg-don-bark">
                 <img src={item.img} alt={item.alt} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 saturate-[0.8] contrast-110" loading={i === 0 ? 'eager' : 'lazy'} fetchPriority={i === 0 ? 'high' : 'auto'} width={800} height={800} />
@@ -267,7 +267,7 @@ export default function Home() {
               The standard isn't optional.
             </h2>
             <p className="text-lg md:text-xl font-light text-don-ink/70 leading-relaxed max-w-2xl mx-auto">
-              We bring the equipment, the chemicals, and the discipline directly to your driveway. Paint correction, ceramic coating, and full auto detailing in Reno, NV. No filler products. No shortcuts. The work shows.
+              We bring the equipment, the chemicals, and the discipline directly to your driveway. Paint correction, ceramic coating, and full auto detailing in Sparks, NV. No filler products. No shortcuts. The work shows.
             </p>
           </div>
         </section>

@@ -64,18 +64,18 @@ export default function Packages() {
                 </div>
                 
                 <ul className="space-y-4 mb-4">
-                  <li className="flex items-start"><Check className="text-don-red mr-3 shrink-0" size={24} strokeWidth={3} /> <span className="text-don-ink font-medium">Hand wash</span></li>
-                  <li className="flex items-start"><Check className="text-don-red mr-3 shrink-0" size={24} strokeWidth={3} /> <span className="text-don-ink font-medium">Wheels & tires cleaned</span></li>
-                  <li className="flex items-start"><Check className="text-don-red mr-3 shrink-0" size={24} strokeWidth={3} /> <span className="text-don-ink font-medium">Tire shine applied</span></li>
-                  <li className="flex items-start"><Check className="text-don-red mr-3 shrink-0" size={24} strokeWidth={3} /> <span className="text-don-ink font-medium">Exterior glass cleaned</span></li>
-                  <li className="flex items-start"><Check className="text-don-red mr-3 shrink-0" size={24} strokeWidth={3} /> <span className="text-don-ink font-medium">Light paint protection</span></li>
+                  <li className="flex items-start"><Check aria-hidden="true" className="text-don-red mr-3 shrink-0" size={24} strokeWidth={3} /> <span className="text-don-ink font-medium">Hand wash</span></li>
+                  <li className="flex items-start"><Check aria-hidden="true" className="text-don-red mr-3 shrink-0" size={24} strokeWidth={3} /> <span className="text-don-ink font-medium">Wheels & tires cleaned</span></li>
+                  <li className="flex items-start"><Check aria-hidden="true" className="text-don-red mr-3 shrink-0" size={24} strokeWidth={3} /> <span className="text-don-ink font-medium">Tire shine applied</span></li>
+                  <li className="flex items-start"><Check aria-hidden="true" className="text-don-red mr-3 shrink-0" size={24} strokeWidth={3} /> <span className="text-don-ink font-medium">Exterior glass cleaned</span></li>
+                  <li className="flex items-start"><Check aria-hidden="true" className="text-don-red mr-3 shrink-0" size={24} strokeWidth={3} /> <span className="text-don-ink font-medium">Light paint protection</span></li>
                 </ul>
               </div>
 
               {/* Level 2 (Most Popular) */}
               <div className="bg-don-ink rounded shadow-2xl border-t-4 border-t-don-red p-8 lg:p-10 transform lg:-translate-y-8 relative">
                 <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-don-red text-don-oat px-5 py-2 rounded text-xs font-bold uppercase tracking-[0.2em] flex items-center gap-2 shadow-lg whitespace-nowrap">
-                  <Star size={14} fill="currentColor" /> The Standard
+                  <Star aria-hidden="true" size={14} fill="currentColor" /> The Standard
                 </div>
                 <h3 className="text-2xl font-bold text-don-oat uppercase tracking-wide">Level 2 Exterior Detail</h3>
                 <p className="text-don-clay text-sm mt-2 mb-6 min-h-[40px]">A thorough exterior decontamination detail designed to remove built-up grime, contaminants, and embedded debris. This service restores a smoother finish and prepares the paint for better shine and protection.</p>
@@ -95,11 +95,11 @@ export default function Packages() {
                 </div>
                 
                 <ul className="space-y-4 mb-4">
-                  <li className="flex items-start"><Check className="text-don-red mr-3 shrink-0" size={24} strokeWidth={3} /> <span className="text-don-oat font-bold">Everything in Level 1, plus:</span></li>
-                  <li className="flex items-start"><Check className="text-don-red mr-3 shrink-0" size={24} strokeWidth={3} /> <span className="text-don-oat/90 font-medium">Iron removal treatment</span></li>
-                  <li className="flex items-start"><Check className="text-don-red mr-3 shrink-0" size={24} strokeWidth={3} /> <span className="text-don-oat/90 font-medium">Clay bar decontamination</span></li>
-                  <li className="flex items-start"><Check className="text-don-red mr-3 shrink-0" size={24} strokeWidth={3} /> <span className="text-don-oat/90 font-medium">Bug & tar removal</span></li>
-                  <li className="flex items-start"><Check className="text-don-red mr-3 shrink-0" size={24} strokeWidth={3} /> <span className="text-don-oat/90 font-medium">Deeper wheel cleaning</span></li>
+                  <li className="flex items-start"><Check aria-hidden="true" className="text-don-red mr-3 shrink-0" size={24} strokeWidth={3} /> <span className="text-don-oat font-bold">Everything in Level 1, plus:</span></li>
+                  <li className="flex items-start"><Check aria-hidden="true" className="text-don-red mr-3 shrink-0" size={24} strokeWidth={3} /> <span className="text-don-oat/90 font-medium">Iron removal treatment</span></li>
+                  <li className="flex items-start"><Check aria-hidden="true" className="text-don-red mr-3 shrink-0" size={24} strokeWidth={3} /> <span className="text-don-oat/90 font-medium">Clay bar decontamination</span></li>
+                  <li className="flex items-start"><Check aria-hidden="true" className="text-don-red mr-3 shrink-0" size={24} strokeWidth={3} /> <span className="text-don-oat/90 font-medium">Bug & tar removal</span></li>
+                  <li className="flex items-start"><Check aria-hidden="true" className="text-don-red mr-3 shrink-0" size={24} strokeWidth={3} /> <span className="text-don-oat/90 font-medium">Deeper wheel cleaning</span></li>
                 </ul>
               </div>
 
@@ -123,11 +123,11 @@ export default function Packages() {
                 </div>
                 
                 <ul className="space-y-4 mb-4">
-                  <li className="flex items-start"><Check className="text-don-red mr-3 shrink-0" size={24} strokeWidth={3} /> <span className="text-don-ink font-bold">Everything in Level 2, plus:</span></li>
-                  <li className="flex items-start"><Check className="text-don-red mr-3 shrink-0" size={24} strokeWidth={3} /> <span className="text-don-ink font-medium">Machine polish (light swirl removal)</span></li>
-                  <li className="flex items-start"><Check className="text-don-red mr-3 shrink-0" size={24} strokeWidth={3} /> <span className="text-don-ink font-medium">Gloss enhancement</span></li>
-                  <li className="flex items-start"><Check className="text-don-red mr-3 shrink-0" size={24} strokeWidth={3} /> <span className="text-don-ink font-medium">Paint prep wipe down</span></li>
-                  <li className="flex items-start"><Check className="text-don-red mr-3 shrink-0" size={24} strokeWidth={3} /> <span className="text-don-ink font-medium">Upgraded protection</span></li>
+                  <li className="flex items-start"><Check aria-hidden="true" className="text-don-red mr-3 shrink-0" size={24} strokeWidth={3} /> <span className="text-don-ink font-bold">Everything in Level 2, plus:</span></li>
+                  <li className="flex items-start"><Check aria-hidden="true" className="text-don-red mr-3 shrink-0" size={24} strokeWidth={3} /> <span className="text-don-ink font-medium">Machine polish (light swirl removal)</span></li>
+                  <li className="flex items-start"><Check aria-hidden="true" className="text-don-red mr-3 shrink-0" size={24} strokeWidth={3} /> <span className="text-don-ink font-medium">Gloss enhancement</span></li>
+                  <li className="flex items-start"><Check aria-hidden="true" className="text-don-red mr-3 shrink-0" size={24} strokeWidth={3} /> <span className="text-don-ink font-medium">Paint prep wipe down</span></li>
+                  <li className="flex items-start"><Check aria-hidden="true" className="text-don-red mr-3 shrink-0" size={24} strokeWidth={3} /> <span className="text-don-ink font-medium">Upgraded protection</span></li>
                 </ul>
               </div>
             </div>
@@ -165,17 +165,17 @@ export default function Packages() {
                 </div>
                 
                 <ul className="space-y-4 mb-4">
-                  <li className="flex items-start"><Check className="text-don-red mr-3 shrink-0" size={24} strokeWidth={3} /> <span className="text-don-oat font-medium">Full vacuum (seats, carpets, mats)</span></li>
-                  <li className="flex items-start"><Check className="text-don-red mr-3 shrink-0" size={24} strokeWidth={3} /> <span className="text-don-oat font-medium">Wipe down of all surfaces</span></li>
-                  <li className="flex items-start"><Check className="text-don-red mr-3 shrink-0" size={24} strokeWidth={3} /> <span className="text-don-oat font-medium">Interior glass cleaned</span></li>
-                  <li className="flex items-start"><Check className="text-don-red mr-3 shrink-0" size={24} strokeWidth={3} /> <span className="text-don-oat font-medium">Light dusting & crevices</span></li>
+                  <li className="flex items-start"><Check aria-hidden="true" className="text-don-red mr-3 shrink-0" size={24} strokeWidth={3} /> <span className="text-don-oat font-medium">Full vacuum (seats, carpets, mats)</span></li>
+                  <li className="flex items-start"><Check aria-hidden="true" className="text-don-red mr-3 shrink-0" size={24} strokeWidth={3} /> <span className="text-don-oat font-medium">Wipe down of all surfaces</span></li>
+                  <li className="flex items-start"><Check aria-hidden="true" className="text-don-red mr-3 shrink-0" size={24} strokeWidth={3} /> <span className="text-don-oat font-medium">Interior glass cleaned</span></li>
+                  <li className="flex items-start"><Check aria-hidden="true" className="text-don-red mr-3 shrink-0" size={24} strokeWidth={3} /> <span className="text-don-oat font-medium">Light dusting & crevices</span></li>
                 </ul>
               </div>
 
               {/* Level 2 (Most Popular) */}
               <div className="bg-don-oat text-don-ink rounded shadow-2xl border-t-4 border-t-don-red p-8 lg:p-10 transform lg:-translate-y-8 relative">
                 <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-don-red text-don-oat px-5 py-2 rounded text-xs font-bold uppercase tracking-[0.2em] flex items-center gap-2 shadow-lg whitespace-nowrap">
-                  <Star size={14} fill="currentColor" /> The Standard
+                  <Star aria-hidden="true" size={14} fill="currentColor" /> The Standard
                 </div>
                 <h3 className="text-2xl font-bold uppercase tracking-wide">Level 2 Interior Detail</h3>
                 <p className="text-don-ink/70 text-sm mt-2 mb-6 min-h-[40px]">A deep interior cleaning designed to remove built-up dirt and restore a clean, refreshed feel. This service goes beyond maintenance with deeper cleaning of surfaces, targeted steam cleaning, and attention to stains and higher-traffic areas.</p>
@@ -195,13 +195,13 @@ export default function Packages() {
                 </div>
                 
                 <ul className="space-y-4 mb-4">
-                  <li className="flex items-start"><Check className="text-don-red mr-3 shrink-0" size={24} strokeWidth={3} /> <span className="text-don-ink font-bold">Everything in Level 1, plus:</span></li>
-                  <li className="flex items-start"><Check className="text-don-red mr-3 shrink-0" size={24} strokeWidth={3} /> <span className="text-don-ink font-medium">Deep cleaning of surfaces</span></li>
-                  <li className="flex items-start"><Check className="text-don-red mr-3 shrink-0" size={24} strokeWidth={3} /> <span className="text-don-ink font-medium">Steam cleaning (target areas)</span></li>
-                  <li className="flex items-start"><Check className="text-don-red mr-3 shrink-0" size={24} strokeWidth={3} /> <span className="text-don-ink font-medium">Floor mats deep cleaned</span></li>
-                  <li className="flex items-start"><Check className="text-don-red mr-3 shrink-0" size={24} strokeWidth={3} /> <span className="text-don-ink font-medium">Light stain removal</span></li>
-                  <li className="flex items-start"><Check className="text-don-red mr-3 shrink-0" size={24} strokeWidth={3} /> <span className="text-don-ink font-medium">Moderate pet hair removal</span></li>
-                  <li className="flex items-start"><Check className="text-don-red mr-3 shrink-0" size={24} strokeWidth={3} /> <span className="text-don-ink font-medium">UV protection applied to dash & trim</span></li>
+                  <li className="flex items-start"><Check aria-hidden="true" className="text-don-red mr-3 shrink-0" size={24} strokeWidth={3} /> <span className="text-don-ink font-bold">Everything in Level 1, plus:</span></li>
+                  <li className="flex items-start"><Check aria-hidden="true" className="text-don-red mr-3 shrink-0" size={24} strokeWidth={3} /> <span className="text-don-ink font-medium">Deep cleaning of surfaces</span></li>
+                  <li className="flex items-start"><Check aria-hidden="true" className="text-don-red mr-3 shrink-0" size={24} strokeWidth={3} /> <span className="text-don-ink font-medium">Steam cleaning (target areas)</span></li>
+                  <li className="flex items-start"><Check aria-hidden="true" className="text-don-red mr-3 shrink-0" size={24} strokeWidth={3} /> <span className="text-don-ink font-medium">Floor mats deep cleaned</span></li>
+                  <li className="flex items-start"><Check aria-hidden="true" className="text-don-red mr-3 shrink-0" size={24} strokeWidth={3} /> <span className="text-don-ink font-medium">Light stain removal</span></li>
+                  <li className="flex items-start"><Check aria-hidden="true" className="text-don-red mr-3 shrink-0" size={24} strokeWidth={3} /> <span className="text-don-ink font-medium">Moderate pet hair removal</span></li>
+                  <li className="flex items-start"><Check aria-hidden="true" className="text-don-red mr-3 shrink-0" size={24} strokeWidth={3} /> <span className="text-don-ink font-medium">UV protection applied to dash & trim</span></li>
                 </ul>
               </div>
 
@@ -225,12 +225,12 @@ export default function Packages() {
                 </div>
                 
                 <ul className="space-y-4 mb-4">
-                  <li className="flex items-start"><Check className="text-don-red mr-3 shrink-0" size={24} strokeWidth={3} /> <span className="text-don-oat font-bold">Everything in Level 2, plus:</span></li>
-                  <li className="flex items-start"><Check className="text-don-red mr-3 shrink-0" size={24} strokeWidth={3} /> <span className="text-don-oat font-medium">Full steam cleaning</span></li>
-                  <li className="flex items-start"><Check className="text-don-red mr-3 shrink-0" size={24} strokeWidth={3} /> <span className="text-don-oat font-medium">Carpet & seat extraction</span></li>
-                  <li className="flex items-start"><Check className="text-don-red mr-3 shrink-0" size={24} strokeWidth={3} /> <span className="text-don-oat font-medium">Heavy stain removal</span></li>
-                  <li className="flex items-start"><Check className="text-don-red mr-3 shrink-0" size={24} strokeWidth={3} /> <span className="text-don-oat font-medium">Heavy pet hair removal</span></li>
-                  <li className="flex items-start"><Check className="text-don-red mr-3 shrink-0" size={24} strokeWidth={3} /> <span className="text-don-oat font-medium">Odor treatment</span></li>
+                  <li className="flex items-start"><Check aria-hidden="true" className="text-don-red mr-3 shrink-0" size={24} strokeWidth={3} /> <span className="text-don-oat font-bold">Everything in Level 2, plus:</span></li>
+                  <li className="flex items-start"><Check aria-hidden="true" className="text-don-red mr-3 shrink-0" size={24} strokeWidth={3} /> <span className="text-don-oat font-medium">Full steam cleaning</span></li>
+                  <li className="flex items-start"><Check aria-hidden="true" className="text-don-red mr-3 shrink-0" size={24} strokeWidth={3} /> <span className="text-don-oat font-medium">Carpet & seat extraction</span></li>
+                  <li className="flex items-start"><Check aria-hidden="true" className="text-don-red mr-3 shrink-0" size={24} strokeWidth={3} /> <span className="text-don-oat font-medium">Heavy stain removal</span></li>
+                  <li className="flex items-start"><Check aria-hidden="true" className="text-don-red mr-3 shrink-0" size={24} strokeWidth={3} /> <span className="text-don-oat font-medium">Heavy pet hair removal</span></li>
+                  <li className="flex items-start"><Check aria-hidden="true" className="text-don-red mr-3 shrink-0" size={24} strokeWidth={3} /> <span className="text-don-oat font-medium">Odor treatment</span></li>
                 </ul>
               </div>
             </div>

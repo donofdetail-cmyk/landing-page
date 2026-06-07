@@ -33,6 +33,7 @@ const ROUTES = [
   '/blog/how-to-wash-a-ceramic-coated-car',
   '/blog/preparing-boat-rv-for-lake-tahoe',
   '/blog/paint-correction-vs-waxing',
+  '/mobile-detailing-sparks-nv',
   '/404'
 ];
 const PORT = 4173;

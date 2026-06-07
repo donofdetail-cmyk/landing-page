@@ -1,9 +1,69 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { ServiceLayout } from '../components/ServiceLayout';
 import { Link } from 'react-router-dom';
 
+type BlogPost = {
+  slug: string;
+  category: string;
+  title: string;
+  description: string;
+  date: string;
+  readTime: string;
+};
+
+const BLOG_POSTS: BlogPost[] = [
+  {
+    slug: 'is-ceramic-coating-worth-it-reno',
+    category: 'Ceramic Coating',
+    title: 'Is ceramic coating worth it in Nevada?',
+    description: 'Reno sun damages clear coat fast. Read why physical paint preservation is the only way to protect your investment in Nevada.',
+    date: 'May 10, 2026',
+    readTime: '5 min read'
+  },
+  {
+    slug: 'the-truth-about-automatic-car-washes',
+    category: 'Education',
+    title: 'The Truth About Automatic Car Washes',
+    description: 'Why the convenience of an automatic wash is destroying your clear coat. Read exactly what those spinning brushes do to your paint.',
+    date: 'May 28, 2026',
+    readTime: '6 min read'
+  },
+  {
+    slug: 'how-to-wash-a-ceramic-coated-car',
+    category: 'Education',
+    title: 'How To Wash Your Car After a Ceramic Coating',
+    description: 'A ceramic coating is the ultimate armor for your paint, but it requires discipline to maintain. Learn the exact two-bucket method to preserve your investment.',
+    date: 'June 3, 2026',
+    readTime: '5 min read'
+  },
+  {
+    slug: 'preparing-boat-rv-for-lake-tahoe',
+    category: 'Boat & RV',
+    title: 'Preparing Your Boat or RV for Lake Tahoe',
+    description: "Lake Tahoe's high-altitude UV rays destroy marine gelcoat fast. Learn why physical oxidation removal and marine-grade ceramic coatings are mandatory for preservation.",
+    date: 'June 15, 2026',
+    readTime: '6 min read'
+  },
+  {
+    slug: 'paint-correction-vs-waxing',
+    category: 'Education',
+    title: 'Paint Correction vs. Waxing',
+    description: 'Applying wax over scratched paint is a temporary illusion. Discover why professional paint correction is the only permanent solution for a flawless clear coat.',
+    date: 'June 22, 2026',
+    readTime: '5 min read'
+  }
+];
+
+const CATEGORIES = ['All', 'Ceramic Coating', 'Education', 'Boat & RV'];
+
 export default function BlogHub() {
+  const [activeCategory, setActiveCategory] = useState('All');
+
+  const filteredPosts = BLOG_POSTS.filter(post => 
+    activeCategory === 'All' ? true : post.category === activeCategory
+  );
+
   return (
     <ServiceLayout>
       <Helmet>
@@ -33,100 +93,53 @@ export default function BlogHub() {
         </div>
       </section>
 
+      {/* Category Filters */}
+      <section className="bg-don-bark pt-16 px-6 lg:px-12">
+        <div className="max-w-[1400px] mx-auto flex flex-wrap gap-4">
+          {CATEGORIES.map(category => (
+            <button
+              key={category}
+              onClick={() => setActiveCategory(category)}
+              className={`text-xs font-bold uppercase tracking-[0.2em] px-6 py-3 border transition-colors ${
+                activeCategory === category 
+                  ? 'bg-don-oat text-don-ink border-don-oat' 
+                  : 'text-don-oat border-don-clay/30 hover:border-don-oat'
+              }`}
+            >
+              {category}
+            </button>
+          ))}
+        </div>
+      </section>
+
       {/* Editorial Grid */}
-      <section className="py-32 lg:py-48 bg-don-bark text-don-oat px-6 lg:px-12 min-h-[50vh]">
+      <section className="py-16 lg:py-24 bg-don-bark text-don-oat px-6 lg:px-12 min-h-[50vh]">
         <div className="max-w-[1400px] mx-auto grid lg:grid-cols-2 gap-16 lg:gap-32">
-
-          <Link to="/blog/is-ceramic-coating-worth-it-reno" className="block group border-b border-don-clay/20 pb-16">
-            <p className="text-[10px] font-bold uppercase tracking-[0.3em] text-don-clay mb-6">Ceramic Coating</p>
-            <h2 className="text-4xl md:text-5xl font-display uppercase tracking-[-2px] mb-6 text-don-oat group-hover:text-don-clay transition-colors">
-              Is ceramic coating worth it in Nevada?
-            </h2>
-            <p className="text-don-clay font-light leading-relaxed mb-8 max-w-xl">
-              Reno sun damages clear coat fast. Read why physical paint preservation is the only way to protect your investment in Nevada.
-            </p>
-            <div className="flex items-center gap-4 mb-8">
-              <span className="text-[10px] uppercase tracking-[0.2em] text-don-clay/60">May 10, 2026</span>
-              <span className="text-don-clay/40">·</span>
-              <span className="text-[10px] uppercase tracking-[0.2em] text-don-clay/60">5 min read</span>
+          {filteredPosts.length > 0 ? (
+            filteredPosts.map(post => (
+              <Link key={post.slug} to={`/blog/${post.slug}`} className="block group border-b border-don-clay/20 pb-16">
+                <p className="text-[10px] font-bold uppercase tracking-[0.3em] text-don-clay mb-6">{post.category}</p>
+                <h2 className="text-4xl md:text-5xl font-display uppercase tracking-[-2px] mb-6 text-don-oat group-hover:text-don-clay transition-colors">
+                  {post.title}
+                </h2>
+                <p className="text-don-clay font-light leading-relaxed mb-8 max-w-xl">
+                  {post.description}
+                </p>
+                <div className="flex items-center gap-4 mb-8">
+                  <span className="text-[10px] uppercase tracking-[0.2em] text-don-clay/60">{post.date}</span>
+                  <span className="text-don-clay/40">·</span>
+                  <span className="text-[10px] uppercase tracking-[0.2em] text-don-clay/60">{post.readTime}</span>
+                </div>
+                <span className="text-xs font-bold uppercase tracking-[0.2em] text-don-oat border-b border-don-oat pb-2 group-hover:text-don-clay group-hover:border-don-clay transition-colors">
+                  Read Article
+                </span>
+              </Link>
+            ))
+          ) : (
+            <div className="col-span-full py-12">
+              <p className="text-don-clay font-light">No articles found in this category.</p>
             </div>
-            <span className="text-xs font-bold uppercase tracking-[0.2em] text-don-oat border-b border-don-oat pb-2 group-hover:text-don-clay group-hover:border-don-clay transition-colors">
-              Read Article
-            </span>
-          </Link>
-
-          <Link to="/blog/the-truth-about-automatic-car-washes" className="block group border-b border-don-clay/20 pb-16">
-            <p className="text-[10px] font-bold uppercase tracking-[0.3em] text-don-clay mb-6">Education</p>
-            <h2 className="text-4xl md:text-5xl font-display uppercase tracking-[-2px] mb-6 text-don-oat group-hover:text-don-clay transition-colors">
-              The Truth About Automatic Car Washes
-            </h2>
-            <p className="text-don-clay font-light leading-relaxed mb-8 max-w-xl">
-              Why the convenience of an automatic wash is destroying your clear coat. Read exactly what those spinning brushes do to your paint.
-            </p>
-            <div className="flex items-center gap-4 mb-8">
-              <span className="text-[10px] uppercase tracking-[0.2em] text-don-clay/60">May 28, 2026</span>
-              <span className="text-don-clay/40">·</span>
-              <span className="text-[10px] uppercase tracking-[0.2em] text-don-clay/60">6 min read</span>
-            </div>
-            <span className="text-xs font-bold uppercase tracking-[0.2em] text-don-oat border-b border-don-oat pb-2 group-hover:text-don-clay group-hover:border-don-clay transition-colors">
-              Read Article
-            </span>
-          </Link>
-
-          <Link to="/blog/how-to-wash-a-ceramic-coated-car" className="block group border-b border-don-clay/20 pb-16">
-            <p className="text-[10px] font-bold uppercase tracking-[0.3em] text-don-clay mb-6">Education</p>
-            <h2 className="text-4xl md:text-5xl font-display uppercase tracking-[-2px] mb-6 text-don-oat group-hover:text-don-clay transition-colors">
-              How To Wash Your Car After a Ceramic Coating
-            </h2>
-            <p className="text-don-clay font-light leading-relaxed mb-8 max-w-xl">
-              A ceramic coating is the ultimate armor for your paint, but it requires discipline to maintain. Learn the exact two-bucket method to preserve your investment.
-            </p>
-            <div className="flex items-center gap-4 mb-8">
-              <span className="text-[10px] uppercase tracking-[0.2em] text-don-clay/60">June 3, 2026</span>
-              <span className="text-don-clay/40">·</span>
-              <span className="text-[10px] uppercase tracking-[0.2em] text-don-clay/60">5 min read</span>
-            </div>
-            <span className="text-xs font-bold uppercase tracking-[0.2em] text-don-oat border-b border-don-oat pb-2 group-hover:text-don-clay group-hover:border-don-clay transition-colors">
-              Read Article
-            </span>
-          </Link>
-
-          <Link to="/blog/preparing-boat-rv-for-lake-tahoe" className="block group border-b border-don-clay/20 pb-16">
-            <p className="text-[10px] font-bold uppercase tracking-[0.3em] text-don-clay mb-6">Boat & RV</p>
-            <h2 className="text-4xl md:text-5xl font-display uppercase tracking-[-2px] mb-6 text-don-oat group-hover:text-don-clay transition-colors">
-              Preparing Your Boat or RV for Lake Tahoe
-            </h2>
-            <p className="text-don-clay font-light leading-relaxed mb-8 max-w-xl">
-              Lake Tahoe's high-altitude UV rays destroy marine gelcoat fast. Learn why physical oxidation removal and marine-grade ceramic coatings are mandatory for preservation.
-            </p>
-            <div className="flex items-center gap-4 mb-8">
-              <span className="text-[10px] uppercase tracking-[0.2em] text-don-clay/60">June 15, 2026</span>
-              <span className="text-don-clay/40">·</span>
-              <span className="text-[10px] uppercase tracking-[0.2em] text-don-clay/60">6 min read</span>
-            </div>
-            <span className="text-xs font-bold uppercase tracking-[0.2em] text-don-oat border-b border-don-oat pb-2 group-hover:text-don-clay group-hover:border-don-clay transition-colors">
-              Read Article
-            </span>
-          </Link>
-
-          <Link to="/blog/paint-correction-vs-waxing" className="block group border-b border-don-clay/20 pb-16">
-            <p className="text-[10px] font-bold uppercase tracking-[0.3em] text-don-clay mb-6">Education</p>
-            <h2 className="text-4xl md:text-5xl font-display uppercase tracking-[-2px] mb-6 text-don-oat group-hover:text-don-clay transition-colors">
-              Paint Correction vs. Waxing
-            </h2>
-            <p className="text-don-clay font-light leading-relaxed mb-8 max-w-xl">
-              Applying wax over scratched paint is a temporary illusion. Discover why professional paint correction is the only permanent solution for a flawless clear coat.
-            </p>
-            <div className="flex items-center gap-4 mb-8">
-              <span className="text-[10px] uppercase tracking-[0.2em] text-don-clay/60">June 22, 2026</span>
-              <span className="text-don-clay/40">·</span>
-              <span className="text-[10px] uppercase tracking-[0.2em] text-don-clay/60">5 min read</span>
-            </div>
-            <span className="text-xs font-bold uppercase tracking-[0.2em] text-don-oat border-b border-don-oat pb-2 group-hover:text-don-clay group-hover:border-don-clay transition-colors">
-              Read Article
-            </span>
-          </Link>
-
+          )}
         </div>
       </section>
     </ServiceLayout>

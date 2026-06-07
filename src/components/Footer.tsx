@@ -22,6 +22,13 @@ export const Footer = () => {
               <p>Mobile Service | Reno, NV</p>
               <a href="tel:+17752307035" className="hover:text-don-oat transition-colors block mt-1">(775) 230-7035</a>
             </address>
+            <div className="mt-4 flex flex-col items-center md:items-start gap-2">
+              <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-don-clay">Service Areas</p>
+              <nav aria-label="Service Areas" className="flex flex-wrap gap-4">
+                <Link to="/" className="text-xs uppercase tracking-[0.2em] text-don-clay hover:text-don-oat transition-colors">Reno, NV</Link>
+                <Link to="/mobile-detailing-sparks-nv" className="text-xs uppercase tracking-[0.2em] text-don-clay hover:text-don-oat transition-colors">Sparks, NV</Link>
+              </nav>
+            </div>
           </div>
           
           <nav aria-label="Footer" className="flex items-center gap-8">
