@@ -27,7 +27,7 @@ export default function SparksDetailing() {
       <Helmet>
         <title>Top Mobile Auto Detailing & Ceramic Coating in Sparks, NV</title>
         <meta name="description" content="Sparks's premier mobile auto detailing service. We specialize in professional ceramic coatings, paint correction, and full interior detailing. We come to you." />
-        <link rel="canonical" href="https://www.donofdetail.com/mobile-detailing-sparks-nv" />
+        <link rel="canonical" href="https://donofdetail.com/mobile-detailing-sparks-nv" />
 
         <script type="application/ld+json">
           {`{

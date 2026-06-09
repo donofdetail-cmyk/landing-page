@@ -469,12 +469,12 @@ export default function BlogPost() {
       <Helmet>
         <title>{post.title} | Don of Detail</title>
         <meta name="description" content={post.metaDescription} />
-        <link rel="canonical" href={`https://www.donofdetail.com/blog/${slug}`} />
+        <link rel="canonical" href={`https://donofdetail.com/blog/${slug}`} />
         <meta property="og:type" content="article" />
         <meta property="og:title" content={`${post.title} | Don of Detail`} />
         <meta property="og:description" content={post.metaDescription} />
-        <meta property="og:url" content={`https://www.donofdetail.com/blog/${slug}`} />
-        <meta property="og:image" content="https://www.donofdetail.com/og-image-v2.png" />
+        <meta property="og:url" content={`https://donofdetail.com/blog/${slug}`} />
+        <meta property="og:image" content="https://donofdetail.com/og-image-v2.png" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={`${post.title} | Don of Detail`} />
         <meta name="twitter:description" content={post.metaDescription} />
@@ -492,7 +492,7 @@ export default function BlogPost() {
             "publisher": {
               "@type": "Organization",
               "name": "Don of Detail",
-              "logo": {"@type": "ImageObject", "url": "https://www.donofdetail.com/logo.png"}
+              "logo": {"@type": "ImageObject", "url": "https://donofdetail.com/logo.png"}
             }
           }`}
         </script>

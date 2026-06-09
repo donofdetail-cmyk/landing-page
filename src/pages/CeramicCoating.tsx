@@ -33,12 +33,12 @@ export default function CeramicCoating() {
       <Helmet>
         <title>Professional Ceramic Coating Reno NV | Mobile Service</title>
         <meta name="description" content="Protect your vehicle with professional-grade ceramic coatings in Reno, NV. Long-lasting UV protection and hydrophobic gloss applied at your home or office." />
-        <link rel="canonical" href="https://www.donofdetail.com/ceramic-coating-reno-nv" />
+        <link rel="canonical" href="https://donofdetail.com/ceramic-coating-reno-nv" />
         <meta property="og:type" content="website" />
         <meta property="og:title" content="Professional Ceramic Coating Reno NV | Don of Detail" />
         <meta property="og:description" content="Protect your vehicle with professional-grade ceramic coatings in Reno, NV. Long-lasting UV protection and hydrophobic gloss applied at your home or office." />
-        <meta property="og:url" content="https://www.donofdetail.com/ceramic-coating-reno-nv" />
-        <meta property="og:image" content="https://www.donofdetail.com/og-image-v2.png" />
+        <meta property="og:url" content="https://donofdetail.com/ceramic-coating-reno-nv" />
+        <meta property="og:image" content="https://donofdetail.com/og-image-v2.png" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Professional Ceramic Coating Reno NV | Don of Detail" />
         <meta name="twitter:description" content="Protect your vehicle with professional-grade ceramic coatings in Reno, NV. Long-lasting UV protection and hydrophobic gloss applied at your home or office." />
@@ -51,7 +51,7 @@ export default function CeramicCoating() {
             "provider": {
               "@type": "AutomotiveBusiness",
               "name": "Don of Detail",
-              "url": "https://www.donofdetail.com"
+              "url": "https://donofdetail.com"
             },
             "areaServed": [
               {"@type": "City", "name": "Reno"},

@@ -8,12 +8,12 @@ export default function About() {
       <Helmet>
         <title>About Don of Detail | Mobile Detailing Experts in Reno, NV</title>
         <meta name="description" content="Learn about Logan and Don of Detail, Reno's premier mobile auto detailing service. We bring studio-level paint correction and ceramic coating directly to your driveway." />
-        <link rel="canonical" href="https://www.donofdetail.com/about" />
+        <link rel="canonical" href="https://donofdetail.com/about" />
         <meta property="og:type" content="website" />
         <meta property="og:title" content="About Don of Detail | Reno, NV" />
         <meta property="og:description" content="Learn about Logan and Don of Detail, Reno's premier mobile auto detailing service. We bring studio-level paint correction and ceramic coating directly to your driveway." />
-        <meta property="og:url" content="https://www.donofdetail.com/about" />
-        <meta property="og:image" content="https://www.donofdetail.com/og-image-v2.png" />
+        <meta property="og:url" content="https://donofdetail.com/about" />
+        <meta property="og:image" content="https://donofdetail.com/og-image-v2.png" />
         
         <script type="application/ld+json">
           {`{
@@ -22,8 +22,8 @@ export default function About() {
             "mainEntity": {
               "@type": "Organization",
               "name": "Don of Detail",
-              "url": "https://www.donofdetail.com",
-              "logo": "https://www.donofdetail.com/logo.png",
+              "url": "https://donofdetail.com",
+              "logo": "https://donofdetail.com/logo.png",
               "founder": {
                 "@type": "Person",
                 "name": "Logan"

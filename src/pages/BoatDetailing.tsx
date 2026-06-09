@@ -33,12 +33,12 @@ export default function BoatDetailing() {
       <Helmet>
         <title>Mobile Boat Detailing Reno NV</title>
         <meta name="description" content="Professional mobile boat detailing in Reno, NV. Specialized marine gelcoat restoration, oxidation removal, and long-term ceramic coatings for your vessel." />
-        <link rel="canonical" href="https://www.donofdetail.com/boat-detailing-reno-nv" />
+        <link rel="canonical" href="https://donofdetail.com/boat-detailing-reno-nv" />
         <meta property="og:type" content="website" />
         <meta property="og:title" content="Mobile Boat Detailing Reno NV | Don of Detail" />
         <meta property="og:description" content="Professional mobile boat detailing in Reno, NV. Gelcoat restoration, oxidation removal, and long-term ceramic coatings for your vessel." />
-        <meta property="og:url" content="https://www.donofdetail.com/boat-detailing-reno-nv" />
-        <meta property="og:image" content="https://www.donofdetail.com/og-image-v2.png" />
+        <meta property="og:url" content="https://donofdetail.com/boat-detailing-reno-nv" />
+        <meta property="og:image" content="https://donofdetail.com/og-image-v2.png" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Mobile Boat Detailing Reno NV | Don of Detail" />
         <meta name="twitter:description" content="Professional mobile boat detailing in Reno, NV. Gelcoat restoration, oxidation removal, and long-term ceramic coatings for your vessel." />
@@ -51,7 +51,7 @@ export default function BoatDetailing() {
             "provider": {
               "@type": "AutomotiveBusiness",
               "name": "Don of Detail",
-              "url": "https://www.donofdetail.com"
+              "url": "https://donofdetail.com"
             },
             "areaServed": [
               {"@type": "City", "name": "Washoe Valley"},

@@ -69,12 +69,12 @@ export default function BlogHub() {
       <Helmet>
         <title>Detailing & Protection Blog | Don of Detail</title>
         <meta name="description" content="Reno auto detailing blog by Don of Detail. Expert tips on ceramic coatings, paint correction, and vehicle maintenance for Northern Nevada's climate." />
-        <link rel="canonical" href="https://www.donofdetail.com/blog" />
+        <link rel="canonical" href="https://donofdetail.com/blog" />
         <meta property="og:type" content="website" />
         <meta property="og:title" content="Detailing &amp; Protection Blog | Don of Detail" />
         <meta property="og:description" content="Reno auto detailing blog by Don of Detail. Expert tips on ceramic coatings, paint correction, and vehicle maintenance for Northern Nevada's climate." />
-        <meta property="og:url" content="https://www.donofdetail.com/blog" />
-        <meta property="og:image" content="https://www.donofdetail.com/og-image-v2.png" />
+        <meta property="og:url" content="https://donofdetail.com/blog" />
+        <meta property="og:image" content="https://donofdetail.com/og-image-v2.png" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Detailing &amp; Protection Blog | Don of Detail" />
         <meta name="twitter:description" content="Reno auto detailing blog by Don of Detail. Expert tips on ceramic coatings, paint correction, and vehicle maintenance for Northern Nevada's climate." />

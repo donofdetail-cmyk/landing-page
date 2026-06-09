@@ -27,7 +27,7 @@ export default function Home() {
       <Helmet>
         <title>Top Mobile Auto Detailing & Ceramic Coating in Reno, NV</title>
         <meta name="description" content="Reno's premier mobile auto detailing service. We specialize in professional ceramic coatings, paint correction, and full interior detailing. We come to you." />
-        <link rel="canonical" href="https://www.donofdetail.com/" />
+        <link rel="canonical" href="https://donofdetail.com/" />
 
         <script type="application/ld+json">
           {`{

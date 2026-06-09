@@ -33,12 +33,12 @@ export default function PaintCorrection() {
       <Helmet>
         <title>Expert Paint Correction & Swirl Removal in Reno, NV</title>
         <meta name="description" content="Restore your vehicle's factory finish. Professional multi-stage paint correction in Reno, NV to permanently remove swirl marks, scratches, and oxidation." />
-        <link rel="canonical" href="https://www.donofdetail.com/paint-correction-reno-nv" />
+        <link rel="canonical" href="https://donofdetail.com/paint-correction-reno-nv" />
         <meta property="og:type" content="website" />
         <meta property="og:title" content="Expert Paint Correction &amp; Swirl Removal in Reno, NV | Don of Detail" />
         <meta property="og:description" content="Restore your vehicle's factory finish. Professional multi-stage paint correction in Reno, NV to permanently remove swirl marks, scratches, and oxidation." />
-        <meta property="og:url" content="https://www.donofdetail.com/paint-correction-reno-nv" />
-        <meta property="og:image" content="https://www.donofdetail.com/og-image-v2.png" />
+        <meta property="og:url" content="https://donofdetail.com/paint-correction-reno-nv" />
+        <meta property="og:image" content="https://donofdetail.com/og-image-v2.png" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Expert Paint Correction &amp; Swirl Removal in Reno, NV | Don of Detail" />
         <meta name="twitter:description" content="Restore your vehicle's factory finish. Professional multi-stage paint correction in Reno, NV to permanently remove swirl marks, scratches, and oxidation." />
@@ -51,7 +51,7 @@ export default function PaintCorrection() {
             "provider": {
               "@type": "AutomotiveBusiness",
               "name": "Don of Detail",
-              "url": "https://www.donofdetail.com"
+              "url": "https://donofdetail.com"
             },
             "areaServed": [
               {"@type": "City", "name": "Reno"},

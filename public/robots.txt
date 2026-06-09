@@ -27,4 +27,4 @@ User-agent: ClaudeBot
 Allow: /
 Disallow: /packages
 
-Sitemap: https://www.donofdetail.com/sitemap.xml
+Sitemap: https://donofdetail.com/sitemap.xml

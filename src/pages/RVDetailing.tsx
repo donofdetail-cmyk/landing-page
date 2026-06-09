@@ -33,12 +33,12 @@ export default function RVDetailing() {
       <Helmet>
         <title>Mobile RV Detailing & Wash Services in Reno, NV</title>
         <meta name="description" content="Expert mobile RV and motorhome detailing in Reno, NV. Exterior washing, heavy oxidation removal, and multi-stage gelcoat restoration." />
-        <link rel="canonical" href="https://www.donofdetail.com/rv-detailing-reno-nv" />
+        <link rel="canonical" href="https://donofdetail.com/rv-detailing-reno-nv" />
         <meta property="og:type" content="website" />
         <meta property="og:title" content="Mobile RV Detailing &amp; Wash Services in Reno, NV | Don of Detail" />
         <meta property="og:description" content="Expert mobile RV and motorhome detailing in Reno, NV. Exterior washing, heavy oxidation removal, and multi-stage gelcoat restoration." />
-        <meta property="og:url" content="https://www.donofdetail.com/rv-detailing-reno-nv" />
-        <meta property="og:image" content="https://www.donofdetail.com/og-image-v2.png" />
+        <meta property="og:url" content="https://donofdetail.com/rv-detailing-reno-nv" />
+        <meta property="og:image" content="https://donofdetail.com/og-image-v2.png" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Mobile RV Detailing &amp; Wash Services in Reno, NV | Don of Detail" />
         <meta name="twitter:description" content="Expert mobile RV and motorhome detailing in Reno, NV. Exterior washing, heavy oxidation removal, and multi-stage gelcoat restoration." />
@@ -51,7 +51,7 @@ export default function RVDetailing() {
             "provider": {
               "@type": "AutomotiveBusiness",
               "name": "Don of Detail",
-              "url": "https://www.donofdetail.com"
+              "url": "https://donofdetail.com"
             },
             "areaServed": [
               {"@type": "City", "name": "Reno"},
