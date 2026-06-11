@@ -7,6 +7,7 @@ import About from './pages/About';
 const TermsOfService = React.lazy(() => import('./pages/TermsOfService'));
 const PrivacyPolicy = React.lazy(() => import('./pages/PrivacyPolicy'));
 const CeramicCoating = React.lazy(() => import('./pages/CeramicCoating'));
+const SparksCeramicCoating = React.lazy(() => import('./pages/SparksCeramicCoating'));
 const PaintCorrection = React.lazy(() => import('./pages/PaintCorrection'));
 const AutoDetailing = React.lazy(() => import('./pages/AutoDetailing'));
 const RVDetailing = React.lazy(() => import('./pages/RVDetailing'));
@@ -31,6 +32,7 @@ export default function App() {
           <Route path="/terms" element={<TermsOfService />} />
           <Route path="/privacy" element={<PrivacyPolicy />} />
           <Route path="/ceramic-coating-reno-nv" element={<CeramicCoating />} />
+          <Route path="/ceramic-coating-sparks-nv" element={<SparksCeramicCoating />} />
           <Route path="/paint-correction-reno-nv" element={<PaintCorrection />} />
           <Route path="/auto-detailing-reno-nv" element={<AutoDetailing />} />
           <Route path="/rv-detailing-reno-nv" element={<RVDetailing />} />

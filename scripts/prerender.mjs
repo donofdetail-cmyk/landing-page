@@ -23,6 +23,7 @@ const ROUTES = [
   '/terms', 
   '/privacy',
   '/ceramic-coating-reno-nv',
+  '/ceramic-coating-sparks-nv',
   '/paint-correction-reno-nv',
   '/auto-detailing-reno-nv',
   '/rv-detailing-reno-nv',

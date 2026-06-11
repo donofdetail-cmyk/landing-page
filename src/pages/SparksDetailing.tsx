@@ -167,7 +167,7 @@ export default function SparksDetailing() {
         <section id="services" className="bg-don-bark text-don-oat py-32 lg:py-48 px-6 lg:px-12">
           <div className="max-w-[1400px] mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-16 gap-y-24 lg:gap-x-8 lg:gap-y-32">
             {[
-              { num: '01', title: 'Ceramic Coating', desc: 'Permanent hydrophobic barrier against UV and oxidation.', price: 'From $800', link: '/ceramic-coating-reno-nv' },
+              { num: '01', title: 'Ceramic Coating', desc: 'Permanent hydrophobic barrier against UV and oxidation.', price: 'From $800', link: '/ceramic-coating-sparks-nv' },
               { num: '02', title: 'Paint Correction', desc: 'Multi-stage machine polishing to level defects and swirl marks.', price: 'From $400', link: '/paint-correction-reno-nv' },
               { num: '03', title: 'Auto Detailing', desc: 'Comprehensive interior and exterior preservation.', price: 'From $250', link: '/auto-detailing-reno-nv' },
               { num: '04', title: 'RV Detailing', desc: 'Heavy oxidation removal and multi-stage gelcoat restoration.', price: 'Quote Required', link: '/rv-detailing-reno-nv' },
