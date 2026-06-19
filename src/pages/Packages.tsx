@@ -11,6 +11,7 @@ export default function Packages() {
         <title>Detailing Packages | Don of Detail</title>
         <meta name="description" content="Explore our exclusive auto detailing packages." />
         <meta name="robots" content="noindex, nofollow" />
+        <link rel="canonical" href="https://donofdetail.com/packages" />
       </Helmet>
 
       <Header hideQuote />

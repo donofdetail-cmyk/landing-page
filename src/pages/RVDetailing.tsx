@@ -35,12 +35,12 @@ export default function RVDetailing() {
         <meta name="description" content="Expert mobile RV and motorhome detailing in Reno, NV. Exterior washing, heavy oxidation removal, and multi-stage gelcoat restoration." />
         <link rel="canonical" href="https://donofdetail.com/rv-detailing-reno-nv" />
         <meta property="og:type" content="website" />
-        <meta property="og:title" content="Mobile RV Detailing &amp; Wash Services in Reno, NV | Don of Detail" />
+        <meta property="og:title" content="Mobile RV Detailing & Wash Services in Reno, NV | Don of Detail" />
         <meta property="og:description" content="Expert mobile RV and motorhome detailing in Reno, NV. Exterior washing, heavy oxidation removal, and multi-stage gelcoat restoration." />
         <meta property="og:url" content="https://donofdetail.com/rv-detailing-reno-nv" />
         <meta property="og:image" content="https://donofdetail.com/og-image-v2.png" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Mobile RV Detailing &amp; Wash Services in Reno, NV | Don of Detail" />
+        <meta name="twitter:title" content="Mobile RV Detailing & Wash Services in Reno, NV | Don of Detail" />
         <meta name="twitter:description" content="Expert mobile RV and motorhome detailing in Reno, NV. Exterior washing, heavy oxidation removal, and multi-stage gelcoat restoration." />
         
         <script type="application/ld+json">
@@ -56,8 +56,10 @@ export default function RVDetailing() {
             "areaServed": [
               {"@type": "City", "name": "Reno"},
               {"@type": "City", "name": "Sparks"},
+              {"@type": "City", "name": "Washoe Valley"},
               {"@type": "Neighborhood", "name": "Somersett"},
-              {"@type": "Neighborhood", "name": "ArrowCreek"}
+              {"@type": "Neighborhood", "name": "ArrowCreek"},
+              {"@type": "Place", "name": "South Reno"}
             ],
             "description": "Specialized recreational vehicle detailing including heavy oxidation removal and multi-stage gelcoat restoration."
           }`}

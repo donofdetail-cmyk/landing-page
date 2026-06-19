@@ -28,6 +28,14 @@ export default function Home() {
         <title>Top Mobile Auto Detailing & Ceramic Coating in Reno, NV</title>
         <meta name="description" content="Reno's premier mobile auto detailing service. We specialize in professional ceramic coatings, paint correction, and full interior detailing. We come to you." />
         <link rel="canonical" href="https://donofdetail.com/" />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Top Mobile Auto Detailing & Ceramic Coating in Reno, NV | Don of Detail" />
+        <meta property="og:description" content="Reno's premier mobile auto detailing service. Professional ceramic coatings, paint correction, and full interior detailing. We come to you." />
+        <meta property="og:url" content="https://donofdetail.com/" />
+        <meta property="og:image" content="https://donofdetail.com/og-image-v2.png" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Top Mobile Auto Detailing & Ceramic Coating in Reno, NV | Don of Detail" />
+        <meta name="twitter:description" content="Reno's premier mobile auto detailing service. Professional ceramic coatings, paint correction, and full interior detailing. We come to you." />
 
         <script type="application/ld+json">
           {`{

@@ -14,6 +14,9 @@ export default function About() {
         <meta property="og:description" content="Learn about Logan and Don of Detail, Reno's premier mobile auto detailing service. We bring studio-level paint correction and ceramic coating directly to your driveway." />
         <meta property="og:url" content="https://donofdetail.com/about" />
         <meta property="og:image" content="https://donofdetail.com/og-image-v2.png" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="About Don of Detail | Reno, NV" />
+        <meta name="twitter:description" content="Learn about Logan and Don of Detail, Reno's premier mobile auto detailing service. We bring studio-level paint correction and ceramic coating directly to your driveway." />
         
         <script type="application/ld+json">
           {`{
@@ -67,7 +70,7 @@ export default function About() {
           </div>
           <div className="aspect-[4/5] bg-don-ink/50 relative overflow-hidden group">
             <img 
-              src="/logan-don-of-detail.jpg" 
+              src="/logan-don-of-detail.webp" 
               alt="Logan - Owner and Lead Operator of Don of Detail Reno NV" 
               className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 saturate-[0.8] contrast-110"
             />

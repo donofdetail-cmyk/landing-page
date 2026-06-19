@@ -31,12 +31,12 @@ export default function BoatDetailing() {
   return (
     <ServiceLayout>
       <Helmet>
-        <title>Mobile Boat Detailing Reno NV</title>
+        <title>Mobile Boat Detailing Reno NV | Don of Detail</title>
         <meta name="description" content="Professional mobile boat detailing in Reno, NV. Specialized marine gelcoat restoration, oxidation removal, and long-term ceramic coatings for your vessel." />
         <link rel="canonical" href="https://donofdetail.com/boat-detailing-reno-nv" />
         <meta property="og:type" content="website" />
         <meta property="og:title" content="Mobile Boat Detailing Reno NV | Don of Detail" />
-        <meta property="og:description" content="Professional mobile boat detailing in Reno, NV. Gelcoat restoration, oxidation removal, and long-term ceramic coatings for your vessel." />
+        <meta property="og:description" content="Professional mobile boat detailing in Reno, NV. Specialized marine gelcoat restoration, oxidation removal, and long-term ceramic coatings for your vessel." />
         <meta property="og:url" content="https://donofdetail.com/boat-detailing-reno-nv" />
         <meta property="og:image" content="https://donofdetail.com/og-image-v2.png" />
         <meta name="twitter:card" content="summary_large_image" />

@@ -26,8 +26,17 @@ export default function SparksDetailing() {
     <div className="min-h-screen bg-don-oat text-don-ink font-sans selection:bg-don-ink selection:text-don-oat">
       <Helmet>
         <title>Top Mobile Auto Detailing & Ceramic Coating in Sparks, NV</title>
-        <meta name="description" content="Sparks's premier mobile auto detailing service. We specialize in professional ceramic coatings, paint correction, and full interior detailing. We come to you." />
+        <meta name="description" content="Sparks' premier mobile auto detailing service. We specialize in professional ceramic coatings, paint correction, and full interior detailing. We come to you." />
         <link rel="canonical" href="https://donofdetail.com/mobile-detailing-sparks-nv" />
+
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Top Mobile Auto Detailing & Ceramic Coating in Sparks, NV | Don of Detail" />
+        <meta property="og:description" content="Sparks' premier mobile auto detailing service. Professional ceramic coatings, paint correction, and full interior detailing. We come to you." />
+        <meta property="og:url" content="https://donofdetail.com/mobile-detailing-sparks-nv" />
+        <meta property="og:image" content="https://donofdetail.com/og-image-v2.png" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Top Mobile Auto Detailing & Ceramic Coating in Sparks, NV | Don of Detail" />
+        <meta name="twitter:description" content="Sparks' premier mobile auto detailing service. Professional ceramic coatings, paint correction, and full interior detailing. We come to you." />
 
         <script type="application/ld+json">
           {`{
