@@ -35,6 +35,7 @@ export const Footer = () => {
             <Link to="/about" className="text-xs uppercase tracking-[0.2em] text-don-clay hover:text-don-oat transition-colors">About</Link>
             <a href="/#work" className="text-xs uppercase tracking-[0.2em] text-don-clay hover:text-don-oat transition-colors">Work</a>
             <Link to="/blog" className="text-xs uppercase tracking-[0.2em] text-don-clay hover:text-don-oat transition-colors">Journal</Link>
+            <Link to="/contact" className="text-xs uppercase tracking-[0.2em] text-don-clay hover:text-don-oat transition-colors">Contact</Link>
             <button onClick={openBooking} className="text-xs uppercase tracking-[0.2em] text-don-clay hover:text-don-oat transition-colors">Get Quote</button>
           </nav>
           

@@ -2,6 +2,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ServiceLayout } from '../components/ServiceLayout';
+import { BreadcrumbSchema } from '../components/BreadcrumbSchema';
 import { useBooking } from '../context/BookingContext';
 import { ChevronDown } from 'lucide-react';
 
@@ -31,8 +32,8 @@ export default function AutoDetailing() {
   return (
     <ServiceLayout>
       <Helmet>
-        <title>Premium Mobile Auto Detailing Reno & Sparks NV</title>
-        <meta name="description" content="Comprehensive interior and exterior mobile auto detailing in Reno and Sparks. Deep cleaning, stain extraction, and protective exterior sealants." />
+        <title>Mobile Car Detailing Reno NV | Interior & Exterior | From $95</title>
+        <meta name="description" content="Professional mobile car detailing in Reno, NV starting at $95. Full interior deep clean, clay bar decontamination, exterior correction, and protective sealants. We come to you." />
         <link rel="canonical" href="https://donofdetail.com/auto-detailing-reno-nv" />
         <meta property="og:type" content="website" />
         <meta property="og:title" content="Premium Mobile Auto Detailing Reno & Sparks NV | Don of Detail" />
@@ -56,13 +57,11 @@ export default function AutoDetailing() {
             "areaServed": [
               {"@type": "City", "name": "Reno"},
               {"@type": "City", "name": "Sparks"},
-              {"@type": "City", "name": "Washoe Valley"},
-              {"@type": "Neighborhood", "name": "Montreux"},
-              {"@type": "Neighborhood", "name": "Somersett"},
-              {"@type": "Neighborhood", "name": "ArrowCreek"},
-              {"@type": "Neighborhood", "name": "Caughlin Ranch"}
+              {"@type": "Place", "name": "Spanish Springs"},
+              {"@type": "Place", "name": "Verdi"},
+              {"@type": "Place", "name": "Sun Valley"}
             ],
-            "description": "Comprehensive interior and exterior mobile auto detailing services delivered directly to private residences in Northern Nevada."
+            "description": "Comprehensive interior and exterior mobile auto detailing services delivered directly to private residences in the Reno-Sparks area."
           }`}
         </script>
 
@@ -84,6 +83,7 @@ export default function AutoDetailing() {
         </script>
       </Helmet>
 
+      <BreadcrumbSchema items={[{ name: 'Auto Detailing Reno NV', url: 'https://donofdetail.com/auto-detailing-reno-nv' }]} />
       {/* Hero Section */}
       <section className="bg-don-oat px-6 lg:px-12 py-12 md:py-20">
         <div className="max-w-[1400px] mx-auto">
@@ -127,7 +127,7 @@ export default function AutoDetailing() {
               Your time is valuable. We operate on the principle that you should not have to leave your home or office to maintain your vehicle properly. However, "mobile" should never mean a reduction in quality.
             </p>
             <p>
-              Our mobile units are entirely self-contained. We arrive equipped with spot-free deionized water systems, power generators, and an arsenal of specialized chemistry. Whether you are at home in Montrêux, at the office in South Reno, or residing in ArrowCreek or Washoe Valley, we execute studio-level detailing without interrupting your day or leaving a mess in your driveway.
+              Our mobile units are entirely self-contained. We arrive equipped with spot-free deionized water systems, power generators, and an arsenal of specialized chemistry. Whether you are at home in Spanish Springs, at the office in South Reno, or residing in Verdi or Sun Valley, we execute studio-level detailing without interrupting your day or leaving a mess in your driveway.
             </p>
             <p>
               We treat the interior and exterior of your vehicle as two distinct ecosystems. The exterior requires heavy lubricants, iron removers, and alkaline pre-washes to safely lift Nevada road salt and abrasive dust without scratching the clear coat. We strictly utilize the two-bucket wash method and plush microfiber media.

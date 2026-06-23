@@ -1,55 +1,150 @@
 # Don of Detail
+> Mobile auto detailing, ceramic coating, and paint correction studio serving Reno, Sparks, and surrounding areas. We bring professional-grade equipment directly to your home or office.
 
-> Reno's premier mobile auto detailing service. Ceramic coating, paint correction, interior & exterior detailing for cars, boats & RVs. We come to you. 80+ five-star Google reviews.
+## Business Information
+- **Company**: Don of Detail LLC
+- **Owner/Operator**: Logan
+- **Service Model**: Fully mobile. We come to the client's location
+- **Phone**: (775) 230-7035
+- **Website**: https://donofdetail.com
+- **Service Area**: Reno NV, Sparks NV, Spanish Springs, Verdi, Sun Valley, Hidden Valley, Golden Valley, Mogul, Cold Springs, Lemmon Valley
+- **Hours**: Monday-Sunday, 8:00 AM - 7:00 PM
+- **Rating**: 5.0 stars - 80+ verified Google reviews
 
-## About
-
-Don of Detail LLC is a fully mobile auto detailing company based in Reno, Nevada. We bring professional-grade detailing directly to your home or office - no shop visit needed. Owned and operated locally, we specialize in ceramic coatings, multi-stage paint correction, and full interior & exterior details designed for Reno's harsh high-desert climate (intense UV, desert dust, and road salt from Tahoe trips).
+---
 
 ## Services
 
-- Interior Detail: full vacuum, steam clean, leather conditioning, odor removal, pet hair extraction
-- Exterior Detail: hand wash, clay bar decontamination, machine polish, sealant, deionized water rinse
-- Interior & Exterior Detail: comprehensive full vehicle detail combining both services
-- Ceramic Coating: professional-grade coating for UV protection, hydrophobic defense, and long-term gloss (2–5 year durability)
-- Paint Correction: multi-stage machine polishing to remove swirl marks, scratches, and oxidation
-- Boat Detailing: hull cleaning, oxidation removal, waxing, and interior deep clean
-- RV & Travel Trailer Detailing: exterior wash, roof treatment, interior deep clean, ceramic coating
-- Headlight Restoration: remove yellowing and hazing for improved clarity and safety
-- Engine Bay Detailing: safe degreasing and dressing for a clean engine compartment
+### Auto Detailing - Mobile Car Detailing Reno NV
+Professional interior and exterior car detailing starting at $95 for a sedan.
 
-## Service Area
+**Exterior Detailing** (from $95):
+- Level 1: Hand wash, wheels & tires, tire shine, exterior glass - from $95 (sedan)
+- Level 2: Level 1 + iron removal, clay bar decontamination, bug & tar removal - from $195 (sedan)
+- Level 3: Level 2 + machine polish, gloss enhancement - from $495 (sedan)
 
-Reno, Sparks, Spanish Springs, South Meadows, Montrêux, Verdi, Sun Valley, Washoe Valley, Fernley, Dayton, Carson City, and all of Northern Nevada.
+**Interior Detailing** (from $95):
+- Level 1: Full vacuum, wipe-down, interior glass - from $95 (sedan)
+- Level 2: Level 1 + steam cleaning, floor mats, light stain removal, pet hair - from $245 (sedan)
+- Level 3: Level 2 + full steam clean, carpet & seat extraction, odor treatment - from $395 (sedan)
+
+**URL**: https://donofdetail.com/auto-detailing-reno-nv
+
+---
+
+### Ceramic Coating - Reno, NV
+Professional-grade SiO2 ceramic coating bonded to the vehicle's factory clear coat. Creates a hardened, hydrophobic, UV-resistant barrier lasting 2-5 years.
+
+**Why ceramic coating in Reno?** Reno's elevation of 4,500+ feet intensifies UV radiation. Traditional waxes degrade in weeks. Ceramic coating is a permanent molecular bond that resists UV, hard water, alkaline dust, and chemical etching.
+
+**Process**: Iron decontamination > multi-stage machine polish > IPA wipe > panel-by-panel coating > infrared curing
+**Price**: from $800 (varies by vehicle size and paint condition)
+
+**URL**: https://donofdetail.com/ceramic-coating-reno-nv
+
+---
+
+### Ceramic Coating - Sparks, NV
+Same professional ceramic coating service for Sparks and surrounding neighborhoods: Spanish Springs, Sun Valley, and surrounding areas.
+
+**URL**: https://donofdetail.com/ceramic-coating-sparks-nv
+
+---
+
+### Paint Correction - Reno, NV
+Multi-stage machine polishing to permanently remove swirl marks, holograms, scratches, and oxidation from a vehicle's clear coat.
+
+**Process**: Clear coat thickness measurement > test spots > heavy cutting compound > finishing polish
+**Duration**: 8-20 hours depending on defect severity
+**Price**: from $400
+
+**URL**: https://donofdetail.com/paint-correction-reno-nv
+
+---
+
+### Mobile Detailing - Sparks, NV
+Full-service mobile detailing for Sparks, NV including all services: auto detailing, ceramic coating, paint correction, boat detailing, and RV detailing.
+
+**URL**: https://donofdetail.com/mobile-detailing-sparks-nv
+
+---
+
+### RV Detailing - Reno, NV
+Mobile RV and motorhome detailing specializing in heavy oxidation removal and multi-stage gelcoat restoration. We service RVs, travel trailers, fifth wheels, and motorhomes.
+
+**Services**: Exterior wash, oxidation removal, roof treatment, interior deep clean, ceramic coating
+**Price**: Custom quote required
+
+**URL**: https://donofdetail.com/rv-detailing-reno-nv
+
+---
+
+### Boat Detailing - Reno & Sparks, NV
+Professional mobile boat detailing including hull cleaning, acid washing, gelcoat oxidation removal, and marine ceramic coating.
+
+**Services**: Hull cleaning, acid wash, gelcoat restoration, interior detail, marine ceramic coating
+**Price**: Custom quote required
+
+**URL**: https://donofdetail.com/boat-detailing-reno-nv
+
+---
+
+### Headlight Restoration
+Professional wet-sand, machine polish, and UV sealant process. Restores clarity to yellowed polycarbonate headlight lenses. Results last 2-3 years.
+
+---
+
+## Blog / Education
+
+### Is Ceramic Coating Worth It In Reno?
+URL: https://donofdetail.com/blog/is-ceramic-coating-worth-it-reno
+
+### The Truth About Automatic Car Washes
+URL: https://donofdetail.com/blog/the-truth-about-automatic-car-washes
+
+### How To Wash Your Car After a Ceramic Coating
+URL: https://donofdetail.com/blog/how-to-wash-a-ceramic-coated-car
+
+### Preparing Your Boat or RV for Lake Tahoe
+URL: https://donofdetail.com/blog/preparing-boat-rv-for-lake-tahoe
+
+### Paint Correction vs. Waxing
+URL: https://donofdetail.com/blog/paint-correction-vs-waxing
+
+### How Much Does Car Detailing Cost in Reno, NV?
+URL: https://donofdetail.com/blog/how-much-does-car-detailing-cost-reno
+
+### Headlight Restoration in Reno, NV
+URL: https://donofdetail.com/blog/headlight-restoration-reno-nv
+
+---
+
+## Frequently Asked Questions
+
+**Q: Do you come to my house?**
+A: Yes. We are fully mobile. We bring deionized water, power, chemicals, and equipment. You don't need to leave.
+
+**Q: How much does a detail cost in Reno?**
+A: Interior or exterior from $95 (sedan). Combined mid-tier from $350. Paint correction from $400. Ceramic coating from $800.
+
+**Q: How long does ceramic coating last?**
+A: 2-5 years depending on the coating grade and maintenance.
+
+**Q: Can you detail my boat or RV?**
+A: Yes. We service boats, RVs, travel trailers, motorhomes, and fifth wheels throughout the greater Reno-Sparks area.
+
+**Q: What areas do you serve?**
+A: Reno, Sparks, Spanish Springs, Verdi, Sun Valley, Hidden Valley, Golden Valley, Mogul, Cold Springs, and Lemmon Valley.
+
+**Q: Is ceramic coating worth it in Nevada's climate?**
+A: Yes. Reno sits at 4,500 ft elevation with 300+ sunny days per year. UV radiation at this altitude destroys unprotected clear coats in 3-5 years. Ceramic coating is the most cost-effective long-term solution.
+
+---
 
 ## Contact
 
-- Phone: (775) 230-7035
-- Email: contact@donofdetail.com
-- Website: https://donofdetail.com
-- Instagram: https://www.instagram.com/donofdetail
-- Google Maps: https://maps.app.goo.gl/mvf4PLGiRWU8wSAa7
-
-## Hours
-
-Open 7 days a week, 8:00 AM – 7:00 PM
-
-## Links
-
-- Homepage: https://donofdetail.com/
-- About: https://donofdetail.com/about
-- Ceramic Coating (Reno): https://donofdetail.com/ceramic-coating-reno-nv
-- Ceramic Coating (Sparks): https://donofdetail.com/ceramic-coating-sparks-nv
-- Paint Correction: https://donofdetail.com/paint-correction-reno-nv
-- Auto Detailing: https://donofdetail.com/auto-detailing-reno-nv
-- Mobile Detailing Sparks: https://donofdetail.com/mobile-detailing-sparks-nv
-- RV Detailing: https://donofdetail.com/rv-detailing-reno-nv
-- Boat Detailing: https://donofdetail.com/boat-detailing-reno-nv
-- Blog: https://donofdetail.com/blog
-- Blog - Is Ceramic Coating Worth It?: https://donofdetail.com/blog/is-ceramic-coating-worth-it-reno
-- Blog - The Truth About Automatic Car Washes: https://donofdetail.com/blog/the-truth-about-automatic-car-washes
-- Blog - How To Wash a Ceramic Coated Car: https://donofdetail.com/blog/how-to-wash-a-ceramic-coated-car
-- Blog - Preparing Your Boat or RV for Lake Tahoe: https://donofdetail.com/blog/preparing-boat-rv-for-lake-tahoe
-- Blog - Paint Correction vs. Waxing: https://donofdetail.com/blog/paint-correction-vs-waxing
-- Terms of Service: https://donofdetail.com/terms
-- Privacy Policy: https://donofdetail.com/privacy
+- **Phone / Text**: (775) 230-7035
+- **Booking**: https://donofdetail.com
+- **Google Maps**: https://maps.app.goo.gl/mvf4PLGiRWU8wSAa7
+- **Instagram**: https://instagram.com/donofdetail
+- **Facebook**: https://facebook.com/donofdetail

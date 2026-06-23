@@ -58,7 +58,7 @@ export default function About() {
             <h2 className="text-5xl md:text-7xl font-display uppercase tracking-[-2px] mb-8">Meet Logan.</h2>
             <div className="space-y-6 font-light text-don-clay leading-relaxed text-lg">
               <p>
-                My name is Logan, and I am the owner and lead operator of Don of Detail. I started this company because I saw a gap in the Northern Nevada market: plenty of places could wash a car, but very few understood the complex chemistry of modern clear coats, the nuances of gel coat restoration, or the specific environmental challenges our vehicles face in the high desert.
+                My name is Logan, and I am the owner and lead operator of Don of Detail. I started this company because I saw a gap in the Reno-Sparks market: plenty of places could wash a car, but very few understood the complex chemistry of modern clear coats, the nuances of gel coat restoration, or the specific environmental challenges our vehicles face in the high desert.
               </p>
               <p>
                 When you book with Don of Detail, you don't get a random crew of untrained technicians rushing to meet a quota. You get me. I personally oversee every paint correction phase, every ceramic coating application, and every meticulous interior restoration.

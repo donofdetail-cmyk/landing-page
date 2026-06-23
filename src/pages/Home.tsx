@@ -25,8 +25,8 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-don-oat text-don-ink font-sans selection:bg-don-ink selection:text-don-oat">
       <Helmet>
-        <title>Top Mobile Auto Detailing & Ceramic Coating in Reno, NV</title>
-        <meta name="description" content="Reno's premier mobile auto detailing service. We specialize in professional ceramic coatings, paint correction, and full interior detailing. We come to you." />
+        <title>Don of Detail | Mobile Detailing Reno NV | Ceramic Coating & Paint Correction</title>
+        <meta name="description" content="Reno's premier mobile auto detailing studio. Ceramic coating, paint correction, interior &amp; exterior detailing, delivered to your home or office. Serving Reno, Sparks &amp; surrounding areas." />
         <link rel="canonical" href="https://donofdetail.com/" />
         <meta property="og:type" content="website" />
         <meta property="og:title" content="Top Mobile Auto Detailing & Ceramic Coating in Reno, NV | Don of Detail" />
@@ -55,7 +55,7 @@ export default function Home() {
                 "name": "Is ceramic coating worth it in Reno's climate?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "Yes. Ceramic coating is one of the best investments for vehicles in Reno's high-desert climate. Reno gets 300+ days of intense UV at 4,500+ feet of elevation, road salt from Tahoe trips, and constant desert dust. Ceramic coating provides years of hydrophobic protection, UV resistance, and keeps your paint looking factory-fresh."
+                  "text": "Yes. Ceramic coating is one of the best investments for vehicles in Reno's high-desert climate. Reno gets 300+ days of intense UV at 4,500+ feet of elevation, corrosive de-icing chemicals in winter, and constant desert dust. Ceramic coating provides years of hydrophobic protection, UV resistance, and keeps your paint looking factory-fresh."
                 }
               },
               {
@@ -63,7 +63,7 @@ export default function Home() {
                 "name": "What areas in Reno & Sparks do you service?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "We provide mobile auto detailing throughout the greater Reno-Sparks metro area including Reno, Sparks, Spanish Springs, South Meadows, Montrêux, Verdi, Sun Valley, Washoe Valley, Fernley, and Dayton. Not sure if we cover your area? Give us a call. We're flexible."
+                  "text": "We provide mobile auto detailing throughout the greater Reno-Sparks metro area including Reno, Sparks, Spanish Springs, Verdi, Sun Valley, Hidden Valley, Golden Valley, Mogul, and Cold Springs. Not sure if we cover your area? Give us a call."
                 }
               },
               {
@@ -95,7 +95,7 @@ export default function Home() {
                 "name": "Do you detail boats and RVs in Reno?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "Yes. We offer full mobile detailing for boats, RVs, travel trailers, and motorhomes throughout Reno, Sparks, and Northern Nevada. Services include exterior wash and wax, oxidation removal, hull cleaning, interior deep clean, and ceramic coating for long-term protection against Reno's intense UV and desert conditions."
+                  "text": "Yes. We offer full mobile detailing for boats, RVs, travel trailers, and motorhomes throughout Reno, Sparks, and surrounding areas. Services include exterior wash and wax, oxidation removal, hull cleaning, interior deep clean, and ceramic coating for long-term protection against the intense UV and desert conditions."
                 }
               },
               {
@@ -153,10 +153,10 @@ export default function Home() {
         <section id="work" className="bg-don-oat">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
             {[
-              { img: '/porsche-911-foam-wash-detailing-reno.webp', alt: 'Classic Porsche 911 full interior and exterior detail — Don of Detail mobile detailing Reno NV', title: 'Classic Porsche 911', service: 'Interior & Exterior Detail' },
-              { img: '/classic-truck-car-show-reno.webp', alt: 'Custom classic truck paint correction Reno NV — Don of Detail mobile detailing', title: 'Custom Classic Truck', service: 'Paint Correction' },
-              { img: '/range-rover-headlight-restoration.webp', alt: 'Range Rover headlight restoration Reno NV — Don of Detail mobile detailing', title: 'Range Rover', service: 'Headlight Restoration' },
-              { img: '/land-rover-ceramic-coating.webp', alt: 'Land Rover Discovery ceramic coating Reno NV — Don of Detail mobile detailing', title: 'Land Rover Discovery', service: 'Ceramic Coating' },
+              { img: '/porsche-911-foam-wash-detailing-reno.webp', alt: 'Classic Porsche 911 full interior and exterior detail by Don of Detail mobile detailing Reno NV', title: 'Classic Porsche 911', service: 'Interior & Exterior Detail' },
+              { img: '/classic-truck-car-show-reno.webp', alt: 'Custom classic truck paint correction Reno NV by Don of Detail mobile detailing', title: 'Custom Classic Truck', service: 'Paint Correction' },
+              { img: '/range-rover-headlight-restoration.webp', alt: 'Range Rover headlight restoration Reno NV by Don of Detail mobile detailing', title: 'Range Rover', service: 'Headlight Restoration' },
+              { img: '/land-rover-ceramic-coating.webp', alt: 'Land Rover Discovery ceramic coating Reno NV by Don of Detail mobile detailing', title: 'Land Rover Discovery', service: 'Ceramic Coating' },
             ].map((item, i) => (
               <div key={i} className="group relative aspect-square overflow-hidden cursor-pointer bg-don-bark">
                 <img src={item.img} alt={item.alt} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 saturate-[0.8] contrast-110" loading={i === 0 ? 'eager' : 'lazy'} fetchPriority={i === 0 ? 'high' : 'auto'} width={800} height={800} />
@@ -277,6 +277,36 @@ export default function Home() {
             <p className="text-lg md:text-xl font-light text-don-ink/70 leading-relaxed max-w-2xl mx-auto">
               We bring the equipment, the chemicals, and the discipline directly to your driveway. Paint correction, ceramic coating, and full auto detailing in Reno, NV. No filler products. No shortcuts. The work shows.
             </p>
+          </div>
+        </section>
+
+        {/* Section - From The Journal */}
+        <section className="bg-don-oat text-don-ink py-32 lg:py-48 px-6 lg:px-12 border-t border-don-clay/10">
+          <div className="max-w-[1400px] mx-auto">
+            <div className="flex flex-col sm:flex-row justify-between items-start sm:items-end mb-16 gap-6">
+              <div>
+                <p className="text-[10px] font-bold uppercase tracking-[0.3em] text-don-clay mb-4">From The Journal</p>
+                <h2 className="text-5xl md:text-7xl font-display uppercase tracking-[-3px] leading-[0.9]">The Knowledge.</h2>
+              </div>
+              <Link to="/blog" className="text-xs font-bold uppercase tracking-[0.2em] text-don-clay hover:text-don-ink transition-colors border-b border-don-clay/40 hover:border-don-ink pb-1 whitespace-nowrap">
+                All Articles →
+              </Link>
+            </div>
+
+            <div className="grid md:grid-cols-3 gap-12 lg:gap-16">
+              {[
+                { slug: 'paint-correction-vs-waxing', category: 'Education', title: 'Paint Correction vs. Waxing', desc: 'Wax only temporarily fills scratches. Learn why machine paint correction is the only permanent fix for a flawless clear coat.', date: 'June 22, 2026' },
+                { slug: 'preparing-boat-rv-for-lake-tahoe', category: 'Boat & RV', title: 'Preparing Your Boat or RV for Lake Tahoe', desc: 'High-altitude UV at 6,200 ft destroys unprotected gelcoat in a single season. Here\'s how to protect your investment before launch.', date: 'June 15, 2026' },
+                { slug: 'is-ceramic-coating-worth-it-reno', category: 'Ceramic Coating', title: 'Is Ceramic Coating Worth It In Reno?', desc: 'Reno sits at 4,500 ft elevation. The UV, road salt, and alkaline dust destroy factory clear coat fast. Find out why coating is mandatory.', date: 'May 10, 2026' },
+              ].map((post) => (
+                <Link key={post.slug} to={`/blog/${post.slug}`} className="group border-t border-don-clay/20 pt-8 block hover:border-don-ink transition-colors">
+                  <p className="text-[10px] font-bold uppercase tracking-[0.3em] text-don-clay mb-4">{post.category}</p>
+                  <h3 className="text-2xl md:text-3xl font-display uppercase tracking-[-1px] text-don-ink group-hover:text-don-clay transition-colors leading-tight mb-4">{post.title}</h3>
+                  <p className="text-don-ink/60 font-light leading-relaxed text-sm mb-6">{post.desc}</p>
+                  <span className="text-[10px] uppercase tracking-[0.2em] text-don-clay">{post.date}</span>
+                </Link>
+              ))}
+            </div>
           </div>
         </section>
 

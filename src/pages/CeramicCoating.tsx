@@ -2,6 +2,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ServiceLayout } from '../components/ServiceLayout';
+import { BreadcrumbSchema } from '../components/BreadcrumbSchema';
 import { useBooking } from '../context/BookingContext';
 import { ChevronDown } from 'lucide-react';
 
@@ -31,8 +32,8 @@ export default function CeramicCoating() {
   return (
     <ServiceLayout>
       <Helmet>
-        <title>Professional Ceramic Coating Reno NV | Mobile Service</title>
-        <meta name="description" content="Protect your vehicle with professional-grade ceramic coatings in Reno, NV. Long-lasting UV protection and hydrophobic gloss applied at your home or office." />
+        <title>Ceramic Coating Reno NV | 2 to 5 Year Paint Protection | Don of Detail</title>
+        <meta name="description" content="Professional-grade ceramic coating in Reno, NV. SiO2 polymer that bonds to your clear coat. UV protection, hydrophobic gloss, and chemical resistance lasting 2 to 5 years. Mobile installation." />
         <link rel="canonical" href="https://donofdetail.com/ceramic-coating-reno-nv" />
         <meta property="og:type" content="website" />
         <meta property="og:title" content="Professional Ceramic Coating Reno NV | Don of Detail" />
@@ -56,12 +57,11 @@ export default function CeramicCoating() {
             "areaServed": [
               {"@type": "City", "name": "Reno"},
               {"@type": "City", "name": "Sparks"},
-              {"@type": "City", "name": "Washoe Valley"},
-              {"@type": "Neighborhood", "name": "Montreux"},
-              {"@type": "Neighborhood", "name": "Somersett"},
-              {"@type": "Neighborhood", "name": "ArrowCreek"}
+              {"@type": "Place", "name": "Spanish Springs"},
+              {"@type": "Place", "name": "Verdi"},
+              {"@type": "Place", "name": "Sun Valley"}
             ],
-            "description": "Professional ceramic coating installation providing UV protection and hydrophobic properties. Delivered via mobile unit to Northern Nevada."
+            "description": "Professional ceramic coating installation providing UV protection and hydrophobic properties. Delivered via mobile unit to the Reno-Sparks area."
           }`}
         </script>
 
@@ -82,6 +82,7 @@ export default function CeramicCoating() {
           }`}
         </script>
       </Helmet>
+      <BreadcrumbSchema items={[{ name: 'Ceramic Coating Reno NV', url: 'https://donofdetail.com/ceramic-coating-reno-nv' }]} />
 
       {/* Hero Section */}
       <section className="bg-don-oat px-6 lg:px-12 py-12 md:py-20">
@@ -123,7 +124,7 @@ export default function CeramicCoating() {
           </div>
           <div className="space-y-8 font-light text-don-clay leading-relaxed text-lg">
             <p>
-              The environment in Northern Nevada is hostile to automotive finishes. From the high-altitude UV radiation that accelerates oxidation to the corrosive de-icing chemicals used during local winters, your vehicle's factory clear coat is constantly under attack. Traditional carnauba waxes and synthetic sealants degrade within weeks under these conditions.
+              The environment in the Reno-Sparks area is hostile to automotive finishes. From the high-altitude UV radiation that accelerates oxidation to the corrosive de-icing chemicals used during local winters, your vehicle's factory clear coat is constantly under attack. Traditional carnauba waxes and synthetic sealants degrade within weeks under these conditions.
             </p>
             <p>
               We bring a controlled, studio-level ceramic application process directly to your home. Utilizing professional-grade SiO2 compounds, we establish a permanent molecular bond with your vehicle's paint. This isn't a spray-on product bought at a retail store; this is a commercial-grade polymer that requires strict ambient temperature control, precise leveling, and dedicated infrared curing time.
@@ -132,7 +133,7 @@ export default function CeramicCoating() {
               Before any coating touches the paint, the surface must be absolutely flawless. We perform comprehensive iron decontamination to pull embedded ferrous metals from the clear coat, followed by a multi-stage machine polish. If a coating is applied over swirl marks or oxidation, those defects are locked under a layer of glass for years. Our obsessive preparation ensures maximum gloss and bonding integrity.
             </p>
             <p>
-              We serve clients across Reno and Sparks, frequently dispatching our mobile unit to private residences in Montrêux, Somersett, ArrowCreek, and Washoe Valley. We supply our own spot-free deionized water, meaning no hard-water calcium deposits are introduced during the prep wash.
+              We serve clients across Reno and Sparks, frequently dispatching our mobile unit to private residences in Spanish Springs, Verdi, Sun Valley, and Hidden Valley. We supply our own spot-free deionized water, meaning no hard-water calcium deposits are introduced during the prep wash.
             </p>
             <p className="text-don-oat">
               We do not wash cars. We preserve automotive investments against the specific elements of the Sierra Nevada region.

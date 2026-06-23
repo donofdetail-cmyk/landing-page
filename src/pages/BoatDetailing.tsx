@@ -2,6 +2,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ServiceLayout } from '../components/ServiceLayout';
+import { BreadcrumbSchema } from '../components/BreadcrumbSchema';
 import { useBooking } from '../context/BookingContext';
 import { ChevronDown } from 'lucide-react';
 
@@ -31,8 +32,8 @@ export default function BoatDetailing() {
   return (
     <ServiceLayout>
       <Helmet>
-        <title>Mobile Boat Detailing Reno NV | Don of Detail</title>
-        <meta name="description" content="Professional mobile boat detailing in Reno, NV. Specialized marine gelcoat restoration, oxidation removal, and long-term ceramic coatings for your vessel." />
+        <title>Boat Detailing Reno NV | Hull Cleaning & Marine Ceramic Coating</title>
+        <meta name="description" content="Professional mobile boat detailing in Reno & Sparks, NV. Hull oxidation removal, acid washing, marine ceramic coating, and interior deep clean. We come to your dock, storage, or home." />
         <link rel="canonical" href="https://donofdetail.com/boat-detailing-reno-nv" />
         <meta property="og:type" content="website" />
         <meta property="og:title" content="Mobile Boat Detailing Reno NV | Don of Detail" />
@@ -54,9 +55,9 @@ export default function BoatDetailing() {
               "url": "https://donofdetail.com"
             },
             "areaServed": [
-              {"@type": "City", "name": "Washoe Valley"},
-              {"@type": "City", "name": "Reno"},
-              {"@type": "City", "name": "Sparks"}
+              {"@type": "Place", "name": "Spanish Springs"},
+              {"@type": "Place", "name": "Verdi"},
+              {"@type": "Place", "name": "Sun Valley"}
             ],
             "description": "Specialized boat detailing services, featuring heavy oxidation removal, gelcoat restoration, and marine ceramic coatings."
           }`}
@@ -80,6 +81,7 @@ export default function BoatDetailing() {
         </script>
       </Helmet>
 
+      <BreadcrumbSchema items={[{ name: 'Boat Detailing Reno NV', url: 'https://donofdetail.com/boat-detailing-reno-nv' }]} />
       {/* Hero Section */}
       <section className="bg-don-oat px-6 lg:px-12 py-12 md:py-20">
         <div className="max-w-[1400px] mx-auto">

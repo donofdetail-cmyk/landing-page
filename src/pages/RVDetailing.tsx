@@ -2,6 +2,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ServiceLayout } from '../components/ServiceLayout';
+import { BreadcrumbSchema } from '../components/BreadcrumbSchema';
 import { useBooking } from '../context/BookingContext';
 import { ChevronDown } from 'lucide-react';
 
@@ -31,8 +32,8 @@ export default function RVDetailing() {
   return (
     <ServiceLayout>
       <Helmet>
-        <title>Mobile RV Detailing & Wash Services in Reno, NV</title>
-        <meta name="description" content="Expert mobile RV and motorhome detailing in Reno, NV. Exterior washing, heavy oxidation removal, and multi-stage gelcoat restoration." />
+        <title>Mobile RV Detailing Reno NV | Oxidation Removal & Gelcoat Restoration</title>
+        <meta name="description" content="Professional mobile RV and motorhome detailing in Reno, NV. Heavy oxidation removal, multi-stage gelcoat restoration, roof treatment, and ceramic coating. We come to your storage or driveway." />
         <link rel="canonical" href="https://donofdetail.com/rv-detailing-reno-nv" />
         <meta property="og:type" content="website" />
         <meta property="og:title" content="Mobile RV Detailing & Wash Services in Reno, NV | Don of Detail" />
@@ -56,9 +57,9 @@ export default function RVDetailing() {
             "areaServed": [
               {"@type": "City", "name": "Reno"},
               {"@type": "City", "name": "Sparks"},
-              {"@type": "City", "name": "Washoe Valley"},
-              {"@type": "Neighborhood", "name": "Somersett"},
-              {"@type": "Neighborhood", "name": "ArrowCreek"},
+              {"@type": "Place", "name": "Spanish Springs"},
+              {"@type": "Place", "name": "Verdi"},
+              {"@type": "Place", "name": "Sun Valley"},
               {"@type": "Place", "name": "South Reno"}
             ],
             "description": "Specialized recreational vehicle detailing including heavy oxidation removal and multi-stage gelcoat restoration."
@@ -83,6 +84,7 @@ export default function RVDetailing() {
         </script>
       </Helmet>
 
+      <BreadcrumbSchema items={[{ name: 'RV Detailing Reno NV', url: 'https://donofdetail.com/rv-detailing-reno-nv' }]} />
       {/* Hero Section */}
       <section className="bg-don-oat px-6 lg:px-12 py-12 md:py-20">
         <div className="max-w-[1400px] mx-auto">
@@ -123,10 +125,10 @@ export default function RVDetailing() {
           </div>
           <div className="space-y-8 font-light text-don-clay leading-relaxed text-lg">
             <p>
-              Recreational vehicles feature massive expanses of fiberglass gelcoat. At our elevation in Northern Nevada, the extreme UV radiation rapidly breaks down porous gelcoat, turning the surface chalky and dull. This is not just a cosmetic issue; severe oxidation leads to structural degradation of the fiberglass itself.
+              Recreational vehicles feature massive expanses of fiberglass gelcoat. At our elevation in the Nevada high desert, the extreme UV radiation rapidly breaks down porous gelcoat, turning the surface chalky and dull. This is not just a cosmetic issue; severe oxidation leads to structural degradation of the fiberglass itself.
             </p>
             <p>
-              Whether your coach is parked at a storage facility in South Reno or sitting in a driveway in Somersett, if it isn't aggressively protected, it will oxidize. We specialize in reversing this damage. Operating a fully independent mobile unit, we bring our own power and spot-free deionized water directly to your location, eliminating the logistical nightmare of driving a 40-foot rig to a specialized wash bay.
+              Whether your coach is parked at a storage facility in South Reno or sitting in a driveway in Spanish Springs, if it isn't aggressively protected, it will oxidize. We specialize in reversing this damage. Operating a fully independent mobile unit, we bring our own power and spot-free deionized water directly to your location, eliminating the logistical nightmare of driving a 40-foot rig to a specialized wash bay.
             </p>
             <p>
               Proper RV maintenance must always begin at the roof. Neglected roofs accumulate heavy dirt, mold, and environmental fallout. When it rains, this grime washes down the sides of the coach, creating the notorious "black streaks" that stain the fiberglass. We scrub and seal the roof first, protecting the seals to prevent costly water intrusion.

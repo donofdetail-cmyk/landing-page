@@ -2,6 +2,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { useParams, Link, Navigate } from 'react-router-dom';
 import { ServiceLayout } from '../components/ServiceLayout';
+import { BreadcrumbSchema } from '../components/BreadcrumbSchema';
 import { useBooking } from '../context/BookingContext';
 
 const CTA = () => {
@@ -28,6 +29,7 @@ const posts: Record<string, any> = {
     title: 'Is Ceramic Coating Worth It In Reno?',
     date: 'May 10, 2026',
     dateISO: '2026-05-10',
+    dateModifiedISO: '2026-06-22',
     readTime: '5 min read',
     author: 'Don of Detail',
     category: 'Ceramic Coating',
@@ -117,6 +119,7 @@ const posts: Record<string, any> = {
     title: 'The Truth About Automatic Car Washes: Why Convenience is Killing Your Clear Coat',
     date: 'May 28, 2026',
     dateISO: '2026-05-28',
+    dateModifiedISO: '2026-06-22',
     readTime: '6 min read',
     author: 'Don of Detail',
     category: 'Education',
@@ -213,6 +216,7 @@ const posts: Record<string, any> = {
     title: 'How To Wash Your Car After a Ceramic Coating',
     date: 'June 3, 2026',
     dateISO: '2026-06-03',
+    dateModifiedISO: '2026-06-22',
     readTime: '5 min read',
     author: 'Don of Detail',
     category: 'Education',
@@ -290,6 +294,7 @@ const posts: Record<string, any> = {
     title: 'Preparing Your Boat or RV for Lake Tahoe',
     date: 'June 15, 2026',
     dateISO: '2026-06-15',
+    dateModifiedISO: '2026-06-22',
     readTime: '6 min read',
     author: 'Don of Detail',
     category: 'Boat & RV',
@@ -298,7 +303,7 @@ const posts: Record<string, any> = {
       <div className="space-y-12">
 
         <div>
-          <p className="text-xl md:text-2xl font-light text-don-ink/90 leading-relaxed">A boat or RV is a massive investment. Dragging it up the mountain to Lake Tahoe or out to Pyramid Lake without protection is irresponsible. The high-altitude sun in Northern Nevada will destroy unprotected gelcoat in a single season.</p>
+          <p className="text-xl md:text-2xl font-light text-don-ink/90 leading-relaxed">A boat or RV is a massive investment. Dragging it up the mountain to Lake Tahoe or out to Pyramid Lake without protection is irresponsible. The high-altitude sun in the Reno-Sparks area will destroy unprotected gelcoat in a single season.</p>
         </div>
 
         <div className="pt-4">
@@ -380,6 +385,7 @@ const posts: Record<string, any> = {
     title: "Paint Correction vs. Waxing: Why Wax Won't Fix Your Scratches",
     date: 'June 22, 2026',
     dateISO: '2026-06-22',
+    dateModifiedISO: '2026-06-22',
     readTime: '5 min read',
     author: 'Don of Detail',
     category: 'Education',
@@ -452,6 +458,146 @@ const posts: Record<string, any> = {
 
       </div>
     )
+  }  ,
+  'how-much-does-car-detailing-cost-reno': {
+    title: 'How Much Does Car Detailing Cost in Reno, NV?',
+    date: 'June 22, 2026',
+    dateISO: '2026-06-22',
+    dateModifiedISO: '2026-06-22',
+    readTime: '5 min read',
+    author: 'Don of Detail',
+    category: 'Education',
+    metaDescription: 'Honest breakdown of auto detailing prices in Reno, NV. Interior-only, exterior-only, full details, paint correction, and ceramic coating costs explained.',
+    content: (
+      <div className="space-y-12">
+        <div>
+          <p className="text-xl md:text-2xl font-light text-don-ink/90 leading-relaxed">The price of a detail in Reno ranges wildly depending on who is doing it and what they actually care about. Here is an honest breakdown of what professional mobile detailing costs and what drives the price.</p>
+        </div>
+        <div className="pt-4">
+          <h2 className="text-2xl md:text-3xl font-display uppercase tracking-[-1px] text-don-ink mb-6">Interior Detail Cost</h2>
+          <p className="text-lg text-don-ink/80 font-light leading-relaxed mb-6">An interior-only detail in Reno typically costs between $95 and $395 depending on the vehicle size and level of cleaning required. A light maintenance detail on a regularly cleaned car sits at the lower end. A heavily soiled vehicle needing deep extraction, steam cleaning, and odor treatment sits at the higher end.</p>
+          <p className="text-lg text-don-ink/80 font-light leading-relaxed">Our Level 1 interior (vacuum, wipe-down, glass) starts at $95 for a sedan. Level 3 full reset with extraction, steam, and stain treatment starts at $395 for a sedan and $495 for an oversized or third-row SUV.</p>
+        </div>
+        <div className="pt-4">
+          <h2 className="text-2xl md:text-3xl font-display uppercase tracking-[-1px] text-don-ink mb-6">Exterior Detail Cost</h2>
+          <p className="text-lg text-don-ink/80 font-light leading-relaxed mb-6">A standard exterior detail in Reno costs between $95 and $595 depending on the service tier. Level 1 (hand wash, wheels, tire shine, glass) starts at $95 for a sedan. Level 3 with iron removal, clay bar decontamination, and a light machine polish starts at $495 for a sedan.</p>
+          <p className="text-lg text-don-ink/80 font-light leading-relaxed">The difference between a $95 wash and a $495 detail is chemistry. Clay bar removes bonded contamination a wash mitt cannot touch. Iron removers dissolve embedded brake dust. These steps are not optional in a real detail.</p>
+        </div>
+        <div className="pt-4">
+          <h2 className="text-2xl md:text-3xl font-display uppercase tracking-[-1px] text-don-ink mb-6">Full Detail Cost</h2>
+          <p className="text-lg text-don-ink/80 font-light leading-relaxed mb-6">Most Reno clients booking a combined interior and exterior detail spend between $250 and $600. For a sedan at mid-tier, expect $350 to $440. For a large truck or third-row SUV, $450 to $540 is typical.</p>
+          <p className="text-lg text-don-ink/80 font-light leading-relaxed">We assess every vehicle individually and provide a custom quote before booking.</p>
+        </div>
+        <div className="pt-4">
+          <h2 className="text-2xl md:text-3xl font-display uppercase tracking-[-1px] text-don-ink mb-6">Paint Correction Cost in Reno</h2>
+          <p className="text-lg text-don-ink/80 font-light leading-relaxed mb-6">Professional paint correction starts at $400 and ranges to $1,500 for multi-stage full correction on a larger vehicle. The price is driven by paint condition, vehicle size, and the number of stages required to fully level the clear coat.</p>
+          <p className="text-lg text-don-ink/80 font-light leading-relaxed">A multi-stage correction takes 8 to 20 hours and produces a permanent improvement in optical clarity, not a temporary wax fill.</p>
+        </div>
+        <div className="pt-4">
+          <h2 className="text-2xl md:text-3xl font-display uppercase tracking-[-1px] text-don-ink mb-6">Ceramic Coating Cost in Reno</h2>
+          <p className="text-lg text-don-ink/80 font-light leading-relaxed mb-6">Ceramic coating in Reno costs between $800 and $2,500. This includes decontamination, paint correction, and the coating application. Entry-level coatings last 2 to 3 years. Premium coatings last 5 years or more.</p>
+          <p className="text-lg text-don-ink/80 font-light leading-relaxed">Every install includes a full aftercare walkthrough. We never coat a dirty or scratched car. The correction step is mandatory.</p>
+        </div>
+        <CTA />
+        <div className="pt-8 pb-8 border-t border-b border-don-clay/20 mt-12 mb-12">
+          <h2 className="text-2xl md:text-3xl font-display uppercase tracking-[-1px] text-don-ink mb-8">Frequently Asked Questions</h2>
+          <div className="space-y-8">
+            <div>
+              <p className="text-lg font-bold text-don-ink mb-2">Q: How much does a basic car detail cost in Reno?</p>
+              <p className="text-lg text-don-ink/80 font-light leading-relaxed">A: A basic interior or exterior detail starts at $95 for a standard sedan. A combined mid-tier detail typically runs $350 to $440 depending on vehicle size.</p>
+            </div>
+            <div>
+              <p className="text-lg font-bold text-don-ink mb-2">Q: Is mobile detailing more expensive than a shop?</p>
+              <p className="text-lg text-don-ink/80 font-light leading-relaxed">A: Mobile detailing is often comparable in price to a quality shop. The difference is you never leave your location.</p>
+            </div>
+            <div>
+              <p className="text-lg font-bold text-don-ink mb-2">Q: Do you charge more for trucks and SUVs?</p>
+              <p className="text-lg text-don-ink/80 font-light leading-relaxed">A: Yes. Larger vehicles require significantly more time and product. We have separate pricing tiers for sedans, SUVs/trucks, and oversized/third-row vehicles.</p>
+            </div>
+            <div>
+              <p className="text-lg font-bold text-don-ink mb-2">Q: Do you provide quotes before booking?</p>
+              <p className="text-lg text-don-ink/80 font-light leading-relaxed">A: Always. Every vehicle is unique. We typically respond within the hour.</p>
+            </div>
+          </div>
+        </div>
+        <div className="pt-4">
+          <h2 className="text-2xl md:text-3xl font-display uppercase tracking-[-1px] text-don-ink mb-6">Related Reading</h2>
+          <ul className="space-y-4">
+            <li><Link to="/auto-detailing-reno-nv" className="text-don-red hover:text-don-ink transition-colors font-bold uppercase tracking-[0.1em] text-sm">Mobile Auto Detailing Services</Link></li>
+            <li><Link to="/blog/is-ceramic-coating-worth-it-reno" className="text-don-red hover:text-don-ink transition-colors font-bold uppercase tracking-[0.1em] text-sm">Is Ceramic Coating Worth It In Reno?</Link></li>
+            <li><Link to="/blog/paint-correction-vs-waxing" className="text-don-red hover:text-don-ink transition-colors font-bold uppercase tracking-[0.1em] text-sm">Paint Correction vs. Waxing</Link></li>
+          </ul>
+        </div>
+      </div>
+    )
+  },
+  'headlight-restoration-reno-nv': {
+    title: 'Headlight Restoration in Reno, NV: Why Yellowed Headlights Are Dangerous',
+    date: 'June 22, 2026',
+    dateISO: '2026-06-22',
+    dateModifiedISO: '2026-06-22',
+    readTime: '4 min read',
+    author: 'Don of Detail',
+    category: 'Education',
+    metaDescription: "Yellowed headlights sharply cut your nighttime visibility. Learn why Reno's UV causes it and how professional headlight restoration fixes it permanently.",
+    content: (
+      <div className="space-y-12">
+        <div>
+          <p className="text-xl md:text-2xl font-light text-don-ink/90 leading-relaxed">Yellowed headlights are not cosmetic. They reduce your ability to see at night and make your vehicle nearly invisible to oncoming drivers. In Reno, where high-altitude UV radiation is relentless, this problem accelerates faster than almost anywhere else in the country.</p>
+        </div>
+        <div className="pt-4">
+          <h2 className="text-2xl md:text-3xl font-display uppercase tracking-[-1px] text-don-ink mb-6">Why Headlights Turn Yellow in Reno</h2>
+          <p className="text-lg text-don-ink/80 font-light leading-relaxed mb-6">Headlight lenses are made of polycarbonate plastic coated with a thin UV-resistant layer. At Reno's elevation of over 4,500 feet, UV intensity is significantly higher than at sea level. Once the coating breaks down, the bare polycarbonate oxidizes rapidly, turning the lens yellow, hazy, and opaque.</p>
+          <p className="text-lg text-don-ink/80 font-light leading-relaxed">In our experience, most Reno vehicles show visible headlight yellowing within a few years if left untreated. Vehicles parked outside year-round, especially facing south, degrade even faster.</p>
+        </div>
+        <div className="pt-4">
+          <h2 className="text-2xl md:text-3xl font-display uppercase tracking-[-1px] text-don-ink mb-6">The Safety Consequence</h2>
+          <p className="text-lg text-don-ink/80 font-light leading-relaxed mb-6">Severely oxidized headlights throw a fraction of the light they did when new. On Highway 395 or the Mount Rose Highway at night, that lost output is a genuine safety risk.</p>
+          <p className="text-lg text-don-ink/80 font-light leading-relaxed">Most drivers adapt to diminished output without noticing how severe the degradation has become. The before-and-after of restored headlights is always dramatic.</p>
+        </div>
+        <div className="pt-4">
+          <h2 className="text-2xl md:text-3xl font-display uppercase tracking-[-1px] text-don-ink mb-6">The Restoration Process</h2>
+          <p className="text-lg text-don-ink/80 font-light leading-relaxed mb-6">A proper restoration involves wet sanding the oxidized surface with progressively finer grits, from 400 to 3000 grit, to physically remove the degraded polycarbonate layer.</p>
+          <p className="text-lg text-don-ink/80 font-light leading-relaxed mb-6">After sanding, we machine polish the lens to restore optical clarity. The final step is applying a UV-resistant clear coat. Without it, the polycarbonate re-oxidizes within 6 to 12 months.</p>
+          <p className="text-lg text-don-ink/80 font-light leading-relaxed">With a properly applied UV sealant, restored headlights stay clear for 2 to 3 years, far cheaper than replacing the assemblies outright.</p>
+        </div>
+        <div className="pt-4">
+          <h2 className="text-2xl md:text-3xl font-display uppercase tracking-[-1px] text-don-ink mb-6">Why DIY Kits Fail</h2>
+          <p className="text-lg text-don-ink/80 font-light leading-relaxed mb-6">Retail kits skip wet sanding and use a light abrasive compound. This works temporarily, 2 to 4 months, but does not remove the oxidized layer deep enough for lasting results. The thin UV coating in these kits breaks down quickly under Reno's sun.</p>
+          <p className="text-lg text-don-ink/80 font-light leading-relaxed">We wet sand, machine polish, and apply a professional UV-grade sealant. The result holds.</p>
+        </div>
+        <CTA />
+        <div className="pt-8 pb-8 border-t border-b border-don-clay/20 mt-12 mb-12">
+          <h2 className="text-2xl md:text-3xl font-display uppercase tracking-[-1px] text-don-ink mb-8">Frequently Asked Questions</h2>
+          <div className="space-y-8">
+            <div>
+              <p className="text-lg font-bold text-don-ink mb-2">Q: How long does headlight restoration last?</p>
+              <p className="text-lg text-don-ink/80 font-light leading-relaxed">A: With a professional UV sealant applied after polishing, results typically last 2 to 3 years. Without the sealant, the lens re-oxidizes within months.</p>
+            </div>
+            <div>
+              <p className="text-lg font-bold text-don-ink mb-2">Q: Is it cheaper to restore or replace headlights?</p>
+              <p className="text-lg text-don-ink/80 font-light leading-relaxed">A: Restoration is significantly cheaper. Replacement headlight assemblies can run several hundred to well over a thousand dollars per side on newer vehicles.</p>
+            </div>
+            <div>
+              <p className="text-lg font-bold text-don-ink mb-2">Q: Can all headlights be restored?</p>
+              <p className="text-lg text-don-ink/80 font-light leading-relaxed">A: Most polycarbonate headlights can be restored. Lenses that are deeply cracked or damaged beyond surface oxidation may require replacement.</p>
+            </div>
+            <div>
+              <p className="text-lg font-bold text-don-ink mb-2">Q: Do you come to my location in Reno or Sparks?</p>
+              <p className="text-lg text-don-ink/80 font-light leading-relaxed">A: Yes. Headlight restoration is fully mobile. We perform the full wet sand, polish, and seal process at your home or office anywhere in Reno, Sparks, or surrounding areas.</p>
+            </div>
+          </div>
+        </div>
+        <div className="pt-4">
+          <h2 className="text-2xl md:text-3xl font-display uppercase tracking-[-1px] text-don-ink mb-6">Related Reading</h2>
+          <ul className="space-y-4">
+            <li><Link to="/auto-detailing-reno-nv" className="text-don-red hover:text-don-ink transition-colors font-bold uppercase tracking-[0.1em] text-sm">Mobile Auto Detailing Services</Link></li>
+            <li><Link to="/blog/paint-correction-vs-waxing" className="text-don-red hover:text-don-ink transition-colors font-bold uppercase tracking-[0.1em] text-sm">Paint Correction vs. Waxing</Link></li>
+            <li><Link to="/blog/the-truth-about-automatic-car-washes" className="text-don-red hover:text-don-ink transition-colors font-bold uppercase tracking-[0.1em] text-sm">The Truth About Automatic Car Washes</Link></li>
+          </ul>
+        </div>
+      </div>
+    )
   }
 };
 
@@ -466,8 +612,12 @@ export default function BlogPost() {
 
   return (
     <ServiceLayout>
+      <BreadcrumbSchema items={[
+        { name: 'Blog', url: 'https://donofdetail.com/blog' },
+        { name: post.title, url: `https://donofdetail.com/blog/${slug}` },
+      ]} />
       <Helmet>
-        <title>{post.title} | Don of Detail</title>
+        <title>{`${post.title} | Don of Detail`}</title>
         <meta name="description" content={post.metaDescription} />
         <link rel="canonical" href={`https://donofdetail.com/blog/${slug}`} />
         <meta property="og:type" content="article" />
@@ -481,20 +631,20 @@ export default function BlogPost() {
 
         {/* Article Schema */}
         <script type="application/ld+json">
-          {`{
-            "@context": "https://schema.org",
-            "@type": "Article",
-            "headline": "${post.title}",
-            "description": "${post.metaDescription}",
-            "author": {"@type": "Organization", "name": "${post.author}"},
-            "datePublished": "${post.dateISO}",
-            "dateModified": "${post.dateISO}",
-            "publisher": {
-              "@type": "Organization",
-              "name": "Don of Detail",
-              "logo": {"@type": "ImageObject", "url": "https://donofdetail.com/logo.png"}
+          {JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'Article',
+            headline: post.title,
+            description: post.metaDescription,
+            author: { '@type': 'Organization', name: post.author },
+            datePublished: post.dateISO,
+            dateModified: post.dateModifiedISO || post.dateISO,
+            publisher: {
+              '@type': 'Organization',
+              name: 'Don of Detail',
+              logo: { '@type': 'ImageObject', url: 'https://donofdetail.com/logo.png' }
             }
-          }`}
+          })}
         </script>
       </Helmet>
 
@@ -508,9 +658,9 @@ export default function BlogPost() {
           <h1 className="text-5xl lg:text-7xl font-display uppercase tracking-[-2px] text-don-ink leading-[0.9] mb-8">{post.title}</h1>
           <div className="flex items-center gap-4 text-don-clay text-xs uppercase tracking-[0.2em]">
             <span>{post.author}</span>
-            <span>—</span>
+            <span>·</span>
             <span>{post.date}</span>
-            <span>—</span>
+            <span>·</span>
             <span>{post.readTime}</span>
           </div>
         </header>

@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import { motion } from 'motion/react';
 import { Header } from '../components/Header';
 import { Footer } from '../components/Footer';
+import { BreadcrumbSchema } from '../components/BreadcrumbSchema';
 import { useBooking } from '../context/BookingContext';
 
 const formatName = (name: string) => {
@@ -25,8 +26,8 @@ export default function SparksDetailing() {
   return (
     <div className="min-h-screen bg-don-oat text-don-ink font-sans selection:bg-don-ink selection:text-don-oat">
       <Helmet>
-        <title>Top Mobile Auto Detailing & Ceramic Coating in Sparks, NV</title>
-        <meta name="description" content="Sparks' premier mobile auto detailing service. We specialize in professional ceramic coatings, paint correction, and full interior detailing. We come to you." />
+        <title>Mobile Auto Detailing Sparks NV | Cars, Boats & RVs | Don of Detail</title>
+        <meta name="description" content="Sparks, NV's top-rated mobile detailing service. Ceramic coating, paint correction, interior &amp; exterior detailing for cars, boats, and RVs in Spanish Springs, Sun Valley &amp; surrounding areas." />
         <link rel="canonical" href="https://donofdetail.com/mobile-detailing-sparks-nv" />
 
         <meta property="og:type" content="website" />
@@ -37,6 +38,27 @@ export default function SparksDetailing() {
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Top Mobile Auto Detailing & Ceramic Coating in Sparks, NV | Don of Detail" />
         <meta name="twitter:description" content="Sparks' premier mobile auto detailing service. Professional ceramic coatings, paint correction, and full interior detailing. We come to you." />
+
+        <script type="application/ld+json">
+          {`{
+            "@context": "https://schema.org",
+            "@type": "Service",
+            "name": "Mobile Auto Detailing",
+            "provider": {
+              "@type": "AutomotiveBusiness",
+              "name": "Don of Detail",
+              "url": "https://donofdetail.com"
+            },
+            "areaServed": [
+              {"@type": "City", "name": "Sparks"},
+              {"@type": "City", "name": "Reno"},
+              {"@type": "Place", "name": "Spanish Springs"},
+              {"@type": "Place", "name": "Sun Valley"},
+              {"@type": "Place", "name": "Verdi"}
+            ],
+            "description": "Mobile auto, boat, and RV detailing including ceramic coating, paint correction, and interior/exterior detailing. Delivered via mobile unit to the Sparks-Reno area."
+          }`}
+        </script>
 
         <script type="application/ld+json">
           {`{
@@ -56,7 +78,7 @@ export default function SparksDetailing() {
                 "name": "Is ceramic coating worth it in Nevada's climate?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "Yes. Ceramic coating is one of the best investments for vehicles in Northern Nevada's high-desert climate. Sparks gets 300+ days of intense UV at 4,500+ feet of elevation, road salt from Tahoe trips, and constant desert dust. Ceramic coating provides years of hydrophobic protection, UV resistance, and keeps your paint looking factory-fresh."
+                  "text": "Yes. Ceramic coating is one of the best investments for vehicles in the Reno-Sparks area. Sparks gets 300+ days of intense UV at 4,500+ feet of elevation, constant desert dust, and corrosive de-icing chemicals in winter. Ceramic coating provides years of hydrophobic protection, UV resistance, and keeps your paint looking factory-fresh."
                 }
               },
               {
@@ -64,7 +86,7 @@ export default function SparksDetailing() {
                 "name": "What areas in Reno & Sparks do you service?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "We provide mobile auto detailing throughout the greater Reno-Sparks metro area including Reno, Sparks, Spanish Springs, South Meadows, Montrêux, Verdi, Sun Valley, Washoe Valley, Fernley, and Dayton. Not sure if we cover your area? Give us a call. We're flexible."
+                  "text": "We provide mobile auto detailing throughout the greater Reno-Sparks metro area including Reno, Sparks, Spanish Springs, Verdi, Sun Valley, Hidden Valley, Golden Valley, Mogul, and Cold Springs. Not sure if we cover your area? Give us a call."
                 }
               },
               {
@@ -96,7 +118,7 @@ export default function SparksDetailing() {
                 "name": "Do you detail boats and RVs in Sparks?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "Yes. We offer full mobile detailing for boats, RVs, travel trailers, and motorhomes throughout Sparks, Reno, and Northern Nevada. Services include exterior wash and wax, oxidation removal, hull cleaning, interior deep clean, and ceramic coating for long-term protection against the intense UV and desert conditions."
+                  "text": "Yes. We offer full mobile detailing for boats, RVs, travel trailers, and motorhomes throughout Sparks, Reno, and surrounding areas. Services include exterior wash and wax, oxidation removal, hull cleaning, interior deep clean, and ceramic coating for long-term protection against the intense UV and desert conditions."
                 }
               },
               {
@@ -111,6 +133,7 @@ export default function SparksDetailing() {
           }`}
         </script>
       </Helmet>
+      <BreadcrumbSchema items={[{ name: 'Mobile Detailing Sparks NV', url: 'https://donofdetail.com/mobile-detailing-sparks-nv' }]} />
       <Header />
 
       <main id="main" className="focus:outline-none" tabIndex={-1}>
@@ -154,10 +177,10 @@ export default function SparksDetailing() {
         <section id="work" className="bg-don-oat">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
             {[
-              { img: '/porsche-911-foam-wash-detailing-reno.webp', alt: 'Classic Porsche 911 full interior and exterior detail — Don of Detail mobile detailing Sparks NV', title: 'Classic Porsche 911', service: 'Interior & Exterior Detail' },
-              { img: '/classic-truck-car-show-reno.webp', alt: 'Custom classic truck paint correction Sparks NV — Don of Detail mobile detailing', title: 'Custom Classic Truck', service: 'Paint Correction' },
-              { img: '/range-rover-headlight-restoration.webp', alt: 'Range Rover headlight restoration Sparks NV — Don of Detail mobile detailing', title: 'Range Rover', service: 'Headlight Restoration' },
-              { img: '/land-rover-ceramic-coating.webp', alt: 'Land Rover Discovery ceramic coating Sparks NV — Don of Detail mobile detailing', title: 'Land Rover Discovery', service: 'Ceramic Coating' },
+              { img: '/porsche-911-foam-wash-detailing-reno.webp', alt: 'Classic Porsche 911 full interior and exterior detail by Don of Detail mobile detailing Sparks NV', title: 'Classic Porsche 911', service: 'Interior & Exterior Detail' },
+              { img: '/classic-truck-car-show-reno.webp', alt: 'Custom classic truck paint correction Sparks NV by Don of Detail mobile detailing', title: 'Custom Classic Truck', service: 'Paint Correction' },
+              { img: '/range-rover-headlight-restoration.webp', alt: 'Range Rover headlight restoration Sparks NV by Don of Detail mobile detailing', title: 'Range Rover', service: 'Headlight Restoration' },
+              { img: '/land-rover-ceramic-coating.webp', alt: 'Land Rover Discovery ceramic coating Sparks NV by Don of Detail mobile detailing', title: 'Land Rover Discovery', service: 'Ceramic Coating' },
             ].map((item, i) => (
               <div key={i} className="group relative aspect-square overflow-hidden cursor-pointer bg-don-bark">
                 <img src={item.img} alt={item.alt} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 saturate-[0.8] contrast-110" loading={i === 0 ? 'eager' : 'lazy'} fetchPriority={i === 0 ? 'high' : 'auto'} width={800} height={800} />
@@ -206,6 +229,32 @@ export default function SparksDetailing() {
                 </span>
               </Link>
             ))}
+          </div>
+        </section>
+
+        {/* Section - Local (Sparks-specific) */}
+        <section className="bg-don-oat text-don-ink py-32 lg:py-48 px-6 lg:px-12 border-t border-don-clay/10">
+          <div className="max-w-[1400px] mx-auto grid lg:grid-cols-2 gap-16 lg:gap-32 items-start">
+            <div>
+              <p className="text-[10px] font-bold uppercase tracking-[0.3em] text-don-clay mb-8">Sparks, NV</p>
+              <h2 className="text-[10vw] md:text-7xl font-display uppercase tracking-[-2px] leading-tight">
+                Built around how Sparks drives.
+              </h2>
+            </div>
+            <div className="space-y-8 font-light text-don-ink/70 leading-relaxed text-lg">
+              <p>
+                Sparks is not one kind of vehicle. It is the daily commuter grinding up Pyramid Highway, the work truck running the warehouses off Greg Street and USA Parkway, the boat that lives half the summer at Sparks Marina, and the weekend car tucked in a garage out in Wingfield Springs. Each one wears the high desert differently, and each one gets its own plan.
+              </p>
+              <p>
+                We are fully mobile, so the work happens where the vehicle already sits. Driveways in Spanish Springs and Kiley Ranch, office lots near Victorian Square, storage yards along Sparks Boulevard. We carry our own power and spot-free deionized water and leave the spot empty when we are done.
+              </p>
+              <p>
+                The valley floor takes a beating most of the year. Open-air sun in summer, sanding brine on the freeway in winter, alkaline dust the rest of the time. Left alone it flattens paint, chalks gelcoat, and bakes interiors. Our work is about staying ahead of that, not chasing it after the damage is done.
+              </p>
+              <p className="text-don-ink">
+                One operator, start to finish. The same hands on every vehicle. That is the standard.
+              </p>
+            </div>
           </div>
         </section>
 
@@ -276,7 +325,7 @@ export default function SparksDetailing() {
               The standard isn't optional.
             </h2>
             <p className="text-lg md:text-xl font-light text-don-ink/70 leading-relaxed max-w-2xl mx-auto">
-              We bring the equipment, the chemicals, and the discipline directly to your driveway. Paint correction, ceramic coating, and full auto detailing in Sparks, NV. No filler products. No shortcuts. The work shows.
+              We bring the equipment, the chemicals, and the discipline to your driveway anywhere in Sparks. Paint correction, ceramic coating, boats, RVs, and full interior work. No filler glazes that wash off next month. No rushing the cure. You see exactly what you paid for.
             </p>
           </div>
         </section>

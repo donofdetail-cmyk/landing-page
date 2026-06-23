@@ -19,6 +19,8 @@ export const Header = ({ hideQuote = false }: { hideQuote?: boolean }) => {
         <nav aria-label="Primary" className="flex items-center gap-8 lg:gap-12">
           <Link to="/about" className="hidden md:block text-xs uppercase tracking-[0.2em] text-don-clay hover:text-don-ink transition-colors font-semibold">About</Link>
           <a href="/#work" className="hidden md:block text-xs uppercase tracking-[0.2em] text-don-clay hover:text-don-ink transition-colors font-semibold">Work</a>
+          <Link to="/blog" className="hidden md:block text-xs uppercase tracking-[0.2em] text-don-clay hover:text-don-ink transition-colors font-semibold">Journal</Link>
+          <Link to="/contact" className="hidden md:block text-xs uppercase tracking-[0.2em] text-don-clay hover:text-don-ink transition-colors font-semibold">Contact</Link>
 
           {/* Services Dropdown */}
           <div className="relative group hidden md:block">

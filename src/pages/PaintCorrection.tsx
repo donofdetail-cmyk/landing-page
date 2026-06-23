@@ -2,6 +2,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ServiceLayout } from '../components/ServiceLayout';
+import { BreadcrumbSchema } from '../components/BreadcrumbSchema';
 import { useBooking } from '../context/BookingContext';
 import { ChevronDown } from 'lucide-react';
 
@@ -31,8 +32,8 @@ export default function PaintCorrection() {
   return (
     <ServiceLayout>
       <Helmet>
-        <title>Expert Paint Correction & Swirl Removal in Reno, NV</title>
-        <meta name="description" content="Restore your vehicle's factory finish. Professional multi-stage paint correction in Reno, NV to permanently remove swirl marks, scratches, and oxidation." />
+        <title>Paint Correction Reno NV | Swirl Mark & Scratch Removal | Don of Detail</title>
+        <meta name="description" content="Multi-stage machine paint correction in Reno, NV. We permanently remove swirl marks, holograms, and oxidation from your clear coat. Mobile service. We come to your garage." />
         <link rel="canonical" href="https://donofdetail.com/paint-correction-reno-nv" />
         <meta property="og:type" content="website" />
         <meta property="og:title" content="Expert Paint Correction & Swirl Removal in Reno, NV | Don of Detail" />
@@ -56,11 +57,9 @@ export default function PaintCorrection() {
             "areaServed": [
               {"@type": "City", "name": "Reno"},
               {"@type": "City", "name": "Sparks"},
-              {"@type": "City", "name": "Washoe Valley"},
-              {"@type": "Neighborhood", "name": "Montreux"},
-              {"@type": "Neighborhood", "name": "Somersett"},
-              {"@type": "Neighborhood", "name": "ArrowCreek"},
-              {"@type": "Neighborhood", "name": "Caughlin Ranch"}
+              {"@type": "Place", "name": "Spanish Springs"},
+              {"@type": "Place", "name": "Verdi"},
+              {"@type": "Place", "name": "Sun Valley"}
             ],
             "description": "Multi-stage machine polishing to permanently remove swirl marks, holograms, and oxidation from clear coats."
           }`}
@@ -83,6 +82,7 @@ export default function PaintCorrection() {
           }`}
         </script>
       </Helmet>
+      <BreadcrumbSchema items={[{ name: 'Paint Correction Reno NV', url: 'https://donofdetail.com/paint-correction-reno-nv' }]} />
 
       {/* Hero Section */}
       <section className="bg-don-oat px-6 lg:px-12 py-12 md:py-20">
@@ -124,7 +124,7 @@ export default function PaintCorrection() {
           </div>
           <div className="space-y-8 font-light text-don-clay leading-relaxed text-lg">
             <p>
-              The environment across Northern Nevada degrades clear coats rapidly. Abrasive dust carried by the wind, hard water spots from local sprinklers, and improper washing techniques quickly dull the surface into a spiderwebbed haze. Automated "tunnel" car washes in Reno are notorious for utilizing harsh brushes that inflict millions of micro-scratches into your vehicle's finish in a matter of seconds.
+              The environment across the Reno-Sparks area degrades clear coats rapidly. Abrasive dust carried by the wind, hard water spots from local sprinklers, and improper washing techniques quickly dull the surface into a spiderwebbed haze. Automated "tunnel" car washes in Reno are notorious for utilizing harsh brushes that inflict millions of micro-scratches into your vehicle's finish in a matter of seconds.
             </p>
             <p>
               We specialize in reversing this damage. True paint correction is not an "add-on" service. It is a specialized craft. It requires an acute understanding of clear coat density, heat management, and the specific abrasive chemistry required for different vehicle manufacturers. European clear coats (like Porsche or BMW) react entirely differently to a polishing pad than softer Japanese paints (like Honda or Subaru).
@@ -133,7 +133,7 @@ export default function PaintCorrection() {
               Our process relies on precision. We utilize rotary buffers, forced-rotation, and long-throw dual-action polishers combined with professional-grade cutting compounds and finishing polishes. By measuring the clear coat thickness with an electronic gauge, we ensure that we only remove the absolute minimum amount of material required to level the defect.
             </p>
             <p>
-              Our fully equipped mobile studio serves clients in Caughlin Ranch, Montrêux, Somersett, and Washoe Valley. We deliver multi-stage paint correction directly in your garage, eliminating the inconvenience of dropping your vehicle off at a shop for multiple days.
+              Our fully equipped mobile studio serves clients in Spanish Springs, Verdi, Sun Valley, and surrounding areas. We deliver multi-stage paint correction directly in your garage, eliminating the inconvenience of dropping your vehicle off at a shop for multiple days.
             </p>
             <p className="text-don-oat">
               Don't hide the damage under a temporary wax. Erase it permanently.

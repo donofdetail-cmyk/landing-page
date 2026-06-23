@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { ServiceLayout } from '../components/ServiceLayout';
+import { BreadcrumbSchema } from '../components/BreadcrumbSchema';
 import { Link } from 'react-router-dom';
 
 type BlogPost = {
@@ -52,6 +53,22 @@ const BLOG_POSTS: BlogPost[] = [
     description: 'Applying wax over scratched paint is a temporary illusion. Discover why professional paint correction is the only permanent solution for a flawless clear coat.',
     date: 'June 22, 2026',
     readTime: '5 min read'
+  },
+  {
+    slug: 'how-much-does-car-detailing-cost-reno',
+    category: 'Education',
+    title: 'How Much Does Car Detailing Cost in Reno, NV?',
+    description: 'Honest breakdown of auto detailing prices in Reno. Interior, exterior, full details, paint correction, and ceramic coating costs. No surprises.',
+    date: 'June 22, 2026',
+    readTime: '5 min read'
+  },
+  {
+    slug: 'headlight-restoration-reno-nv',
+    category: 'Education',
+    title: 'Headlight Restoration in Reno, NV',
+    description: "Yellowed headlights sharply cut your nighttime visibility. Learn why Reno's UV causes it and how professional restoration fixes it permanently.",
+    date: 'June 22, 2026',
+    readTime: '4 min read'
   }
 ];
 
@@ -66,18 +83,19 @@ export default function BlogHub() {
 
   return (
     <ServiceLayout>
+      <BreadcrumbSchema items={[{ name: 'Blog', url: 'https://donofdetail.com/blog' }]} />
       <Helmet>
         <title>Detailing & Protection Blog | Don of Detail</title>
-        <meta name="description" content="Reno auto detailing blog by Don of Detail. Expert tips on ceramic coatings, paint correction, and vehicle maintenance for Northern Nevada's climate." />
+        <meta name="description" content="Reno auto detailing blog by Don of Detail. Expert tips on ceramic coatings, paint correction, and vehicle maintenance for the Reno & Sparks climate." />
         <link rel="canonical" href="https://donofdetail.com/blog" />
         <meta property="og:type" content="website" />
         <meta property="og:title" content="Detailing &amp; Protection Blog | Don of Detail" />
-        <meta property="og:description" content="Reno auto detailing blog by Don of Detail. Expert tips on ceramic coatings, paint correction, and vehicle maintenance for Northern Nevada's climate." />
+        <meta property="og:description" content="Reno auto detailing blog by Don of Detail. Expert tips on ceramic coatings, paint correction, and vehicle maintenance for the Reno & Sparks climate." />
         <meta property="og:url" content="https://donofdetail.com/blog" />
         <meta property="og:image" content="https://donofdetail.com/og-image-v2.png" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Detailing &amp; Protection Blog | Don of Detail" />
-        <meta name="twitter:description" content="Reno auto detailing blog by Don of Detail. Expert tips on ceramic coatings, paint correction, and vehicle maintenance for Northern Nevada's climate." />
+        <meta name="twitter:description" content="Reno auto detailing blog by Don of Detail. Expert tips on ceramic coatings, paint correction, and vehicle maintenance for the Reno & Sparks climate." />
       </Helmet>
 
       {/* Hero Section */}

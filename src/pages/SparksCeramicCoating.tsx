@@ -2,6 +2,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ServiceLayout } from '../components/ServiceLayout';
+import { BreadcrumbSchema } from '../components/BreadcrumbSchema';
 import { useBooking } from '../context/BookingContext';
 import { ChevronDown } from 'lucide-react';
 
@@ -11,28 +12,28 @@ export default function SparksCeramicCoating() {
 
   const faqs = [
     {
-      q: 'Is ceramic coating necessary in Northern Nevada?',
-      a: 'Yes. The high-altitude sun breaks down unprotected clear coat. A professional coating acts as a sacrificial barrier, preventing oxidation and repelling desert dust.'
+      q: 'Do you install ceramic coatings in Sparks and Spanish Springs?',
+      a: 'Yes. We are fully mobile and run the entire job on site at homes, offices, and storage units across Sparks, Spanish Springs, Sun Valley, and the surrounding area. You do not drive anywhere.'
     },
     {
-      q: 'How does this compare to wax?',
-      a: 'Wax melts in the summer heat. Ceramic coatings bond at a molecular level, creating a hardened glass-like surface that lasts for years.'
+      q: 'My truck lives outside near the Marina. Is a coating worth it?',
+      a: 'That is exactly the vehicle a coating is built for. Constant sun and open-air parking flatten unprotected clear coat fast. A coating takes the UV and hard water hits for years and makes the weekly wash far easier.'
     },
     {
-      q: 'Will this prevent scratches?',
-      a: 'It resists fine wash marring and swirl marks. It will not stop rock chips or deep physical damage. For impact protection, we recommend Paint Protection Film.'
+      q: 'How long does the vehicle need to stay put after coating?',
+      a: 'Plan on the vehicle staying sheltered for about 24 hours while the coating cures. We schedule around your driveway or garage so the cure is never interrupted.'
     },
     {
-      q: 'Do you apply the coating at my home in Sparks?',
-      a: 'Yes. We operate a fully equipped mobile unit. We control the environment and apply the coating directly in your driveway or garage in Sparks or Spanish Springs.'
+      q: 'Does the paint need correction before coating?',
+      a: 'Almost always. A coating locks in whatever is underneath it, so we machine polish out swirls and oxidation before sealing. We quote the correction and the coating together after seeing the paint.'
     }
   ];
 
   return (
     <ServiceLayout>
       <Helmet>
-        <title>Professional Ceramic Coating Sparks NV | Mobile Service</title>
-        <meta name="description" content="Protect your vehicle with professional-grade ceramic coatings in Sparks, NV. Long-lasting UV protection and hydrophobic gloss applied at your home or office." />
+        <title>Ceramic Coating Sparks NV | Mobile Installation | Spanish Springs & Wingfield Springs</title>
+        <meta name="description" content="Professional ceramic coating in Sparks, NV. We apply SiO2 coatings at your home, office, or storage in Spanish Springs, Wingfield Springs & D'Andrea. UV protection that lasts years, not weeks." />
         <link rel="canonical" href="https://donofdetail.com/ceramic-coating-sparks-nv" />
         <meta property="og:type" content="website" />
         <meta property="og:title" content="Professional Ceramic Coating Sparks NV | Don of Detail" />
@@ -57,8 +58,7 @@ export default function SparksCeramicCoating() {
               {"@type": "City", "name": "Sparks"},
               {"@type": "City", "name": "Reno"},
               {"@type": "Place", "name": "Spanish Springs"},
-              {"@type": "Place", "name": "Wingfield Springs"},
-              {"@type": "Place", "name": "D'Andrea"}
+              {"@type": "Place", "name": "Sun Valley"}
             ],
             "description": "Professional ceramic coating installation providing UV protection and hydrophobic properties. Delivered via mobile unit to Sparks, NV and surrounding areas."
           }`}
@@ -81,6 +81,7 @@ export default function SparksCeramicCoating() {
           }`}
         </script>
       </Helmet>
+      <BreadcrumbSchema items={[{ name: 'Ceramic Coating Sparks NV', url: 'https://donofdetail.com/ceramic-coating-sparks-nv' }]} />
 
       {/* Hero Section */}
       <section className="bg-don-oat px-6 lg:px-12 py-12 md:py-20">
@@ -90,7 +91,7 @@ export default function SparksCeramicCoating() {
             Ceramic<br/>Coating.
           </h1>
           <p className="text-lg md:text-xl text-don-ink/70 font-light leading-relaxed max-w-2xl mb-12">
-            The Nevada sun breaks down unprotected paint. We apply professional-grade ceramic coatings at your location in Sparks, creating a hardened barrier against UV degradation, hard water, and oxidation. Protection that lasts years, not weeks.
+            Sparks vehicles bake in open driveways from Wingfield Springs to the Marina, then take winter brine on the Pyramid Highway commute. We install professional-grade ceramic coatings at your home or storage unit, locking in a hardened barrier against UV, hard water, and oxidation. Years of protection, not weeks.
           </p>
           <button onClick={openBooking} className="inline-block bg-don-red text-don-oat text-sm font-bold uppercase tracking-[0.2em] px-10 py-4 rounded hover:bg-don-ink transition-colors">
             Request a Quote
@@ -105,7 +106,7 @@ export default function SparksCeramicCoating() {
           <div className="bg-don-bark/50 p-8 lg:p-12 rounded border border-don-clay/5">
             <h2 className="text-2xl font-display uppercase tracking-[-1px] mb-4 text-don-oat">What is Ceramic Coating?</h2>
             <p className="text-don-clay font-light leading-relaxed text-lg max-w-4xl">
-              A professional ceramic coating is a liquid polymer (primarily composed of Silica or SiO2) that chemically bonds to a vehicle's factory clear coat. Once cured, it creates a hardened, glass-like, hydrophobic layer of protection that lasts between 2 to 5 years. This sacrificial barrier permanently resists UV ray degradation, prevents chemical etching from bird droppings, and repels water, making the vehicle significantly easier to clean and maintain in the high-desert climate of Sparks.
+              Ceramic coating is a silica-based (SiO2) liquid polymer that bonds to your factory clear coat and cures into a hard, glass-like shell. That shell is hydrophobic and sacrificial: it takes the UV, the alkaline desert dust, and the chemical hits instead of your paint, and it holds for roughly 2 to 5 years. For a Sparks vehicle that lives outside, it is the difference between paint that still looks new in five years and paint that has already gone flat and chalky.
             </p>
           </div>
         </div>
@@ -117,24 +118,24 @@ export default function SparksCeramicCoating() {
           <div>
             <h2 className="sr-only">Why Sparks Demands Professional Ceramic Coating</h2>
             <p aria-hidden="true" className="text-[10vw] md:text-7xl font-display uppercase tracking-[-2px] leading-tight">
-              Engineered for the high desert.
+              Built for how Sparks drives.
             </p>
           </div>
           <div className="space-y-8 font-light text-don-clay leading-relaxed text-lg">
             <p>
-              The environment in Northern Nevada is hostile to automotive finishes. From the high-altitude UV radiation that accelerates oxidation to the corrosive de-icing chemicals used during local winters, your vehicle's factory clear coat is constantly under attack. Traditional carnauba waxes and synthetic sealants degrade within weeks under these conditions.
+              Sparks sits on the valley floor at roughly 4,400 feet, and the punishment on paint here is relentless. Summer sun cooks unprotected clear coat in open driveways across Spanish Springs and Wingfield Springs. Winter brings sanding brine and de-icer on Pyramid Highway and I-80. The rest of the year, fine alkaline dust blows off the high desert and settles into the finish. Wax gives up in weeks against all of it.
             </p>
             <p>
-              We bring a controlled, studio-level ceramic application process directly to your home in Sparks. Utilizing professional-grade SiO2 compounds, we establish a permanent molecular bond with your vehicle's paint. This isn't a spray-on product bought at a retail store; this is a commercial-grade polymer that requires strict ambient temperature control, precise leveling, and dedicated infrared curing time.
+              We bring the full studio process to your driveway, garage, or storage unit. Professional SiO2 coatings are not a retail spray. They demand controlled temperature, careful panel-by-panel leveling, and real cure time, which is exactly why we apply them on site instead of rushing cars through a shop.
             </p>
             <p>
-              Before any coating touches the paint, the surface must be absolutely flawless. We perform comprehensive iron decontamination to pull embedded ferrous metals from the clear coat, followed by a multi-stage machine polish. If a coating is applied over swirl marks or oxidation, those defects are locked under a layer of glass for years. Our obsessive preparation ensures maximum gloss and bonding integrity.
+              The prep is where a coating is won or lost. We pull embedded iron and industrial fallout out of the clear coat, then machine polish the paint flat. Vehicles that live near the Greg Street corridor or commute out to the industrial parks along USA Parkway pick up heavy brake and rail dust, and that has to come out before anything gets sealed. Coat over swirls or oxidation and you lock those defects in for years.
             </p>
             <p>
-              We serve clients across Sparks, frequently dispatching our mobile unit to private residences in Spanish Springs, Wingfield Springs, and D'Andrea. We supply our own spot-free deionized water, meaning no hard-water calcium deposits are introduced during the prep wash.
+              We coat daily drivers, weekend trucks, and boats kept near Sparks Marina, dispatching across Spanish Springs, Sun Valley, Kiley Ranch, and D'Andrea. The coating is one piece of our full <Link to="/mobile-detailing-sparks-nv" className="text-don-oat underline decoration-don-clay/40 underline-offset-4 hover:decoration-don-oat transition-colors">mobile detailing service in Sparks</Link>, and we carry our own spot-free deionized water so no hard-water minerals get introduced during the prep wash.
             </p>
             <p className="text-don-oat">
-              We do not wash cars. We preserve automotive investments against the specific elements of the Sierra Nevada region.
+              We do not wash cars. We protect what you parked in the driveway against everything Sparks throws at it.
             </p>
           </div>
         </div>
@@ -147,10 +148,10 @@ export default function SparksCeramicCoating() {
           
           <div className="grid md:grid-cols-2 gap-16 lg:gap-32">
             {[
-              { num: '01', title: 'Decontamination', desc: 'We strip the clear coat of embedded iron and fallout to ensure a flawless bond.' },
-              { num: '02', title: 'Correction', desc: 'We machine polish the paint to remove swirl marks and oxidation, restoring the surface to a mirror finish.' },
-              { num: '03', title: 'Sterilization', desc: 'We wipe down every panel with isopropyl alcohol prep spray. The surface must be completely sterile.' },
-              { num: '04', title: 'Application', desc: 'The coating is applied panel by panel, allowed to flash, and carefully leveled. This requires strict focus and proper lighting.' }
+              { num: '01', title: 'Decontamination', desc: 'We strip iron, rail dust, and industrial fallout out of the clear coat so nothing gets trapped under the coating.' },
+              { num: '02', title: 'Correction', desc: 'We machine polish the paint flat, cutting swirls and oxidation until the finish reflects clean.' },
+              { num: '03', title: 'Sterilization', desc: 'Every panel gets wiped down with a prep solvent. The surface has to be chemically bare before anything bonds.' },
+              { num: '04', title: 'Application', desc: 'We lay the coating panel by panel, let it flash, and level it by hand under proper lighting. No rushing the cure.' }
             ].map((step, i) => (
               <div key={i} className="flex flex-col gap-6">
                 <div className="flex items-baseline gap-4 mb-2">
