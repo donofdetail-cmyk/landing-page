@@ -2,6 +2,9 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ServiceLayout } from '../components/ServiceLayout';
+import { ServiceCTA } from '../components/ServiceCTA';
+import { TrustBar } from '../components/TrustBar';
+import { ServiceReviews } from '../components/ServiceReviews';
 import { BreadcrumbSchema } from '../components/BreadcrumbSchema';
 import { useBooking } from '../context/BookingContext';
 import { ChevronDown } from 'lucide-react';
@@ -26,14 +29,26 @@ export default function RVDetailing() {
     {
       q: 'Do you clean the roof?',
       a: 'Roof cleaning is a mandatory part of the process. We remove built-up dirt and mildew to prevent streaks from running down the sides of the coach.'
+    },
+    {
+      q: 'Do you offer mobile RV detailing in Reno and Sparks?',
+      a: 'Yes. We come to your home, RV storage lot, or wherever the rig is parked across Reno, Sparks, Spanish Springs, and the surrounding area. Our unit is fully self-contained with its own power and deionized water, so size and location are not a problem.'
+    },
+    {
+      q: 'Do you detail fifth wheels and travel trailers too?',
+      a: 'Yes. We service motorhomes, fifth wheels, travel trailers, and toy haulers. Oversized Class A coaches take longer, so we quote by length and condition after a few photos.'
+    },
+    {
+      q: 'Can you ceramic coat an RV after oxidation removal?',
+      a: 'Yes. Once we compound away the chalky, oxidized layer and restore the gelcoat, we seal it with a UV-resistant ceramic coating so it holds its gloss far longer in the high-desert sun.'
     }
   ];
 
   return (
     <ServiceLayout>
       <Helmet>
-        <title>Mobile RV Detailing Reno NV | Oxidation Removal & Gelcoat Restoration</title>
-        <meta name="description" content="Professional mobile RV and motorhome detailing in Reno, NV. Heavy oxidation removal, multi-stage gelcoat restoration, roof treatment, and ceramic coating. We come to your storage or driveway." />
+        <title>Mobile RV Detailing Reno NV | Gelcoat Restoration</title>
+        <meta name="description" content="Mobile RV and motorhome detailing in Reno, NV. Heavy oxidation removal, gelcoat restoration, roof treatment, and ceramic coating. We come to your storage." />
         <link rel="canonical" href="https://donofdetail.com/rv-detailing-reno-nv" />
         <meta property="og:type" content="website" />
         <meta property="og:title" content="Mobile RV Detailing & Wash Services in Reno, NV | Don of Detail" />
@@ -67,20 +82,15 @@ export default function RVDetailing() {
         </script>
 
         <script type="application/ld+json">
-          {`{
+          {JSON.stringify({
             "@context": "https://schema.org",
             "@type": "FAQPage",
-            "mainEntity": [
-              ${faqs.map(faq => `{
-                "@type": "Question",
-                "name": "${faq.q}",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "${faq.a}"
-                }
-              }`).join(',')}
-            ]
-          }`}
+            mainEntity: faqs.map((faq) => ({
+              "@type": "Question",
+              name: faq.q,
+              acceptedAnswer: { "@type": "Answer", text: faq.a },
+            })),
+          })}
         </script>
       </Helmet>
 
@@ -88,10 +98,10 @@ export default function RVDetailing() {
       {/* Hero Section */}
       <section className="bg-don-oat px-6 lg:px-12 py-12 md:py-20">
         <div className="max-w-[1400px] mx-auto">
-          <p className="text-[10px] md:text-xs font-bold uppercase tracking-[0.3em] text-don-clay mb-8">Gelcoat Restoration</p>
-          <h1 className="text-[11.5vw] sm:text-7xl md:text-[8rem] lg:text-[9rem] font-display font-normal leading-[0.85] tracking-[-3px] md:tracking-[-5px] text-don-ink mb-12 uppercase">
+          <h1 className="!font-sans text-xs !font-black uppercase !tracking-[0.2em] leading-normal text-don-ink mb-8 md:mb-12">Mobile RV Detailing in Reno & Sparks, NV</h1>
+          <p aria-hidden="true" className="text-[clamp(2rem,11vw,9rem)] font-display font-normal leading-[0.85] tracking-[-3px] md:tracking-[-5px] text-don-ink mb-12 uppercase">
             RV<br/>Detailing.
-          </h1>
+          </p>
           <p className="text-lg md:text-xl text-don-ink/70 font-light leading-relaxed max-w-2xl mb-12">
             Heavy oxidation removal, multi-stage compounding, and long-term protection for motorhomes, fifth wheels, and travel trailers.
           </p>
@@ -100,6 +110,8 @@ export default function RVDetailing() {
           </button>
         </div>
       </section>
+
+      <TrustBar />
 
       {/* AI Summary Block (AEO Optimization) */}
       <section className="bg-don-ink text-don-oat px-6 lg:px-12 py-16 border-b border-don-clay/20">
@@ -148,17 +160,17 @@ export default function RVDetailing() {
         <div className="max-w-[1400px] mx-auto">
           <p className="text-[10px] font-bold uppercase tracking-[0.3em] text-don-clay mb-16 md:mb-24">The Methodology</p>
           
-          <div className="grid md:grid-cols-2 gap-16 lg:gap-32">
+          <div className="grid lg:grid-cols-2 gap-16 lg:gap-32">
             {[
               { num: '01', title: 'Roof Preparation', desc: 'We scrub the roof to remove dirt and mold, preventing streaks from ruining the detail below. Awnings are carefully unrolled and cleaned.' },
               { num: '02', title: 'Decontamination', desc: 'The entire exterior is foamed and hand washed using spot-free water to remove bug splatter and environmental fallout.' },
               { num: '03', title: 'Compounding', desc: 'Using rotary polishers and heavy-cut marine compounds, we work through the chalky, dead gelcoat layer to reveal the healthy fiberglass beneath.' },
               { num: '04', title: 'Protection', desc: 'The compounded surface is refined to maximize gloss, then sealed with UV inhibitors to ensure the oxidation does not return.' }
             ].map((step, i) => (
-              <div key={i} className="flex flex-col gap-6">
-                <div className="flex items-baseline gap-4 mb-2">
+              <div key={i} className="min-w-0 flex flex-col gap-6">
+                <div className="flex items-baseline gap-4 mb-2 min-w-0">
                   <span className="text-2xl font-display text-don-clay">{step.num}</span>
-                  <h3 className="text-3xl font-display uppercase tracking-[-1px] text-don-ink">{step.title}</h3>
+                  <h3 className="text-2xl sm:text-3xl font-display uppercase tracking-[-1px] text-don-ink break-words min-w-0">{step.title}</h3>
                 </div>
                 <p className="text-don-ink/70 font-light leading-relaxed">{step.desc}</p>
               </div>
@@ -167,10 +179,12 @@ export default function RVDetailing() {
         </div>
       </section>
 
+      <ServiceReviews />
+
       {/* Raw FAQ Section */}
       <section className="bg-don-ink text-don-oat py-32 lg:py-48 px-6 lg:px-12">
         <div className="max-w-3xl mx-auto">
-          <h2 className="text-[10vw] md:text-7xl font-display uppercase tracking-[-2px] mb-16">Clarification.</h2>
+          <h2 className="text-[9vw] md:text-7xl font-display uppercase tracking-[-2px] mb-16">Frequently Asked Questions</h2>
 
           <div className="divide-y divide-don-bark border-t border-don-bark">
             {faqs.map((faq, i) => (
@@ -191,6 +205,8 @@ export default function RVDetailing() {
           </div>
         </div>
       </section>
+
+      <ServiceCTA headline="Revive your rig." />
 
       {/* Related Reading */}
       <section className="bg-don-oat py-24 px-6 lg:px-12 border-t border-don-clay/20">

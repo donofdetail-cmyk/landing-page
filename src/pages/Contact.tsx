@@ -17,7 +17,7 @@ export default function Contact() {
     <ServiceLayout>
       <Helmet>
         <title>Contact Don of Detail | Mobile Detailing Reno &amp; Sparks, NV</title>
-        <meta name="description" content="Get a quote from Don of Detail. Call or text (775) 230-7035, or request a quote online. Mobile auto detailing, ceramic coating, and paint correction across Reno, Sparks & surrounding NV. We come to you." />
+        <meta name="description" content="Get a quote from Don of Detail. Call or text (775) 230-7035 for mobile detailing, ceramic coating, and paint correction across Reno & Sparks, NV." />
         <link rel="canonical" href="https://donofdetail.com/contact" />
         <meta property="og:type" content="website" />
         <meta property="og:title" content="Contact Don of Detail | Reno & Sparks, NV" />
@@ -95,7 +95,7 @@ export default function Contact() {
       <section className="bg-don-oat px-6 lg:px-12 py-12 md:py-20">
         <div className="max-w-[1400px] mx-auto">
           <p className="text-[10px] md:text-xs font-bold uppercase tracking-[0.3em] text-don-clay mb-8">Contact</p>
-          <h1 className="text-[11.5vw] sm:text-7xl md:text-[8rem] lg:text-[9rem] font-display font-normal leading-[0.85] tracking-[-3px] md:tracking-[-5px] text-don-ink mb-12 uppercase">
+          <h1 className="text-[clamp(2rem,11vw,9rem)] font-display font-normal leading-[0.85] tracking-[-3px] md:tracking-[-5px] text-don-ink mb-12 uppercase">
             Get In<br/>Touch.
           </h1>
           <p className="text-lg md:text-xl text-don-ink/70 font-light leading-relaxed max-w-2xl mb-12">

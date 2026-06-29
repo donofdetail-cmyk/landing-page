@@ -11,7 +11,6 @@ export default function Packages() {
         <title>Detailing Packages | Don of Detail</title>
         <meta name="description" content="Explore our exclusive auto detailing packages." />
         <meta name="robots" content="noindex, nofollow" />
-        <link rel="canonical" href="https://donofdetail.com/packages" />
       </Helmet>
 
       <Header hideQuote />
@@ -24,7 +23,7 @@ export default function Packages() {
             <p className="text-xs font-bold uppercase tracking-[0.2em] text-don-red mb-8 md:mb-12">
               Client Packages
             </p>
-            <h1 className="text-[10vw] sm:text-7xl md:text-[8rem] lg:text-[9rem] font-display font-normal leading-[0.85] tracking-[-3px] md:tracking-[-4px] text-don-ink mb-8 uppercase max-w-full break-words">
+            <h1 className="text-[clamp(2rem,10vw,9rem)] font-display font-normal leading-[0.85] tracking-[-3px] md:tracking-[-4px] text-don-ink mb-8 uppercase max-w-full break-words">
               Direct Pricing.
             </h1>
             <p className="text-lg md:text-xl font-light text-don-ink/70 leading-relaxed max-w-2xl">

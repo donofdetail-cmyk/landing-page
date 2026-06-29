@@ -37,6 +37,17 @@
        duplicate tags in the prerendered output. -->
   <meta name="author" content="Don of Detail" />
 
+  <!-- Constant Open Graph / Twitter tags (same on every route). Per-page og:title,
+       og:description, og:url, og:image and twitter:* are injected by React Helmet.
+       These are NOT managed by Helmet, so they live here once and apply site-wide.
+       prerender.mjs is configured to leave these untouched during head dedup. -->
+  <meta property="og:site_name" content="Don of Detail" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Don of Detail mobile auto detailing and ceramic coating, Reno NV" />
+  <meta name="twitter:image" content="https://donofdetail.com/og-image-v2.png" />
+
   <!-- JSON-LD Structured Data: LocalBusiness -->
   <script type="application/ld+json">
     {
@@ -94,6 +105,51 @@
         {"@type": "Place", "name": "Lemmon Valley"},
         {"@type": "Place", "name": "Washoe Valley"},
         {"@type": "Place", "name": "Steamboat"}
+      ],
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "5.0",
+        "reviewCount": "87",
+        "bestRating": "5",
+        "worstRating": "1"
+      },
+      "review": [
+        {
+          "@type": "Review",
+          "author": {"@type": "Person", "name": "Andrew R."},
+          "reviewRating": {"@type": "Rating", "ratingValue": "5", "bestRating": "5"},
+          "reviewBody": "Logan knocked it out of the park with the detail and ceramic job on my triple black metallic F350. Looks better today than the day I brought it home from the dealer! I highly recommend Don of Detail's services for your vehicles."
+        },
+        {
+          "@type": "Review",
+          "author": {"@type": "Person", "name": "Thomas Mesloh"},
+          "reviewRating": {"@type": "Rating", "ratingValue": "5", "bestRating": "5"},
+          "reviewBody": "Logan is very professional and knowledgeable. He does things right and is very particular with making things look the very best. He knows the particulars and proper material maintenance that come with a professional detail, not just a standard cleaning."
+        },
+        {
+          "@type": "Review",
+          "author": {"@type": "Person", "name": "Clay Eagleton"},
+          "reviewRating": {"@type": "Rating", "ratingValue": "5", "bestRating": "5"},
+          "reviewBody": "Truly a 5-star experience. My 5th wheel was in pretty bad shape, and Logan made it shine like new. The communication was great, the attention to detail was great, and the care for his work and my property was great. They should be your first call!"
+        },
+        {
+          "@type": "Review",
+          "author": {"@type": "Person", "name": "Ariana D."},
+          "reviewRating": {"@type": "Rating", "ratingValue": "5", "bestRating": "5"},
+          "reviewBody": "I had an amazing experience with Logan at Don of Detail. They did an outstanding job on my car and went above and beyond with their attention to detail. The interior looks spotless, and my car honestly looks better than when I first got it."
+        },
+        {
+          "@type": "Review",
+          "author": {"@type": "Person", "name": "Dennis Beeghly"},
+          "reviewRating": {"@type": "Rating", "ratingValue": "5", "bestRating": "5"},
+          "reviewBody": "Logan and his wife are true professionals in detailing in every sense of the word! They are punctual, thorough, and do an incredibly beautiful job. Our Toyota Venza never looked so beautiful. We also had him do a ceramic coat finish. We would highly recommend them!"
+        },
+        {
+          "@type": "Review",
+          "author": {"@type": "Person", "name": "Charles Walker"},
+          "reviewRating": {"@type": "Rating", "ratingValue": "5", "bestRating": "5"},
+          "reviewBody": "I had these guys do a deep cleaning and detail of a truck I bought that had been smoked in for many years. They did an excellent job and got into every nook and cranny. I highly recommend them."
+        }
       ],
       "hasOfferCatalog": {
         "@type": "OfferCatalog",

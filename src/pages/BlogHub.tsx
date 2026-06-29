@@ -102,7 +102,7 @@ export default function BlogHub() {
       <section className="bg-don-oat px-6 lg:px-12 py-12 md:py-20">
         <div className="max-w-[1400px] mx-auto">
           <p className="text-[10px] md:text-xs font-bold uppercase tracking-[0.3em] text-don-clay mb-8">Editorial</p>
-          <h1 className="text-[11.5vw] sm:text-7xl md:text-[8rem] lg:text-[9rem] font-display font-normal leading-[0.85] tracking-[-3px] md:tracking-[-5px] text-don-ink mb-12 uppercase">
+          <h1 className="text-[clamp(2rem,11vw,9rem)] font-display font-normal leading-[0.85] tracking-[-3px] md:tracking-[-5px] text-don-ink mb-12 uppercase">
             The<br/>Journal.
           </h1>
           <p className="text-lg md:text-xl text-don-ink/70 font-light leading-relaxed max-w-2xl">

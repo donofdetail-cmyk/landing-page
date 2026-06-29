@@ -1,22 +1,23 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { ServiceLayout } from '../components/ServiceLayout';
+import { ServiceCTA } from '../components/ServiceCTA';
 
 export default function About() {
   return (
     <ServiceLayout>
       <Helmet>
         <title>About Don of Detail | Mobile Detailing Experts in Reno, NV</title>
-        <meta name="description" content="Learn about Logan and Don of Detail, Reno's premier mobile auto detailing service. We bring studio-level paint correction and ceramic coating directly to your driveway." />
+        <meta name="description" content="Meet Logan and Don of Detail, Reno's premier mobile detailing service bringing studio-level paint correction and ceramic coating to your driveway." />
         <link rel="canonical" href="https://donofdetail.com/about" />
         <meta property="og:type" content="website" />
         <meta property="og:title" content="About Don of Detail | Reno, NV" />
-        <meta property="og:description" content="Learn about Logan and Don of Detail, Reno's premier mobile auto detailing service. We bring studio-level paint correction and ceramic coating directly to your driveway." />
+        <meta property="og:description" content="Meet Logan and Don of Detail, Reno's premier mobile detailing service bringing studio-level paint correction and ceramic coating to your driveway." />
         <meta property="og:url" content="https://donofdetail.com/about" />
         <meta property="og:image" content="https://donofdetail.com/og-image-v2.png" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="About Don of Detail | Reno, NV" />
-        <meta name="twitter:description" content="Learn about Logan and Don of Detail, Reno's premier mobile auto detailing service. We bring studio-level paint correction and ceramic coating directly to your driveway." />
+        <meta name="twitter:description" content="Meet Logan and Don of Detail, Reno's premier mobile detailing service bringing studio-level paint correction and ceramic coating to your driveway." />
         
         <script type="application/ld+json">
           {`{
@@ -41,7 +42,7 @@ export default function About() {
       <section className="bg-don-oat px-6 lg:px-12 py-12 md:py-20">
         <div className="max-w-[1400px] mx-auto">
           <p className="text-[10px] md:text-xs font-bold uppercase tracking-[0.3em] text-don-clay mb-8">The Company</p>
-          <h1 className="text-[11.5vw] sm:text-7xl md:text-[8rem] lg:text-[9rem] font-display font-normal leading-[0.85] tracking-[-3px] md:tracking-[-5px] text-don-ink mb-12 uppercase">
+          <h1 className="text-[clamp(2rem,11vw,9rem)] font-display font-normal leading-[0.85] tracking-[-3px] md:tracking-[-5px] text-don-ink mb-12 uppercase">
             Meet the<br/>Team.
           </h1>
           <p className="text-lg md:text-xl text-don-ink/70 font-light leading-relaxed max-w-2xl mb-12">
@@ -97,6 +98,8 @@ export default function About() {
           </div>
         </div>
       </section>
+
+      <ServiceCTA headline="Work with Logan." blurb="No crews, no quotas. You deal with Logan directly, and your vehicle gets the same care he gives his own. Tell us what it needs and we bring the studio to your driveway." />
     </ServiceLayout>
   );
 }

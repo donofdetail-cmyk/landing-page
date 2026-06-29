@@ -1,9 +1,11 @@
 import React, { Suspense } from 'react';
 import { Routes, Route } from 'react-router-dom';
-import Home from './pages/Home';
-import About from './pages/About';
 
-// Lazy load all subpages to split JavaScript bundles
+// Lazy load all pages to split JavaScript bundles and keep react-helmet-async
+// head tags isolated per route (mixed eager/lazy leaks the eager page's tags
+// into other routes during static prerendering).
+const Home = React.lazy(() => import('./pages/Home'));
+const About = React.lazy(() => import('./pages/About'));
 const TermsOfService = React.lazy(() => import('./pages/TermsOfService'));
 const PrivacyPolicy = React.lazy(() => import('./pages/PrivacyPolicy'));
 const CeramicCoating = React.lazy(() => import('./pages/CeramicCoating'));

@@ -1,30 +1,30 @@
 User-agent: *
 Allow: /
-Disallow: /packages
+Disallow: /*/tag/
 
 # AI crawlers - explicitly allowed for AEO visibility
 User-agent: GPTBot
 Allow: /
-Disallow: /packages
+Disallow: /*/tag/
 
 User-agent: Google-Extended
 Allow: /
-Disallow: /packages
+Disallow: /*/tag/
 
 User-agent: Bingbot
 Allow: /
-Disallow: /packages
+Disallow: /*/tag/
 
 User-agent: anthropic-ai
 Allow: /
-Disallow: /packages
+Disallow: /*/tag/
 
 User-agent: PerplexityBot
 Allow: /
-Disallow: /packages
+Disallow: /*/tag/
 
 User-agent: ClaudeBot
 Allow: /
-Disallow: /packages
+Disallow: /*/tag/
 
 Sitemap: https://donofdetail.com/sitemap.xml

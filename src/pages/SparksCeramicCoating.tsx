@@ -2,6 +2,9 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ServiceLayout } from '../components/ServiceLayout';
+import { ServiceCTA } from '../components/ServiceCTA';
+import { TrustBar } from '../components/TrustBar';
+import { ServiceReviews } from '../components/ServiceReviews';
 import { BreadcrumbSchema } from '../components/BreadcrumbSchema';
 import { useBooking } from '../context/BookingContext';
 import { ChevronDown } from 'lucide-react';
@@ -32,8 +35,8 @@ export default function SparksCeramicCoating() {
   return (
     <ServiceLayout>
       <Helmet>
-        <title>Ceramic Coating Sparks NV | Mobile Installation | Spanish Springs & Wingfield Springs</title>
-        <meta name="description" content="Professional ceramic coating in Sparks, NV. We apply SiO2 coatings at your home, office, or storage in Spanish Springs, Wingfield Springs & D'Andrea. UV protection that lasts years, not weeks." />
+        <title>Ceramic Coating Sparks NV | Mobile Install | Don of Detail</title>
+        <meta name="description" content="Professional ceramic coating in Sparks, NV. We apply SiO2 coatings at your home, office, or storage. UV protection that lasts years, not weeks." />
         <link rel="canonical" href="https://donofdetail.com/ceramic-coating-sparks-nv" />
         <meta property="og:type" content="website" />
         <meta property="og:title" content="Professional Ceramic Coating Sparks NV | Don of Detail" />
@@ -65,20 +68,15 @@ export default function SparksCeramicCoating() {
         </script>
 
         <script type="application/ld+json">
-          {`{
+          {JSON.stringify({
             "@context": "https://schema.org",
             "@type": "FAQPage",
-            "mainEntity": [
-              ${faqs.map(faq => `{
-                "@type": "Question",
-                "name": "${faq.q}",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "${faq.a}"
-                }
-              }`).join(',')}
-            ]
-          }`}
+            mainEntity: faqs.map((faq) => ({
+              "@type": "Question",
+              name: faq.q,
+              acceptedAnswer: { "@type": "Answer", text: faq.a },
+            })),
+          })}
         </script>
       </Helmet>
       <BreadcrumbSchema items={[{ name: 'Ceramic Coating Sparks NV', url: 'https://donofdetail.com/ceramic-coating-sparks-nv' }]} />
@@ -86,10 +84,10 @@ export default function SparksCeramicCoating() {
       {/* Hero Section */}
       <section className="bg-don-oat px-6 lg:px-12 py-12 md:py-20">
         <div className="max-w-[1400px] mx-auto">
-          <p className="text-[10px] md:text-xs font-bold uppercase tracking-[0.3em] text-don-clay mb-8">Paint Preservation • Sparks</p>
-          <h1 className="text-[11.5vw] sm:text-7xl md:text-[8rem] lg:text-[9rem] font-display font-normal leading-[0.85] tracking-[-3px] md:tracking-[-5px] text-don-ink mb-12 uppercase">
+          <h1 className="!font-sans text-xs !font-black uppercase !tracking-[0.2em] leading-normal text-don-ink mb-8 md:mb-12">Mobile Ceramic Coating in Sparks, NV</h1>
+          <p aria-hidden="true" className="text-[clamp(2rem,11vw,9rem)] font-display font-normal leading-[0.85] tracking-[-3px] md:tracking-[-5px] text-don-ink mb-12 uppercase">
             Ceramic<br/>Coating.
-          </h1>
+          </p>
           <p className="text-lg md:text-xl text-don-ink/70 font-light leading-relaxed max-w-2xl mb-12">
             Sparks vehicles bake in open driveways from Wingfield Springs to the Marina, then take winter brine on the Pyramid Highway commute. We install professional-grade ceramic coatings at your home or storage unit, locking in a hardened barrier against UV, hard water, and oxidation. Years of protection, not weeks.
           </p>
@@ -98,6 +96,8 @@ export default function SparksCeramicCoating() {
           </button>
         </div>
       </section>
+
+      <TrustBar />
 
       {/* AI Summary Block (AEO Optimization) */}
       <section className="bg-don-ink text-don-oat px-6 lg:px-12 py-16 border-b border-don-clay/20">
@@ -132,7 +132,7 @@ export default function SparksCeramicCoating() {
               The prep is where a coating is won or lost. We pull embedded iron and industrial fallout out of the clear coat, then machine polish the paint flat. Vehicles that live near the Greg Street corridor or commute out to the industrial parks along USA Parkway pick up heavy brake and rail dust, and that has to come out before anything gets sealed. Coat over swirls or oxidation and you lock those defects in for years.
             </p>
             <p>
-              We coat daily drivers, weekend trucks, and boats kept near Sparks Marina, dispatching across Spanish Springs, Sun Valley, Kiley Ranch, and D'Andrea. The coating is one piece of our full <Link to="/mobile-detailing-sparks-nv" className="text-don-oat underline decoration-don-clay/40 underline-offset-4 hover:decoration-don-oat transition-colors">mobile detailing service in Sparks</Link>, and we carry our own spot-free deionized water so no hard-water minerals get introduced during the prep wash.
+              We coat daily drivers, weekend trucks, and boats that summer at Pyramid Lake and Lake Tahoe, dispatching across Spanish Springs, Sun Valley, Kiley Ranch, and D'Andrea. The coating is one piece of our full <Link to="/mobile-detailing-sparks-nv" className="text-don-oat underline decoration-don-clay/40 underline-offset-4 hover:decoration-don-oat transition-colors">mobile detailing service in Sparks</Link>, and we carry our own spot-free deionized water so no hard-water minerals get introduced during the prep wash.
             </p>
             <p className="text-don-oat">
               We do not wash cars. We protect what you parked in the driveway against everything Sparks throws at it.
@@ -153,10 +153,10 @@ export default function SparksCeramicCoating() {
               { num: '03', title: 'Sterilization', desc: 'Every panel gets wiped down with a prep solvent. The surface has to be chemically bare before anything bonds.' },
               { num: '04', title: 'Application', desc: 'We lay the coating panel by panel, let it flash, and level it by hand under proper lighting. No rushing the cure.' }
             ].map((step, i) => (
-              <div key={i} className="flex flex-col gap-6">
-                <div className="flex items-baseline gap-4 mb-2">
+              <div key={i} className="min-w-0 flex flex-col gap-6">
+                <div className="flex items-baseline gap-4 mb-2 min-w-0">
                   <span className="text-2xl font-display text-don-clay">{step.num}</span>
-                  <h3 className="text-3xl font-display uppercase tracking-[-1px] text-don-ink">{step.title}</h3>
+                  <h3 className="text-2xl sm:text-3xl font-display uppercase tracking-[-1px] text-don-ink break-words min-w-0">{step.title}</h3>
                 </div>
                 <p className="text-don-ink/70 font-light leading-relaxed">{step.desc}</p>
               </div>
@@ -165,10 +165,12 @@ export default function SparksCeramicCoating() {
         </div>
       </section>
 
+      <ServiceReviews heading="What Sparks Drivers Say" />
+
       {/* Raw FAQ Section */}
       <section className="bg-don-ink text-don-oat py-32 lg:py-48 px-6 lg:px-12">
         <div className="max-w-3xl mx-auto">
-          <h2 className="text-[10vw] md:text-7xl font-display uppercase tracking-[-2px] mb-16">Clarification.</h2>
+          <h2 className="text-[9vw] md:text-7xl font-display uppercase tracking-[-2px] mb-16">Frequently Asked Questions</h2>
 
           <div className="divide-y divide-don-bark border-t border-don-bark">
             {faqs.map((faq, i) => (
@@ -189,6 +191,8 @@ export default function SparksCeramicCoating() {
           </div>
         </div>
       </section>
+
+      <ServiceCTA headline="Lock in the gloss." areas="Sparks, Spanish Springs, Wingfield Springs, D'Andrea, and Sun Valley" />
 
       {/* Related Reading */}
       <section className="bg-don-oat py-24 px-6 lg:px-12 border-t border-don-clay/20">

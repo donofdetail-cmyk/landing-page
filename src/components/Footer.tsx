@@ -8,7 +8,7 @@ export const Footer = () => {
 
   return (
     <footer className="bg-don-ink text-don-oat">
-      <div className="max-w-[1400px] mx-auto px-6 lg:px-12 py-16">
+      <div className="max-w-[1400px] mx-auto px-6 lg:px-12 py-16 pb-28 md:pb-16">
         <div className="flex flex-col md:flex-row items-center justify-between gap-8 mb-12">
           <div className="flex flex-col items-center md:items-start gap-4">
             <Link to="/" aria-label="Home" className="text-don-oat">
@@ -31,7 +31,7 @@ export const Footer = () => {
             </div>
           </div>
           
-          <nav aria-label="Footer" className="flex items-center gap-8">
+          <nav aria-label="Footer" className="flex flex-wrap items-center justify-center gap-x-6 gap-y-3">
             <Link to="/about" className="text-xs uppercase tracking-[0.2em] text-don-clay hover:text-don-oat transition-colors">About</Link>
             <a href="/#work" className="text-xs uppercase tracking-[0.2em] text-don-clay hover:text-don-oat transition-colors">Work</a>
             <Link to="/blog" className="text-xs uppercase tracking-[0.2em] text-don-clay hover:text-don-oat transition-colors">Journal</Link>

@@ -2,6 +2,9 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ServiceLayout } from '../components/ServiceLayout';
+import { ServiceCTA } from '../components/ServiceCTA';
+import { TrustBar } from '../components/TrustBar';
+import { ServiceReviews } from '../components/ServiceReviews';
 import { BreadcrumbSchema } from '../components/BreadcrumbSchema';
 import { useBooking } from '../context/BookingContext';
 import { ChevronDown } from 'lucide-react';
@@ -26,14 +29,26 @@ export default function BoatDetailing() {
     {
       q: 'Do you clean the interior of the boat?',
       a: 'Yes. We deep clean non-skid decking, remove mildew from vinyl seating, and apply UV protection to interior surfaces to prevent cracking.'
+    },
+    {
+      q: 'Do you offer mobile boat detailing in Reno and Sparks?',
+      a: 'Yes. We are fully mobile and detail boats at your home, dry storage, or wherever the trailer is parked across Reno, Sparks, and the surrounding area. We bring our own power and spot-free deionized water.'
+    },
+    {
+      q: 'Can you ceramic coat a boat hull?',
+      a: 'Yes. After compounding away oxidation and restoring the gelcoat, we seal the hull with a marine-grade ceramic coating. It repels water and UV, slows future oxidation, and makes the boat far easier to rinse off between trips to Lake Tahoe and Pyramid Lake.'
+    },
+    {
+      q: 'How often should a boat be detailed in this climate?',
+      a: 'At our elevation the UV is brutal on gelcoat. We recommend a protective detail at the start of the season and a maintenance polish or coating refresh as needed, so the hull never reaches heavy oxidation.'
     }
   ];
 
   return (
     <ServiceLayout>
       <Helmet>
-        <title>Boat Detailing Reno NV | Hull Cleaning & Marine Ceramic Coating</title>
-        <meta name="description" content="Professional mobile boat detailing in Reno & Sparks, NV. Hull oxidation removal, acid washing, marine ceramic coating, and interior deep clean. We come to your dock, storage, or home." />
+        <title>Boat Detailing Reno NV | Marine Ceramic Coating</title>
+        <meta name="description" content="Mobile boat detailing in Reno & Sparks, NV. Hull oxidation removal, acid washing, and marine ceramic coating. We come to your dock or storage." />
         <link rel="canonical" href="https://donofdetail.com/boat-detailing-reno-nv" />
         <meta property="og:type" content="website" />
         <meta property="og:title" content="Mobile Boat Detailing Reno NV | Don of Detail" />
@@ -64,20 +79,15 @@ export default function BoatDetailing() {
         </script>
 
         <script type="application/ld+json">
-          {`{
+          {JSON.stringify({
             "@context": "https://schema.org",
             "@type": "FAQPage",
-            "mainEntity": [
-              ${faqs.map(faq => `{
-                "@type": "Question",
-                "name": "${faq.q}",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "${faq.a}"
-                }
-              }`).join(',')}
-            ]
-          }`}
+            mainEntity: faqs.map((faq) => ({
+              "@type": "Question",
+              name: faq.q,
+              acceptedAnswer: { "@type": "Answer", text: faq.a },
+            })),
+          })}
         </script>
       </Helmet>
 
@@ -85,10 +95,10 @@ export default function BoatDetailing() {
       {/* Hero Section */}
       <section className="bg-don-oat px-6 lg:px-12 py-12 md:py-20">
         <div className="max-w-[1400px] mx-auto">
-          <p className="text-[10px] md:text-xs font-bold uppercase tracking-[0.3em] text-don-clay mb-8">Boat Restoration</p>
-          <h1 className="text-[11.5vw] sm:text-7xl md:text-[8rem] lg:text-[9rem] font-display font-normal leading-[0.85] tracking-[-3px] md:tracking-[-5px] text-don-ink mb-12 uppercase">
+          <h1 className="!font-sans text-xs !font-black uppercase !tracking-[0.2em] leading-normal text-don-ink mb-8 md:mb-12">Mobile Boat Detailing in Reno & Sparks, NV</h1>
+          <p aria-hidden="true" className="text-[clamp(2rem,11vw,9rem)] font-display font-normal leading-[0.85] tracking-[-3px] md:tracking-[-5px] text-don-ink mb-12 uppercase">
             Boat<br/>Detailing.
-          </h1>
+          </p>
           <p className="text-lg md:text-xl text-don-ink/70 font-light leading-relaxed max-w-2xl mb-12">
             Gelcoat restoration, oxidation removal, and long-term protection for the demanding Nevada environment.
           </p>
@@ -97,6 +107,8 @@ export default function BoatDetailing() {
           </button>
         </div>
       </section>
+
+      <TrustBar />
 
       {/* AI Summary Block (AEO Optimization) */}
       <section className="bg-don-ink text-don-oat px-6 lg:px-12 py-16 border-b border-don-clay/20">
@@ -152,10 +164,10 @@ export default function BoatDetailing() {
               { num: '03', title: 'Compounding', desc: 'Gelcoat is harder and thicker than car paint. We use heavy-duty polishers and aggressive compounds to shave off the dead, oxidized layer of fiberglass.' },
               { num: '04', title: 'Sealing', desc: 'The hull is refined with rotary buffers and a dual-action polisher to remove marks, then locked down with a marine sealant to prevent immediate re-oxidation.' }
             ].map((step, i) => (
-              <div key={i} className="flex flex-col gap-6">
-                <div className="flex items-baseline gap-4 mb-2">
+              <div key={i} className="min-w-0 flex flex-col gap-6">
+                <div className="flex items-baseline gap-4 mb-2 min-w-0">
                   <span className="text-2xl font-display text-don-clay">{step.num}</span>
-                  <h3 className="text-3xl font-display uppercase tracking-[-1px] text-don-ink">{step.title}</h3>
+                  <h3 className="text-2xl sm:text-3xl font-display uppercase tracking-[-1px] text-don-ink break-words min-w-0">{step.title}</h3>
                 </div>
                 <p className="text-don-ink/70 font-light leading-relaxed">{step.desc}</p>
               </div>
@@ -164,10 +176,12 @@ export default function BoatDetailing() {
         </div>
       </section>
 
+      <ServiceReviews />
+
       {/* Raw FAQ Section */}
       <section className="bg-don-ink text-don-oat py-32 lg:py-48 px-6 lg:px-12">
         <div className="max-w-3xl mx-auto">
-          <h2 className="text-[10vw] md:text-7xl font-display uppercase tracking-[-2px] mb-16">Clarification.</h2>
+          <h2 className="text-[9vw] md:text-7xl font-display uppercase tracking-[-2px] mb-16">Frequently Asked Questions</h2>
 
           <div className="divide-y divide-don-bark border-t border-don-bark">
             {faqs.map((faq, i) => (
@@ -188,6 +202,8 @@ export default function BoatDetailing() {
           </div>
         </div>
       </section>
+
+      <ServiceCTA headline="Protect your vessel." />
 
       {/* Related Reading */}
       <section className="bg-don-oat py-24 px-6 lg:px-12 border-t border-don-clay/20">

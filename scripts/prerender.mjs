@@ -49,6 +49,10 @@ const ROUTES = [
   '/blog/headlight-restoration-reno-nv',
   '/mobile-detailing-sparks-nv',
   '/contact',
+  // Prerendered so its noindex meta is baked into static HTML. /packages is not
+  // in the sitemap and is intentionally kept out of the index; baking the tag
+  // (rather than relying on robots Disallow) lets crawlers actually read noindex.
+  '/packages',
   '/404'
 ];
 const PORT = 4173;
@@ -155,6 +159,7 @@ async function prerender() {
   const browser = await launchBrowser();
 
   const failures = [];
+  let homeSeo = null; // baseline homepage head tags, captured on the "/" route
 
   for (const route of ROUTES) {
     const page = await browser.newPage();
@@ -168,6 +173,67 @@ async function prerender() {
     // Brief additional wait: react-helmet-async writes title/meta via useEffect;
     // give effects time to commit before we serialize the DOM.
     await new Promise(r => setTimeout(r, 400));
+
+    // During static rendering, react-helmet-async leaks the homepage's head
+    // tags into every subsequently-rendered route (the page's own correct tags
+    // are present too, but the homepage title/canonical/description/OG get
+    // appended). We capture the homepage tags as a baseline on "/", then strip
+    // any tag whose value matches that baseline from the other routes. This is
+    // value-based (not position-based), so it is deterministic.
+    if (route === '/') {
+      homeSeo = await page.evaluate(() => {
+        const meta = {};
+        document.querySelectorAll('head meta[name="description"], head meta[property^="og:"], head meta[name^="twitter:"]').forEach((m) => {
+          const k = m.getAttribute('property') || m.getAttribute('name');
+          // Shared, site-wide defaults (declared statically in index.html or identical
+          // on every page) — never treat these as a homepage value to strip elsewhere.
+          if (['og:image', 'og:type', 'twitter:card', 'twitter:image', 'og:site_name', 'og:locale', 'og:image:width', 'og:image:height', 'og:image:alt'].includes(k)) return;
+          meta[k] = m.getAttribute('content');
+        });
+        return {
+          title: document.querySelector('head title')?.textContent || '',
+          canonical: document.querySelector('head link[rel="canonical"]')?.getAttribute('href') || '',
+          meta,
+        };
+      });
+    } else if (homeSeo) {
+      await page.evaluate((home) => {
+        document.querySelectorAll('head title').forEach((t) => { if (t.textContent === home.title) t.remove(); });
+        document.querySelectorAll('head link[rel="canonical"]').forEach((l) => { if (l.getAttribute('href') === home.canonical) l.remove(); });
+        document.querySelectorAll('head meta[name="description"], head meta[property^="og:"], head meta[name^="twitter:"]').forEach((m) => {
+          const k = m.getAttribute('property') || m.getAttribute('name');
+          if (home.meta[k] !== undefined && m.getAttribute('content') === home.meta[k]) m.remove();
+        });
+      }, homeSeo);
+    }
+
+    // Blog posts render a visible "Frequently Asked Questions" section as Q:/A:
+    // paragraph pairs but ship no FAQPage schema. Extract the on-page Q&A and
+    // inject matching FAQPage JSON-LD (single source = visible content, so the
+    // markup can never drift from what users see).
+    if (route.startsWith('/blog/')) {
+      await page.evaluate(() => {
+        const faqH2 = [...document.querySelectorAll('h2')].find((h) => /frequently asked questions/i.test(h.textContent || ''));
+        if (!faqH2 || !faqH2.parentElement) return;
+        const faqs = [];
+        let q = null;
+        faqH2.parentElement.querySelectorAll('p').forEach((p) => {
+          const t = (p.textContent || '').trim();
+          if (/^Q:\s*/i.test(t)) q = t.replace(/^Q:\s*/i, '');
+          else if (/^A:\s*/i.test(t) && q) { faqs.push({ q, a: t.replace(/^A:\s*/i, '') }); q = null; }
+        });
+        if (!faqs.length) return;
+        const ld = {
+          '@context': 'https://schema.org',
+          '@type': 'FAQPage',
+          mainEntity: faqs.map((f) => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })),
+        };
+        const s = document.createElement('script');
+        s.type = 'application/ld+json';
+        s.textContent = JSON.stringify(ld);
+        document.head.appendChild(s);
+      });
+    }
 
     const html = await page.content();
     await page.close();

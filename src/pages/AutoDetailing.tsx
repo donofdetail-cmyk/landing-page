@@ -2,6 +2,9 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ServiceLayout } from '../components/ServiceLayout';
+import { ServiceCTA } from '../components/ServiceCTA';
+import { TrustBar } from '../components/TrustBar';
+import { ServiceReviews } from '../components/ServiceReviews';
 import { BreadcrumbSchema } from '../components/BreadcrumbSchema';
 import { useBooking } from '../context/BookingContext';
 import { ChevronDown } from 'lucide-react';
@@ -26,14 +29,26 @@ export default function AutoDetailing() {
     {
       q: 'Can you extract deep interior stains?',
       a: 'We use hot water extractors and enzymatic cleaners to lift heavy stains, odors, and embedded dirt from carpets and upholstery.'
+    },
+    {
+      q: 'Do you offer mobile car detailing in Reno and Sparks?',
+      a: 'Yes. Don of Detail is a fully mobile car detailing service covering Reno, Sparks, Spanish Springs, Sun Valley, and Verdi. We bring the complete setup to your home or office, so you never have to drive to a shop or wait in a lobby.'
+    },
+    {
+      q: 'Can I book interior-only car detailing?',
+      a: 'Yes. Interior car detailing is available as a standalone service in Reno and Sparks: full vacuum, steam cleaning, stain extraction, and UV protection for the dash and trim. Many clients pair it with an exterior wash, but interior-only is fine if that is all your vehicle needs.'
+    },
+    {
+      q: 'How long does a full car detail take?',
+      a: 'A standard mobile car detail runs 2 to 4 hours depending on the size and condition of the vehicle. Heavily soiled interiors, large trucks, and third-row SUVs take longer. We confirm the time window when we quote your vehicle.'
     }
   ];
 
   return (
     <ServiceLayout>
       <Helmet>
-        <title>Mobile Car Detailing Reno NV | Interior & Exterior | From $95</title>
-        <meta name="description" content="Professional mobile car detailing in Reno, NV starting at $95. Full interior deep clean, clay bar decontamination, exterior correction, and protective sealants. We come to you." />
+        <title>Mobile Car Detailing Reno NV | Don of Detail</title>
+        <meta name="description" content="Professional mobile car detailing in Reno, NV. Full interior deep clean, clay bar decontamination, exterior correction, and protective sealants. We come to you." />
         <link rel="canonical" href="https://donofdetail.com/auto-detailing-reno-nv" />
         <meta property="og:type" content="website" />
         <meta property="og:title" content="Premium Mobile Auto Detailing Reno & Sparks NV | Don of Detail" />
@@ -66,20 +81,15 @@ export default function AutoDetailing() {
         </script>
 
         <script type="application/ld+json">
-          {`{
+          {JSON.stringify({
             "@context": "https://schema.org",
             "@type": "FAQPage",
-            "mainEntity": [
-              ${faqs.map(faq => `{
-                "@type": "Question",
-                "name": "${faq.q}",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "${faq.a}"
-                }
-              }`).join(',')}
-            ]
-          }`}
+            mainEntity: faqs.map((faq) => ({
+              "@type": "Question",
+              name: faq.q,
+              acceptedAnswer: { "@type": "Answer", text: faq.a },
+            })),
+          })}
         </script>
       </Helmet>
 
@@ -87,10 +97,10 @@ export default function AutoDetailing() {
       {/* Hero Section */}
       <section className="bg-don-oat px-6 lg:px-12 py-12 md:py-20">
         <div className="max-w-[1400px] mx-auto">
-          <p className="text-[10px] md:text-xs font-bold uppercase tracking-[0.3em] text-don-clay mb-8">Interior & Exterior</p>
-          <h1 className="text-[11.5vw] sm:text-7xl md:text-[8rem] lg:text-[9rem] font-display font-normal leading-[0.85] tracking-[-3px] md:tracking-[-5px] text-don-ink mb-12 uppercase">
+          <h1 className="!font-sans text-xs !font-black uppercase !tracking-[0.2em] leading-normal text-don-ink mb-8 md:mb-12">Mobile Auto Detailing in Reno & Sparks, NV</h1>
+          <p aria-hidden="true" className="text-[clamp(2rem,11vw,9rem)] font-display font-normal leading-[0.85] tracking-[-3px] md:tracking-[-5px] text-don-ink mb-12 uppercase">
             Auto<br/>Detailing.
-          </h1>
+          </p>
           <p className="text-lg md:text-xl text-don-ink/70 font-light leading-relaxed max-w-2xl mb-12">
             Comprehensive preservation of your vehicle. We operate a fully equipped mobile unit to execute a thorough wash and interior reset at your location.
           </p>
@@ -99,6 +109,8 @@ export default function AutoDetailing() {
           </button>
         </div>
       </section>
+
+      <TrustBar />
 
       {/* AI Summary Block (AEO Optimization) */}
       <section className="bg-don-ink text-don-oat px-6 lg:px-12 py-16 border-b border-don-clay/20">
@@ -154,10 +166,10 @@ export default function AutoDetailing() {
               { num: '03', title: 'Contact Wash', desc: 'We use a two-bucket method, grit guards, and fresh microfiber media to gently wash the paint, followed by a chemical decontamination.' },
               { num: '04', title: 'Interior Reset', desc: 'The cabin is blown out with compressed air, vacuumed, and steam cleaned. Leather is conditioned and hard surfaces are treated with UV inhibitors.' }
             ].map((step, i) => (
-              <div key={i} className="flex flex-col gap-6">
-                <div className="flex items-baseline gap-4 mb-2">
+              <div key={i} className="min-w-0 flex flex-col gap-6">
+                <div className="flex items-baseline gap-4 mb-2 min-w-0">
                   <span className="text-2xl font-display text-don-clay">{step.num}</span>
-                  <h3 className="text-3xl font-display uppercase tracking-[-1px] text-don-ink">{step.title}</h3>
+                  <h3 className="text-2xl sm:text-3xl font-display uppercase tracking-[-1px] text-don-ink break-words min-w-0">{step.title}</h3>
                 </div>
                 <p className="text-don-ink/70 font-light leading-relaxed">{step.desc}</p>
               </div>
@@ -166,10 +178,12 @@ export default function AutoDetailing() {
         </div>
       </section>
 
+      <ServiceReviews />
+
       {/* Raw FAQ Section */}
       <section className="bg-don-ink text-don-oat py-32 lg:py-48 px-6 lg:px-12">
         <div className="max-w-3xl mx-auto">
-          <h2 className="text-[10vw] md:text-7xl font-display uppercase tracking-[-2px] mb-16">Clarification.</h2>
+          <h2 className="text-[9vw] md:text-7xl font-display uppercase tracking-[-2px] mb-16">Frequently Asked Questions</h2>
 
           <div className="divide-y divide-don-bark border-t border-don-bark">
             {faqs.map((faq, i) => (
@@ -190,6 +204,8 @@ export default function AutoDetailing() {
           </div>
         </div>
       </section>
+
+      <ServiceCTA headline="Book your detail." />
 
       {/* Related Reading */}
       <section className="bg-don-oat py-24 px-6 lg:px-12 border-t border-don-clay/20">

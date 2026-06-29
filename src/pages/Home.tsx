@@ -2,31 +2,33 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { motion } from 'motion/react';
+import { ChevronDown } from 'lucide-react';
 import { Header } from '../components/Header';
 import { Footer } from '../components/Footer';
 import { useBooking } from '../context/BookingContext';
+import { reviews, formatName } from '../data/reviews';
 
-const formatName = (name: string) => {
-  if (name === "SELF_CREATION KREW") return "S. Krew";
-  const parts = name.trim().split(/\s+/);
-  if (parts.length === 1) return parts[0].charAt(0).toUpperCase() + parts[0].slice(1).toLowerCase();
-
-  const firstName = parts[0].charAt(0).toUpperCase() + parts[0].slice(1).toLowerCase();
-  const lastPart = parts[parts.length - 1];
-  const lastInitial = lastPart.endsWith('.') ? lastPart.toUpperCase() : lastPart.charAt(0).toUpperCase() + '.';
-
-  return `${firstName} ${lastInitial}`;
-};
+const faqs = [
+  { q: "How much does mobile auto detailing cost in Reno, NV?", a: "Mobile auto detailing in Reno typically costs between $200 and $400 depending on vehicle size and the service selected. Exterior-only packages start at $200+. For a full interior & exterior detail, most clients spend $250 to $400. Because every vehicle is different, we provide custom quotes after you submit a brief form." },
+  { q: "Is ceramic coating worth it in Reno's climate?", a: "Yes. Ceramic coating is one of the best investments for vehicles in Reno's high-desert climate. Reno gets 300+ days of intense UV at 4,500+ feet of elevation, corrosive de-icing chemicals in winter, and constant desert dust. Ceramic coating provides years of hydrophobic protection, UV resistance, and keeps your paint looking factory-fresh." },
+  { q: "What areas in Reno & Sparks do you service?", a: "We provide mobile auto detailing throughout the greater Reno-Sparks metro area including Reno, Sparks, Spanish Springs, Verdi, Sun Valley, Hidden Valley, Golden Valley, Mogul, and Cold Springs. Not sure if we cover your area? Give us a call." },
+  { q: "How long does ceramic coating last?", a: "2 to 5 years, depending on how you maintain it. Regular hand washes with pH-balanced shampoo and the occasional ceramic booster go a long way, especially out here with the UV and dust. After every install, we'll show you exactly how to take care of it." },
+  { q: "Can mobile detailers apply ceramic coatings on-site?", a: "Yes. Our fully-equipped mobile unit carries everything needed for a professional ceramic coating installation, including paint correction, decontamination tools, and a controlled curing setup. We perform the entire process at your home or office in Reno or Sparks. The vehicle simply needs to remain sheltered (garage or covered area) during the 24-hour initial cure." },
+  { q: "What is paint correction and does my car need it?", a: "Paint correction is a multi-stage machine polishing process that removes swirl marks, scratches, water spots, and oxidation from your vehicle's clear coat. If your paint looks dull, hazy, or covered in fine scratches, especially under direct sunlight, your car will benefit from paint correction. It's also a required step before applying ceramic coating, since the coating locks in whatever condition the paint is in." },
+  { q: "Do you detail boats and RVs in Reno?", a: "Yes. We offer full mobile detailing for boats, RVs, travel trailers, and motorhomes throughout Reno, Sparks, and surrounding areas. Services include exterior wash and wax, oxidation removal, hull cleaning, interior deep clean, and ceramic coating for long-term protection against the intense UV and desert conditions." },
+  { q: "How much does ceramic coating cost in Reno?", a: "Professional ceramic coating in Reno typically ranges from $800 to $2,500 depending on vehicle size, paint condition, and the level of coating selected. This includes full paint decontamination, paint correction (to remove swirls and scratches before sealing), and the ceramic coating application itself. Because every vehicle is unique, we provide custom quotes after reviewing photos of your vehicle." },
+];
 
 export default function Home() {
   const { openBooking } = useBooking();
+  const [openFaq, setOpenFaq] = React.useState<number | null>(null);
 
 
   return (
     <div className="min-h-screen bg-don-oat text-don-ink font-sans selection:bg-don-ink selection:text-don-oat">
       <Helmet>
-        <title>Don of Detail | Mobile Detailing Reno NV | Ceramic Coating & Paint Correction</title>
-        <meta name="description" content="Reno's premier mobile auto detailing studio. Ceramic coating, paint correction, interior &amp; exterior detailing, delivered to your home or office. Serving Reno, Sparks &amp; surrounding areas." />
+        <title>Don of Detail | Mobile Detailing Reno NV | Ceramic Coating</title>
+        <meta name="description" content="Reno's premier mobile detailing studio. Ceramic coating, paint correction, and interior & exterior detailing delivered to your door in Reno & Sparks." />
         <link rel="canonical" href="https://donofdetail.com/" />
         <meta property="og:type" content="website" />
         <meta property="og:title" content="Top Mobile Auto Detailing & Ceramic Coating in Reno, NV | Don of Detail" />
@@ -129,7 +131,7 @@ export default function Home() {
                 <button onClick={openBooking} className="inline-block bg-don-ink text-don-oat text-sm font-bold uppercase tracking-[0.2em] px-8 py-4 rounded hover:bg-don-ink/90 transition-colors">
                   Get a Quote
                 </button>
-                <a href="#work" className="text-sm font-bold uppercase tracking-[0.2em] text-don-clay hover:text-don-ink transition-colors flex items-center gap-2 group">
+                <a href="#work" className="text-sm font-bold uppercase tracking-[0.2em] text-don-ink/70 hover:text-don-ink transition-colors flex items-center gap-2 group">
                   See the work <span className="group-hover:translate-x-1 transition-transform">→</span>
                 </a>
               </div>
@@ -160,14 +162,31 @@ export default function Home() {
             ].map((item, i) => (
               <div key={i} className="group relative aspect-square overflow-hidden cursor-pointer bg-don-bark">
                 <img src={item.img} alt={item.alt} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 saturate-[0.8] contrast-110" loading={i === 0 ? 'eager' : 'lazy'} fetchPriority={i === 0 ? 'high' : 'auto'} width={800} height={800} />
-                <div className="absolute inset-0 bg-don-ink/0 group-hover:bg-don-ink/90 transition-colors duration-300 flex flex-col justify-end p-8">
-                  <div className="translate-y-8 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
+                <div className="absolute inset-0 flex flex-col justify-end p-8 transition-colors duration-300 bg-gradient-to-t from-don-ink/85 via-don-ink/10 to-transparent md:from-transparent md:via-transparent md:bg-don-ink/0 md:group-hover:bg-don-ink/90">
+                  <div className="translate-y-0 opacity-100 md:translate-y-8 md:opacity-0 md:group-hover:translate-y-0 md:group-hover:opacity-100 transition-all duration-300">
                     <p className="text-[10px] uppercase tracking-[0.2em] text-don-clay mb-2">{item.service}</p>
                     <p className="text-2xl font-display uppercase tracking-[-1px] text-don-oat">{item.title}</p>
                   </div>
                 </div>
               </div>
             ))}
+          </div>
+        </section>
+
+        {/* Rating strip - surfaces Google proof early */}
+        <section className="bg-don-oat border-y border-don-clay/20 px-6 lg:px-12 py-6">
+          <div className="max-w-[1400px] mx-auto flex flex-wrap items-center justify-center gap-x-4 gap-y-2">
+            <span className="inline-flex gap-0.5 text-don-red" aria-hidden="true">
+              {[0, 1, 2, 3, 4].map((s) => (
+                <svg key={s} className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                </svg>
+              ))}
+            </span>
+            <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-don-ink">5-Star Rated on Google</span>
+            <a href="https://maps.app.goo.gl/mvf4PLGiRWU8wSAa7" target="_blank" rel="noopener noreferrer" className="text-[10px] font-bold uppercase tracking-[0.2em] text-don-ink/70 hover:text-don-ink border-b border-don-clay/40 hover:border-don-ink pb-0.5 transition-colors">
+              Read Reviews →
+            </a>
           </div>
         </section>
 
@@ -185,7 +204,7 @@ export default function Home() {
                 <span className="text-7xl md:text-8xl font-display text-don-clay/20 leading-none mb-6 select-none group-hover:text-don-clay/40 transition-colors">
                   {svc.num}
                 </span>
-                <h3 className="text-3xl md:text-4xl font-display uppercase tracking-[-2px] mb-4 text-don-oat group-hover:text-don-clay transition-colors flex items-center gap-3">
+                <h2 className="text-3xl md:text-4xl font-display uppercase tracking-[-2px] mb-4 text-don-oat group-hover:text-don-clay transition-colors flex items-center gap-3">
                   {svc.title}
                   <motion.span
                     initial={{ opacity: 0, x: -10 }}
@@ -196,7 +215,7 @@ export default function Home() {
                   >
                     &rarr;
                   </motion.span>
-                </h3>
+                </h2>
                 <p className="text-sm font-light text-don-clay mb-8 max-w-sm">
                   {svc.desc}
                 </p>
@@ -214,7 +233,7 @@ export default function Home() {
             <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-20 gap-8">
               <div>
                 <p className="text-[10px] font-bold uppercase tracking-[0.3em] text-don-clay mb-6">Verified Reviews</p>
-                <h2 className="text-[9vw] sm:text-6xl md:text-8xl font-display uppercase tracking-[-2px] text-don-oat max-w-full break-words hyphens-auto leading-[0.85]">
+                <h2 className="text-[9vw] sm:text-5xl lg:text-7xl 2xl:text-8xl font-display uppercase tracking-[-2px] text-don-oat max-w-full break-words hyphens-auto leading-[0.85]">
                   Uncompromising<br />Results.
                 </h2>
               </div>
@@ -228,14 +247,7 @@ export default function Home() {
             </div>
 
             <div className="columns-1 md:columns-2 lg:columns-3 gap-8 space-y-8">
-              {[
-                { name: "Andrew R.", loc: "Reno, NV", text: "Logan knocked it out of the park with the detail and ceramic job on my triple black metallic F350. Looks better today than the day I brought it home from the dealer! I highly recommend Don of Detail's services for your vehicles." },
-                { name: "Thomas Mesloh", loc: "Reno, NV", text: "Logan is very professional and knowledgeable. He does things right and is very particular with making things look the very best. There are a lot of mobile detailers out there, but he knows a lot more particulars and proper material maintenance that comes with a professional detail and not just a standard cleaning. He makes sure things are done right the first time!" },
-                { name: "Clay Eagleton", loc: "Reno, NV", text: "Truly a 5-star experience. My 5th wheel was in pretty bad shape, and Logan made it shine like new. The communication was great, the attention to detail was great, and the care for his work and my property was great. They should be your first call!" },
-                { name: "ariana delarosa", loc: "Reno, NV", text: "I had an amazing experience with Logan at Don of Detail. They did an outstanding job on my car and went above and beyond with their attention to detail. The interior looks spotless, and my car honestly looks better than when I first got it.\n\nThey were professional, friendly, and took the time to make sure everything was done right. You can tell they genuinely care about their work and take pride in delivering high-quality results. Communication was great throughout the process, and the service was absolutely worth it.\n\nI highly recommend Logan with Don of Detail to anyone looking for a reliable and top-quality car detail. I'll definitely be coming back again!" },
-                { name: "Dennis Beeghly", loc: "Reno, NV", text: "Logan and his wife are true professionals in detailing in every sense of the word! They are punctual, thorough, and do an incredibly beautiful job in their detail work. Our Toyota Venza never looked so beautiful when they were done. We also had him do a ceramic coat finish as well! We would highly recommend them!" },
-                { name: "Charles Walker", loc: "Reno, NV", text: "I had these guys do a deep cleaning and detail of a truck I bought that had been smoked in for many years. They did an excellent job and got into every nook and cranny. I highly recommend them." }
-              ].map((review, i) => (
+              {reviews.map((review, i) => (
                 <div key={i} className="break-inside-avoid bg-don-bark/50 p-10 rounded border border-don-clay/5 hover:border-don-clay/20 transition-colors">
                   <div className="flex gap-1 text-don-clay mb-8">
                     {[1, 2, 3, 4, 5].map((star) => (
@@ -269,7 +281,7 @@ export default function Home() {
         </section>
 
         {/* Section - Brand Statement */}
-        <section className="bg-don-oat text-don-ink py-32 lg:py-48 px-6 lg:px-12">
+        <section className="bg-don-oat text-don-ink pt-20 lg:pt-28 pb-12 lg:pb-16 px-6 lg:px-12">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-[10vw] md:text-7xl font-display uppercase tracking-[-3px] mb-8">
               The standard isn't optional.
@@ -280,31 +292,26 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Section - From The Journal */}
-        <section className="bg-don-oat text-don-ink py-32 lg:py-48 px-6 lg:px-12 border-t border-don-clay/10">
-          <div className="max-w-[1400px] mx-auto">
-            <div className="flex flex-col sm:flex-row justify-between items-start sm:items-end mb-16 gap-6">
-              <div>
-                <p className="text-[10px] font-bold uppercase tracking-[0.3em] text-don-clay mb-4">From The Journal</p>
-                <h2 className="text-5xl md:text-7xl font-display uppercase tracking-[-3px] leading-[0.9]">The Knowledge.</h2>
-              </div>
-              <Link to="/blog" className="text-xs font-bold uppercase tracking-[0.2em] text-don-clay hover:text-don-ink transition-colors border-b border-don-clay/40 hover:border-don-ink pb-1 whitespace-nowrap">
-                All Articles →
-              </Link>
-            </div>
-
-            <div className="grid md:grid-cols-3 gap-12 lg:gap-16">
-              {[
-                { slug: 'paint-correction-vs-waxing', category: 'Education', title: 'Paint Correction vs. Waxing', desc: 'Wax only temporarily fills scratches. Learn why machine paint correction is the only permanent fix for a flawless clear coat.', date: 'June 22, 2026' },
-                { slug: 'preparing-boat-rv-for-lake-tahoe', category: 'Boat & RV', title: 'Preparing Your Boat or RV for Lake Tahoe', desc: 'High-altitude UV at 6,200 ft destroys unprotected gelcoat in a single season. Here\'s how to protect your investment before launch.', date: 'June 15, 2026' },
-                { slug: 'is-ceramic-coating-worth-it-reno', category: 'Ceramic Coating', title: 'Is Ceramic Coating Worth It In Reno?', desc: 'Reno sits at 4,500 ft elevation. The UV, road salt, and alkaline dust destroy factory clear coat fast. Find out why coating is mandatory.', date: 'May 10, 2026' },
-              ].map((post) => (
-                <Link key={post.slug} to={`/blog/${post.slug}`} className="group border-t border-don-clay/20 pt-8 block hover:border-don-ink transition-colors">
-                  <p className="text-[10px] font-bold uppercase tracking-[0.3em] text-don-clay mb-4">{post.category}</p>
-                  <h3 className="text-2xl md:text-3xl font-display uppercase tracking-[-1px] text-don-ink group-hover:text-don-clay transition-colors leading-tight mb-4">{post.title}</h3>
-                  <p className="text-don-ink/60 font-light leading-relaxed text-sm mb-6">{post.desc}</p>
-                  <span className="text-[10px] uppercase tracking-[0.2em] text-don-clay">{post.date}</span>
-                </Link>
+        {/* Section - FAQ */}
+        <section className="bg-don-oat text-don-ink py-20 lg:py-28 px-6 lg:px-12 border-t border-don-clay/10">
+          <div className="max-w-3xl mx-auto">
+            <p className="text-[10px] font-bold uppercase tracking-[0.3em] text-don-clay mb-4">Common Questions</p>
+            <h2 className="text-[clamp(2rem,10vw,4.5rem)] font-display uppercase tracking-[-2px] leading-[0.9] mb-12">Questions?</h2>
+            <div className="divide-y divide-don-clay/20 border-t border-don-clay/20">
+              {faqs.map((faq, i) => (
+                <div key={i}>
+                  <button
+                    onClick={() => setOpenFaq(openFaq === i ? null : i)}
+                    className="w-full flex items-center justify-between py-6 text-left cursor-pointer group gap-4"
+                    aria-expanded={openFaq === i}
+                  >
+                    <h3 className="text-base md:text-lg font-sans font-normal tracking-[0.05em] text-don-ink group-hover:text-don-clay transition-colors">{faq.q}</h3>
+                    <ChevronDown aria-hidden="true" className={`w-5 h-5 text-don-clay transition-transform duration-300 shrink-0 ${openFaq === i ? 'rotate-180' : ''}`} />
+                  </button>
+                  <div className={`overflow-hidden transition-all duration-500 ease-in-out ${openFaq === i ? 'max-h-[40rem] opacity-100' : 'max-h-0 opacity-0'}`}>
+                    <p className="text-don-ink/70 font-light leading-relaxed pb-6">{faq.a}</p>
+                  </div>
+                </div>
               ))}
             </div>
           </div>

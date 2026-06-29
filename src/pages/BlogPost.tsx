@@ -117,6 +117,7 @@ const posts: Record<string, any> = {
   },
   'the-truth-about-automatic-car-washes': {
     title: 'The Truth About Automatic Car Washes: Why Convenience is Killing Your Clear Coat',
+    seoTitle: 'Are Automatic Car Washes Bad for Your Paint?',
     date: 'May 28, 2026',
     dateISO: '2026-05-28',
     dateModifiedISO: '2026-06-22',
@@ -220,7 +221,7 @@ const posts: Record<string, any> = {
     readTime: '5 min read',
     author: 'Don of Detail',
     category: 'Education',
-    metaDescription: 'Learn the exact two-bucket method required to maintain your ceramic coating. Never use automatic washes, and avoid cheap high-pH soaps that degrade your protection.',
+    metaDescription: 'Learn the two-bucket method to maintain your ceramic coating. Avoid automatic washes and cheap high-pH soaps that degrade your protection.',
     content: (
       <div className="space-y-12">
 
@@ -298,7 +299,7 @@ const posts: Record<string, any> = {
     readTime: '6 min read',
     author: 'Don of Detail',
     category: 'Boat & RV',
-    metaDescription: "Lake Tahoe's high-altitude UV rays destroy marine gelcoat fast. Learn why physical oxidation removal and marine-grade ceramic coatings are mandatory for preservation.",
+    metaDescription: "Lake Tahoe's high-altitude UV destroys marine gelcoat fast. Why oxidation removal and marine ceramic coatings are mandatory to protect your boat or RV.",
     content: (
       <div className="space-y-12">
 
@@ -383,13 +384,14 @@ const posts: Record<string, any> = {
   },
   'paint-correction-vs-waxing': {
     title: "Paint Correction vs. Waxing: Why Wax Won't Fix Your Scratches",
+    seoTitle: 'Paint Correction vs. Waxing in Reno',
     date: 'June 22, 2026',
     dateISO: '2026-06-22',
     dateModifiedISO: '2026-06-22',
     readTime: '5 min read',
     author: 'Don of Detail',
     category: 'Education',
-    metaDescription: 'Discover why traditional wax only temporarily hides swirl marks, and why professional paint correction is the only permanent solution for damaged clear coat in Reno.',
+    metaDescription: 'Why wax only temporarily hides swirl marks, and why professional paint correction is the only permanent fix for damaged clear coat in Reno.',
     content: (
       <div className="space-y-12">
 
@@ -461,6 +463,7 @@ const posts: Record<string, any> = {
   }  ,
   'how-much-does-car-detailing-cost-reno': {
     title: 'How Much Does Car Detailing Cost in Reno, NV?',
+    seoTitle: 'Car Detailing Cost in Reno, NV',
     date: 'June 22, 2026',
     dateISO: '2026-06-22',
     dateModifiedISO: '2026-06-22',
@@ -533,6 +536,7 @@ const posts: Record<string, any> = {
   },
   'headlight-restoration-reno-nv': {
     title: 'Headlight Restoration in Reno, NV: Why Yellowed Headlights Are Dangerous',
+    seoTitle: 'Headlight Restoration in Reno, NV',
     date: 'June 22, 2026',
     dateISO: '2026-06-22',
     dateModifiedISO: '2026-06-22',
@@ -617,7 +621,7 @@ export default function BlogPost() {
         { name: post.title, url: `https://donofdetail.com/blog/${slug}` },
       ]} />
       <Helmet>
-        <title>{`${post.title} | Don of Detail`}</title>
+        <title>{`${post.seoTitle || post.title} | Don of Detail`}</title>
         <meta name="description" content={post.metaDescription} />
         <link rel="canonical" href={`https://donofdetail.com/blog/${slug}`} />
         <meta property="og:type" content="article" />
