@@ -10,7 +10,7 @@ import { reviews, formatName } from '../data/reviews';
 import { ChevronDown } from 'lucide-react';
 
 const faqs = [
-  { q: "How much does mobile auto detailing cost in Sparks, NV?", a: "Mobile auto detailing in Sparks typically costs between $200 and $400 depending on vehicle size and the service selected. Exterior-only packages start at $200+. For a full interior & exterior detail, most clients spend $250 to $400. Because every vehicle is different, we provide custom quotes after you submit a brief form." },
+  { q: "How much does mobile auto detailing cost in Sparks, NV?", a: "Basic single-service details start at $95 for a sedan, a Level 1 interior or a Level 1 exterior. Most clients spend $300 or more for a full interior and exterior detail. Vehicle size and condition drive the final price, so we provide a custom quote after you submit a brief form." },
   { q: "Is ceramic coating worth it in Nevada's climate?", a: "Yes. Ceramic coating is one of the best investments for vehicles in the Reno-Sparks area. Sparks gets 300+ days of intense UV at 4,500+ feet of elevation, constant desert dust, and corrosive de-icing chemicals in winter. Ceramic coating provides years of hydrophobic protection, UV resistance, and keeps your paint looking factory-fresh." },
   { q: "What areas in Reno & Sparks do you service?", a: "We provide mobile auto detailing throughout the greater Reno-Sparks metro area including Reno, Sparks, Spanish Springs, Verdi, Sun Valley, Hidden Valley, Golden Valley, Mogul, and Cold Springs. Not sure if we cover your area? Give us a call." },
   { q: "How long does ceramic coating last?", a: "2 to 5 years, depending on how you maintain it. Regular hand washes with pH-balanced shampoo and the occasional ceramic booster go a long way, especially out here with the UV and dust. After every install, we'll show you exactly how to take care of it." },
@@ -36,7 +36,7 @@ export default function SparksDetailing() {
         <meta property="og:title" content="Top Mobile Auto Detailing & Ceramic Coating in Sparks, NV | Don of Detail" />
         <meta property="og:description" content="Sparks' premier mobile auto detailing service. Professional ceramic coatings, paint correction, and full interior detailing. We come to you." />
         <meta property="og:url" content="https://donofdetail.com/mobile-detailing-sparks-nv" />
-        <meta property="og:image" content="https://donofdetail.com/og-image-v2.png" />
+        <meta property="og:image" content="https://donofdetail.com/og-auto-detailing.jpg" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Top Mobile Auto Detailing & Ceramic Coating in Sparks, NV | Don of Detail" />
         <meta name="twitter:description" content="Sparks' premier mobile auto detailing service. Professional ceramic coatings, paint correction, and full interior detailing. We come to you." />
@@ -45,11 +45,16 @@ export default function SparksDetailing() {
           {`{
             "@context": "https://schema.org",
             "@type": "Service",
+            "@id": "https://donofdetail.com/mobile-detailing-sparks-nv#service",
             "name": "Mobile Auto Detailing",
-            "provider": {
-              "@type": "AutomotiveBusiness",
-              "name": "Don of Detail",
-              "url": "https://donofdetail.com"
+            "serviceType": "Auto Detailing",
+            "url": "https://donofdetail.com/mobile-detailing-sparks-nv",
+            "provider": {"@id": "https://donofdetail.com/#business"},
+            "offers": {
+              "@type": "Offer",
+              "priceCurrency": "USD",
+              "price": "95",
+              "description": "Starting price for a Level 1 interior or exterior service on a sedan. Most clients spend $300 or more for a full interior and exterior detail."
             },
             "areaServed": [
               {"@type": "City", "name": "Sparks"},
@@ -62,77 +67,17 @@ export default function SparksDetailing() {
           }`}
         </script>
 
+        {/* FAQPage schema generated from the visible faqs array above, so markup can never drift from on-page content */}
         <script type="application/ld+json">
-          {`{
+          {JSON.stringify({
             "@context": "https://schema.org",
             "@type": "FAQPage",
-            "mainEntity": [
-              {
-                "@type": "Question",
-                "name": "How much does mobile auto detailing cost in Sparks, NV?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "Mobile auto detailing in Sparks typically costs between $200 and $400 depending on vehicle size and the service selected. Exterior-only packages start at $200+. For a full interior & exterior detail, most clients spend $250 to $400. Because every vehicle is different, we provide custom quotes after you submit a brief form."
-                }
-              },
-              {
-                "@type": "Question",
-                "name": "Is ceramic coating worth it in Nevada's climate?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "Yes. Ceramic coating is one of the best investments for vehicles in the Reno-Sparks area. Sparks gets 300+ days of intense UV at 4,500+ feet of elevation, constant desert dust, and corrosive de-icing chemicals in winter. Ceramic coating provides years of hydrophobic protection, UV resistance, and keeps your paint looking factory-fresh."
-                }
-              },
-              {
-                "@type": "Question",
-                "name": "What areas in Reno & Sparks do you service?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "We provide mobile auto detailing throughout the greater Reno-Sparks metro area including Reno, Sparks, Spanish Springs, Verdi, Sun Valley, Hidden Valley, Golden Valley, Mogul, and Cold Springs. Not sure if we cover your area? Give us a call."
-                }
-              },
-              {
-                "@type": "Question",
-                "name": "How long does ceramic coating last?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "2 to 5 years, depending on how you maintain it. Regular hand washes with pH-balanced shampoo and the occasional ceramic booster go a long way, especially out here with the UV and dust. After every install, we'll show you exactly how to take care of it."
-                }
-              },
-              {
-                "@type": "Question",
-                "name": "Can mobile detailers apply ceramic coatings on-site?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "Yes. Our fully-equipped mobile unit carries everything needed for a professional ceramic coating installation, including paint correction, decontamination tools, and a controlled curing setup. We perform the entire process at your home or office in Reno or Sparks. The vehicle simply needs to remain sheltered (garage or covered area) during the 24-hour initial cure."
-                }
-              },
-              {
-                "@type": "Question",
-                "name": "What is paint correction and does my car need it?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "Paint correction is a multi-stage machine polishing process that removes swirl marks, scratches, water spots, and oxidation from your vehicle's clear coat. If your paint looks dull, hazy, or covered in fine scratches, especially under direct sunlight, your car will benefit from paint correction. It's also a required step before applying ceramic coating, since the coating locks in whatever condition the paint is in."
-                }
-              },
-              {
-                "@type": "Question",
-                "name": "Do you detail boats and RVs in Sparks?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "Yes. We offer full mobile detailing for boats, RVs, travel trailers, and motorhomes throughout Sparks, Reno, and surrounding areas. Services include exterior wash and wax, oxidation removal, hull cleaning, interior deep clean, and ceramic coating for long-term protection against the intense UV and desert conditions."
-                }
-              },
-              {
-                "@type": "Question",
-                "name": "How much does ceramic coating cost in Sparks?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "Professional ceramic coating in Sparks typically ranges from $800 to $2,500 depending on vehicle size, paint condition, and the level of coating selected. This includes full paint decontamination, paint correction (to remove swirls and scratches before sealing), and the ceramic coating application itself. Because every vehicle is unique, we provide custom quotes after reviewing photos of your vehicle."
-                }
-              }
-            ]
-          }`}
+            mainEntity: faqs.map((faq) => ({
+              "@type": "Question",
+              name: faq.q,
+              acceptedAnswer: { "@type": "Answer", text: faq.a },
+            })),
+          })}
         </script>
       </Helmet>
       <BreadcrumbSchema items={[{ name: 'Mobile Detailing Sparks NV', url: 'https://donofdetail.com/mobile-detailing-sparks-nv' }]} />
@@ -220,7 +165,7 @@ export default function SparksDetailing() {
             {[
               { num: '01', title: 'Ceramic Coating', desc: 'Permanent hydrophobic barrier against UV and oxidation.', price: 'From $800', link: '/ceramic-coating-sparks-nv' },
               { num: '02', title: 'Paint Correction', desc: 'Multi-stage machine polishing to level defects and swirl marks.', price: 'From $400', link: '/paint-correction-reno-nv' },
-              { num: '03', title: 'Auto Detailing', desc: 'Comprehensive interior and exterior preservation.', price: 'From $250', link: '/auto-detailing-reno-nv' },
+              { num: '03', title: 'Auto Detailing', desc: 'Comprehensive interior and exterior preservation.', price: 'From $95', link: '/auto-detailing-reno-nv' },
               { num: '04', title: 'RV Detailing', desc: 'Heavy oxidation removal and multi-stage gelcoat restoration.', price: 'Quote Required', link: '/rv-detailing-reno-nv' },
               { num: '05', title: 'Boat Detailing', desc: 'Marine acid washing and specialized gelcoat sealing.', price: 'Quote Required', link: '/boat-detailing-reno-nv' },
             ].map((svc) => (

@@ -54,7 +54,7 @@ export default function AutoDetailing() {
         <meta property="og:title" content="Premium Mobile Auto Detailing Reno & Sparks NV | Don of Detail" />
         <meta property="og:description" content="Comprehensive interior and exterior mobile auto detailing in Reno and Sparks. Deep cleaning, stain extraction, and protective exterior sealants." />
         <meta property="og:url" content="https://donofdetail.com/auto-detailing-reno-nv" />
-        <meta property="og:image" content="https://donofdetail.com/og-image-v2.png" />
+        <meta property="og:image" content="https://donofdetail.com/og-auto-detailing.jpg" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Premium Mobile Auto Detailing Reno & Sparks NV | Don of Detail" />
         <meta name="twitter:description" content="Comprehensive interior and exterior mobile auto detailing in Reno and Sparks. Deep cleaning, stain extraction, and protective exterior sealants." />
@@ -63,11 +63,16 @@ export default function AutoDetailing() {
           {`{
             "@context": "https://schema.org",
             "@type": "Service",
+            "@id": "https://donofdetail.com/auto-detailing-reno-nv#service",
             "name": "Mobile Auto Detailing",
-            "provider": {
-              "@type": "AutomotiveBusiness",
-              "name": "Don of Detail",
-              "url": "https://donofdetail.com"
+            "serviceType": "Auto Detailing",
+            "url": "https://donofdetail.com/auto-detailing-reno-nv",
+            "provider": {"@id": "https://donofdetail.com/#business"},
+            "offers": {
+              "@type": "Offer",
+              "priceCurrency": "USD",
+              "price": "95",
+              "description": "Starting price for a Level 1 interior or exterior service on a sedan. Most clients spend $300 or more for a full interior and exterior detail."
             },
             "areaServed": [
               {"@type": "City", "name": "Reno"},

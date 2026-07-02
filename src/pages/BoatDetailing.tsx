@@ -63,12 +63,11 @@ export default function BoatDetailing() {
           {`{
             "@context": "https://schema.org",
             "@type": "Service",
+            "@id": "https://donofdetail.com/boat-detailing-reno-nv#service",
             "name": "Boat Detailing",
-            "provider": {
-              "@type": "AutomotiveBusiness",
-              "name": "Don of Detail",
-              "url": "https://donofdetail.com"
-            },
+            "serviceType": "Boat Detailing",
+            "url": "https://donofdetail.com/boat-detailing-reno-nv",
+            "provider": {"@id": "https://donofdetail.com/#business"},
             "areaServed": [
               {"@type": "Place", "name": "Spanish Springs"},
               {"@type": "Place", "name": "Verdi"},

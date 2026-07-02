@@ -1,5 +1,25 @@
-/* Fonts loaded via <link> in index.html for non-blocking rendering */
+/* Fonts are self-hosted via @fontsource so there is no third-party request in the
+   critical path. Vite bundles the @font-face rules into the single CSS file and
+   fingerprints the woff2 files into /assets (immutable cache per vercel.json). */
 @import "tailwindcss";
+@import "@fontsource/archivo-black/400.css";
+@import "@fontsource/dm-sans/300.css";
+@import "@fontsource/dm-sans/400.css";
+@import "@fontsource/dm-sans/500.css";
+@import "@fontsource/dm-sans/600.css";
+@import "@fontsource/dm-sans/700.css";
+@import "@fontsource/barlow-condensed/400.css";
+@import "@fontsource/barlow-condensed/500.css";
+@import "@fontsource/barlow-condensed/600.css";
+@import "@fontsource/barlow-condensed/700.css";
+
+/* Metric-compatible local fallback so the swap to Archivo Black (the LCP headline
+   font) does not shift layout while the woff2 loads. */
+@font-face {
+  font-family: "Archivo Black Fallback";
+  src: local("Arial Black"), local("Arial-Black");
+  size-adjust: 106%;
+}
 
 @theme {
   --color-don-oat: #F0EDE8;
@@ -7,7 +27,7 @@
   --color-don-bark: #3D3830;
   --color-don-clay: #C4BAB0;
   --color-don-red: #E8341C;
-  --font-display: "Archivo Black", sans-serif;
+  --font-display: "Archivo Black", "Archivo Black Fallback", sans-serif;
   --font-sans: "DM Sans", sans-serif;
   --font-logo: "Barlow Condensed", sans-serif;
 }

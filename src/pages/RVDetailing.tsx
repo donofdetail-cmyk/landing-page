@@ -63,12 +63,11 @@ export default function RVDetailing() {
           {`{
             "@context": "https://schema.org",
             "@type": "Service",
+            "@id": "https://donofdetail.com/rv-detailing-reno-nv#service",
             "name": "Mobile RV Detailing",
-            "provider": {
-              "@type": "AutomotiveBusiness",
-              "name": "Don of Detail",
-              "url": "https://donofdetail.com"
-            },
+            "serviceType": "RV Detailing",
+            "url": "https://donofdetail.com/rv-detailing-reno-nv",
+            "provider": {"@id": "https://donofdetail.com/#business"},
             "areaServed": [
               {"@type": "City", "name": "Reno"},
               {"@type": "City", "name": "Sparks"},

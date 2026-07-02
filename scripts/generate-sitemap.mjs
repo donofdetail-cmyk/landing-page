@@ -10,7 +10,8 @@
  * Static routes map 1:1 to their page component. Blog posts are parsed out of
  * BlogPost.tsx (slug + dateModifiedISO), so adding a post updates the sitemap
  * with no manual edit here. noindex routes (terms, privacy, packages, 404) are
- * intentionally excluded.
+ * intentionally excluded; packages is a client-only price sheet shared by text
+ * after a quote request, never publicly indexed.
  *
  * Output: argv[2] or dist/sitemap.xml. Wired into the build via `postbuild`.
  * Usage:  node scripts/generate-sitemap.mjs ["public/sitemap.xml"]

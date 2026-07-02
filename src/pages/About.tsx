@@ -14,7 +14,7 @@ export default function About() {
         <meta property="og:title" content="About Don of Detail | Reno, NV" />
         <meta property="og:description" content="Meet Logan and Don of Detail, Reno's premier mobile detailing service bringing studio-level paint correction and ceramic coating to your driveway." />
         <meta property="og:url" content="https://donofdetail.com/about" />
-        <meta property="og:image" content="https://donofdetail.com/og-image-v2.png" />
+        <meta property="og:image" content="https://donofdetail.com/og-about.jpg" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="About Don of Detail | Reno, NV" />
         <meta name="twitter:description" content="Meet Logan and Don of Detail, Reno's premier mobile detailing service bringing studio-level paint correction and ceramic coating to your driveway." />
@@ -22,18 +22,23 @@ export default function About() {
         <script type="application/ld+json">
           {`{
             "@context": "https://schema.org",
-            "@type": "AboutPage",
-            "mainEntity": {
-              "@type": "Organization",
-              "name": "Don of Detail",
-              "url": "https://donofdetail.com",
-              "logo": "https://donofdetail.com/logo.png",
-              "founder": {
-                "@type": "Person",
-                "name": "Logan"
+            "@graph": [
+              {
+                "@type": "AboutPage",
+                "@id": "https://donofdetail.com/about",
+                "url": "https://donofdetail.com/about",
+                "mainEntity": {"@id": "https://donofdetail.com/#business"}
               },
-              "description": "Mobile auto detailing, paint correction, and ceramic coating specialists serving Reno and Sparks, Nevada."
-            }
+              {
+                "@type": "Person",
+                "@id": "https://donofdetail.com/about#logan",
+                "name": "Logan",
+                "jobTitle": "Owner and Lead Operator",
+                "image": "https://donofdetail.com/logan-don-of-detail.webp",
+                "worksFor": {"@id": "https://donofdetail.com/#business"},
+                "knowsAbout": ["Ceramic Coating", "Paint Correction", "Auto Detailing", "Gelcoat Restoration"]
+              }
+            ]
           }`}
         </script>
       </Helmet>

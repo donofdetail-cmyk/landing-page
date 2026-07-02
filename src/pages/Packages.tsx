@@ -3,19 +3,28 @@ import { Helmet } from 'react-helmet-async';
 import { Check, Star } from 'lucide-react';
 import { Header } from '../components/Header';
 import { Footer } from '../components/Footer';
-
 export default function Packages() {
   return (
     <div className="min-h-screen bg-don-oat text-don-ink font-sans selection:bg-don-ink selection:text-don-oat">
+      {/* Deliberately noindexed: the full price sheet is only sent to clients by
+          text after a quote request. Public surfaces (home FAQ, service pages,
+          llms.txt) state only the $95 floor and $300+ typical spend. */}
       <Helmet>
-        <title>Detailing Packages | Don of Detail</title>
-        <meta name="description" content="Explore our exclusive auto detailing packages." />
+        <title>Client Packages | Don of Detail</title>
+        <meta name="description" content="Tiered detailing packages for Don of Detail clients in Reno and Sparks, NV." />
         <meta name="robots" content="noindex, nofollow" />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Client Packages | Don of Detail" />
+        <meta property="og:description" content="Tiered detailing packages for Don of Detail clients in Reno and Sparks, NV." />
+        <meta property="og:image" content="https://donofdetail.com/og-image-v2.png" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Client Packages | Don of Detail" />
+        <meta name="twitter:description" content="Tiered detailing packages for Don of Detail clients in Reno and Sparks, NV." />
       </Helmet>
 
       <Header hideQuote />
 
-      <main className="focus:outline-none" tabIndex={-1}>
+      <main id="main" className="focus:outline-none" tabIndex={-1}>
         
         {/* Hero Section - Matching Home.tsx scale */}
         <section className="relative flex flex-col justify-center pt-32 pb-20 px-6 lg:px-12 bg-don-oat border-b border-don-clay/10">

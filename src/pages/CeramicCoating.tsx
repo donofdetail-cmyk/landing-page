@@ -54,7 +54,7 @@ export default function CeramicCoating() {
         <meta property="og:title" content="Professional Ceramic Coating Reno NV | Don of Detail" />
         <meta property="og:description" content="Protect your vehicle with professional-grade ceramic coatings in Reno, NV. Long-lasting UV protection and hydrophobic gloss applied at your home or office." />
         <meta property="og:url" content="https://donofdetail.com/ceramic-coating-reno-nv" />
-        <meta property="og:image" content="https://donofdetail.com/og-image-v2.png" />
+        <meta property="og:image" content="https://donofdetail.com/og-ceramic-coating.jpg" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Professional Ceramic Coating Reno NV | Don of Detail" />
         <meta name="twitter:description" content="Protect your vehicle with professional-grade ceramic coatings in Reno, NV. Long-lasting UV protection and hydrophobic gloss applied at your home or office." />
@@ -63,11 +63,16 @@ export default function CeramicCoating() {
           {`{
             "@context": "https://schema.org",
             "@type": "Service",
+            "@id": "https://donofdetail.com/ceramic-coating-reno-nv#service",
             "name": "Mobile Ceramic Coating",
-            "provider": {
-              "@type": "AutomotiveBusiness",
-              "name": "Don of Detail",
-              "url": "https://donofdetail.com"
+            "serviceType": "Ceramic Coating",
+            "url": "https://donofdetail.com/ceramic-coating-reno-nv",
+            "provider": {"@id": "https://donofdetail.com/#business"},
+            "offers": {
+              "@type": "Offer",
+              "priceCurrency": "USD",
+              "price": "800",
+              "description": "Starting price for a sedan. Final quote depends on vehicle size and paint condition."
             },
             "areaServed": [
               {"@type": "City", "name": "Reno"},

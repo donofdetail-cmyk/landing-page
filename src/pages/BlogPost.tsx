@@ -466,7 +466,7 @@ const posts: Record<string, any> = {
     seoTitle: 'Car Detailing Cost in Reno, NV',
     date: 'June 22, 2026',
     dateISO: '2026-06-22',
-    dateModifiedISO: '2026-06-22',
+    dateModifiedISO: '2026-07-01',
     readTime: '5 min read',
     author: 'Don of Detail',
     category: 'Education',
@@ -478,17 +478,17 @@ const posts: Record<string, any> = {
         </div>
         <div className="pt-4">
           <h2 className="text-2xl md:text-3xl font-display uppercase tracking-[-1px] text-don-ink mb-6">Interior Detail Cost</h2>
-          <p className="text-lg text-don-ink/80 font-light leading-relaxed mb-6">An interior-only detail in Reno typically costs between $95 and $395 depending on the vehicle size and level of cleaning required. A light maintenance detail on a regularly cleaned car sits at the lower end. A heavily soiled vehicle needing deep extraction, steam cleaning, and odor treatment sits at the higher end.</p>
-          <p className="text-lg text-don-ink/80 font-light leading-relaxed">Our Level 1 interior (vacuum, wipe-down, glass) starts at $95 for a sedan. Level 3 full reset with extraction, steam, and stain treatment starts at $395 for a sedan and $495 for an oversized or third-row SUV.</p>
+          <p className="text-lg text-don-ink/80 font-light leading-relaxed mb-6">An interior-only detail in Reno starts at $95 for a sedan and climbs from there based on vehicle size and condition. A light maintenance detail on a regularly cleaned car sits at the low end. A heavily soiled vehicle needing deep extraction, steam cleaning, and odor treatment can run several times the base price.</p>
+          <p className="text-lg text-don-ink/80 font-light leading-relaxed">Our Level 1 interior (vacuum, wipe-down, glass) starts at $95 for a sedan. A Level 3 full reset with extraction, steam, and stain treatment is quoted per vehicle, because a third-row SUV full of pet hair is a different job than a commuter sedan. Send photos and we text back an exact number.</p>
         </div>
         <div className="pt-4">
           <h2 className="text-2xl md:text-3xl font-display uppercase tracking-[-1px] text-don-ink mb-6">Exterior Detail Cost</h2>
-          <p className="text-lg text-don-ink/80 font-light leading-relaxed mb-6">A standard exterior detail in Reno costs between $95 and $595 depending on the service tier. Level 1 (hand wash, wheels, tire shine, glass) starts at $95 for a sedan. Level 3 with iron removal, clay bar decontamination, and a light machine polish starts at $495 for a sedan.</p>
-          <p className="text-lg text-don-ink/80 font-light leading-relaxed">The difference between a $95 wash and a $495 detail is chemistry. Clay bar removes bonded contamination a wash mitt cannot touch. Iron removers dissolve embedded brake dust. These steps are not optional in a real detail.</p>
+          <p className="text-lg text-don-ink/80 font-light leading-relaxed mb-6">A standard exterior detail in Reno starts at $95 for a Level 1 (hand wash, wheels, tire shine, glass) on a sedan. Higher tiers add iron removal, clay bar decontamination, and a light machine polish, and they price by vehicle size and paint condition.</p>
+          <p className="text-lg text-don-ink/80 font-light leading-relaxed">The difference between a $95 wash and a top-tier detail is chemistry. Clay bar removes bonded contamination a wash mitt cannot touch. Iron removers dissolve embedded brake dust. These steps are not optional in a real detail.</p>
         </div>
         <div className="pt-4">
           <h2 className="text-2xl md:text-3xl font-display uppercase tracking-[-1px] text-don-ink mb-6">Full Detail Cost</h2>
-          <p className="text-lg text-don-ink/80 font-light leading-relaxed mb-6">Most Reno clients booking a combined interior and exterior detail spend between $250 and $600. For a sedan at mid-tier, expect $350 to $440. For a large truck or third-row SUV, $450 to $540 is typical.</p>
+          <p className="text-lg text-don-ink/80 font-light leading-relaxed mb-6">Most Reno clients booking a combined interior and exterior detail spend $300 or more. Vehicle size moves the number most: a large truck or third-row SUV costs meaningfully more than a sedan, and condition does the rest.</p>
           <p className="text-lg text-don-ink/80 font-light leading-relaxed">We assess every vehicle individually and provide a custom quote before booking.</p>
         </div>
         <div className="pt-4">
@@ -507,7 +507,7 @@ const posts: Record<string, any> = {
           <div className="space-y-8">
             <div>
               <p className="text-lg font-bold text-don-ink mb-2">Q: How much does a basic car detail cost in Reno?</p>
-              <p className="text-lg text-don-ink/80 font-light leading-relaxed">A: A basic interior or exterior detail starts at $95 for a standard sedan. A combined mid-tier detail typically runs $350 to $440 depending on vehicle size.</p>
+              <p className="text-lg text-don-ink/80 font-light leading-relaxed">A: A basic interior or exterior detail starts at $95 for a standard sedan. Most clients spend $300 or more for a combined interior and exterior detail. The exact price depends on vehicle size and condition, and we quote it by text after you send vehicle details.</p>
             </div>
             <div>
               <p className="text-lg font-bold text-don-ink mb-2">Q: Is mobile detailing more expensive than a shop?</p>
@@ -640,14 +640,10 @@ export default function BlogPost() {
             '@type': 'Article',
             headline: post.title,
             description: post.metaDescription,
-            author: { '@type': 'Organization', name: post.author },
+            author: { '@id': 'https://donofdetail.com/#business' },
             datePublished: post.dateISO,
             dateModified: post.dateModifiedISO || post.dateISO,
-            publisher: {
-              '@type': 'Organization',
-              name: 'Don of Detail',
-              logo: { '@type': 'ImageObject', url: 'https://donofdetail.com/logo.png' }
-            }
+            publisher: { '@id': 'https://donofdetail.com/#business' }
           })}
         </script>
       </Helmet>

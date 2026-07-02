@@ -76,8 +76,5 @@
         }
       ]
     }
-  ],
-  "rewrites": [
-    { "source": "/((?!assets|.*\\..*|sitemap\\.xml|robots\\.txt|llms\\.txt).*)", "destination": "/index.html" }
   ]
 }

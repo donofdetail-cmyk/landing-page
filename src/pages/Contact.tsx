@@ -34,57 +34,7 @@ export default function Contact() {
             "@type": "ContactPage",
             "name": "Contact Don of Detail",
             "url": "https://donofdetail.com/contact",
-            "mainEntity": {
-              "@type": "AutomotiveBusiness",
-              "@id": "https://donofdetail.com/#business",
-              "name": "Don of Detail",
-              "telephone": "+17752307035",
-              "email": "contact@donofdetail.com",
-              "url": "https://donofdetail.com",
-              "image": "https://donofdetail.com/logo.png",
-              "priceRange": "$$$",
-              "address": {
-                "@type": "PostalAddress",
-                "addressLocality": "Reno",
-                "addressRegion": "NV",
-                "addressCountry": "US"
-              },
-              "areaServed": [
-                {"@type": "City", "name": "Reno"},
-                {"@type": "City", "name": "Sparks"},
-                {"@type": "Place", "name": "Spanish Springs"},
-                {"@type": "Place", "name": "Sun Valley"},
-                {"@type": "Place", "name": "Verdi"},
-                {"@type": "Place", "name": "Hidden Valley"},
-                {"@type": "Place", "name": "Golden Valley"},
-                {"@type": "Place", "name": "Mogul"},
-                {"@type": "Place", "name": "Cold Springs"},
-                {"@type": "Place", "name": "Lemmon Valley"},
-                {"@type": "Place", "name": "Washoe Valley"},
-                {"@type": "Place", "name": "Steamboat"}
-              ],
-              "openingHoursSpecification": [
-                {
-                  "@type": "OpeningHoursSpecification",
-                  "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
-                  "opens": "08:00",
-                  "closes": "19:00"
-                }
-              ],
-              "contactPoint": {
-                "@type": "ContactPoint",
-                "telephone": "+17752307035",
-                "email": "contact@donofdetail.com",
-                "contactType": "customer service",
-                "areaServed": "US",
-                "availableLanguage": "English"
-              },
-              "sameAs": [
-                "https://www.instagram.com/donofdetail",
-                "https://www.facebook.com/donofdetail",
-                "https://maps.app.goo.gl/mvf4PLGiRWU8wSAa7"
-              ]
-            }
+            "mainEntity": {"@id": "https://donofdetail.com/#business"}
           }`}
         </script>
       </Helmet>

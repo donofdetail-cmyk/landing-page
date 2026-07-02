@@ -170,9 +170,15 @@ async function prerender() {
 
     // Wait for React hydration and Helmet effects to flush to DOM
     await page.waitForSelector('#root > *', { timeout: 10000 });
-    // Brief additional wait: react-helmet-async writes title/meta via useEffect;
-    // give effects time to commit before we serialize the DOM.
-    await new Promise(r => setTimeout(r, 400));
+    // Helmet writes head tags via useEffect. Wait for the observable result
+    // (a non-empty title plus either a canonical or a robots meta; every route
+    // sets one of the two) instead of a fixed sleep, then allow a short settle
+    // for the remaining meta tags written in the same effect pass.
+    await page.waitForFunction(
+      () => !!document.title.trim() && !!(document.querySelector('link[rel="canonical"]') || document.querySelector('meta[name="robots"]')),
+      { timeout: 15000 }
+    );
+    await new Promise(r => setTimeout(r, 200));
 
     // During static rendering, react-helmet-async leaks the homepage's head
     // tags into every subsequently-rendered route (the page's own correct tags
@@ -193,6 +199,9 @@ async function prerender() {
         return {
           title: document.querySelector('head title')?.textContent || '',
           canonical: document.querySelector('head link[rel="canonical"]')?.getAttribute('href') || '',
+          // og:image is excluded from the value-based strip (many pages share the
+          // site default), so record it separately for the positional cleanup below.
+          ogImage: document.querySelector('head meta[property="og:image"]')?.getAttribute('content') || '',
           meta,
         };
       });
@@ -204,6 +213,22 @@ async function prerender() {
           const k = m.getAttribute('property') || m.getAttribute('name');
           if (home.meta[k] !== undefined && m.getAttribute('content') === home.meta[k]) m.remove();
         });
+        // og:image cannot use the value-based strip: pages without a dedicated
+        // image legitimately share the homepage's default, and stripping by value
+        // would delete their only tag. Positional rule instead: if the page has
+        // an og:image different from the homepage's, the homepage copies are
+        // leaks; drop them. Then collapse any remaining duplicates to one tag.
+        const ogs = [...document.querySelectorAll('head meta[property="og:image"]')];
+        if (ogs.length > 1) {
+          const own = ogs.filter((m) => m.getAttribute('content') !== home.ogImage);
+          const keep = own.length > 0 ? own : ogs;
+          const seen = new Set();
+          ogs.forEach((m) => {
+            const v = m.getAttribute('content');
+            if (!keep.includes(m) || seen.has(v)) m.remove();
+            else seen.add(v);
+          });
+        }
       }, homeSeo);
     }
 
